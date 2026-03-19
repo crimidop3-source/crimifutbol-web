@@ -10,7 +10,7 @@
             --neon-red: #ff0032;
             --neon-blue: #00f2ff;
             --gx-dark: #0b0b0b;
-            --gx-card: rgba(22, 22, 22, 0.98);
+            --gx-card: rgba(20, 20, 20, 0.98);
             --gx-accent: var(--neon-blue);
             --gx-glow: rgba(0, 242, 255, 0.5);
         }
@@ -20,52 +20,36 @@
         body { 
             background-color: var(--gx-dark); color: white; 
             font-family: 'Rajdhani', sans-serif; margin: 0; 
-            overflow-x: hidden; /* Evita el ancho extra en celular */
-            
-            /* --- FONDO NEGRO PURO (Sin textura) --- */
+            overflow-x: hidden;
             background-image: radial-gradient(circle at 50% 50%, #1a1a1a 0%, #0b0b0b 100%);
-            /* --------------------------------------- */
         }
 
-        /* BARRA DE NAVEGACIÓN CON BUSCADOR */
+        /* BARRA DE NAVEGACIÓN SIMPLE (Solo Logo) */
         header {
             background: rgba(0,0,0,0.95); border-bottom: 2px solid var(--gx-accent); 
-            padding: 10px 20px; display: flex; justify-content: space-between; align-items: center;
+            padding: 15px 20px; text-align: center;
             box-shadow: 0 0 15px var(--gx-glow); position: sticky; top: 0; z-index: 100;
         }
 
-        .logo-nav { font-family: 'Orbitron', sans-serif; font-size: 1.1rem; letter-spacing: 2px; text-decoration: none; color: white; }
+        .logo-nav { font-family: 'Orbitron', sans-serif; font-size: 1.3rem; letter-spacing: 3px; text-decoration: none; color: white; }
         .accent { color: var(--gx-accent); text-shadow: 0 0 10px var(--gx-accent); transition: 0.5s; }
-
-        /* Buscador GX */
-        .search-box { display: flex; gap: 5px; max-width: 300px; width: 60%; }
-        
-        input#gx-input {
-            background: rgba(30,30,30,0.8); border: 1px solid #333; color: white;
-            padding: 8px 12px; font-size: 0.9rem; border-radius: 4px; width: 100%;
-        }
-
-        input#gx-input:focus { border-color: var(--gx-accent); outline: none; box-shadow: 0 0 10px var(--gx-glow); }
-
-        button#gx-btn {
-            background: var(--gx-accent); color: white; border: none; font-weight: bold;
-            padding: 0 15px; cursor: pointer; text-transform: uppercase;
-            clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%); transition: 0.3s;
-        }
 
         /* Contenedor Principal */
         .main-content {
             display: flex; flex-direction: column; align-items: center;
-            width: 100%; padding: 20px;
+            width: 100%; padding: 20px; padding-bottom: 100px;
         }
 
+        /* SECCIÓN HERO (Perfil + Buscador) */
         .hero-section {
-            height: 70vh; display: flex; flex-direction: column; 
-            align-items: center; justify-content: center; position: relative;
+            width: 100%; max-width: 800px; /* Ancho controlado para PC */
+            display: flex; flex-direction: column; 
+            align-items: center; justify-content: center;
+            padding: 40px 0;
         }
 
-        /* Enlace a la foto de perfil */
-        .profile-link { text-decoration: none; display: block; }
+        .profile-link { text-decoration: none; display: block; transition: 0.3s; }
+        .profile-link:hover { transform: scale(1.05); }
 
         .profile-pic {
             width: 160px; height: 160px; border-radius: 50%;
@@ -84,45 +68,82 @@
             100% { box-shadow: 0 0 0 0 rgba(0,0,0,0); }
         }
 
-        .username { font-family: 'Orbitron', sans-serif; font-size: 2rem; margin: 15px 0; letter-spacing: 3px; }
+        .username { font-family: 'Orbitron', sans-serif; font-size: 2.2rem; margin: 15px 0; letter-spacing: 4px; }
 
         .btn-live {
             background: var(--gx-accent); color: white; text-decoration: none;
             font-weight: bold; font-size: 1.1rem; padding: 12px 35px;
             text-transform: uppercase; clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
             transition: 0.3s; box-shadow: 0 0 10px var(--gx-glow);
+            margin-bottom: 30px; /* Espacio para el buscador */
         }
 
-        /* CARTA DE RESULTADO (Oculta por defecto) */
+        /* GRANDE BUSCADOR CENTRAL */
+        .gx-search-container {
+            width: 100%; max-width: 600px; /* Grande en PC */
+            margin-bottom: 30px;
+        }
+        
+        .search-box { display: flex; gap: 10px; width: 100%; }
+        
+        input#gx-input {
+            flex: 1; background: rgba(25,25,25,0.9); border: 2px solid #333; color: white;
+            padding: 15px; font-size: 1.1rem; border-radius: 4px;
+        }
+
+        input#gx-input:focus { border-color: var(--gx-accent); outline: none; box-shadow: 0 0 15px var(--gx-glow); }
+
+        button#gx-btn {
+            background: var(--gx-accent); color: white; border: none; font-weight: bold;
+            padding: 0 30px; cursor: pointer; text-transform: uppercase;
+            clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%); transition: 0.3s;
+            font-size: 1rem;
+        }
+
+        /* CARTA DE RESULTADO (Debajo del buscador, sin reemplazar) */
         #player-card {
-            background: var(--gx-card); border-left: 4px solid var(--gx-accent);
-            padding: 20px; border-radius: 8px; width: 100%; max-width: 450px;
-            margin-top: -50px; z-index: 10; display: none; /* Se activa con JS */
-            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+            background: var(--gx-card); border-left: 5px solid var(--gx-accent);
+            padding: 25px; border-radius: 8px; width: 100%; max-width: 600px;
+            display: none; /* Se activa con JS */
+            box-shadow: 0 10px 30px rgba(0,0,0,0.6);
             animation: glitchIn 0.3s ease-in;
+            margin-bottom: 40px;
         }
 
-        @keyframes glitchIn { from { opacity: 0; transform: scale(0.9); } to { opacity: 1; transform: scale(1); } }
+        @keyframes glitchIn { from { opacity: 0; transform: translateY(20px) scale(0.95); } to { opacity: 1; transform: translateY(0) scale(1); } }
 
-        .racha-fire { color: #ff8c00; font-size: 1.8rem; font-weight: bold; text-shadow: 0 0 15px #ff4500; }
-        .xp-bar { background: #222; height: 10px; margin-top: 15px; border-radius: 5px; overflow: hidden; }
+        .racha-fire { color: #ff8c00; font-size: 2.2rem; font-weight: bold; text-shadow: 0 0 15px #ff4500; }
+        .xp-bar { background: #222; height: 12px; margin-top: 15px; border-radius: 6px; overflow: hidden; }
         .xp-fill { background: var(--gx-accent); height: 100%; box-shadow: 0 0 10px var(--gx-accent); transition: width 1s ease-in-out; }
 
-        /* SECCIONES DE JUEGOS */
-        .game-info {
-            width: 100%; max-width: 500px; margin-top: 50px;
-            padding: 20px; background: rgba(255,255,255,0.02);
-            border-left: 4px solid var(--gx-accent); border-radius: 0 8px 8px 0;
+        /* SECCIONES DE JUEGOS (Diseño Lleno para PC) */
+        .games-container {
+            display: flex; flex-wrap: wrap; gap: 30px;
+            width: 100%; max-width: 1000px; justify-content: center;
         }
 
-        .game-title { font-family: 'Orbitron', sans-serif; font-size: 1.3rem; color: var(--gx-accent); margin-bottom: 8px; }
-        .game-desc { font-size: 1rem; line-height: 1.4; color: #ccc; }
+        .game-info {
+            flex: 1 1 300px; /* Crece y se llena en PC */
+            background: rgba(255,255,255,0.02);
+            padding: 25px; border-left: 4px solid var(--gx-accent); border-radius: 0 8px 8px 0;
+            transition: 0.3s;
+        }
 
-        @media (max-width: 480px) {
-            .username { font-size: 1.4rem; }
+        .game-info:hover { background: rgba(255,255,255,0.04); transform: translateY(-5px); }
+
+        .game-title { font-family: 'Orbitron', sans-serif; font-size: 1.4rem; color: var(--gx-accent); margin-bottom: 10px; }
+        .game-desc { font-size: 1rem; line-height: 1.5; color: #ccc; }
+
+        /* AJUSTES MÓVILES */
+        @media (max-width: 600px) {
+            .username { font-size: 1.6rem; }
             .profile-pic { width: 130px; height: 130px; }
-            header { padding: 10px; }
-            .search-box { width: 50%; max-width: 200px; }
+            .hero-section { padding: 20px 0; }
+            .gx-search-container { padding: 0 10px; }
+            input#gx-input { padding: 12px; font-size: 1rem; }
+            button#gx-btn { padding: 0 15px; font-size: 0.9rem; }
+            #player-card { padding: 15px; }
+            .racha-fire { font-size: 1.8rem; }
         }
     </style>
 </head>
@@ -130,31 +151,10 @@
 
 <header>
     <a href="index.html" class="logo-nav">CRIMIFUTBOL</a>
-    
-    <div class="search-box">
-        <input type="text" id="gx-input" placeholder="Escribe tu usuario de tiktok...">
-        <button id="gx-btn" onclick="checkPlayerRacha()">CONSULTAR</button>
-    </div>
 </header>
 
 <div class="main-content">
     
-    <div id="player-card">
-        <h2 id="res-name" style="margin-top:0;">@USUARIO</h2>
-        <div style="display: flex; justify-content: space-between; align-items: center;">
-            <div>
-                <p style="margin:0; color: #888;">RACHA DIARIA</p>
-                <div id="res-racha" class="racha-fire">0 DÍAS 🔥</div>
-            </div>
-            <div style="text-align: right;">
-                <p style="margin:0; color: #888;">NIVEL</p>
-                <div id="res-nivel" style="font-size: 1.4rem; font-weight: bold;">1</div>
-            </div>
-        </div>
-        <div class="xp-bar"><div id="res-bar" class="xp-fill" style="width: 0%"></div></div>
-        <p id="res-beneficio" style="color: var(--gx-accent); font-weight: bold; margin-top: 15px; font-size: 0.9rem;"></p>
-    </div>
-
     <section class="hero-section" id="hero-section">
         <a href="https://www.tiktok.com/@crimifutbol?_r=1&_t=ZS-94pBrGjj9FJ" target="_blank" class="profile-link">
             <img src="perfil.jpg" alt="Crimifutbol" class="profile-pic live-active" id="profile-pic">
@@ -165,25 +165,50 @@
         </a>
     </section>
 
-    <div class="game-info">
-        <div class="game-title">JUEGO FPC</div>
-        <p class="game-desc">
-            Únete a tu equipo favorito de la Liga Colombiana. Comenta para acelerar el carro, 
-            da likes para dar potencia y compite por ser el campeón de la jornada. 
-            ¡Suma racha diaria para obtener beneficios exclusivos en cada carrera!
-        </p>
+    <div class="gx-search-container">
+        <div class="search-box">
+            <input type="text" id="gx-input" placeholder="Escribe tu usuario de tiktok...">
+            <button id="gx-btn" onclick="checkPlayerRacha()">CONSULTAR</button>
+        </div>
     </div>
 
-    <div class="game-info">
-        <div class="game-title">MUNDIAL</div>
-        <p class="game-desc">
-            Lleva a tu selección a lo más alto. Una competencia global donde cada interacción cuenta. 
-            Participa en las trivias en vivo para ganar experiencia y desbloquear el "Ultra Boost" 
-            para tu país.
-        </p>
+    <div id="player-card">
+        <h2 id="res-name" style="margin-top:0;">@USUARIO</h2>
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <div>
+                <p style="margin:0; color: #888;">RACHA DIARIA</p>
+                <div id="res-racha" class="racha-fire">0 DÍAS 🔥</div>
+            </div>
+            <div style="text-align: right;">
+                <p style="margin:0; color: #888;">NIVEL</p>
+                <div id="res-nivel" style="font-size: 1.6rem; font-weight: bold;">1</div>
+            </div>
+        </div>
+        <div class="xp-bar"><div id="res-bar" class="xp-fill" style="width: 0%"></div></div>
+        <p id="res-beneficio" style="color: var(--gx-accent); font-weight: bold; margin-top: 15px; font-size: 1rem;"></p>
+    </div>
+
+    <div class="games-container">
+        <div class="game-info">
+            <div class="game-title">JUEGO FPC</div>
+            <p class="game-desc">
+                Únete a tu equipo favorito de la Liga Colombiana. Comenta para acelerar el carro, 
+                da likes para dar potencia y compite por ser el campeón de la jornada. 
+                ¡Suma racha diaria para obtener beneficios exclusivos en cada carrera!
+            </p>
+        </div>
+
+        <div class="game-info">
+            <div class="game-title">MUNDIAL</div>
+            <p class="game-desc">
+                Lleva a tu selección a lo más alto. Una competencia global donde cada interacción cuenta. 
+                Participa en las trivias en vivo para ganar experiencia y desbloquear el "Ultra Boost" 
+                para tu país.
+            </p>
+        </div>
     </div>
     
-    <div style="height: 100px;"></div> </div>
+</div>
 
 <script>
     // --- LÓGICA DEL BUSCADOR DE RACHA ---
@@ -192,7 +217,6 @@
     async function checkPlayerRacha() {
         const userSearch = document.getElementById('gx-input').value.trim().toLowerCase();
         const card = document.getElementById('player-card');
-        const hero = document.getElementById('hero-section');
 
         try {
             const response = await fetch(JSON_URL);
@@ -200,8 +224,7 @@
             const user = data.users.find(u => u.username.toLowerCase() === userSearch);
 
             if (user) {
-                // Ocultamos la portada y mostramos la carta
-                hero.style.display = 'none';
+                // Mostramos la carta debajo, SIN ocultar nada de arriba
                 card.style.display = 'block';
                 
                 // Llenamos los datos
@@ -218,6 +241,9 @@
                 if(user.rachaDias >= 15) msg = "BONO: ¡SUPER FUERZA X2 ACTIVADA! 🧨";
                 else if(user.rachaDias >= 5) msg = "BONO: IMPULSO X1.5 ⚡";
                 document.getElementById('res-beneficio').innerText = msg;
+                
+                // Scroll suave automático hacia la carta de resultado
+                card.scrollIntoView({ behavior: 'smooth', block: 'center' });
                 
             } else {
                 alert("JUGADOR NO ENCONTRADO EN LA BASE DE DATOS FPC");
