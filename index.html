@@ -3,128 +3,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CRIMIFUTBOL | GX DASHBOARD</title>
+    <title>CRIMIFUTBOL | INICIO - HUB FPC</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
     <style>
-        :root { --gx-red: #ff0032; --gx-dark: #0b0b0b; --gx-card: #161616; --gx-glow: rgba(255, 0, 50, 0.5); }
+        /* --- MOTOR DE COLORES DINÁMICOS --- */
+        :root {
+            /* Definimos los dos colores neón */
+            --neon-red: #ff0032;
+            --neon-blue: #00f2ff;
+            --gx-dark: #0b0b0b;
+
+            /* ESTA VARIABLE ES LA QUE CAMBIA CON JAVASCRIPT */
+            --gx-accent: var(--neon-blue); /* Empieza en azul por defecto */
+            
+            /* Glow dinámico basado en el acento */
+            --gx-glow: rgba(0, 242, 255, 0.5); /* Empieza en azul por defecto */
+        }
         
         body { 
             background-color: var(--gx-dark); color: white; 
             font-family: 'Rajdhani', sans-serif; margin: 0; overflow-x: hidden;
             background-image: radial-gradient(circle at 50% 50%, #1a1a1a 0%, #0b0b0b 100%);
+            transition: background-color 0.5s ease; /* Transición suave de color de fondo */
         }
 
-        /* Estilo Opera GX Header */
-        header {
-            border-bottom: 2px solid var(--gx-red); padding: 20px;
-            text-align: center; box-shadow: 0 0 15px var(--gx-glow);
+        /* Estilo Barra de Navegación */
+        nav {
+            background-color: #000; border-bottom: 2px solid var(--gx-accent);
+            padding: 15px 50px; display: flex; justify-content: space-between; align-items: center;
+            box-shadow: 0 0 15px var(--gx-glow);
+            transition: border-color 0.5s ease, box-shadow 0.5s ease; /* Transiciones suaves */
         }
 
-        .logo { font-family: 'Orbitron', sans-serif; font-size: 2.5rem; letter-spacing: 5px; }
-        .red { color: var(--gx-red); text-shadow: 0 0 10px var(--gx-red); }
+        .logo-nav { font-family: 'Orbitron', sans-serif; font-size: 1.5rem; letter-spacing: 3px; }
+        .accent { color: var(--gx-accent); text-shadow: 0 0 10px var(--gx-accent); transition: color 0.5s ease, text-shadow 0.5s ease; }
 
-        /* Buscador Impacto */
-        .search-container { max-width: 600px; margin: 50px auto; padding: 20px; }
-        
-        .gx-input-group { position: relative; display: flex; gap: 10px; }
-        
-        input {
-            flex: 1; background: var(--gx-card); border: 2px solid #333;
-            padding: 15px; color: white; font-size: 1.1rem; border-radius: 4px;
-            transition: 0.3s;
+        .nav-links a {
+            color: white; text-decoration: none; font-weight: bold;
+            margin-left: 30px; text-transform: uppercase; transition: 0.3s;
         }
 
-        input:focus { border-color: var(--gx-red); outline: none; box-shadow: 0 0 15px var(--gx-glow); }
+        .nav-links a:hover, .nav-links a.active { color: var(--gx-accent); text-shadow: 0 0 5px var(--gx-accent); }
 
-        button {
-            background: var(--gx-red); color: white; border: none; font-weight: bold;
-            padding: 0 30px; cursor: pointer; text-transform: uppercase;
-            clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%); transition: 0.3s;
+        /* Contenido Central */
+        .hub-container {
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            height: 80vh; text-align: center;
         }
 
-        button:hover { transform: scale(1.05); filter: brightness(1.2); }
-
-        /* Carta de Jugador GX */
-        #player-card {
-            max-width: 500px; margin: 20px auto; background: var(--gx-card);
-            border: 1px solid #333; border-left: 5px solid var(--gx-red);
-            padding: 30px; display: none; animation: slideIn 0.4s ease-out;
+        /* Foto de Perfil con Borde Parpadeante (Live) */
+        .profile-pic {
+            width: 200px; height: 200px; border-radius: 50%;
+            object-fit: cover; border: 5px solid #333; /* Borde apagado por defecto */
+            transition: border-color 0.5s ease, box-shadow 0.5s ease; /* Transiciones suaves */
         }
 
-        @keyframes slideIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        /* Clase para activar el parpadeo "LIVE" */
+        .live-active {
+            border-color: var(--gx-accent) !important;
+            box-shadow: 0 0 20px var(--gx-accent);
+            animation: pulse-border 1.5s infinite;
+        }
 
-        .racha-fire { color: #ff8c00; font-size: 2rem; font-weight: bold; text-shadow: 0 0 15px #ff4500; }
-        
-        .xp-bar { background: #222; height: 12px; margin-top: 20px; border-radius: 6px; overflow: hidden; }
-        .xp-fill { background: var(--gx-red); height: 100%; box-shadow: 0 0 10px var(--gx-red); transition: width 1s ease-in-out; }
+        @keyframes pulse-border {
+            0% { box-shadow: 0 0 0 0 rgba(var(--gx-accent-rgb), 0.7); } /* Usaremos JS para RGB */
+            70% { box-shadow: 0 0 0 20px rgba(var(--gx-accent-rgb), 0); }
+            100% { box-shadow: 0 0 0 0 rgba(var(--gx-accent-rgb), 0); }
+        }
+
+        .username { font-family: 'Orbitron', sans-serif; font-size: 3rem; margin: 20px 0; letter-spacing: 5px; }
+
+        /* Botón TikTok GX */
+        .btn-live {
+            background: var(--gx-accent); color: white; text-decoration: none;
+            font-weight: bold; font-size: 1.2rem; padding: 15px 40px; cursor: pointer;
+            text-transform: uppercase; clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
+            transition: 0.3s, background-color 0.5s ease, box-shadow 0.5s ease; /* Transiciones suaves */
+            box-shadow: 0 0 10px var(--gx-glow);
+        }
+
+        .btn-live:hover { transform: scale(1.05); filter: brightness(1.2); box-shadow: 0 0 20px var(--gx-accent); }
+
     </style>
 </head>
 <body>
 
-<header>
-    <div class="logo">CRIMIFUTBOL <span class="red">GX</span></div>
-</header>
-
-<div class="search-container">
-    <div class="gx-input-group">
-        <input type="text" id="username" placeholder="INTRODUCE TU USUARIO...">
-        <button onclick="checkStats()">CONSULTAR</button>
+<nav>
+    <div class="logo-nav">CRIMIFUTBOL <span class="accent">Hub</span></div>
+    <div class="nav-links">
+        <a href="index.html" class="active">Inicio</a>
+        <a href="juegos.html">Juegos FPC</a>
     </div>
+</nav>
 
-    <div id="player-card">
-        <h2 id="res-name" style="margin-top:0;">@USUARIO</h2>
-        <div style="display: flex; justify-content: space-between; align-items: center;">
-            <div>
-                <p style="margin:0; color: #888;">RACHA ACTUAL</p>
-                <div id="res-racha" class="racha-fire">0 DÍAS 🔥</div>
-            </div>
-            <div style="text-align: right;">
-                <p style="margin:0; color: #888;">NIVEL</p>
-                <div id="res-nivel" style="font-size: 1.5rem; font-weight: bold;">1</div>
-            </div>
-        </div>
-        <div class="xp-bar"><div id="res-bar" class="xp-fill" style="width: 0%"></div></div>
-        <p id="res-beneficio" style="color: var(--gx-red); font-weight: bold; margin-top: 15px;"></p>
-    </div>
+<div class="hub-container">
+    <img src="perfil.jpg" alt="Foto de Perfil Crimifutbol" class="profile-pic" id="profile-pic">
+    
+    <div class="username">@crimifutbol<span class="accent">_</span></div>
+
+    <a href="LINK_A_TU_TIKTOK" target="_blank" class="btn-live" id="btn-live">
+        Ir al TikTok
+    </a>
 </div>
 
 <script>
-    // URL de tu JSON en GitHub (después lo actualizaremos)
-    const JSON_URL = "user_exp.json"; 
+    // --- LÓGICA DE CONTROL DE "EN VIVO" ---
+    const estaEnVivo = true; // Cambia a 'false' para probar apagado
 
-    async function checkStats() {
-        const userSearch = document.getElementById('username').value.trim().toLowerCase();
-        const card = document.getElementById('player-card');
+    function actualizarEstadoLive() {
+        const pic = document.getElementById('profile-pic');
+        const btn = document.getElementById('btn-live');
 
-        try {
-            const response = await fetch(JSON_URL);
-            const data = await response.json();
-            const user = data.users.find(u => u.username.toLowerCase() === userSearch);
-
-            if (user) {
-                card.style.display = 'block';
-                document.getElementById('res-name').innerText = "@" + user.username.toUpperCase();
-                document.getElementById('res-racha').innerText = (user.rachaDias || 0) + " DÍAS 🔥";
-                document.getElementById('res-nivel').innerText = user.level || 1;
-                
-                // Animación de la barra de nivel (basada en el nivel actual)
-                const expProgress = (user.exp % 1000) / 10; 
-                document.getElementById('res-bar').style.width = expProgress + "%";
-
-                // Beneficio dinámico
-                let msg = "BONO ACTUAL: IMPULSO ESTÁNDAR";
-                if(user.rachaDias >= 15) msg = "BONO: ¡SUPER FUERZA X2 ACTIVADA! 🧨";
-                else if(user.rachaDias >= 5) msg = "BONO: IMPULSO X1.5 ⚡";
-                document.getElementById('res-beneficio').innerText = msg;
-                
-            } else {
-                alert("JUGADOR NO ENCONTRADO EN LA BASE DE DATOS");
-            }
-        } catch (e) {
-            console.error(e);
-            alert("ERROR AL CONECTAR CON EL SERVIDOR GX");
+        if (estaEnVivo) {
+            pic.classList.add('live-active');
+            btn.innerText = "¡ESTAMOS EN VIVO! 🔥 Ver ahora";
+        } else {
+            pic.classList.remove('live-active');
+            btn.innerText = "Ir al TikTok";
         }
     }
+
+    // --- LÓGICA DEL CAMBIO DE COLOR (Cada 5 minutos) ---
+    function actualizarColorGamer() {
+        const ahora = new Date();
+        const minutos = ahora.getMinutes();
+        const root = document.documentElement;
+
+        // Calculamos en qué ciclo de 5 minutos estamos (par o impar)
+        // minutos / 5 nos da un número (0, 1, 2, 3...)
+        // Usamos Math.floor() para redondear hacia abajo (0, 1, 2, 3...)
+        // El operador % 2 nos dice si es par (azul) o impar (rojo)
+        const cicloRojo = Math.floor(minutos / 5) % 2 === 1;
+
+        if (cicloRojo) {
+            // Cambiamos las variables CSS a Rojo
+            root.style.setProperty('--gx-accent', 'var(--neon-red)');
+            root.style.setProperty('--gx-glow', 'rgba(255, 0, 50, 0.5)');
+            root.style.setProperty('--gx-accent-rgb', '255, 0, 50'); // Para la animación pulse
+            console.log("🎨 Modo GX: Rojo Neón Activado");
+        } else {
+            // Cambiamos las variables CSS a Azul (por defecto)
+            root.style.setProperty('--gx-accent', 'var(--neon-blue)');
+            root.style.setProperty('--gx-glow', 'rgba(0, 242, 255, 0.5)');
+            root.style.setProperty('--gx-accent-rgb', '0, 242, 255'); // Para la animación pulse
+            console.log("🎨 Modo GX: Azul Neón Activado");
+        }
+    }
+
+    // Ejecutamos las funciones al cargar la página
+    actualizarEstadoLive();
+    actualizarColorGamer(); // Ejecutamos una vez al inicio
+
+    // Configuramos para que revise el color cada minuto
+    // Así detecta el cambio de ciclo sin esperar 5 minutos enteros
+    setInterval(actualizarColorGamer, 60000); 
+
 </script>
 
 </body>
