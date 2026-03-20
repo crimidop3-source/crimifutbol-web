@@ -6,8 +6,8 @@
     <title>CRIMIFUTBOL | OFICIAL</title>
 
     <link rel="icon" type="image/png" href="logo_azul.png" id="favicon">
-
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+
     <style>
         :root {
             --neon-red: #ff0032;
@@ -31,7 +31,6 @@
             background-image: radial-gradient(circle at 50% 50%, #1a1a1a 0%, #0b0b0b 100%);
         }
 
-        /* BANNER SUPERIOR CON LOGO DINÁMICO */
         header {
             background: rgba(0,0,0,0.95);
             border-bottom: 2px solid var(--gx-accent);
@@ -45,13 +44,11 @@
             justify-content: center;
             align-items: center;
             gap: 15px;
-            transition: border-color 0.5s ease, box-shadow 0.5s ease;
         }
 
         .header-logo {
-            height: 40px; /* Tamaño del logo en el banner */
-            width: auto;
-            transition: 0.5s; /* Transición suave cuando cambia la imagen */
+            height: 40px;
+            transition: 0.5s;
         }
 
         .logo-nav {
@@ -62,12 +59,6 @@
             text-decoration: none;
         }
 
-        .accent {
-            color: var(--gx-accent);
-            text-shadow: 0 0 10px var(--gx-accent);
-            transition: 0.5s;
-        }
-
         .main-content {
             display: flex;
             flex-direction: column;
@@ -76,66 +67,137 @@
             padding: 20px;
         }
 
-        /* PERFIL */
-        .hero-section {
-            width: 100%;
-            max-width: 800px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 40px 0;
-        }
-
-        .profile-pic {
-            width: 160px;
-            height: 160px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid #333;
-            transition: 0.5s;
-        }
-
-        .live-active {
-            border-color: var(--gx-accent) !important;
-            box-shadow: 0 0 20px var(--gx-accent);
-            animation: pulse-border 1.5s infinite;
-        }
-
-        @keyframes pulse-border {
-            0% {
-                box-shadow: 0 0 0 0 var(--gx-glow);
-            }
-
-            70% {
-                box-shadow: 0 0 0 15px rgba(0,0,0,0);
-            }
-
-            100% {
-                box-shadow: 0 0 0 0 rgba(0,0,0,0);
-            }
-        }
-
-        .username {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 2.2rem;
-            margin: 15px 0;
-            letter-spacing: 4px;
-        }
-
+        /* --- 4. ANIMACIÓN BOTÓN PRINCIPAL (Pulse) --- */
         .btn-live {
             background: var(--gx-accent);
             color: white;
             text-decoration: none;
             font-weight: bold;
-            padding: 12px 35px;
+            padding: 15px 45px;
             text-transform: uppercase;
             clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
             transition: 0.3s;
-            box-shadow: 0 0 10px var(--gx-glow);
-            margin-bottom: 30px;
+            box-shadow: 0 0 20px var(--gx-glow);
+            margin-bottom: 40px;
+            animation: pulse-button 2s infinite;
         }
 
-        /* BUSCADOR */
+        @keyframes pulse-button {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 var(--gx-glow);
+            }
+
+            70% {
+                transform: scale(1.05);
+                box-shadow: 0 0 0 20px rgba(0,0,0,0);
+            }
+
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(0,0,0,0);
+            }
+        }
+
+        /* --- 1. SISTEMA DE PESTAÑAS (FPC vs MUNDIAL) --- */
+        .tabs-container {
+            width: 100%;
+            max-width: 600px;
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .tab-btn {
+            flex: 1;
+            padding: 15px;
+            border: 2px solid #333;
+            background: #111;
+            color: #888;
+            font-family: 'Orbitron';
+            cursor: pointer;
+            transition: 0.3s;
+            font-size: 0.9rem;
+        }
+
+            .tab-btn.active {
+                border-color: var(--gx-accent);
+                color: white;
+                box-shadow: 0 0 10px var(--gx-glow);
+            }
+
+        /* --- 3. REGLAS EN TARJETAS (Cards) --- */
+        .rules-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            width: 100%;
+            max-width: 1000px;
+            margin: 40px 0;
+        }
+
+        .rule-card {
+            background: var(--gx-card);
+            border-top: 3px solid var(--gx-accent);
+            padding: 20px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+            .rule-card:hover {
+                transform: translateY(-10px);
+                background: #1a1a1a;
+            }
+
+        .rule-icon {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .rule-step {
+            color: var(--gx-accent);
+            font-family: 'Orbitron';
+            font-size: 0.8rem;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        /* --- 2. SALÓN DE LA FAMA (Videos) --- */
+        .hall-of-fame {
+            width: 100%;
+            max-width: 1000px;
+            margin-top: 50px;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .video-item {
+            background: #000;
+            border: 1px solid #333;
+            position: relative;
+            aspect-ratio: 9/16;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .video-label {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background: linear-gradient(transparent, var(--gx-accent));
+            padding: 10px;
+            font-weight: bold;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        /* BUSCADOR Y RESULTADOS */
         .gx-search-container {
             width: 100%;
             max-width: 600px;
@@ -154,123 +216,30 @@
             color: white;
             padding: 15px;
             font-size: 1.1rem;
-            border-radius: 4px;
         }
-
-            input#gx-input:focus {
-                border-color: var(--gx-accent);
-                outline: none;
-                box-shadow: 0 0 15px var(--gx-glow);
-            }
 
         button#gx-btn {
             background: var(--gx-accent);
             color: white;
             border: none;
-            font-weight: bold;
             padding: 0 25px;
             cursor: pointer;
-            text-transform: uppercase;
-            clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
+            font-family: 'Orbitron';
         }
 
-        /* TARJETA RESULTADO */
         #player-card {
             background: var(--gx-card);
             border-left: 5px solid var(--gx-accent);
             padding: 25px;
-            border-radius: 8px;
             width: 100%;
             max-width: 600px;
             display: none;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.6);
             margin-bottom: 40px;
         }
 
-        .racha-fire {
-            color: #ff8c00;
-            font-size: 2.2rem;
-            font-weight: bold;
-            text-shadow: 0 0 15px #ff4500;
-        }
-
-        .xp-bar {
-            background: #222;
-            height: 12px;
-            margin-top: 15px;
-            border-radius: 6px;
-            overflow: hidden;
-        }
-
-        .xp-fill {
-            background: var(--gx-accent);
-            height: 100%;
-            box-shadow: 0 0 10px var(--gx-accent);
-            transition: width 1s ease-in-out;
-        }
-
-        /* SECCIONES EXPLICATIVAS */
-        .section-box {
-            width: 100%;
-            max-width: 900px;
-            background: rgba(255,255,255,0.02);
-            padding: 30px;
-            border-left: 4px solid var(--gx-accent);
-            border-radius: 0 15px 15px 0;
-            margin-bottom: 30px;
-            transition: 0.3s;
-        }
-
-        .section-title {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 1.6rem;
-            color: var(--gx-accent);
-            margin-bottom: 15px;
-            border-bottom: 1px solid #333;
-            padding-bottom: 10px;
-        }
-
-        .section-text {
-            font-size: 1.1rem;
-            line-height: 1.6;
-            color: #ccc;
-        }
-
-        .highlight {
-            color: white;
-            font-weight: bold;
-        }
-
-        /* TABLA TOP RACHA */
-        .top-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-
-            .top-table th {
-                text-align: left;
-                color: var(--gx-accent);
-                padding: 10px;
-                border-bottom: 2px solid #333;
-            }
-
-            .top-table td {
-                padding: 12px 10px;
-                border-bottom: 1px solid #222;
-            }
-
         @media (max-width: 600px) {
-            .username {
-                font-size: 1.6rem;
-            }
-
-            .section-box {
-                padding: 20px;
-            }
-
-            header {
-                gap: 8px;
+            .logo-nav {
+                font-size: 1rem;
             }
 
             .header-logo {
@@ -282,144 +251,151 @@
 <body>
 
     <header>
-        <img src="logo_azul.png" alt="Logo Crimifutbol" class="header-logo" id="header-logo">
+        <img src="logo_azul.png" alt="Logo" class="header-logo" id="header-logo">
         <a href="index.html" class="logo-nav">CRIMIFUTBOL</a>
     </header>
 
     <div class="main-content">
 
-        <section class="hero-section">
-            <a href="https://www.tiktok.com/@crimifutbol" target="_blank" style="text-decoration:none;">
-                <img src="perfil.jpg" alt="Crimifutbol" class="profile-pic live-active">
-            </a>
-            <div class="username">@crimifutbol</div>
+        <section style="text-align:center; padding: 40px 0;">
+            <img src="perfil.jpg" alt="Crimifutbol" style="width:150px; border-radius:50%; border:3px solid var(--gx-accent);" id="profile-pic">
+            <h1 style="font-family:'Orbitron';">@crimifutbol</h1>
             <a href="https://www.tiktok.com/@crimifutbol" target="_blank" class="btn-live">VER AHORA</a>
         </section>
 
+        <div class="rules-grid">
+            <div class="rule-card">
+                <span class="rule-step">PASO 1</span>
+                <span class="rule-icon">💬</span>
+                <b style="color:var(--gx-accent)">ÚNETE</b>
+                <p style="font-size:0.9rem; color:#aaa;">Comenta tu Equipo o País para entrar en la carrera.</p>
+            </div>
+            <div class="rule-card">
+                <span class="rule-step">PASO 2</span>
+                <span class="rule-icon">🚀</span>
+                <b style="color:var(--gx-accent)">IMPULSA</b>
+                <p style="font-size:0.9rem; color:#aaa;">Usa Likes, Comentarios y Regalos para dar potencia.</p>
+            </div>
+            <div class="rule-card">
+                <span class="rule-step">PASO 3</span>
+                <span class="rule-icon">👑</span>
+                <b style="color:var(--gx-accent)">CAPITÁN</b>
+                <p style="font-size:0.9rem; color:#aaa;">El Top 3 de nivel activa X2 durante 3 minutos.</p>
+            </div>
+            <div class="rule-card">
+                <span class="rule-step">PASO 4</span>
+                <span class="rule-icon">🔥</span>
+                <b style="color:var(--gx-accent)">RACHA</b>
+                <p style="font-size:0.9rem; color:#aaa;">¡No faltes! Suma días y desbloquea beneficios.</p>
+            </div>
+        </div>
+
+        <div class="tabs-container">
+            <button class="tab-btn active" onclick="switchTorneo('fpc', this)">TORNEO FPC</button>
+            <button class="tab-btn" onclick="switchTorneo('mundial', this)">MUNDIAL</button>
+        </div>
+
         <div class="gx-search-container">
             <div class="search-box">
-                <input type="text" id="gx-input" placeholder="Escribe tu usuario de tiktok...">
-                <button id="gx-btn" onclick="checkPlayerRacha()">CONSULTAR</button>
+                <input type="text" id="gx-input" placeholder="Busca tu usuario...">
+                <button id="gx-btn" onclick="checkPlayerRacha()">BUSCAR</button>
             </div>
         </div>
 
         <div id="player-card">
             <h2 id="res-name" style="margin-top:0;">@USUARIO</h2>
-            <div style="display: flex; justify-content: space-between; align-items: center;">
-                <div><p style="margin:0; color: #888;">RACHA DIARIA</p><div id="res-racha" class="racha-fire">0 DÍAS 🔥</div></div>
-                <div style="text-align: right;"><p style="margin:0; color: #888;">NIVEL</p><div id="res-nivel" style="font-size: 1.6rem; font-weight: bold;">1</div></div>
+            <div style="display:flex; justify-content:space-between;">
+                <div><p style="margin:0; color:#888;">RACHA</p><div id="res-racha" style="font-size:1.8rem; font-weight:bold; color:#ff8c00;">0 🔥</div></div>
+                <div style="text-align:right;"><p style="margin:0; color:#888;">NIVEL</p><div id="res-nivel" style="font-size:1.8rem; font-weight:bold;">1</div></div>
             </div>
-            <div class="xp-bar"><div id="res-bar" class="xp-fill" style="width: 0%"></div></div>
-            <p id="res-beneficio" style="color: var(--gx-accent); font-weight: bold; margin-top: 15px;"></p>
         </div>
 
-        <div class="section-box">
-            <div class="section-title">¿CÓMO JUGAR?</div>
-            <p class="section-text">
-                Lo primero al entrar es <span class="highlight">comentar el nombre de tu equipo o país</span> para unirte a la carrera.
-                Una vez dentro, el objetivo es impulsarlo hacia la meta usando <span class="highlight">likes, comentarios y regalos</span> (todos los regalos suman potencia).
-                También puedes participar en las <span class="highlight">trivias en vivo</span>; si eres el primero en adivinar, ¡darás un empuje masivo a tu equipo!
-            </p>
-        </div>
-
-        <div class="section-box">
-            <div class="section-title">NIVELES Y CAPITANES</div>
-            <p class="section-text">
-                Cada interacción suma <span class="highlight">Experiencia (EXP)</span> a tu perfil. Al acumular EXP, subirás de nivel automáticamente.
-                <br><br>
-                Los <span class="highlight">3 jugadores con más nivel</span> de cada equipo o país serán nombrados <span class="highlight">CAPITANES</span>.
-                El Capitán tiene un poder único: puede comentar la palabra <span class="highlight">"capitan"</span> (una vez por live) para activar un <span class="highlight">X2 durante 3 minutos</span>.
-                Durante este tiempo, <span class="highlight">CUALQUIER impulso</span> de cualquier persona para ese equipo contará por el doble. ¡Es un beneficio para todo el grupo!
-            </p>
-        </div>
-
-        <div class="section-box">
-            <div class="section-title">SISTEMA DE RACHA</div>
-            <p class="section-text">
-                La constancia premia. Por cada día que llegues al juego y te actives comentando tu equipo, tu <span class="highlight">Racha Diaria</span> subirá 1 día.
-                Mantener tu racha activa te dará beneficios exclusivos como multiplicadores de fuerza permanentes.
-            </p>
-
-            <h3 style="margin-top: 30px; font-family: 'Orbitron'; color: var(--gx-accent);">🏆 TOP 10 RACHAS</h3>
-            <table class="top-table" id="top-racha-table">
-                <thead>
-                    <tr>
-                        <th>Puesto</th>
-                        <th>Usuario</th>
-                        <th>Racha</th>
-                    </tr>
-                </thead>
-                <tbody id="top-racha-body">
-                </tbody>
+        <div style="width:100%; max-width:600px; background:rgba(255,255,255,0.03); padding:20px; border-radius:10px;">
+            <h3 id="ranking-title" style="font-family:'Orbitron'; margin:0; color:var(--gx-accent);">TOP 10 RACHAS FPC</h3>
+            <table style="width:100%; margin-top:15px; border-collapse:collapse;" id="ranking-table">
+                <tbody id="ranking-body"></tbody>
             </table>
         </div>
+
+        <div class="hall-of-fame">
+            <h2 style="font-family:'Orbitron'; text-align:center; color:var(--gx-accent);">👑 SALÓN DE LA FAMA</h2>
+            <div class="video-grid">
+                <div class="video-item">
+                    <video width="100%" height="100%" autoplay loop muted playsinline>
+                        <source src="video1.mp4" type="video/mp4">
+                    </video>
+                    <div class="video-label">EL REY DEL UNIVERSO</div>
+                </div>
+                <div class="video-item">
+                    <video width="100%" height="100%" autoplay loop muted playsinline>
+                        <source src="video2.mp4" type="video/mp4">
+                    </video>
+                    <div class="video-label">LEÓN LEGENDARIO</div>
+                </div>
+            </div>
+        </div>
+
     </div>
 
     <script>
-        const JSON_URL = "user_exp.json";
+        let currentJSON = "user_exp.json"; // FPC por defecto
+
+        function switchTorneo(torneo, btn) {
+            // Cambiar botones
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            // Cambiar fuente de datos
+            if (torneo === 'fpc') {
+                currentJSON = "user_exp.json";
+                document.getElementById('ranking-title').innerText = "TOP 10 RACHAS FPC";
+            } else {
+                currentJSON = "mundial_exp.json"; // Necesitas este archivo en GitHub
+                document.getElementById('ranking-title').innerText = "TOP 10 RACHAS MUNDIAL";
+            }
+            cargarRanking();
+        }
 
         async function checkPlayerRacha() {
             const userSearch = document.getElementById('gx-input').value.trim().toLowerCase();
-            const card = document.getElementById('player-card');
             try {
-                const response = await fetch(JSON_URL);
+                const response = await fetch(currentJSON);
                 const data = await response.json();
                 const user = data.users.find(u => u.username.toLowerCase() === userSearch);
                 if (user) {
-                    card.style.display = 'block';
+                    document.getElementById('player-card').style.display = 'block';
                     document.getElementById('res-name').innerText = "@" + user.username.toUpperCase();
-                    document.getElementById('res-racha').innerText = (user.rachaDias || 0) + " DÍAS 🔥";
+                    document.getElementById('res-racha').innerText = (user.rachaDias || 0) + " DÍAS";
                     document.getElementById('res-nivel').innerText = user.level || 1;
-                    document.getElementById('res-bar').style.width = ((user.exp % 1000) / 10) + "%";
-                    document.getElementById('res-beneficio').innerText = user.rachaDias >= 15 ? "BONO: SUPER FUERZA X2 🧨" : (user.rachaDias >= 5 ? "BONO: IMPULSO X1.5 ⚡" : "BONO: ESTÁNDAR");
-                    card.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                } else { alert("USUARIO NO ENCONTRADO"); }
+                } else { alert("Usuario no encontrado en este torneo"); }
             } catch (e) { console.error(e); }
         }
 
-        async function cargarTopRacha() {
+        async function cargarRanking() {
             try {
-                const response = await fetch(JSON_URL);
+                const response = await fetch(currentJSON);
                 const data = await response.json();
                 const top10 = data.users.sort((a, b) => (b.rachaDias || 0) - (a.rachaDias || 0)).slice(0, 10);
-                const tbody = document.getElementById('top-racha-body');
+                const tbody = document.getElementById('ranking-body');
                 tbody.innerHTML = "";
-                top10.forEach((user, index) => {
-                    const row = `<tr>
-                        <td>#${index + 1}</td>
-                        <td>${user.username}</td>
-                        <td class="accent">${user.rachaDias || 0} días 🔥</td>
-                    </tr>`;
-                    tbody.innerHTML += row;
+                top10.forEach((user, i) => {
+                    tbody.innerHTML += `<tr><td style="padding:10px;">#${i + 1}</td><td>${user.username}</td><td style="text-align:right; color:var(--gx-accent);">${user.rachaDias || 0} 🔥</td></tr>`;
                 });
             } catch (e) { console.error(e); }
         }
 
-        // --- LÓGICA DEL CAMBIO DE COLOR Y LOGO (Ciclo RGB 5 min) ---
-        function actualizarColorAndLogo() {
-            const ahora = new Date();
+        function colorLoop() {
+            const m = new Date().getMinutes();
             const root = document.documentElement;
-            const logoImg = document.getElementById('header-logo');
-            const cicloRojo = Math.floor(ahora.getMinutes() / 5) % 2 === 1;
-
-            if (cicloRojo) {
-                // MODO ROJO
-                root.style.setProperty('--gx-accent', 'var(--neon-red)');
-                root.style.setProperty('--gx-glow', 'rgba(255, 0, 50, 0.5)');
-                logoImg.src = "logo_rojo.png"; // Cambia la imagen del logo
-                console.log("🎨 Modo GX: Rojo Neón y Logo Rojo Activado");
-            } else {
-                // MODO AZUL
-                root.style.setProperty('--gx-accent', 'var(--neon-blue)');
-                root.style.setProperty('--gx-glow', 'rgba(0, 242, 255, 0.5)');
-                logoImg.src = "logo_azul.png"; // Cambia la imagen del logo
-                console.log("🎨 Modo GX: Azul Neón y Logo Azul Activado");
-            }
+            const isRed = Math.floor(m / 5) % 2 === 1;
+            root.style.setProperty('--gx-accent', isRed ? 'var(--neon-red)' : 'var(--neon-blue)');
+            root.style.setProperty('--gx-glow', isRed ? 'rgba(255, 0, 50, 0.5)' : 'rgba(0, 242, 255, 0.5)');
+            document.getElementById('header-logo').src = isRed ? "logo_rojo.png" : "logo_azul.png";
         }
 
-        actualizarColorAndLogo();
-        setInterval(actualizarColorAndLogo, 30000); // Revisa cada 30 segundos
-        cargarTopRacha();
+        setInterval(colorLoop, 30000);
+        colorLoop();
+        cargarRanking();
     </script>
 </body>
 </html>
