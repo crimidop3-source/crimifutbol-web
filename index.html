@@ -656,20 +656,33 @@
     <script>
         let currentJSON = "user_exp.json";
         /* LÓGICA DE CAPITANES: Calcula el Top 3 por equipo/país */
+        /* LÓGICA DE CAPITANES: Analiza TODO el JSON para sacar el Top 3 por equipo */
         function getCaptains(users) {
             const captains = new Set();
             const byTeam = {};
-            // Agrupamos a todos los usuarios por su equipo ("team")
+
+            // 1. Recorremos el 100% de los usuarios del JSON sin importar cuántos sean
             users.forEach(u => {
                 const teamName = u.team || "SIN EQUIPO";
                 if (!byTeam[teamName]) byTeam[teamName] = [];
                 byTeam[teamName].push(u);
             });
-            // De cada equipo, sacamos los 3 con más nivel
+
+            // 2. Ahora, de cada equipo encontrado en todo el JSON...
             for (const team in byTeam) {
+                // ...ordenamos a TODOS los jugadores de ese equipo de mayor a menor nivel
                 const top3 = byTeam[team]
-                    .sort((a, b) => (b.level || 0) - (a.level || 0) || (b.exp || 0) - (a.exp || 0))
-                    .slice(0, 3);
+                    .sort((a, b) => {
+                        // Primero comparamos por nivel
+                        if ((b.level || 0) !== (a.level || 0)) {
+                            return (b.level || 0) - (a.level || 0);
+                        }
+                        // Si empatan en nivel, el que tenga más EXP es el capitán
+                        return (b.exp || 0) - (a.exp || 0);
+                    })
+                    .slice(0, 3); // Tomamos a los 3 mejores
+
+                // 3. Los guardamos oficialmente como capitanes
                 top3.forEach(u => captains.add(u.username.toLowerCase()));
             }
             return captains;
