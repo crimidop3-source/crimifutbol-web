@@ -140,7 +140,7 @@
             }
         }
 
-        /* REGLAS */
+        /* REGLAS (AHORA CLICKEABLES) */
         .rules-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -157,11 +157,14 @@
             text-align: center;
             border-radius: 5px;
             transition: 0.3s;
+            cursor: pointer;
         }
 
             .rule-card:hover {
                 transform: translateY(-5px);
                 background: #1a1a1a;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+                border-color: white;
             }
 
         .rule-title {
@@ -170,11 +173,15 @@
             font-size: 1rem;
             display: block;
             margin-bottom: 5px;
+            pointer-events: none;
         }
 
-        /* ========================================================
-           CONTENEDOR DE CARRUSELES (Centrado Perfecto en PC)
-           ======================================================== */
+        .rule-card p {
+            pointer-events: none;
+        }
+        /* Evita bugs al hacer clic */
+
+        /* CARRUSEL DE 10 BENEFICIOS (AHORA CLICKEABLES) */
         .scroller-wrapper {
             width: 100%;
             max-width: 1100px;
@@ -183,7 +190,7 @@
             scrollbar-width: thin;
             scrollbar-color: var(--gx-accent) #111;
         }
-        /* El truco de max-content centra todo si no ocupa el 100%, y permite scroll si lo ocupa */
+
         .scroller-track {
             display: flex;
             gap: 15px;
@@ -192,7 +199,6 @@
             padding: 0 10px;
         }
 
-        /* CARRUSEL DE 10 BENEFICIOS */
         .benefits-title {
             font-family: 'Orbitron';
             color: #ff8c00;
@@ -211,6 +217,7 @@
             position: relative;
             transition: 0.3s;
             text-align: left;
+            cursor: pointer;
         }
 
             .benefit-card:hover {
@@ -225,12 +232,14 @@
             color: #ff8c00;
             margin-bottom: 10px;
             font-weight: bold;
+            pointer-events: none;
         }
 
         .b-desc {
             font-size: 0.9rem;
             color: #ccc;
             line-height: 1.4;
+            pointer-events: none;
         }
 
         .b-icon {
@@ -239,6 +248,7 @@
             top: 10px;
             right: 10px;
             opacity: 0.15;
+            pointer-events: none;
         }
 
         /* CARRUSEL DE VIDEOS */
@@ -269,6 +279,7 @@
             text-align: center;
             border-top: 1px solid var(--gx-accent);
             z-index: 2;
+            font-weight: bold;
         }
 
         /* PESTAÑAS Y BUSCADOR */
@@ -404,6 +415,96 @@
             text-shadow: 0 0 8px #ff4500;
         }
 
+        /* =========================================
+           VENTANA EMERGENTE (MODAL)
+           ========================================= */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.85);
+            backdrop-filter: blur(5px);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .modal-box {
+            background: var(--gx-card);
+            border-left: 5px solid var(--gx-accent);
+            padding: 30px;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 500px;
+            position: relative;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.9);
+            animation: slideUp 0.3s ease;
+            text-align: center;
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(30px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 2rem;
+            color: #888;
+            cursor: pointer;
+            transition: 0.3s;
+            line-height: 1;
+        }
+
+            .close-btn:hover {
+                color: var(--neon-red);
+                transform: scale(1.2);
+            }
+
+        .modal-icon-large {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .modal-title {
+            font-family: 'Orbitron';
+            color: var(--gx-accent);
+            font-size: 1.5rem;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        .modal-text {
+            color: #ddd;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            text-align: left;
+        }
+
         @media (max-width: 600px) {
             .logo-nav {
                 font-size: 1rem;
@@ -443,21 +544,21 @@
         </section>
 
         <div class="rules-grid">
-            <div class="rule-card">
+            <div class="rule-card" onclick="openModal('PASO 1: ÚNETE', 'Para ingresar oficialmente a la pista, solo debes comentar el nombre de tu Equipo (Torneo FPC) o tu País (Mundial). <br><br>Al hacerlo, el sistema te leerá automáticamente y tu vehículo aparecerá en pantalla listo para correr. ¡Asegúrate de escribirlo bien!', '💬')">
                 <span class="rule-title">PASO 1 💬</span>
-                <p style="font-size:0.85rem; color:#aaa;">Comenta tu Equipo o País para entrar en la carrera.</p>
+                <p style="font-size:0.85rem; color:#aaa;">Comenta tu Equipo o País para entrar en la carrera. <b style="color:var(--gx-accent);">(Clic para ver más)</b></p>
             </div>
-            <div class="rule-card">
+            <div class="rule-card" onclick="openModal('PASO 2: IMPULSA', 'Una vez en la pista, tu objetivo es dar velocidad. <br><br>Los <b>Likes</b> dan potencia constante. Los <b>Comentarios</b> aceleran. Los <b>Regalos</b> (cualquiera) dan empujes masivos.<br><br>🔥 <b>Dato Clave:</b> Por cada interacción acumulas Experiencia (EXP) en tu perfil para subir de nivel.', '🚀')">
                 <span class="rule-title">PASO 2 🚀</span>
-                <p style="font-size:0.85rem; color:#aaa;">Likes y Regalos dan potencia y <b style="color:white;">acumulan EXP</b> para subir de nivel.</p>
+                <p style="font-size:0.85rem; color:#aaa;">Likes y Regalos dan potencia y acumulan EXP. <b style="color:var(--gx-accent);">(Clic para ver más)</b></p>
             </div>
-            <div class="rule-card">
+            <div class="rule-card" onclick="openModal('PASO 3: CAPITANES', 'Los 3 jugadores que más Experiencia (EXP) tengan aportando a un equipo, se convierten en sus <b>Capitanes</b>.<br><br>👑 <b>Poder de Capitán:</b> Una vez por directo, si un capitán escribe la palabra <i>capitan</i>, activará un multiplicador <b>X2 para TODO su equipo durante 3 minutos</b>. ¡Coordínate con tu equipo!', '👑')">
                 <span class="rule-title">PASO 3 👑</span>
-                <p style="font-size:0.85rem; color:#aaa;">Top 3 EXP son <b style="color:white;">Capitanes</b>. Comenta "capitan" para activar <b style="color:white;">X2 Grupal (3 min)</b>.</p>
+                <p style="font-size:0.85rem; color:#aaa;">Top 3 son Capitanes. Activan X2 Grupal. <b style="color:var(--gx-accent);">(Clic para ver más)</b></p>
             </div>
-            <div class="rule-card">
+            <div class="rule-card" onclick="openModal('PASO 4: LA RACHA', 'La constancia tiene premio. Si entras a mi Live todos los días y comentas tu equipo, sumarás +1 Día a tu Racha.<br><br>Tener una racha alta te otorga poderes permanentes, como multiplicadores de fuerza para tus regalos o escudos protectores. Si faltas un día, ¡la pierdes!', '🔥')">
                 <span class="rule-title">PASO 4 🔥</span>
-                <p style="font-size:0.85rem; color:#aaa;">Actívate a diario para subir tu racha y ganar beneficios únicos.</p>
+                <p style="font-size:0.85rem; color:#aaa;">Actívate a diario para subir tu racha. <b style="color:var(--gx-accent);">(Clic para ver más)</b></p>
             </div>
         </div>
 
@@ -465,16 +566,16 @@
             <h2 class="benefits-title">🏆 CAMINO DE LA RACHA 🏆</h2>
             <div class="scroller-wrapper">
                 <div class="scroller-track">
-                    <div class="benefit-card"><span class="b-icon">⭐</span><div class="b-days">1 DÍA</div><div class="b-desc">Ingreso oficial. Desbloqueas tu perfil en la base de datos FPC.</div></div>
-                    <div class="benefit-card"><span class="b-icon">⚡</span><div class="b-days">3 DÍAS</div><div class="b-desc">Bonus Inicial. Recibes un <b style="color:white;">10% extra</b> de velocidad en tus comentarios.</div></div>
-                    <div class="benefit-card"><span class="b-icon">🚀</span><div class="b-days">5 DÍAS</div><div class="b-desc">Tus regalos obtienen un <b style="color:white;">Impulso X1.5</b> automático para tu equipo.</div></div>
-                    <div class="benefit-card"><span class="b-icon">🎨</span><div class="b-days">7 DÍAS</div><div class="b-desc">Mención destacada. Tu nombre saldrá en el <b style="color:white;">Tablón VIP</b> del directo.</div></div>
-                    <div class="benefit-card"><span class="b-icon">🧨</span><div class="b-days">10 DÍAS</div><div class="b-desc">Poder activado: <b style="color:white;">Fuerza X2</b> permanente mientras mantengas la racha.</div></div>
-                    <div class="benefit-card"><span class="b-icon">🧠</span><div class="b-days">15 DÍAS</div><div class="b-desc">Experto en Trivias. Si adivinas primero, tu equipo recibe <b style="color:white;">Doble Puntaje</b>.</div></div>
-                    <div class="benefit-card"><span class="b-icon">🛡️</span><div class="b-days">20 DÍAS</div><div class="b-desc">Desbloqueas el <b style="color:white;">Escudo Anti-Falla</b>. (Puedes faltar 1 día sin perder tu racha).</div></div>
-                    <div class="benefit-card"><span class="b-icon">👑</span><div class="b-days">25 DÍAS</div><div class="b-desc">Rango de Élite. Tienes <b style="color:white;">Voto Doble</b> para elegir el mapa o liga del siguiente juego.</div></div>
-                    <div class="benefit-card"><span class="b-icon">💎</span><div class="b-days">30 DÍAS</div><div class="b-desc">Llegaste al Mes. Eres una Leyenda con un <b style="color:white;">Multiplicador Masivo X3</b>.</div></div>
-                    <div class="benefit-card"><span class="b-icon">🏆</span><div class="b-days">50 DÍAS</div><div class="b-desc">Rango Dios. <b style="color:white;">Inmortalidad de Racha</b> y un comando especial solo para ti.</div></div>
+                    <div class="benefit-card" onclick="openModal('BENEFICIO: 1 DÍA', '¡Bienvenido a Crimifutbol! Al completar tu primer día, tu usuario queda registrado en la base de datos oficial. Ya puedes empezar a acumular EXP y competir por ser el Capitán de tu equipo.', '⭐')"><span class="b-icon">⭐</span><div class="b-days">1 DÍA</div><div class="b-desc">Ingreso oficial. Desbloqueas tu perfil en la base de datos FPC.</div></div>
+                    <div class="benefit-card" onclick="openModal('BENEFICIO: 3 DÍAS', 'Demuestras compromiso. El sistema reconoce tu racha y te otorga un 10% de velocidad extra en todos los comentarios que hagas. ¡Tu equipo sentirá la diferencia!', '⚡')"><span class="b-icon">⚡</span><div class="b-days">3 DÍAS</div><div class="b-desc">Recibes un <b style="color:white;">10% extra</b> de velocidad en tus comentarios.</div></div>
+                    <div class="benefit-card" onclick="openModal('BENEFICIO: 5 DÍAS', 'Tu poder económico aumenta. Cada vez que envíes una Rosa o cualquier otro regalo, este impulsará a tu equipo un 50% más de lo normal (X1.5).', '🚀')"><span class="b-icon">🚀</span><div class="b-days">5 DÍAS</div><div class="b-desc">Tus regalos obtienen un <b style="color:white;">Impulso X1.5</b> automático.</div></div>
+                    <div class="benefit-card" onclick="openModal('BENEFICIO: 7 DÍAS', '¡Una semana entera de lealtad! Tu nombre aparecerá resaltado en el Tablón VIP durante las carreras. Todos sabrán que eres un veterano apoyando a tu equipo.', '🎨')"><span class="b-icon">🎨</span><div class="b-days">7 DÍAS</div><div class="b-desc">Tu nombre saldrá en el <b style="color:white;">Tablón VIP</b> del directo.</div></div>
+                    <div class="benefit-card" onclick="openModal('BENEFICIO: 10 DÍAS', 'Has despertado el poder real. Tienes Fuerza X2 permanente. Esto significa que TODO lo que hagas (likes, comentarios, regalos) vale EL DOBLE, siempre y cuando no pierdas tu racha.', '🧨')"><span class="b-icon">🧨</span><div class="b-days">10 DÍAS</div><div class="b-desc">Poder activado: <b style="color:white;">Fuerza X2</b> permanente en todo.</div></div>
+                    <div class="benefit-card" onclick="openModal('BENEFICIO: 15 DÍAS', 'Tu cerebro es tu mejor arma. En los minijuegos de trivias que lanzamos en el directo, si logras responder correctamente de primero, los puntos que se lleva tu equipo se multiplican por 2.', '🧠')"><span class="b-icon">🧠</span><div class="b-days">15 DÍAS</div><div class="b-desc">Si adivinas la trivia, tu equipo recibe <b style="color:white;">Doble Puntaje</b>.</div></div>
+                    <div class="benefit-card" onclick="openModal('BENEFICIO: 20 DÍAS', 'Todos tenemos un día ocupado. Al llegar a 20 días, obtienes un salvavidas. Si por alguna razón no puedes asistir a un directo, tu racha NO se reiniciará a cero. ¡Pero solo funciona una vez!', '🛡️')"><span class="b-icon">🛡️</span><div class="b-days">20 DÍAS</div><div class="b-desc">Desbloqueas el <b style="color:white;">Escudo Anti-Falla</b> para tu racha.</div></div>
+                    <div class="benefit-card" onclick="openModal('BENEFICIO: 25 DÍAS', 'Tu voz es ley. Cuando haya votaciones en el chat para decidir qué mapa jugar o qué torneo abrir, tu comentario de voto valdrá por dos personas.', '👑')"><span class="b-icon">👑</span><div class="b-days">25 DÍAS</div><div class="b-desc">Rango de Élite. Tienes <b style="color:white;">Voto Doble</b> en encuestas.</div></div>
+                    <div class="benefit-card" onclick="openModal('BENEFICIO: 30 DÍAS', '¡UN MES DE PURA PASIÓN! Eres una Leyenda Absoluta. Desbloqueas el aura brillante en el juego y obtienes un Multiplicador Masivo X3 para aplastar a los rivales.', '💎')"><span class="b-icon">💎</span><div class="b-days">30 DÍAS</div><div class="b-desc">Rango Leyenda VIP con <b style="color:white;">Multiplicador Masivo X3</b>.</div></div>
+                    <div class="benefit-card" onclick="openModal('BENEFICIO: 50 DÍAS', 'Has alcanzado el olimpo de Crimifutbol. Tu racha se vuelve Inmortal (nunca se reiniciará) y me comunicaré contigo para crear un comando especial en el chat que lleve tu nombre.', '🏆')"><span class="b-icon">🏆</span><div class="b-days">50 DÍAS</div><div class="b-desc">Rango Dios. <b style="color:white;">Inmortalidad de Racha</b> y comando especial.</div></div>
                 </div>
             </div>
         </div>
@@ -514,19 +615,49 @@
             <h2 style="font-family:'Orbitron'; text-align:center; color:var(--gx-accent); margin-bottom: 0;">👑 SALÓN DE LA FAMA</h2>
             <div class="scroller-wrapper">
                 <div class="scroller-track">
-                    <div class="video-card"><video autoplay loop muted playsinline><source src="video1.mp4" type="video/mp4"></video><div class="video-label">UNIVERSO</div></div>
-                    <div class="video-card"><video autoplay loop muted playsinline><source src="video2.mp4" type="video/mp4"></video><div class="video-label">LEÓN</div></div>
-                    <div class="video-card"><video autoplay loop muted playsinline><source src="video3.mp4" type="video/mp4"></video><div class="video-label">HALCÓN</div></div>
-                    <div class="video-card"><video autoplay loop muted playsinline><source src="video4.mp4" type="video/mp4"></video><div class="video-label">FÉNIX</div></div>
+                    <div class="video-card"><video autoplay loop muted playsinline><source src="video1.mp4" type="video/mp4"></video><div class="video-label">LEON</div></div>
+                    <div class="video-card"><video autoplay loop muted playsinline><source src="video2.mp4" type="video/mp4"></video><div class="video-label">DAIRO</div></div>
+                    <div class="video-card"><video autoplay loop muted playsinline><source src="video3.mp4" type="video/mp4"></video><div class="video-label">RIAPIRA</div></div>
+                    <div class="video-card"><video autoplay loop muted playsinline><source src="video4.mp4" type="video/mp4"></video><div class="video-label">RIAPIRA</div></div>
                 </div>
             </div>
         </div>
 
     </div>
 
+    <div class="modal-overlay" id="info-modal" onclick="closeModal(event)">
+        <div class="modal-box" id="modal-content-box" onclick="event.stopPropagation()">
+            <span class="close-btn" onclick="closeModal(event)">&times;</span>
+            <span class="modal-icon-large" id="modal-icon">💬</span>
+            <h2 class="modal-title" id="modal-title">TÍTULO DE LA REGLA</h2>
+            <div class="modal-text" id="modal-text">Aquí va la explicación detallada del paso o beneficio.</div>
+        </div>
+    </div>
+
     <script>
         let currentJSON = "user_exp.json";
 
+        /* LÓGICA DEL MODAL (Ventanas Emergentes) */
+        function openModal(title, text, icon) {
+            document.getElementById('modal-title').innerText = title;
+            document.getElementById('modal-text').innerHTML = text;
+            document.getElementById('modal-icon').innerText = icon;
+
+            // Pone el color del título según el ciclo actual
+            const rootStyles = getComputedStyle(document.documentElement);
+            const accentColor = rootStyles.getPropertyValue('--gx-accent').trim();
+            document.getElementById('modal-title').style.color = title.includes("BENEFICIO") ? "#ff8c00" : accentColor;
+            document.getElementById('modal-content-box').style.borderLeftColor = title.includes("BENEFICIO") ? "#ff8c00" : accentColor;
+
+            document.getElementById('info-modal').style.display = 'flex';
+        }
+
+        function closeModal(e) {
+            if (e) e.stopPropagation();
+            document.getElementById('info-modal').style.display = 'none';
+        }
+
+        /* RESTO DE FUNCIONES */
         function switchTorneo(torneo, btn) {
             document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
