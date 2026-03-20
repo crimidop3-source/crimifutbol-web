@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Crimi Futbol | OFICIAL</title>
+    <title>Crimi Futbol</title>
 
     <link rel="icon" type="image/png" href="logo_azul.png" id="favicon">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
@@ -456,6 +456,24 @@
             text-align: center;
         }
 
+        /* PLACA DE CAPITÁN */
+        .badge-captain {
+            background: linear-gradient(45deg, #000, #222);
+            color: #f1c40f;
+            border: 1px solid #f1c40f;
+            padding: 2px 6px;
+            font-family: 'Orbitron';
+            font-size: 0.6rem;
+            border-radius: 4px;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            box-shadow: 0 0 8px rgba(241, 196, 15, 0.4);
+            text-transform: uppercase;
+            margin-left: 8px;
+            vertical-align: middle;
+        }
+
         @keyframes slideUp {
             from {
                 transform: translateY(30px);
@@ -636,6 +654,23 @@
 
     <script>
         let currentJSON = "user_exp.json";
+        /* LÓGICA DE CAPITANES: Calcula el Top 3 por equipo/país */
+        function getCaptains(users) {
+            const captains = new Set();
+            const byTeam = {};
+            users.forEach(u => {
+                const team = u.equipo || u.pais || "Sin Equipo";
+                if (!byTeam[team]) byTeam[team] = [];
+                byTeam[team].push(u);
+            });
+            for (const team in byTeam) {
+                const top3 = byTeam[team]
+                    .sort((a, b) => (b.level || 1) - (a.level || 1) || (b.exp || 0) - (a.exp || 0))
+                    .slice(0, 3);
+                top3.forEach(u => captains.add(u.username.toLowerCase()));
+            }
+            return captains;
+        }
 
         /* LÓGICA DEL MODAL (Ventanas Emergentes) */
         function openModal(title, text, icon) {
@@ -674,12 +709,16 @@
             try {
                 const resp = await fetch(currentJSON);
                 const data = await resp.json();
+                const captains = getCaptains(data.users); // Calculamos capitanes
                 const user = data.users.find(u => u.username.toLowerCase() === userSearch);
                 if (user) {
+                    const isCap = captains.has(user.username.toLowerCase());
+                    const badge = isCap ? `<span class="badge-captain">👑 CAPITÁN</span>` : "";
+
                     document.getElementById('player-card').style.display = 'block';
-                    document.getElementById('res-name').innerText = "@" + user.username.toUpperCase();
+                    document.getElementById('res-name').innerHTML = "@" + user.username.toUpperCase() + badge;
                     document.getElementById('res-racha').innerHTML = (user.rachaDias || 0) + " DÍAS 🔥";
-                    document.getElementById('res-nivel').innerText = user.level || 1;
+                    document.getElementById('res-nivel').innerHTML = (user.level || 1) + (isCap ? " 👑" : "");
                     document.getElementById('player-card').scrollIntoView({ behavior: 'smooth', block: 'center' });
                 } else { alert("Usuario no encontrado en la base de datos"); }
             } catch (e) { console.error(e); }
@@ -689,14 +728,21 @@
             try {
                 const resp = await fetch(currentJSON);
                 const data = await resp.json();
+                const captains = getCaptains(data.users); // Calculamos capitanes
 
                 const topRacha = [...data.users].sort((a, b) => (b.rachaDias || 0) - (a.rachaDias || 0)).slice(0, 10);
                 const bodyRacha = document.getElementById('body-racha');
-                bodyRacha.innerHTML = topRacha.map((u, i) => `<tr><td>#${i + 1}</td><td>${u.username}</td><td class="fire-text">${u.rachaDias || 0} 🔥</td></tr>`).join('');
+                bodyRacha.innerHTML = topRacha.map((u, i) => {
+                    const isCap = captains.has(u.username.toLowerCase());
+                    return `<tr><td>#${i + 1}</td><td>${u.username}${isCap ? ' 👑' : ''}</td><td class="fire-text">${u.rachaDias || 0} 🔥</td></tr>`;
+                }).join('');
 
                 const topNivel = [...data.users].sort((a, b) => (b.level || 1) - (a.level || 1) || (b.exp || 0) - (a.exp || 0)).slice(0, 10);
                 const bodyNivel = document.getElementById('body-nivel');
-                bodyNivel.innerHTML = topNivel.map((u, i) => `<tr><td>#${i + 1}</td><td>${u.username}</td><td style="color:var(--gx-accent); font-weight:bold;">Nvl ${u.level || 1}</td></tr>`).join('');
+                bodyNivel.innerHTML = topNivel.map((u, i) => {
+                    const isCap = captains.has(u.username.toLowerCase());
+                    return `<tr><td>#${i + 1}</td><td>${u.username}</td><td style="color:var(--gx-accent); font-weight:bold;">Nvl ${u.level || 1}${isCap ? ' <span class="badge-captain">👑 CAPITÁN</span>' : ''}</td></tr>`;
+                }).join('');
             } catch (e) { console.error(e); }
         }
 
