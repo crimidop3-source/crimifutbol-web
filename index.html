@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>CRIMIFUTBOL | OFICIAL</title>
+    <title>Crimi Futbol | OFICIAL</title>
 
     <link rel="icon" type="image/png" href="logo_azul.png" id="favicon">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
@@ -31,6 +31,7 @@
             background-image: radial-gradient(circle at 50% 50%, #1a1a1a 0%, #0b0b0b 100%);
         }
 
+        /* HEADER CON AURA */
         header {
             background: rgba(0,0,0,0.95);
             border-bottom: 2px solid var(--gx-accent);
@@ -47,7 +48,8 @@
         }
 
         .header-logo {
-            height: 40px;
+            height: 45px;
+            filter: drop-shadow(0 0 8px var(--gx-accent)); /* RECUPERADA EL AURA */
             transition: 0.5s;
         }
 
@@ -67,7 +69,32 @@
             padding: 20px;
         }
 
-        /* --- 4. ANIMACIÓN BOTÓN PRINCIPAL (Pulse) --- */
+        /* FOTO PERFIL CON PULSO LIVE */
+        .profile-pic {
+            width: 150px;
+            border-radius: 50%;
+            border: 4px solid var(--gx-accent);
+            box-shadow: 0 0 20px var(--gx-accent);
+            animation: pulse-live 1.5s infinite; /* RECUPERADO EL EFECTO LIVE */
+        }
+
+        @keyframes pulse-live {
+            0% {
+                box-shadow: 0 0 0 0 var(--gx-glow);
+                transform: scale(1);
+            }
+
+            70% {
+                box-shadow: 0 0 0 20px rgba(0,0,0,0);
+                transform: scale(1.03);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(0,0,0,0);
+                transform: scale(1);
+            }
+        }
+
         .btn-live {
             background: var(--gx-accent);
             color: white;
@@ -78,46 +105,70 @@
             clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
             transition: 0.3s;
             box-shadow: 0 0 20px var(--gx-glow);
-            margin-bottom: 40px;
-            animation: pulse-button 2s infinite;
+            margin: 30px 0;
+            animation: pulse-btn 2s infinite;
         }
 
-        @keyframes pulse-button {
-            0% {
-                transform: scale(1);
-                box-shadow: 0 0 0 0 var(--gx-glow);
+        @keyframes pulse-btn {
+            0%, 100% {
+                opacity: 1;
             }
 
-            70% {
-                transform: scale(1.05);
-                box-shadow: 0 0 0 20px rgba(0,0,0,0);
-            }
-
-            100% {
-                transform: scale(1);
-                box-shadow: 0 0 0 0 rgba(0,0,0,0);
+            50% {
+                opacity: 0.8;
             }
         }
 
-        /* --- 1. SISTEMA DE PESTAÑAS (FPC vs MUNDIAL) --- */
+        /* REGLAS EN TARJETAS */
+        .rules-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+            width: 100%;
+            max-width: 1100px;
+            margin: 30px 0;
+        }
+
+        .rule-card {
+            background: var(--gx-card);
+            border-top: 3px solid var(--gx-accent);
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        .rule-icon {
+            font-size: 2rem;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .rule-title {
+            color: var(--gx-accent);
+            font-family: 'Orbitron';
+            font-size: 1rem;
+            display: block;
+        }
+
+        /* PESTAÑAS */
         .tabs-container {
             width: 100%;
             max-width: 600px;
             display: flex;
-            gap: 10px;
-            margin-bottom: 20px;
+            gap: 8px;
+            margin-bottom: 15px;
         }
 
         .tab-btn {
             flex: 1;
-            padding: 15px;
+            padding: 12px;
             border: 2px solid #333;
             background: #111;
             color: #888;
             font-family: 'Orbitron';
             cursor: pointer;
             transition: 0.3s;
-            font-size: 0.9rem;
+            font-size: 0.8rem;
         }
 
             .tab-btn.active {
@@ -126,105 +177,119 @@
                 box-shadow: 0 0 10px var(--gx-glow);
             }
 
-        /* --- 3. REGLAS EN TARJETAS (Cards) --- */
-        .rules-grid {
+        /* RANKINGS DOBLES */
+        .rankings-wrapper {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
             width: 100%;
             max-width: 1000px;
-            margin: 40px 0;
+            margin-bottom: 50px;
         }
 
-        .rule-card {
-            background: var(--gx-card);
-            border-top: 3px solid var(--gx-accent);
+        .rank-box {
+            background: rgba(255,255,255,0.03);
             padding: 20px;
-            text-align: center;
-            transition: 0.3s;
+            border-radius: 10px;
+            border-bottom: 2px solid var(--gx-accent);
         }
 
-            .rule-card:hover {
-                transform: translateY(-10px);
-                background: #1a1a1a;
+            .rank-box h3 {
+                font-family: 'Orbitron';
+                font-size: 1rem;
+                color: var(--gx-accent);
+                margin: 0 0 15px 0;
+                text-align: center;
             }
 
-        .rule-icon {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-            display: block;
-        }
-
-        .rule-step {
-            color: var(--gx-accent);
-            font-family: 'Orbitron';
-            font-size: 0.8rem;
-            display: block;
-            margin-bottom: 5px;
-        }
-
-        /* --- 2. SALÓN DE LA FAMA (Videos) --- */
-        .hall-of-fame {
+        table {
             width: 100%;
-            max-width: 1000px;
-            margin-top: 50px;
+            border-collapse: collapse;
         }
 
-        .video-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
+        td {
+            padding: 10px 5px;
+            border-bottom: 1px solid #222;
+            font-size: 0.9rem;
         }
 
-        .video-item {
+        .fire-text {
+            color: #ff8c00;
+            font-weight: bold;
+            text-shadow: 0 0 8px #ff4500;
+        }
+
+        /* CARRUSEL DE 4 VIDEOS */
+        .video-scroller {
+            width: 100%;
+            max-width: 1100px;
+            overflow-x: auto;
+            display: flex;
+            gap: 15px;
+            padding: 20px 0;
+            scrollbar-width: thin;
+            scrollbar-color: var(--gx-accent) #111;
+        }
+
+        .video-card {
+            min-width: 220px;
             background: #000;
             border: 1px solid #333;
-            position: relative;
-            aspect-ratio: 9/16;
+            border-radius: 8px;
             overflow: hidden;
-            border-radius: 10px;
+            position: relative;
         }
+
+            .video-card video {
+                width: 100%;
+                aspect-ratio: 9/16;
+                object-fit: cover;
+            }
 
         .video-label {
             position: absolute;
             bottom: 0;
             width: 100%;
-            background: linear-gradient(transparent, var(--gx-accent));
-            padding: 10px;
-            font-weight: bold;
+            padding: 8px;
+            background: rgba(0,0,0,0.8);
+            font-size: 0.7rem;
             text-align: center;
-            font-size: 0.9rem;
+            border-top: 1px solid var(--gx-accent);
         }
 
-        /* BUSCADOR Y RESULTADOS */
+        /* BUSCADOR */
         .gx-search-container {
             width: 100%;
             max-width: 600px;
-            margin-bottom: 20px;
+            margin: 20px 0;
         }
 
         .search-box {
             display: flex;
-            gap: 10px;
+            gap: 8px;
         }
 
-        input#gx-input {
+        input {
             flex: 1;
-            background: rgba(25,25,25,0.9);
+            background: #1a1a1a;
             border: 2px solid #333;
             color: white;
-            padding: 15px;
-            font-size: 1.1rem;
+            padding: 12px;
+            border-radius: 4px;
         }
 
-        button#gx-btn {
+            input:focus {
+                border-color: var(--gx-accent);
+                outline: none;
+            }
+
+        #gx-btn {
             background: var(--gx-accent);
-            color: white;
             border: none;
-            padding: 0 25px;
-            cursor: pointer;
+            padding: 0 20px;
+            color: white;
             font-family: 'Orbitron';
+            cursor: pointer;
         }
 
         #player-card {
@@ -234,7 +299,7 @@
             width: 100%;
             max-width: 600px;
             display: none;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
         }
 
         @media (max-width: 600px) {
@@ -243,7 +308,7 @@
             }
 
             .header-logo {
-                height: 30px;
+                height: 35px;
             }
         }
     </style>
@@ -252,41 +317,33 @@
 
     <header>
         <img src="logo_azul.png" alt="Logo" class="header-logo" id="header-logo">
-        <a href="index.html" class="logo-nav">CRIMIFUTBOL</a>
+        <a href="index.html" class="logo-nav">CRIMI FUTBOL</a>
     </header>
 
     <div class="main-content">
 
-        <section style="text-align:center; padding: 40px 0;">
-            <img src="perfil.jpg" alt="Crimifutbol" style="width:150px; border-radius:50%; border:3px solid var(--gx-accent);" id="profile-pic">
-            <h1 style="font-family:'Orbitron';">@crimifutbol</h1>
+        <section style="text-align:center;">
+            <img src="perfil.jpg" alt="Crimifutbol" class="profile-pic">
+            <h1 style="font-family:'Orbitron'; letter-spacing: 5px; margin: 15px 0;">@crimifutbol</h1>
             <a href="https://www.tiktok.com/@crimifutbol" target="_blank" class="btn-live">VER AHORA</a>
         </section>
 
         <div class="rules-grid">
             <div class="rule-card">
-                <span class="rule-step">PASO 1</span>
-                <span class="rule-icon">💬</span>
-                <b style="color:var(--gx-accent)">ÚNETE</b>
-                <p style="font-size:0.9rem; color:#aaa;">Comenta tu Equipo o País para entrar en la carrera.</p>
+                <span class="rule-title">PASO 1 💬</span>
+                <p style="font-size:0.85rem; color:#aaa;">Comenta tu Equipo o País para entrar en la carrera.</p>
             </div>
             <div class="rule-card">
-                <span class="rule-step">PASO 2</span>
-                <span class="rule-icon">🚀</span>
-                <b style="color:var(--gx-accent)">IMPULSA</b>
-                <p style="font-size:0.9rem; color:#aaa;">Usa Likes, Comentarios y Regalos para dar potencia.</p>
+                <span class="rule-title">PASO 2 🚀</span>
+                <p style="font-size:0.85rem; color:#aaa;">Likes y Regalos dan potencia y <b style="color:white;">acumulan EXP</b> para subir de nivel.</p>
             </div>
             <div class="rule-card">
-                <span class="rule-step">PASO 3</span>
-                <span class="rule-icon">👑</span>
-                <b style="color:var(--gx-accent)">CAPITÁN</b>
-                <p style="font-size:0.9rem; color:#aaa;">El Top 3 de nivel activa X2 durante 3 minutos.</p>
+                <span class="rule-title">PASO 3 👑</span>
+                <p style="font-size:0.85rem; color:#aaa;">Top 3 EXP son <b style="color:white;">Capitanes</b>. Comenta "capitan" para activar <b style="color:white;">X2 Grupal (3 min)</b>.</p>
             </div>
             <div class="rule-card">
-                <span class="rule-step">PASO 4</span>
-                <span class="rule-icon">🔥</span>
-                <b style="color:var(--gx-accent)">RACHA</b>
-                <p style="font-size:0.9rem; color:#aaa;">¡No faltes! Suma días y desbloquea beneficios.</p>
+                <span class="rule-title">PASO 4 🔥</span>
+                <p style="font-size:0.85rem; color:#aaa;">Actívate a diario para subir tu racha y ganar beneficios únicos.</p>
             </div>
         </div>
 
@@ -297,90 +354,86 @@
 
         <div class="gx-search-container">
             <div class="search-box">
-                <input type="text" id="gx-input" placeholder="Busca tu usuario...">
-                <button id="gx-btn" onclick="checkPlayerRacha()">BUSCAR</button>
+                <input type="text" id="gx-input" placeholder="Escribe tu usuario de tiktok...">
+                <button id="gx-btn" onclick="checkPlayerRacha()">CONSULTAR</button>
             </div>
         </div>
 
         <div id="player-card">
             <h2 id="res-name" style="margin-top:0;">@USUARIO</h2>
             <div style="display:flex; justify-content:space-between;">
-                <div><p style="margin:0; color:#888;">RACHA</p><div id="res-racha" style="font-size:1.8rem; font-weight:bold; color:#ff8c00;">0 🔥</div></div>
+                <div><p style="margin:0; color:#888;">RACHA</p><div id="res-racha" class="fire-text">0 DÍAS 🔥</div></div>
                 <div style="text-align:right;"><p style="margin:0; color:#888;">NIVEL</p><div id="res-nivel" style="font-size:1.8rem; font-weight:bold;">1</div></div>
             </div>
         </div>
 
-        <div style="width:100%; max-width:600px; background:rgba(255,255,255,0.03); padding:20px; border-radius:10px;">
-            <h3 id="ranking-title" style="font-family:'Orbitron'; margin:0; color:var(--gx-accent);">TOP 10 RACHAS FPC</h3>
-            <table style="width:100%; margin-top:15px; border-collapse:collapse;" id="ranking-table">
-                <tbody id="ranking-body"></tbody>
-            </table>
+        <div class="rankings-wrapper">
+            <div class="rank-box">
+                <h3 id="title-racha">TOP 10 RACHAS FPC</h3>
+                <table><tbody id="body-racha"></tbody></table>
+            </div>
+            <div class="rank-box">
+                <h3 id="title-nivel">TOP 10 NIVELES FPC</h3>
+                <table><tbody id="body-nivel"></tbody></table>
+            </div>
         </div>
 
-        <div class="hall-of-fame">
-            <h2 style="font-family:'Orbitron'; text-align:center; color:var(--gx-accent);">👑 SALÓN DE LA FAMA</h2>
-            <div class="video-grid">
-                <div class="video-item">
-                    <video width="100%" height="100%" autoplay loop muted playsinline>
-                        <source src="video1.mp4" type="video/mp4">
-                    </video>
-                    <div class="video-label">EL REY DEL UNIVERSO</div>
-                </div>
-                <div class="video-item">
-                    <video width="100%" height="100%" autoplay loop muted playsinline>
-                        <source src="video2.mp4" type="video/mp4">
-                    </video>
-                    <div class="video-label">LEÓN LEGENDARIO</div>
-                </div>
+        <div class="hall-of-fame" style="width:100%;">
+            <h2 style="font-family:'Orbitron'; text-align:center; color:var(--gx-accent); margin-bottom: 0;">👑 SALÓN DE LA FAMA</h2>
+            <div class="video-scroller">
+                <div class="video-card"><video autoplay loop muted playsinline><source src="video1.mp4" type="video/mp4"></video><div class="video-label">UNIVERSO</div></div>
+                <div class="video-card"><video autoplay loop muted playsinline><source src="video2.mp4" type="video/mp4"></video><div class="video-label">LEÓN</div></div>
+                <div class="video-card"><video autoplay loop muted playsinline><source src="video3.mp4" type="video/mp4"></video><div class="video-label">HALCÓN</div></div>
+                <div class="video-card"><video autoplay loop muted playsinline><source src="video4.mp4" type="video/mp4"></video><div class="video-label">FÉNIX</div></div>
             </div>
         </div>
 
     </div>
 
     <script>
-        let currentJSON = "user_exp.json"; // FPC por defecto
+        let currentJSON = "user_exp.json";
 
         function switchTorneo(torneo, btn) {
-            // Cambiar botones
             document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
+            const sufijo = torneo === 'fpc' ? 'FPC' : 'MUNDIAL';
+            currentJSON = torneo === 'fpc' ? "user_exp.json" : "mundial_exp.json";
 
-            // Cambiar fuente de datos
-            if (torneo === 'fpc') {
-                currentJSON = "user_exp.json";
-                document.getElementById('ranking-title').innerText = "TOP 10 RACHAS FPC";
-            } else {
-                currentJSON = "mundial_exp.json"; // Necesitas este archivo en GitHub
-                document.getElementById('ranking-title').innerText = "TOP 10 RACHAS MUNDIAL";
-            }
-            cargarRanking();
+            document.getElementById('title-racha').innerText = `TOP 10 RACHAS ${sufijo}`;
+            document.getElementById('title-nivel').innerText = `TOP 10 NIVELES ${sufijo}`;
+            cargarRankings();
         }
 
         async function checkPlayerRacha() {
             const userSearch = document.getElementById('gx-input').value.trim().toLowerCase();
             try {
-                const response = await fetch(currentJSON);
-                const data = await response.json();
+                const resp = await fetch(currentJSON);
+                const data = await resp.json();
                 const user = data.users.find(u => u.username.toLowerCase() === userSearch);
                 if (user) {
                     document.getElementById('player-card').style.display = 'block';
                     document.getElementById('res-name').innerText = "@" + user.username.toUpperCase();
-                    document.getElementById('res-racha').innerText = (user.rachaDias || 0) + " DÍAS";
+                    document.getElementById('res-racha').innerHTML = (user.rachaDias || 0) + " DÍAS 🔥";
                     document.getElementById('res-nivel').innerText = user.level || 1;
-                } else { alert("Usuario no encontrado en este torneo"); }
+                    document.getElementById('player-card').scrollIntoView({ behavior: 'smooth' });
+                } else { alert("Usuario no encontrado"); }
             } catch (e) { console.error(e); }
         }
 
-        async function cargarRanking() {
+        async function cargarRankings() {
             try {
-                const response = await fetch(currentJSON);
-                const data = await response.json();
-                const top10 = data.users.sort((a, b) => (b.rachaDias || 0) - (a.rachaDias || 0)).slice(0, 10);
-                const tbody = document.getElementById('ranking-body');
-                tbody.innerHTML = "";
-                top10.forEach((user, i) => {
-                    tbody.innerHTML += `<tr><td style="padding:10px;">#${i + 1}</td><td>${user.username}</td><td style="text-align:right; color:var(--gx-accent);">${user.rachaDias || 0} 🔥</td></tr>`;
-                });
+                const resp = await fetch(currentJSON);
+                const data = await resp.json();
+
+                // Top Racha
+                const topRacha = [...data.users].sort((a, b) => (b.rachaDias || 0) - (a.rachaDias || 0)).slice(0, 10);
+                const bodyRacha = document.getElementById('body-racha');
+                bodyRacha.innerHTML = topRacha.map((u, i) => `<tr><td>#${i + 1}</td><td>${u.username}</td><td class="fire-text">${u.rachaDias || 0} 🔥</td></tr>`).join('');
+
+                // Top Nivel
+                const topNivel = [...data.users].sort((a, b) => (b.level || 1) - (a.level || 1) || (b.exp || 0) - (a.exp || 0)).slice(0, 10);
+                const bodyNivel = document.getElementById('body-nivel');
+                bodyNivel.innerHTML = topNivel.map((u, i) => `<tr><td>#${i + 1}</td><td>${u.username}</td><td style="color:var(--gx-accent); font-weight:bold;">Nvl ${u.level || 1}</td></tr>`).join('');
             } catch (e) { console.error(e); }
         }
 
@@ -395,7 +448,7 @@
 
         setInterval(colorLoop, 30000);
         colorLoop();
-        cargarRanking();
+        cargarRankings();
     </script>
 </body>
 </html>
