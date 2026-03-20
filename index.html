@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Crimi Futbol</title>
+    <title>CRIMIFUTBOL | OFICIAL</title>
 
-    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="icon" type="image/png" href="logo_azul.png" id="favicon">
 
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
     <style>
@@ -31,7 +31,7 @@
             background-image: radial-gradient(circle at 50% 50%, #1a1a1a 0%, #0b0b0b 100%);
         }
 
-        /* BANNER SUPERIOR CON LOGO */
+        /* BANNER SUPERIOR CON LOGO DINÁMICO */
         header {
             background: rgba(0,0,0,0.95);
             border-bottom: 2px solid var(--gx-accent);
@@ -45,13 +45,13 @@
             justify-content: center;
             align-items: center;
             gap: 15px;
+            transition: border-color 0.5s ease, box-shadow 0.5s ease;
         }
 
         .header-logo {
             height: 40px; /* Tamaño del logo en el banner */
             width: auto;
-            filter: drop-shadow(0 0 5px var(--gx-accent)); /* El logo brilla con el color neón */
-            transition: 0.5s;
+            transition: 0.5s; /* Transición suave cuando cambia la imagen */
         }
 
         .logo-nav {
@@ -267,22 +267,22 @@
 
             .section-box {
                 padding: 20px;
-                header
+            }
 
-        {
-            gap: 8px;
-        }
+            header {
+                gap: 8px;
+            }
 
-        .header-logo {
-            height: 30px;
-        }
+            .header-logo {
+                height: 30px;
+            }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <img src="logo.png" alt="Logo" class="header-logo" id="header-logo">
+        <img src="logo_azul.png" alt="Logo Crimifutbol" class="header-logo" id="header-logo">
         <a href="index.html" class="logo-nav">CRIMIFUTBOL</a>
     </header>
 
@@ -395,21 +395,30 @@
             } catch (e) { console.error(e); }
         }
 
-        function actualizarColorGamer() {
+        // --- LÓGICA DEL CAMBIO DE COLOR Y LOGO (Ciclo RGB 5 min) ---
+        function actualizarColorAndLogo() {
             const ahora = new Date();
             const root = document.documentElement;
+            const logoImg = document.getElementById('header-logo');
             const cicloRojo = Math.floor(ahora.getMinutes() / 5) % 2 === 1;
+
             if (cicloRojo) {
+                // MODO ROJO
                 root.style.setProperty('--gx-accent', 'var(--neon-red)');
                 root.style.setProperty('--gx-glow', 'rgba(255, 0, 50, 0.5)');
+                logoImg.src = "logo_rojo.png"; // Cambia la imagen del logo
+                console.log("🎨 Modo GX: Rojo Neón y Logo Rojo Activado");
             } else {
+                // MODO AZUL
                 root.style.setProperty('--gx-accent', 'var(--neon-blue)');
                 root.style.setProperty('--gx-glow', 'rgba(0, 242, 255, 0.5)');
+                logoImg.src = "logo_azul.png"; // Cambia la imagen del logo
+                console.log("🎨 Modo GX: Azul Neón y Logo Azul Activado");
             }
         }
 
-        actualizarColorGamer();
-        setInterval(actualizarColorGamer, 30000);
+        actualizarColorAndLogo();
+        setInterval(actualizarColorAndLogo, 30000); // Revisa cada 30 segundos
         cargarTopRacha();
     </script>
 </body>
