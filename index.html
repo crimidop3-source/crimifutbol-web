@@ -457,6 +457,7 @@
         }
 
         /* PLACA DE CAPITÁN */
+        /* PLACA DE CAPITÁN */
         .badge-captain {
             background: linear-gradient(45deg, #000, #222);
             color: #f1c40f;
@@ -658,14 +659,16 @@
         function getCaptains(users) {
             const captains = new Set();
             const byTeam = {};
+            // Agrupamos a todos los usuarios por su equipo ("team")
             users.forEach(u => {
-                const team = u.equipo || u.pais || "Sin Equipo";
-                if (!byTeam[team]) byTeam[team] = [];
-                byTeam[team].push(u);
+                const teamName = u.team || "SIN EQUIPO";
+                if (!byTeam[teamName]) byTeam[teamName] = [];
+                byTeam[teamName].push(u);
             });
+            // De cada equipo, sacamos los 3 con más nivel
             for (const team in byTeam) {
                 const top3 = byTeam[team]
-                    .sort((a, b) => (b.level || 1) - (a.level || 1) || (b.exp || 0) - (a.exp || 0))
+                    .sort((a, b) => (b.level || 0) - (a.level || 0) || (b.exp || 0) - (a.exp || 0))
                     .slice(0, 3);
                 top3.forEach(u => captains.add(u.username.toLowerCase()));
             }
@@ -709,7 +712,7 @@
             try {
                 const resp = await fetch(currentJSON);
                 const data = await resp.json();
-                const captains = getCaptains(data.users); // Calculamos capitanes
+                const captains = getCaptains(data.users); // Lógica de equipos
                 const user = data.users.find(u => u.username.toLowerCase() === userSearch);
                 if (user) {
                     const isCap = captains.has(user.username.toLowerCase());
@@ -720,7 +723,7 @@
                     document.getElementById('res-racha').innerHTML = (user.rachaDias || 0) + " DÍAS 🔥";
                     document.getElementById('res-nivel').innerHTML = (user.level || 1) + (isCap ? " 👑" : "");
                     document.getElementById('player-card').scrollIntoView({ behavior: 'smooth', block: 'center' });
-                } else { alert("Usuario no encontrado en la base de datos"); }
+                } else { alert("Usuario no encontrado"); }
             } catch (e) { console.error(e); }
         }
 
@@ -728,18 +731,18 @@
             try {
                 const resp = await fetch(currentJSON);
                 const data = await resp.json();
-                const captains = getCaptains(data.users); // Calculamos capitanes
+                const captains = getCaptains(data.users);
 
+                // Top Rachas
                 const topRacha = [...data.users].sort((a, b) => (b.rachaDias || 0) - (a.rachaDias || 0)).slice(0, 10);
-                const bodyRacha = document.getElementById('body-racha');
-                bodyRacha.innerHTML = topRacha.map((u, i) => {
+                document.getElementById('body-racha').innerHTML = topRacha.map((u, i) => {
                     const isCap = captains.has(u.username.toLowerCase());
                     return `<tr><td>#${i + 1}</td><td>${u.username}${isCap ? ' 👑' : ''}</td><td class="fire-text">${u.rachaDias || 0} 🔥</td></tr>`;
                 }).join('');
 
+                // Top Niveles
                 const topNivel = [...data.users].sort((a, b) => (b.level || 1) - (a.level || 1) || (b.exp || 0) - (a.exp || 0)).slice(0, 10);
-                const bodyNivel = document.getElementById('body-nivel');
-                bodyNivel.innerHTML = topNivel.map((u, i) => {
+                document.getElementById('body-nivel').innerHTML = topNivel.map((u, i) => {
                     const isCap = captains.has(u.username.toLowerCase());
                     return `<tr><td>#${i + 1}</td><td>${u.username}</td><td style="color:var(--gx-accent); font-weight:bold;">Nvl ${u.level || 1}${isCap ? ' <span class="badge-captain">👑 CAPITÁN</span>' : ''}</td></tr>`;
                 }).join('');
