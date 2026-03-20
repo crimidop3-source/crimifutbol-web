@@ -4,571 +4,262 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Crimi Futbol | OFICIAL</title>
-
+    
     <link rel="icon" type="image/png" href="logo_azul.png" id="favicon">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
-
+    
     <style>
         :root {
-            --neon-red: #ff0032;
-            --neon-blue: #00f2ff;
-            --gx-dark: #0b0b0b;
-            --gx-card: rgba(20, 20, 20, 0.98);
-            --gx-accent: var(--neon-blue);
+            --neon-red: #ff0032; --neon-blue: #00f2ff; --gx-dark: #0b0b0b;
+            --gx-card: rgba(20, 20, 20, 0.98); --gx-accent: var(--neon-blue);
             --gx-glow: rgba(0, 242, 255, 0.5);
         }
-
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            background-color: var(--gx-dark);
-            color: white;
-            font-family: 'Rajdhani', sans-serif;
-            margin: 0;
-            overflow-x: hidden;
+        
+        * { box-sizing: border-box; }
+        body { 
+            background-color: var(--gx-dark); color: white; font-family: 'Rajdhani', sans-serif; 
+            margin: 0; overflow-x: hidden;
             background-image: radial-gradient(circle at 50% 50%, #1a1a1a 0%, #0b0b0b 100%);
         }
 
         /* HEADER */
         header {
-            background: rgba(0,0,0,0.95);
-            border-bottom: 2px solid var(--gx-accent);
-            padding: 10px 15px;
-            text-align: center;
-            box-shadow: 0 0 15px var(--gx-glow);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 15px;
+            background: rgba(0,0,0,0.95); border-bottom: 2px solid var(--gx-accent); 
+            padding: 10px 15px; text-align: center; box-shadow: 0 0 15px var(--gx-glow);
+            position: sticky; top: 0; z-index: 100; display: flex; justify-content: center; align-items: center; gap: 15px;
             transition: 0.5s;
         }
+        .header-logo { height: 45px; filter: drop-shadow(0 0 8px var(--gx-accent)); transition: 0.5s; }
+        .logo-nav { font-family: 'Orbitron', sans-serif; font-size: 1.3rem; letter-spacing: 3px; color: white; text-decoration: none; }
 
-        .header-logo {
-            height: 45px;
-            filter: drop-shadow(0 0 8px var(--gx-accent));
-            transition: 0.5s;
-        }
-
-        .logo-nav {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 1.3rem;
-            letter-spacing: 3px;
-            color: white;
-            text-decoration: none;
-        }
-
-        .main-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-            padding: 20px;
-        }
+        .main-content { display: flex; flex-direction: column; align-items: center; width: 100%; padding: 20px; }
 
         /* PERFIL */
-        .profile-link {
-            text-decoration: none;
-            display: inline-block;
-            transition: 0.3s;
+        .profile-link { text-decoration: none; display: inline-block; transition: 0.3s; }
+        .profile-pic { width: 150px; border-radius: 50%; border: 4px solid var(--gx-accent); box-shadow: 0 0 20px var(--gx-accent); animation: pulse-live 1.5s infinite; object-fit: cover; }
+        @keyframes pulse-live { 0% { box-shadow: 0 0 0 0 var(--gx-glow); transform: scale(1); } 70% { box-shadow: 0 0 0 20px rgba(0,0,0,0); transform: scale(1.03); } 100% { box-shadow: 0 0 0 0 rgba(0,0,0,0); transform: scale(1); } }
+        
+        .btn-live { 
+            background: var(--gx-accent); color: white; text-decoration: none; font-weight: bold; 
+            padding: 12px 30px; font-size: 1rem; text-transform: uppercase; 
+            clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%); transition: 0.3s; box-shadow: 0 0 15px var(--gx-glow); margin: 20px 0; animation: pulse-btn 2s infinite;
         }
-
-        .profile-pic {
-            width: 150px;
-            border-radius: 50%;
-            border: 4px solid var(--gx-accent);
-            box-shadow: 0 0 20px var(--gx-accent);
-            animation: pulse-live 1.5s infinite;
-            object-fit: cover;
-        }
-
-        @keyframes pulse-live {
-            0% {
-                box-shadow: 0 0 0 0 var(--gx-glow);
-                transform: scale(1);
-            }
-
-            70% {
-                box-shadow: 0 0 0 20px rgba(0,0,0,0);
-                transform: scale(1.03);
-            }
-
-            100% {
-                box-shadow: 0 0 0 0 rgba(0,0,0,0);
-                transform: scale(1);
-            }
-        }
-
-        .btn-live {
-            background: var(--gx-accent);
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            padding: 12px 30px;
-            font-size: 1rem;
-            text-transform: uppercase;
-            clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
-            transition: 0.3s;
-            box-shadow: 0 0 15px var(--gx-glow);
-            margin: 20px 0;
-            animation: pulse-btn 2s infinite;
-        }
-
-            .btn-live:hover {
-                transform: scale(1.1);
-                filter: brightness(1.2);
-                box-shadow: 0 0 30px var(--gx-accent);
-                animation: none;
-            }
-
-        @keyframes pulse-btn {
-            0%, 100% {
-                opacity: 1;
-            }
-
-            50% {
-                opacity: 0.8;
-            }
-        }
+        .btn-live:hover { transform: scale(1.1); filter: brightness(1.2); box-shadow: 0 0 30px var(--gx-accent); animation: none; }
+        @keyframes pulse-btn { 0%, 100% { opacity: 1; } 50% { opacity: 0.8; } }
 
         /* REGLAS */
-        .rules-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 15px;
-            width: 100%;
-            max-width: 1100px;
-            margin: 30px 0;
-        }
-
-        .rule-card {
-            background: var(--gx-card);
-            border-top: 3px solid var(--gx-accent);
-            padding: 20px;
-            text-align: center;
-            border-radius: 5px;
-            transition: 0.3s;
-            cursor: pointer;
-        }
-
-            .rule-card:hover {
-                transform: translateY(-5px);
-                background: #1a1a1a;
-                box-shadow: 0 10px 20px rgba(0,0,0,0.5);
-            }
-
-        .rule-title {
-            color: var(--gx-accent);
-            font-family: 'Orbitron';
-            font-size: 1rem;
-            display: block;
-            margin-bottom: 5px;
-        }
+        .rules-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px; width: 100%; max-width: 1100px; margin: 30px 0; }
+        .rule-card { background: var(--gx-card); border-top: 3px solid var(--gx-accent); padding: 20px; text-align: center; border-radius: 5px; transition: 0.3s; cursor: pointer; }
+        .rule-card:hover { transform: translateY(-5px); background: #1a1a1a; box-shadow: 0 10px 20px rgba(0,0,0,0.5); }
+        .rule-title { color: var(--gx-accent); font-family: 'Orbitron'; font-size: 1rem; display: block; margin-bottom: 5px; }
 
         /* BENEFICIOS */
-        .scroller-wrapper {
-            width: 100%;
-            max-width: 1100px;
-            overflow-x: auto;
-            padding: 20px 0;
-            scrollbar-width: thin;
-            scrollbar-color: var(--gx-accent) #111;
-        }
-
-        .scroller-track {
-            display: flex;
-            gap: 15px;
-            width: max-content;
-            margin: 0 auto;
-            padding: 0 10px;
-        }
-
-        .benefits-title {
-            font-family: 'Orbitron';
-            color: #ff8c00;
-            font-size: 1.8rem;
-            margin: 20px 0;
-            text-align: center;
-            text-shadow: 0 0 10px #ff4500;
-        }
-
-        .benefit-card {
-            flex: 0 0 200px;
-            background: linear-gradient(145deg, #111, #050505);
-            border: 1px solid #333;
-            border-radius: 8px;
-            padding: 20px;
-            position: relative;
-            transition: 0.3s;
-            cursor: pointer;
-        }
-
-            .benefit-card:hover {
-                border-color: #ff8c00;
-                box-shadow: 0 0 20px rgba(255, 140, 0, 0.4);
-            }
-
-        .b-days {
-            font-family: 'Orbitron';
-            font-size: 1.6rem;
-            color: #ff8c00;
-            font-weight: bold;
-        }
-
-        .b-desc {
-            font-size: 0.9rem;
-            color: #ccc;
-            margin-top: 10px;
-        }
+        .scroller-wrapper { width: 100%; max-width: 1100px; overflow-x: auto; padding: 20px 0; scrollbar-width: thin; scrollbar-color: var(--gx-accent) #111; }
+        .scroller-track { display: flex; gap: 15px; width: max-content; margin: 0 auto; padding: 0 10px; }
+        .benefits-title { font-family: 'Orbitron'; color: #ff8c00; font-size: 1.8rem; margin: 20px 0; text-align: center; text-shadow: 0 0 10px #ff4500; }
+        .benefit-card { flex: 0 0 200px; background: linear-gradient(145deg, #111, #050505); border: 1px solid #333; border-radius: 8px; padding: 20px; position: relative; transition: 0.3s; cursor: pointer; }
+        .benefit-card:hover { border-color: #ff8c00; box-shadow: 0 0 20px rgba(255, 140, 0, 0.4); }
+        .b-days { font-family: 'Orbitron'; font-size: 1.6rem; color: #ff8c00; font-weight: bold; }
+        .b-desc { font-size: 0.9rem; color: #ccc; margin-top: 10px; }
 
         /* VIDEOS */
-        .video-card {
-            flex: 0 0 220px;
-            width: 220px;
-            aspect-ratio: 9/16;
-            background: #000;
-            border: 1px solid #333;
-            border-radius: 8px;
-            overflow: hidden;
-            position: relative;
-        }
-
-            .video-card video {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
-
-        .video-label {
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            padding: 8px;
-            background: rgba(0,0,0,0.8);
-            font-size: 0.7rem;
-            text-align: center;
-            border-top: 1px solid var(--gx-accent);
-            font-weight: bold;
-        }
+        .video-card { flex: 0 0 220px; width: 220px; aspect-ratio: 9/16; background: #000; border: 1px solid #333; border-radius: 8px; overflow: hidden; position: relative; }
+        .video-card video { width: 100%; height: 100%; object-fit: cover; }
+        .video-label { position: absolute; bottom: 0; width: 100%; padding: 8px; background: rgba(0,0,0,0.8); font-size: 0.7rem; text-align: center; border-top: 1px solid var(--gx-accent); font-weight: bold; }
 
         /* BUSCADOR */
-        .gx-search-container {
-            width: 100%;
-            max-width: 600px;
-            margin: 20px 0;
-        }
-
-        .search-box {
-            display: flex;
-            gap: 8px;
-        }
-
-        input {
-            flex: 1;
-            background: #1a1a1a;
-            border: 2px solid #333;
-            color: white;
-            padding: 12px;
-            border-radius: 4px;
-            font-size: 1rem;
-        }
-
-            input:focus {
-                border-color: var(--gx-accent);
-                outline: none;
-            }
-
-        #gx-btn {
-            background: var(--gx-accent);
-            border: none;
-            padding: 0 25px;
-            color: white;
-            font-family: 'Orbitron';
-            cursor: pointer;
-            transition: 0.3s;
-        }
+        .gx-search-container { width: 100%; max-width: 600px; margin: 20px 0; }
+        .search-box { display: flex; gap: 8px; }
+        input { flex: 1; background: #1a1a1a; border: 2px solid #333; color: white; padding: 12px; border-radius: 4px; font-size: 1rem; }
+        input:focus { border-color: var(--gx-accent); outline: none; }
+        #gx-btn { background: var(--gx-accent); border: none; padding: 0 25px; color: white; font-family: 'Orbitron'; cursor: pointer; transition: 0.3s; }
 
         /* RANKINGS */
-        .rankings-wrapper {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            width: 100%;
-            max-width: 1000px;
-            margin-bottom: 50px;
-        }
-
-        .rank-box {
-            background: rgba(255,255,255,0.03);
-            padding: 20px;
-            border-radius: 10px;
-            border-bottom: 2px solid var(--gx-accent);
-        }
-
-            .rank-box h3 {
-                font-family: 'Orbitron';
-                font-size: 1rem;
-                color: var(--gx-accent);
-                margin-bottom: 15px;
-                text-align: center;
-            }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        td {
-            padding: 10px 5px;
-            border-bottom: 1px solid #222;
-            font-size: 0.9rem;
-        }
-
-        .fire-text {
-            color: #ff8c00;
-            font-weight: bold;
-            text-shadow: 0 0 8px #ff4500;
-        }
-
-        .crown-text {
-            color: #f1c40f;
-            font-weight: bold;
-            text-shadow: 0 0 8px #f39c12;
-        }
+        .rankings-wrapper { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; width: 100%; max-width: 1000px; margin-bottom: 50px; }
+        .rank-box { background: rgba(255,255,255,0.03); padding: 20px; border-radius: 10px; border-bottom: 2px solid var(--gx-accent); }
+        .rank-box h3 { font-family: 'Orbitron'; font-size: 1rem; color: var(--gx-accent); margin-bottom: 15px; text-align: center; }
+        table { width: 100%; border-collapse: collapse; }
+        td { padding: 10px 5px; border-bottom: 1px solid #222; font-size: 0.9rem; }
+        .fire-text { color: #ff8c00; font-weight: bold; text-shadow: 0 0 8px #ff4500; }
+        .crown-text { color: #f1c40f; font-weight: bold; text-shadow: 0 0 8px #f39c12; }
 
         /* MODAL */
         .modal-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.9);
-            backdrop-filter: blur(8px);
-            display: none;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.9); backdrop-filter: blur(8px);
+            display: none; justify-content: center; align-items: center; z-index: 1000;
         }
-
         .modal-box {
-            background: var(--gx-card);
-            border-left: 5px solid var(--gx-accent);
-            padding: 35px;
-            border-radius: 8px;
-            width: 90%;
-            max-width: 450px;
-            position: relative;
-            text-align: center;
-            box-shadow: 0 0 50px rgba(0,0,0,1);
+            background: var(--gx-card); border-left: 5px solid var(--gx-accent);
+            padding: 35px; border-radius: 8px; width: 90%; max-width: 450px;
+            position: relative; text-align: center; box-shadow: 0 0 50px rgba(0,0,0,1);
         }
+        .close-btn { position: absolute; top: 10px; right: 15px; font-size: 2rem; color: #666; cursor: pointer; }
+        .modal-icon { font-size: 4rem; margin-bottom: 15px; display: block; }
+        .modal-title { font-family: 'Orbitron'; color: var(--gx-accent); margin-bottom: 20px; }
+        .modal-data-flex { display: flex; justify-content: space-around; margin-top: 20px; background: rgba(0,0,0,0.3); padding: 15px; border-radius: 5px; }
 
-        .close-btn {
-            position: absolute;
-            top: 10px;
-            right: 15px;
-            font-size: 2rem;
-            color: #666;
-            cursor: pointer;
-        }
-
-        .modal-icon {
-            font-size: 4rem;
-            margin-bottom: 15px;
-            display: block;
-        }
-
-        .modal-title {
-            font-family: 'Orbitron';
-            color: var(--gx-accent);
-            margin-bottom: 20px;
-        }
-
-        .modal-data-flex {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 20px;
-            background: rgba(0,0,0,0.3);
-            padding: 15px;
-            border-radius: 5px;
-        }
-
-        @media (max-width: 600px) {
-            .logo-nav {
-                font-size: 1rem;
-            }
-
-            .video-card {
-                flex: 0 0 180px;
-                width: 180px;
-            }
-        }
+        @media (max-width: 600px) { .logo-nav { font-size: 1rem; } .video-card { flex: 0 0 180px; width: 180px; } }
     </style>
 </head>
 <body>
 
-    <header>
-        <img src="logo_azul.png" alt="Logo" class="header-logo" id="header-logo">
-        <a href="index.html" class="logo-nav">CRIMI FUTBOL</a>
-    </header>
+<header>
+    <img src="logo_azul.png" alt="Logo" class="header-logo" id="header-logo">
+    <a href="index.html" class="logo-nav">CRIMI FUTBOL</a>
+</header>
 
-    <div class="main-content">
-        <section style="text-align:center;">
-            <a href="https://www.tiktok.com/@crimifutbol" target="_blank" class="profile-link">
-                <img src="perfil.jpg" alt="Crimifutbol" class="profile-pic">
-            </a>
-            <h1 style="font-family:'Orbitron'; letter-spacing: 5px; margin: 15px 0;">@crimifutbol</h1>
-            <a href="https://www.tiktok.com/@crimifutbol" target="_blank" class="btn-live">VER AHORA</a>
-        </section>
+<div class="main-content">
+    <section style="text-align:center;">
+        <a href="https://www.tiktok.com/@crimifutbol" target="_blank" class="profile-link">
+            <img src="perfil.jpg" alt="Crimifutbol" class="profile-pic">
+        </a>
+        <h1 style="font-family:'Orbitron'; letter-spacing: 5px; margin: 15px 0;">@crimifutbol</h1>
+        <a href="https://www.tiktok.com/@crimifutbol" target="_blank" class="btn-live">VER AHORA</a>
+    </section>
 
-        <div class="rules-grid">
-            <div class="rule-card" onclick="openModal('REGLA: PASO 1', 'Comenta tu equipo o país para entrar en pista.', '💬', 'accent')">
-                <span class="rule-title">PASO 1 💬</span>
-                <p style="font-size:0.85rem; color:#aaa;">Clic para más info.</p>
-            </div>
-            <div class="rule-card" onclick="openModal('REGLA: PASO 2', 'Likes y regalos dan potencia y acumulan EXP.', '🚀', 'accent')">
-                <span class="rule-title">PASO 2 🚀</span>
-                <p style="font-size:0.85rem; color:#aaa;">Clic para más info.</p>
-            </div>
-            <div class="rule-card" onclick="openModal('REGLA: PASO 3', 'Los 3 mejores de cada equipo son capitanes con X2.', '👑', 'accent')">
-                <span class="rule-title">PASO 3 👑</span>
-                <p style="font-size:0.85rem; color:#aaa;">Clic para más info.</p>
-            </div>
-            <div class="rule-card" onclick="openModal('REGLA: PASO 4', 'La constancia diaria sube tu racha.', '🔥', 'accent')">
-                <span class="rule-title">PASO 4 🔥</span>
-                <p style="font-size:0.85rem; color:#aaa;">Clic para más info.</p>
-            </div>
+    <div class="rules-grid">
+        <div class="rule-card" onclick="openModal('REGLA: PASO 1', 'Comenta tu equipo o país para entrar en pista.', '💬', 'accent')">
+            <span class="rule-title">PASO 1 💬</span>
+            <p style="font-size:0.85rem; color:#aaa;">Clic para más info.</p>
         </div>
-
-        <div style="width:100%; max-width:1100px;">
-            <h2 class="benefits-title">🏆 CAMINO DE LA RACHA 🏆</h2>
-            <div class="scroller-wrapper">
-                <div class="scroller-track">
-                    <div class="benefit-card" onclick="openModal('BENEFICIO: 5 DÍAS', 'Impulso X1.5 automático en regalos.', '🚀', 'racha')"><div class="b-days">5 DÍAS</div></div>
-                    <div class="benefit-card" onclick="openModal('BENEFICIO: 10 DÍAS', 'Desbloqueas Fuerza X2 permanente.', '🧨', 'racha')"><div class="b-days">10 DÍAS</div></div>
-                    <div class="benefit-card" onclick="openModal('BENEFICIO: 30 DÍAS', 'Multiplicador Masivo X3. Leyenda VIP.', '💎', 'racha')"><div class="b-days">30 DÍAS</div></div>
-                </div>
-            </div>
+        <div class="rule-card" onclick="openModal('REGLA: PASO 2', 'Likes y regalos dan potencia y acumulan EXP.', '🚀', 'accent')">
+            <span class="rule-title">PASO 2 🚀</span>
+            <p style="font-size:0.85rem; color:#aaa;">Clic para más info.</p>
         </div>
-
-        <div class="tabs-container">
-            <button class="tab-btn active" onclick="switchTorneo('fpc', this)">TORNEO FPC</button>
-            <button class="tab-btn" onclick="switchTorneo('mundial', this)">MUNDIAL</button>
+        <div class="rule-card" onclick="openModal('REGLA: PASO 3', 'Los 3 mejores de cada equipo son capitanes con X2.', '👑', 'accent')">
+            <span class="rule-title">PASO 3 👑</span>
+            <p style="font-size:0.85rem; color:#aaa;">Clic para más info.</p>
         </div>
-        <div class="gx-search-container">
-            <div class="search-box">
-                <input type="text" id="gx-input" placeholder="Escribe tu usuario de tiktok...">
-                <button id="gx-btn" onclick="checkPlayerStats()">CONSULTAR</button>
-            </div>
-        </div>
-
-        <div class="rankings-wrapper">
-            <div class="rank-box"><h3>TOP 10 RACHAS</h3><table><tbody id="body-racha"></tbody></table></div>
-            <div class="rank-box"><h3>TOP 10 NIVELES (CAPITANES)</h3><table><tbody id="body-nivel"></tbody></table></div>
-        </div>
-
-        <div style="width:100%; max-width:1100px;">
-            <h2 style="font-family:'Orbitron'; text-align:center; color:var(--gx-accent); margin-bottom: 0;">👑 SALÓN DE LA FAMA</h2>
-            <div class="scroller-wrapper">
-                <div class="scroller-track">
-                    <div class="video-card"><video autoplay loop muted playsinline><source src="video1.mp4"></video><div class="video-label">LEON</div></div>
-                    <div class="video-card"><video autoplay loop muted playsinline><source src="video2.mp4"></video><div class="video-label">DAIRO</div></div>
-                    <div class="video-card"><video autoplay loop muted playsinline><source src="video3.mp4"></video><div class="video-label">RIAPIRA</div></div>
-                    <div class="video-card"><video autoplay loop muted playsinline><source src="video4.mp4"></video><div class="video-label">RIAPIRA</div></div>
-                </div>
-            </div>
+        <div class="rule-card" onclick="openModal('REGLA: PASO 4', 'La constancia diaria sube tu racha.', '🔥', 'accent')">
+            <span class="rule-title">PASO 4 🔥</span>
+            <p style="font-size:0.85rem; color:#aaa;">Clic para más info.</p>
         </div>
     </div>
 
-    <div class="modal-overlay" id="main-modal" onclick="closeModal(event)">
-        <div class="modal-box" id="modal-box" onclick="event.stopPropagation()">
-            <span class="close-btn" onclick="closeModal(event)">&times;</span>
-            <span class="modal-icon" id="m-icon"></span>
-            <h2 class="modal-title" id="m-title"></h2>
-            <div id="m-content"></div>
+    <div style="width:100%; max-width:1100px;">
+        <h2 class="benefits-title">🏆 CAMINO DE LA RACHA 🏆</h2>
+        <div class="scroller-wrapper">
+            <div class="scroller-track">
+                <div class="benefit-card" onclick="openModal('BENEFICIO: 5 DÍAS', 'Impulso X1.5 automático en regalos.', '🚀', 'racha')"><div class="b-days">5 DÍAS</div></div>
+                <div class="benefit-card" onclick="openModal('BENEFICIO: 10 DÍAS', 'Desbloqueas Fuerza X2 permanente.', '🧨', 'racha')"><div class="b-days">10 DÍAS</div></div>
+                <div class="benefit-card" onclick="openModal('BENEFICIO: 30 DÍAS', 'Multiplicador Masivo X3. Leyenda VIP.', '💎', 'racha')"><div class="b-days">30 DÍAS</div></div>
+                </div>
         </div>
     </div>
 
-    <script>
-        let currentJSON = "user_exp.json";
+    <div class="tabs-container">
+        <button class="tab-btn active" onclick="switchTorneo('fpc', this)">TORNEO FPC</button>
+        <button class="tab-btn" onclick="switchTorneo('mundial', this)">MUNDIAL</button>
+    </div>
+    <div class="gx-search-container">
+        <div class="search-box">
+            <input type="text" id="gx-input" placeholder="Escribe tu usuario de tiktok...">
+            <button id="gx-btn" onclick="checkPlayerStats()">CONSULTAR</button>
+        </div>
+    </div>
 
-        function openModal(title, text, icon, type) {
-            const modal = document.getElementById('main-modal');
-            const box = document.getElementById('modal-box');
-            document.getElementById('m-title').innerText = title;
-            document.getElementById('m-icon').innerText = icon;
-            document.getElementById('m-content').innerHTML = `<p style="font-size:1.1rem; line-height:1.6;">${text}</p>`;
+    <div class="rankings-wrapper">
+        <div class="rank-box"><h3>TOP 10 RACHAS</h3><table><tbody id="body-racha"></tbody></table></div>
+        <div class="rank-box"><h3>TOP 10 NIVELES (CAPITANES)</h3><table><tbody id="body-nivel"></tbody></table></div>
+    </div>
 
-            // Color según tipo
-            let color = getComputedStyle(document.documentElement).getPropertyValue('--gx-accent');
-            if (type === 'racha') color = "#ff8c00";
-            if (type === 'user') color = "#f1c40f"; // Oro para usuarios
+    <div style="width:100%; max-width:1100px;">
+        <h2 style="font-family:'Orbitron'; text-align:center; color:var(--gx-accent); margin-bottom: 0;">👑 SALÓN DE LA FAMA</h2>
+        <div class="scroller-wrapper"><div class="scroller-track">
+            <div class="video-card"><video autoplay loop muted playsinline><source src="video1.mp4"></video><div class="video-label">LEON</div></div>
+            <div class="video-card"><video autoplay loop muted playsinline><source src="video2.mp4"></video><div class="video-label">DAIRO</div></div>
+            <div class="video-card"><video autoplay loop muted playsinline><source src="video3.mp4"></video><div class="video-label">RIAPIRA</div></div>
+            <div class="video-card"><video autoplay loop muted playsinline><source src="video4.mp4"></video><div class="video-label">RIAPIRA</div></div>
+        </div></div>
+    </div>
+</div>
 
-            box.style.borderLeftColor = color;
-            document.getElementById('m-title').style.color = color;
-            modal.style.display = 'flex';
-        }
+<div class="modal-overlay" id="main-modal" onclick="closeModal(event)">
+    <div class="modal-box" id="modal-box" onclick="event.stopPropagation()">
+        <span class="close-btn" onclick="closeModal(event)">&times;</span>
+        <span class="modal-icon" id="m-icon"></span>
+        <h2 class="modal-title" id="m-title"></h2>
+        <div id="m-content"></div>
+    </div>
+</div>
 
-        async function checkPlayerStats() {
-            const input = document.getElementById('gx-input').value.trim().toLowerCase();
-            try {
-                const resp = await fetch(currentJSON);
-                const data = await resp.json();
-                const u = data.users.find(user => user.username.toLowerCase() === input);
-                if (u) {
-                    const content = `
-                        <div class="modal-data-flex">
-                            <div><span style="color:#ff8c00; font-weight:bold; font-size:1.5rem;">${u.rachaDias || 0} 🔥</span><br><small>RACHA</small></div>
-                            <div><span style="color:#f1c40f; font-weight:bold; font-size:1.5rem;">NVL ${u.level || 1} 👑</span><br><small>CAPITÁN</small></div>
-                        </div>
-                        <p style="margin-top:20px; color:#aaa;">Sigue impulsando a tu equipo para ser el Capitán #1.</p>
-                    `;
-                    openModal("@" + u.username.toUpperCase(), content, "👤", "user");
-                } else { alert("Usuario no encontrado."); }
-            } catch (e) { console.error(e); }
-        }
+<script>
+    let currentJSON = "user_exp.json";
 
-        function closeModal() { document.getElementById('main-modal').style.display = 'none'; }
+    function openModal(title, text, icon, type) {
+        const modal = document.getElementById('main-modal');
+        const box = document.getElementById('modal-box');
+        document.getElementById('m-title').innerText = title;
+        document.getElementById('m-icon').innerText = icon;
+        document.getElementById('m-content').innerHTML = `<p style="font-size:1.1rem; line-height:1.6;">${text}</p>`;
+        
+        // Color según tipo
+        let color = getComputedStyle(document.documentElement).getPropertyValue('--gx-accent');
+        if(type === 'racha') color = "#ff8c00";
+        if(type === 'user') color = "#f1c40f"; // Oro para usuarios
 
-        function switchTorneo(torneo, btn) {
-            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            currentJSON = torneo === 'fpc' ? "user_exp.json" : "mundial_exp.json";
-            cargarRankings();
-        }
+        box.style.borderLeftColor = color;
+        document.getElementById('m-title').style.color = color;
+        modal.style.display = 'flex';
+    }
 
-        async function cargarRankings() {
-            try {
-                const resp = await fetch(currentJSON);
-                const data = await resp.json();
-                const users = data.users;
+    async function checkPlayerStats() {
+        const input = document.getElementById('gx-input').value.trim().toLowerCase();
+        try {
+            const resp = await fetch(currentJSON);
+            const data = await resp.json();
+            const u = data.users.find(user => user.username.toLowerCase() === input);
+            if(u) {
+                const content = `
+                    <div class="modal-data-flex">
+                        <div><span style="color:#ff8c00; font-weight:bold; font-size:1.5rem;">${u.rachaDias || 0} 🔥</span><br><small>RACHA</small></div>
+                        <div><span style="color:#f1c40f; font-weight:bold; font-size:1.5rem;">NVL ${u.level || 1} 👑</span><br><small>CAPITÁN</small></div>
+                    </div>
+                    <p style="margin-top:20px; color:#aaa;">Sigue impulsando a tu equipo para ser el Capitán #1.</p>
+                `;
+                openModal("@" + u.username.toUpperCase(), content, "👤", "user");
+            } else { alert("Usuario no encontrado."); }
+        } catch(e) { console.error(e); }
+    }
 
-                const rBody = document.getElementById('body-racha');
-                const topR = [...users].sort((a, b) => (b.rachaDias || 0) - (a.rachaDias || 0)).slice(0, 10);
-                rBody.innerHTML = topR.map((u, i) => `<tr><td>#${i + 1}</td><td>${u.username}</td><td class="fire-text">${u.rachaDias || 0} 🔥</td></tr>`).join('');
+    function closeModal() { document.getElementById('main-modal').style.display = 'none'; }
 
-                const nBody = document.getElementById('body-nivel');
-                const topN = [...users].sort((a, b) => (b.level || 1) - (a.level || 1)).slice(0, 10);
-                nBody.innerHTML = topN.map((u, i) => `<tr><td>#${i + 1}</td><td>${u.username}</td><td class="crown-text">NVL ${u.level || 1} 👑</td></tr>`).join('');
-            } catch (e) { }
-        }
-
-        function colorLoop() {
-            const m = new Date().getMinutes();
-            const root = document.documentElement;
-            const isRed = Math.floor(m / 5) % 2 === 1;
-            root.style.setProperty('--gx-accent', isRed ? 'var(--neon-red)' : 'var(--neon-blue)');
-            root.style.setProperty('--gx-glow', isRed ? 'rgba(255, 0, 50, 0.5)' : 'rgba(0, 242, 255, 0.5)');
-            document.getElementById('header-logo').src = isRed ? "logo_rojo.png" : "logo_azul.png";
-        }
-
-        setInterval(colorLoop, 30000);
-        colorLoop();
+    function switchTorneo(torneo, btn) {
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        currentJSON = torneo === 'fpc' ? "user_exp.json" : "mundial_exp.json";
         cargarRankings();
-    </script>
+    }
+
+    async function cargarRankings() {
+        try {
+            const resp = await fetch(currentJSON);
+            const data = await resp.json();
+            const users = data.users;
+            
+            const rBody = document.getElementById('body-racha');
+            const topR = [...users].sort((a,b) => (b.rachaDias||0)-(a.rachaDias||0)).slice(0,10);
+            rBody.innerHTML = topR.map((u,i) => `<tr><td>#${i+1}</td><td>${u.username}</td><td class="fire-text">${u.rachaDias||0} 🔥</td></tr>`).join('');
+
+            const nBody = document.getElementById('body-nivel');
+            const topN = [...users].sort((a,b) => (b.level||1)-(a.level||1)).slice(0,10);
+            nBody.innerHTML = topN.map((u,i) => `<tr><td>#${i+1}</td><td>${u.username}</td><td class="crown-text">NVL ${u.level||1} 👑</td></tr>`).join('');
+        } catch(e) {}
+    }
+
+    function colorLoop() {
+        const m = new Date().getMinutes();
+        const root = document.documentElement;
+        const isRed = Math.floor(m / 5) % 2 === 1;
+        root.style.setProperty('--gx-accent', isRed ? 'var(--neon-red)' : 'var(--neon-blue)');
+        root.style.setProperty('--gx-glow', isRed ? 'rgba(255, 0, 50, 0.5)' : 'rgba(0, 242, 255, 0.5)');
+        document.getElementById('header-logo').src = isRed ? "logo_rojo.png" : "logo_azul.png";
+    }
+
+    setInterval(colorLoop, 30000);
+    colorLoop();
+    cargarRankings();
+</script>
 </body>
 </html>
