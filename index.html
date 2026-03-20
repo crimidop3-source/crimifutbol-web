@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>CRIMIFUTBOL | OFICIAL</title>
+
+    <link rel="icon" type="image/png" href="logo.png">
+
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -14,192 +17,400 @@
             --gx-accent: var(--neon-blue);
             --gx-glow: rgba(0, 242, 255, 0.5);
         }
-        
-        * { box-sizing: border-box; }
-        body { 
-            background-color: var(--gx-dark); color: white; 
-            font-family: 'Rajdhani', sans-serif; margin: 0; overflow-x: hidden;
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--gx-dark);
+            color: white;
+            font-family: 'Rajdhani', sans-serif;
+            margin: 0;
+            overflow-x: hidden;
             background-image: radial-gradient(circle at 50% 50%, #1a1a1a 0%, #0b0b0b 100%);
         }
 
+        /* BANNER SUPERIOR CON LOGO */
         header {
-            background: rgba(0,0,0,0.95); border-bottom: 2px solid var(--gx-accent); 
-            padding: 15px; text-align: center; box-shadow: 0 0 15px var(--gx-glow);
-            position: sticky; top: 0; z-index: 100;
+            background: rgba(0,0,0,0.95);
+            border-bottom: 2px solid var(--gx-accent);
+            padding: 10px 15px;
+            text-align: center;
+            box-shadow: 0 0 15px var(--gx-glow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
         }
 
-        .logo-nav { font-family: 'Orbitron', sans-serif; font-size: 1.3rem; letter-spacing: 3px; color: white; text-decoration: none; }
-        .accent { color: var(--gx-accent); text-shadow: 0 0 10px var(--gx-accent); transition: 0.5s; }
+        .header-logo {
+            height: 40px; /* Tamaño del logo en el banner */
+            width: auto;
+            filter: drop-shadow(0 0 5px var(--gx-accent)); /* El logo brilla con el color neón */
+            transition: 0.5s;
+        }
 
-        .main-content { display: flex; flex-direction: column; align-items: center; width: 100%; padding: 20px; }
+        .logo-nav {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.3rem;
+            letter-spacing: 3px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .accent {
+            color: var(--gx-accent);
+            text-shadow: 0 0 10px var(--gx-accent);
+            transition: 0.5s;
+        }
+
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            padding: 20px;
+        }
 
         /* PERFIL */
-        .hero-section { width: 100%; max-width: 800px; display: flex; flex-direction: column; align-items: center; padding: 40px 0; }
-        .profile-pic { width: 160px; height: 160px; border-radius: 50%; object-fit: cover; border: 4px solid #333; transition: 0.5s; }
-        .live-active { border-color: var(--gx-accent) !important; box-shadow: 0 0 20px var(--gx-accent); animation: pulse-border 1.5s infinite; }
-        @keyframes pulse-border { 0% { box-shadow: 0 0 0 0 var(--gx-glow); } 70% { box-shadow: 0 0 0 15px rgba(0,0,0,0); } 100% { box-shadow: 0 0 0 0 rgba(0,0,0,0); } }
-        .username { font-family: 'Orbitron', sans-serif; font-size: 2.2rem; margin: 15px 0; letter-spacing: 4px; }
-        .btn-live { background: var(--gx-accent); color: white; text-decoration: none; font-weight: bold; padding: 12px 35px; text-transform: uppercase; clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%); transition: 0.3s; box-shadow: 0 0 10px var(--gx-glow); margin-bottom: 30px; }
+        .hero-section {
+            width: 100%;
+            max-width: 800px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 0;
+        }
+
+        .profile-pic {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #333;
+            transition: 0.5s;
+        }
+
+        .live-active {
+            border-color: var(--gx-accent) !important;
+            box-shadow: 0 0 20px var(--gx-accent);
+            animation: pulse-border 1.5s infinite;
+        }
+
+        @keyframes pulse-border {
+            0% {
+                box-shadow: 0 0 0 0 var(--gx-glow);
+            }
+
+            70% {
+                box-shadow: 0 0 0 15px rgba(0,0,0,0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(0,0,0,0);
+            }
+        }
+
+        .username {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.2rem;
+            margin: 15px 0;
+            letter-spacing: 4px;
+        }
+
+        .btn-live {
+            background: var(--gx-accent);
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 12px 35px;
+            text-transform: uppercase;
+            clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
+            transition: 0.3s;
+            box-shadow: 0 0 10px var(--gx-glow);
+            margin-bottom: 30px;
+        }
 
         /* BUSCADOR */
-        .gx-search-container { width: 100%; max-width: 600px; margin-bottom: 20px; }
-        .search-box { display: flex; gap: 10px; }
-        input#gx-input { flex: 1; background: rgba(25,25,25,0.9); border: 2px solid #333; color: white; padding: 15px; font-size: 1.1rem; border-radius: 4px; }
-        input#gx-input:focus { border-color: var(--gx-accent); outline: none; box-shadow: 0 0 15px var(--gx-glow); }
-        button#gx-btn { background: var(--gx-accent); color: white; border: none; font-weight: bold; padding: 0 25px; cursor: pointer; text-transform: uppercase; clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%); }
+        .gx-search-container {
+            width: 100%;
+            max-width: 600px;
+            margin-bottom: 20px;
+        }
+
+        .search-box {
+            display: flex;
+            gap: 10px;
+        }
+
+        input#gx-input {
+            flex: 1;
+            background: rgba(25,25,25,0.9);
+            border: 2px solid #333;
+            color: white;
+            padding: 15px;
+            font-size: 1.1rem;
+            border-radius: 4px;
+        }
+
+            input#gx-input:focus {
+                border-color: var(--gx-accent);
+                outline: none;
+                box-shadow: 0 0 15px var(--gx-glow);
+            }
+
+        button#gx-btn {
+            background: var(--gx-accent);
+            color: white;
+            border: none;
+            font-weight: bold;
+            padding: 0 25px;
+            cursor: pointer;
+            text-transform: uppercase;
+            clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
+        }
 
         /* TARJETA RESULTADO */
-        #player-card { background: var(--gx-card); border-left: 5px solid var(--gx-accent); padding: 25px; border-radius: 8px; width: 100%; max-width: 600px; display: none; box-shadow: 0 10px 30px rgba(0,0,0,0.6); margin-bottom: 40px; }
-        .racha-fire { color: #ff8c00; font-size: 2.2rem; font-weight: bold; text-shadow: 0 0 15px #ff4500; }
-        .xp-bar { background: #222; height: 12px; margin-top: 15px; border-radius: 6px; overflow: hidden; }
-        .xp-fill { background: var(--gx-accent); height: 100%; box-shadow: 0 0 10px var(--gx-accent); transition: width 1s ease-in-out; }
+        #player-card {
+            background: var(--gx-card);
+            border-left: 5px solid var(--gx-accent);
+            padding: 25px;
+            border-radius: 8px;
+            width: 100%;
+            max-width: 600px;
+            display: none;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+            margin-bottom: 40px;
+        }
+
+        .racha-fire {
+            color: #ff8c00;
+            font-size: 2.2rem;
+            font-weight: bold;
+            text-shadow: 0 0 15px #ff4500;
+        }
+
+        .xp-bar {
+            background: #222;
+            height: 12px;
+            margin-top: 15px;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .xp-fill {
+            background: var(--gx-accent);
+            height: 100%;
+            box-shadow: 0 0 10px var(--gx-accent);
+            transition: width 1s ease-in-out;
+        }
 
         /* SECCIONES EXPLICATIVAS */
-        .section-box { width: 100%; max-width: 900px; background: rgba(255,255,255,0.02); padding: 30px; border-left: 4px solid var(--gx-accent); border-radius: 0 15px 15px 0; margin-bottom: 30px; transition: 0.3s; }
-        .section-title { font-family: 'Orbitron', sans-serif; font-size: 1.6rem; color: var(--gx-accent); margin-bottom: 15px; border-bottom: 1px solid #333; padding-bottom: 10px; }
-        .section-text { font-size: 1.1rem; line-height: 1.6; color: #ccc; }
-        .highlight { color: white; font-weight: bold; }
+        .section-box {
+            width: 100%;
+            max-width: 900px;
+            background: rgba(255,255,255,0.02);
+            padding: 30px;
+            border-left: 4px solid var(--gx-accent);
+            border-radius: 0 15px 15px 0;
+            margin-bottom: 30px;
+            transition: 0.3s;
+        }
+
+        .section-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.6rem;
+            color: var(--gx-accent);
+            margin-bottom: 15px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 10px;
+        }
+
+        .section-text {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #ccc;
+        }
+
+        .highlight {
+            color: white;
+            font-weight: bold;
+        }
 
         /* TABLA TOP RACHA */
-        .top-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
-        .top-table th { text-align: left; color: var(--gx-accent); padding: 10px; border-bottom: 2px solid #333; }
-        .top-table td { padding: 12px 10px; border-bottom: 1px solid #222; }
+        .top-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
 
-        @media (max-width: 600px) { .username { font-size: 1.6rem; } .section-box { padding: 20px; } }
+            .top-table th {
+                text-align: left;
+                color: var(--gx-accent);
+                padding: 10px;
+                border-bottom: 2px solid #333;
+            }
+
+            .top-table td {
+                padding: 12px 10px;
+                border-bottom: 1px solid #222;
+            }
+
+        @media (max-width: 600px) {
+            .username {
+                font-size: 1.6rem;
+            }
+
+            .section-box {
+                padding: 20px;
+                header
+
+        {
+            gap: 8px;
+        }
+
+        .header-logo {
+            height: 30px;
+        }
+        }
     </style>
 </head>
 <body>
 
-<header>
-    <a href="index.html" class="logo-nav">CRIMIFUTBOL</a>
-</header>
+    <header>
+        <img src="logo.png" alt="Logo" class="header-logo" id="header-logo">
+        <a href="index.html" class="logo-nav">CRIMIFUTBOL</a>
+    </header>
 
-<div class="main-content">
-    
-    <section class="hero-section">
-        <a href="https://www.tiktok.com/@crimifutbol" target="_blank" style="text-decoration:none;">
-            <img src="perfil.jpg" alt="Crimifutbol" class="profile-pic live-active">
-        </a>
-        <div class="username">@crimifutbol</div>
-        <a href="https://www.tiktok.com/@crimifutbol" target="_blank" class="btn-live">VER AHORA</a>
-    </section>
+    <div class="main-content">
 
-    <div class="gx-search-container">
-        <div class="search-box">
-            <input type="text" id="gx-input" placeholder="Escribe tu usuario de tiktok...">
-            <button id="gx-btn" onclick="checkPlayerRacha()">CONSULTAR</button>
+        <section class="hero-section">
+            <a href="https://www.tiktok.com/@crimifutbol" target="_blank" style="text-decoration:none;">
+                <img src="perfil.jpg" alt="Crimifutbol" class="profile-pic live-active">
+            </a>
+            <div class="username">@crimifutbol</div>
+            <a href="https://www.tiktok.com/@crimifutbol" target="_blank" class="btn-live">VER AHORA</a>
+        </section>
+
+        <div class="gx-search-container">
+            <div class="search-box">
+                <input type="text" id="gx-input" placeholder="Escribe tu usuario de tiktok...">
+                <button id="gx-btn" onclick="checkPlayerRacha()">CONSULTAR</button>
+            </div>
         </div>
-    </div>
 
-    <div id="player-card">
-        <h2 id="res-name" style="margin-top:0;">@USUARIO</h2>
-        <div style="display: flex; justify-content: space-between; align-items: center;">
-            <div><p style="margin:0; color: #888;">RACHA DIARIA</p><div id="res-racha" class="racha-fire">0 DÍAS 🔥</div></div>
-            <div style="text-align: right;"><p style="margin:0; color: #888;">NIVEL</p><div id="res-nivel" style="font-size: 1.6rem; font-weight: bold;">1</div></div>
+        <div id="player-card">
+            <h2 id="res-name" style="margin-top:0;">@USUARIO</h2>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <div><p style="margin:0; color: #888;">RACHA DIARIA</p><div id="res-racha" class="racha-fire">0 DÍAS 🔥</div></div>
+                <div style="text-align: right;"><p style="margin:0; color: #888;">NIVEL</p><div id="res-nivel" style="font-size: 1.6rem; font-weight: bold;">1</div></div>
+            </div>
+            <div class="xp-bar"><div id="res-bar" class="xp-fill" style="width: 0%"></div></div>
+            <p id="res-beneficio" style="color: var(--gx-accent); font-weight: bold; margin-top: 15px;"></p>
         </div>
-        <div class="xp-bar"><div id="res-bar" class="xp-fill" style="width: 0%"></div></div>
-        <p id="res-beneficio" style="color: var(--gx-accent); font-weight: bold; margin-top: 15px;"></p>
-    </div>
 
-    <div class="section-box">
-        <div class="section-title">¿CÓMO JUGAR?</div>
-        <p class="section-text">
-            Lo primero al entrar es <span class="highlight">comentar el nombre de tu equipo o país</span> para unirte a la carrera. 
-            Una vez dentro, el objetivo es impulsarlo hacia la meta usando <span class="highlight">likes, comentarios y regalos</span> (todos los regalos suman potencia). 
-            También puedes participar en las <span class="highlight">trivias en vivo</span>; si eres el primero en adivinar, ¡darás un empuje masivo a tu equipo!
-        </p>
-    </div>
+        <div class="section-box">
+            <div class="section-title">¿CÓMO JUGAR?</div>
+            <p class="section-text">
+                Lo primero al entrar es <span class="highlight">comentar el nombre de tu equipo o país</span> para unirte a la carrera.
+                Una vez dentro, el objetivo es impulsarlo hacia la meta usando <span class="highlight">likes, comentarios y regalos</span> (todos los regalos suman potencia).
+                También puedes participar en las <span class="highlight">trivias en vivo</span>; si eres el primero en adivinar, ¡darás un empuje masivo a tu equipo!
+            </p>
+        </div>
 
-    <div class="section-box">
-        <div class="section-title">NIVELES Y CAPITANES</div>
-        <p class="section-text">
-            Cada interacción suma <span class="highlight">Experiencia (EXP)</span> a tu perfil. Al acumular EXP, subirás de nivel automáticamente. 
-            <br><br>
-            Los <span class="highlight">3 jugadores con más nivel</span> de cada equipo o país serán nombrados <span class="highlight">CAPITANES</span>. 
-            El Capitán tiene un poder único: puede comentar la palabra <span class="highlight">"capitan"</span> (una vez por live) para activar un <span class="highlight">X2 durante 3 minutos</span>. 
-            Durante este tiempo, <span class="highlight">CUALQUIER impulso</span> de cualquier persona para ese equipo contará por el doble. ¡Es un beneficio para todo el grupo!
-        </p>
-    </div>
+        <div class="section-box">
+            <div class="section-title">NIVELES Y CAPITANES</div>
+            <p class="section-text">
+                Cada interacción suma <span class="highlight">Experiencia (EXP)</span> a tu perfil. Al acumular EXP, subirás de nivel automáticamente.
+                <br><br>
+                Los <span class="highlight">3 jugadores con más nivel</span> de cada equipo o país serán nombrados <span class="highlight">CAPITANES</span>.
+                El Capitán tiene un poder único: puede comentar la palabra <span class="highlight">"capitan"</span> (una vez por live) para activar un <span class="highlight">X2 durante 3 minutos</span>.
+                Durante este tiempo, <span class="highlight">CUALQUIER impulso</span> de cualquier persona para ese equipo contará por el doble. ¡Es un beneficio para todo el grupo!
+            </p>
+        </div>
 
-    <div class="section-box">
-        <div class="section-title">SISTEMA DE RACHA</div>
-        <p class="section-text">
-            La constancia premia. Por cada día que llegues al juego y te actives comentando tu equipo, tu <span class="highlight">Racha Diaria</span> subirá 1 día. 
-            Mantener tu racha activa te dará beneficios exclusivos como multiplicadores de fuerza permanentes.
-        </p>
-        
-        <h3 style="margin-top: 30px; font-family: 'Orbitron'; color: var(--gx-accent);">🏆 TOP 10 RACHAS</h3>
-        <table class="top-table" id="top-racha-table">
-            <thead>
-                <tr>
-                    <th>Puesto</th>
-                    <th>Usuario</th>
-                    <th>Racha</th>
-                </tr>
-            </thead>
-            <tbody id="top-racha-body">
+        <div class="section-box">
+            <div class="section-title">SISTEMA DE RACHA</div>
+            <p class="section-text">
+                La constancia premia. Por cada día que llegues al juego y te actives comentando tu equipo, tu <span class="highlight">Racha Diaria</span> subirá 1 día.
+                Mantener tu racha activa te dará beneficios exclusivos como multiplicadores de fuerza permanentes.
+            </p>
+
+            <h3 style="margin-top: 30px; font-family: 'Orbitron'; color: var(--gx-accent);">🏆 TOP 10 RACHAS</h3>
+            <table class="top-table" id="top-racha-table">
+                <thead>
+                    <tr>
+                        <th>Puesto</th>
+                        <th>Usuario</th>
+                        <th>Racha</th>
+                    </tr>
+                </thead>
+                <tbody id="top-racha-body">
                 </tbody>
-        </table>
+            </table>
+        </div>
     </div>
-</div>
 
-<script>
-    const JSON_URL = "user_exp.json";
+    <script>
+        const JSON_URL = "user_exp.json";
 
-    async function checkPlayerRacha() {
-        const userSearch = document.getElementById('gx-input').value.trim().toLowerCase();
-        const card = document.getElementById('player-card');
-        try {
-            const response = await fetch(JSON_URL);
-            const data = await response.json();
-            const user = data.users.find(u => u.username.toLowerCase() === userSearch);
-            if (user) {
-                card.style.display = 'block';
-                document.getElementById('res-name').innerText = "@" + user.username.toUpperCase();
-                document.getElementById('res-racha').innerText = (user.rachaDias || 0) + " DÍAS 🔥";
-                document.getElementById('res-nivel').innerText = user.level || 1;
-                document.getElementById('res-bar').style.width = ((user.exp % 1000) / 10) + "%";
-                document.getElementById('res-beneficio').innerText = user.rachaDias >= 15 ? "BONO: SUPER FUERZA X2 🧨" : (user.rachaDias >= 5 ? "BONO: IMPULSO X1.5 ⚡" : "BONO: ESTÁNDAR");
-                card.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            } else { alert("USUARIO NO ENCONTRADO"); }
-        } catch (e) { console.error(e); }
-    }
-
-    async function cargarTopRacha() {
-        try {
-            const response = await fetch(JSON_URL);
-            const data = await response.json();
-            // Ordenar por racha descendente y tomar los 10 primeros
-            const top10 = data.users.sort((a, b) => (b.rachaDias || 0) - (a.rachaDias || 0)).slice(0, 10);
-            const tbody = document.getElementById('top-racha-body');
-            tbody.innerHTML = "";
-            top10.forEach((user, index) => {
-                const row = `<tr>
-                    <td>#${index + 1}</td>
-                    <td>${user.username}</td>
-                    <td class="accent">${user.rachaDias || 0} días 🔥</td>
-                </tr>`;
-                tbody.innerHTML += row;
-            });
-        } catch (e) { console.error(e); }
-    }
-
-    function actualizarColorGamer() {
-        const ahora = new Date();
-        const root = document.documentElement;
-        const cicloRojo = Math.floor(ahora.getMinutes() / 5) % 2 === 1;
-        if (cicloRojo) {
-            root.style.setProperty('--gx-accent', 'var(--neon-red)');
-            root.style.setProperty('--gx-glow', 'rgba(255, 0, 50, 0.5)');
-        } else {
-            root.style.setProperty('--gx-accent', 'var(--neon-blue)');
-            root.style.setProperty('--gx-glow', 'rgba(0, 242, 255, 0.5)');
+        async function checkPlayerRacha() {
+            const userSearch = document.getElementById('gx-input').value.trim().toLowerCase();
+            const card = document.getElementById('player-card');
+            try {
+                const response = await fetch(JSON_URL);
+                const data = await response.json();
+                const user = data.users.find(u => u.username.toLowerCase() === userSearch);
+                if (user) {
+                    card.style.display = 'block';
+                    document.getElementById('res-name').innerText = "@" + user.username.toUpperCase();
+                    document.getElementById('res-racha').innerText = (user.rachaDias || 0) + " DÍAS 🔥";
+                    document.getElementById('res-nivel').innerText = user.level || 1;
+                    document.getElementById('res-bar').style.width = ((user.exp % 1000) / 10) + "%";
+                    document.getElementById('res-beneficio').innerText = user.rachaDias >= 15 ? "BONO: SUPER FUERZA X2 🧨" : (user.rachaDias >= 5 ? "BONO: IMPULSO X1.5 ⚡" : "BONO: ESTÁNDAR");
+                    card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                } else { alert("USUARIO NO ENCONTRADO"); }
+            } catch (e) { console.error(e); }
         }
-    }
 
-    actualizarColorGamer();
-    setInterval(actualizarColorGamer, 30000);
-    cargarTopRacha(); // Carga la tabla al iniciar
-</script>
+        async function cargarTopRacha() {
+            try {
+                const response = await fetch(JSON_URL);
+                const data = await response.json();
+                const top10 = data.users.sort((a, b) => (b.rachaDias || 0) - (a.rachaDias || 0)).slice(0, 10);
+                const tbody = document.getElementById('top-racha-body');
+                tbody.innerHTML = "";
+                top10.forEach((user, index) => {
+                    const row = `<tr>
+                        <td>#${index + 1}</td>
+                        <td>${user.username}</td>
+                        <td class="accent">${user.rachaDias || 0} días 🔥</td>
+                    </tr>`;
+                    tbody.innerHTML += row;
+                });
+            } catch (e) { console.error(e); }
+        }
+
+        function actualizarColorGamer() {
+            const ahora = new Date();
+            const root = document.documentElement;
+            const cicloRojo = Math.floor(ahora.getMinutes() / 5) % 2 === 1;
+            if (cicloRojo) {
+                root.style.setProperty('--gx-accent', 'var(--neon-red)');
+                root.style.setProperty('--gx-glow', 'rgba(255, 0, 50, 0.5)');
+            } else {
+                root.style.setProperty('--gx-accent', 'var(--neon-blue)');
+                root.style.setProperty('--gx-glow', 'rgba(0, 242, 255, 0.5)');
+            }
+        }
+
+        actualizarColorGamer();
+        setInterval(actualizarColorGamer, 30000);
+        cargarTopRacha();
+    </script>
 </body>
 </html>
