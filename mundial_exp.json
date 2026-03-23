@@ -79,6 +79,12 @@
             "team": "COLOMBIA"
         },
         {
+            "username": "dorisposada281",
+            "exp": 11032,
+            "level": 11,
+            "team": "COLOMBIA"
+        },
+        {
             "username": "_jefferr_",
             "exp": 9448,
             "level": 9,
@@ -109,15 +115,9 @@
             "team": "COLOMBIA"
         },
         {
-            "username": "dorisposada281",
-            "exp": 5004,
-            "level": 5,
-            "team": "COLOMBIA"
-        },
-        {
             "username": "Cristian",
-            "exp": 4950,
-            "level": 4,
+            "exp": 5000,
+            "level": 5,
             "team": "Millonarios"
         },
         {
@@ -197,6 +197,12 @@
             "exp": 1663,
             "level": 1,
             "team": "GUATEMALA"
+        },
+        {
+            "username": "eslesli.osorio",
+            "exp": 1612,
+            "level": 1,
+            "team": "EL SALVADOR"
         },
         {
             "username": "livancitoo",
@@ -355,6 +361,12 @@
             "team": "PANAMA"
         },
         {
+            "username": "sebas.123741",
+            "exp": 597,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
             "username": "kevintejedor885",
             "exp": 590,
             "level": 1,
@@ -371,6 +383,12 @@
             "exp": 572,
             "level": 1,
             "team": "ECUADOR"
+        },
+        {
+            "username": "jgarci206",
+            "exp": 555,
+            "level": 1,
+            "team": "COLOMBIA"
         },
         {
             "username": "alejandro.garca7679",
@@ -433,10 +451,22 @@
             "team": "PANAMA"
         },
         {
+            "username": "deividmedina3",
+            "exp": 410,
+            "level": 1,
+            "team": "MEXICO"
+        },
+        {
             "username": "roberto.el.papy",
             "exp": 393,
             "level": 1,
             "team": "HONDURAS"
+        },
+        {
+            "username": "klebersonperez",
+            "exp": 390,
+            "level": 1,
+            "team": "VENEZUELA"
         },
         {
             "username": "gomezyamilett123",
@@ -457,16 +487,16 @@
             "team": "VENEZUELA"
         },
         {
-            "username": "el.guaro.victor.a",
-            "exp": 363,
-            "level": 1,
-            "team": "VENEZUELA"
-        },
-        {
             "username": "nicolas7.rg",
             "exp": 363,
             "level": 1,
             "team": "COLOMBIA"
+        },
+        {
+            "username": "el.guaro.victor.a",
+            "exp": 363,
+            "level": 1,
+            "team": "VENEZUELA"
         },
         {
             "username": "victorino1100",
@@ -531,6 +561,12 @@
         {
             "username": "divierferrerj",
             "exp": 275,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "belsychima2908",
+            "exp": 269,
             "level": 1,
             "team": "COLOMBIA"
         },
@@ -625,16 +661,16 @@
             "team": "GUATEMALA"
         },
         {
-            "username": "daniel_manchay",
-            "exp": 215,
-            "level": 1,
-            "team": "ECUADOR"
-        },
-        {
             "username": "izofer",
             "exp": 215,
             "level": 1,
             "team": "COLOMBIA"
+        },
+        {
+            "username": "daniel_manchay",
+            "exp": 215,
+            "level": 1,
+            "team": "ECUADOR"
         },
         {
             "username": "cansom3",
@@ -673,13 +709,13 @@
             "team": "COLOMBIA"
         },
         {
-            "username": "yeraldin0209",
+            "username": "danielmartin120910",
             "exp": 197,
             "level": 1,
             "team": "VENEZUELA"
         },
         {
-            "username": "danielmartin120910",
+            "username": "yeraldin0209",
             "exp": 197,
             "level": 1,
             "team": "VENEZUELA"
@@ -715,16 +751,16 @@
             "team": "COLOMBIA"
         },
         {
-            "username": "io.fresa6",
-            "exp": 176,
-            "level": 1,
-            "team": "VENEZUELA"
-        },
-        {
             "username": "jos.rusbell.bonil",
             "exp": 176,
             "level": 1,
             "team": "COLOMBIA"
+        },
+        {
+            "username": "io.fresa6",
+            "exp": 176,
+            "level": 1,
+            "team": "VENEZUELA"
         },
         {
             "username": "mayot4220",
@@ -737,6 +773,12 @@
             "exp": 175,
             "level": 1,
             "team": "VENEZUELA"
+        },
+        {
+            "username": "andresguerrero0203",
+            "exp": 175,
+            "level": 1,
+            "team": "COLOMBIA"
         },
         {
             "username": "carlos.lp2963",
@@ -865,16 +907,16 @@
             "team": "ARGENTINA"
         },
         {
-            "username": "jhonalejandromill",
-            "exp": 125,
-            "level": 1,
-            "team": "COLOMBIA"
-        },
-        {
             "username": "alfawolf1206",
             "exp": 125,
             "level": 1,
             "team": "HONDURAS"
+        },
+        {
+            "username": "jhonalejandromill",
+            "exp": 125,
+            "level": 1,
+            "team": "COLOMBIA"
         },
         {
             "username": "nicoll15kevin",
@@ -883,16 +925,16 @@
             "team": "COLOMBIA"
         },
         {
-            "username": "tupatrona12072",
-            "exp": 120,
-            "level": 1,
-            "team": "ECUADOR"
-        },
-        {
             "username": "jesusteamomucho2",
             "exp": 120,
             "level": 1,
             "team": "VENEZUELA"
+        },
+        {
+            "username": "tupatrona12072",
+            "exp": 120,
+            "level": 1,
+            "team": "ECUADOR"
         },
         {
             "username": "oscarb9104",
@@ -913,14 +955,14 @@
             "team": "COLOMBIA"
         },
         {
-            "username": "greys.vanessa2",
-            "exp": 114,
+            "username": "sandy.2377",
+            "exp": 115,
             "level": 1,
             "team": "COLOMBIA"
         },
         {
-            "username": "zairynicool",
-            "exp": 113,
+            "username": "greys.vanessa2",
+            "exp": 114,
             "level": 1,
             "team": "COLOMBIA"
         },
@@ -929,6 +971,12 @@
             "exp": 113,
             "level": 1,
             "team": "MEXICO"
+        },
+        {
+            "username": "zairynicool",
+            "exp": 113,
+            "level": 1,
+            "team": "COLOMBIA"
         },
         {
             "username": "luneluz8b",
@@ -943,6 +991,12 @@
             "team": "COLOMBIA"
         },
         {
+            "username": "mariuxivinme",
+            "exp": 110,
+            "level": 1,
+            "team": "ECUADOR"
+        },
+        {
             "username": "lenny_20",
             "exp": 110,
             "level": 1,
@@ -953,12 +1007,6 @@
             "exp": 110,
             "level": 1,
             "team": "MEXICO"
-        },
-        {
-            "username": "mariuxivinme",
-            "exp": 110,
-            "level": 1,
-            "team": "ECUADOR"
         },
         {
             "username": "santiago_burgos1",
@@ -973,10 +1021,10 @@
             "team": "VENEZUELA"
         },
         {
-            "username": "bolivar.vasquez4",
+            "username": "jonnymateo3",
             "exp": 105,
             "level": 1,
-            "team": "ECUADOR"
+            "team": "COLOMBIA"
         },
         {
             "username": "gerardo.garca8919",
@@ -985,10 +1033,10 @@
             "team": "VENEZUELA"
         },
         {
-            "username": "jonnymateo3",
+            "username": "bolivar.vasquez4",
             "exp": 105,
             "level": 1,
-            "team": "COLOMBIA"
+            "team": "ECUADOR"
         },
         {
             "username": "anthonellastella",
@@ -1027,6 +1075,12 @@
             "team": "VENEZUELA"
         },
         {
+            "username": "cardlnaalejandro78",
+            "exp": 95,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
             "username": "suheidyvalbuena5",
             "exp": 92,
             "level": 1,
@@ -1045,8 +1099,8 @@
             "team": "COLOMBIA"
         },
         {
-            "username": "lila_molina9808",
-            "exp": 90,
+            "username": "lucia_arteaga16",
+            "exp": 91,
             "level": 1,
             "team": "COLOMBIA"
         },
@@ -1063,10 +1117,22 @@
             "team": "ECUADOR"
         },
         {
+            "username": "lila_molina9808",
+            "exp": 90,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
             "username": "augustoo791",
             "exp": 86,
             "level": 1,
             "team": "ARGENTINA"
+        },
+        {
+            "username": "christoprer0",
+            "exp": 85,
+            "level": 1,
+            "team": "VENEZUELA"
         },
         {
             "username": "shary64970",
@@ -1075,10 +1141,10 @@
             "team": "HONDURAS"
         },
         {
-            "username": "christoprer0",
-            "exp": 85,
+            "username": "yeison.romero.mopa",
+            "exp": 84,
             "level": 1,
-            "team": "VENEZUELA"
+            "team": "COLOMBIA"
         },
         {
             "username": "tomasramire8",
@@ -1093,13 +1159,13 @@
             "team": "GUATEMALA"
         },
         {
-            "username": "jose.gc363",
+            "username": "ana399393933962527826263",
             "exp": 80,
             "level": 1,
             "team": "COLOMBIA"
         },
         {
-            "username": "ana399393933962527826263",
+            "username": "jose.gc363",
             "exp": 80,
             "level": 1,
             "team": "COLOMBIA"
@@ -1117,16 +1183,22 @@
             "team": "COLOMBIA"
         },
         {
-            "username": "jesus265848550",
-            "exp": 77,
+            "username": "romero_s11",
+            "exp": 78,
             "level": 1,
-            "team": "MEXICO"
+            "team": "COLOMBIA"
         },
         {
             "username": "shaki1192",
             "exp": 77,
             "level": 1,
             "team": "VENEZUELA"
+        },
+        {
+            "username": "jesus265848550",
+            "exp": 77,
+            "level": 1,
+            "team": "MEXICO"
         },
         {
             "username": "val089318",
@@ -1153,13 +1225,13 @@
             "team": "ARGENTINA"
         },
         {
-            "username": "luis_la_l_l3tras3",
+            "username": "eywilder0",
             "exp": 74,
             "level": 1,
             "team": "COLOMBIA"
         },
         {
-            "username": "eywilder0",
+            "username": "luis_la_l_l3tras3",
             "exp": 74,
             "level": 1,
             "team": "COLOMBIA"
@@ -1177,10 +1249,16 @@
             "team": "VENEZUELA"
         },
         {
-            "username": "esperanza.afanado3",
+            "username": "escorpion5362",
             "exp": 70,
             "level": 1,
-            "team": "COLOMBIA"
+            "team": "MEXICO"
+        },
+        {
+            "username": "soledadarrieta13",
+            "exp": 70,
+            "level": 1,
+            "team": "ARGENTINA"
         },
         {
             "username": "mrtorytc",
@@ -1189,7 +1267,7 @@
             "team": "ARGENTINA"
         },
         {
-            "username": "ale.vasquez343",
+            "username": "brayanycl",
             "exp": 70,
             "level": 1,
             "team": "VENEZUELA"
@@ -1201,22 +1279,10 @@
             "team": "VENEZUELA"
         },
         {
-            "username": "escorpion5362",
-            "exp": 70,
-            "level": 1,
-            "team": "MEXICO"
-        },
-        {
-            "username": "justindejesusbarr",
+            "username": "esperanza.afanado3",
             "exp": 70,
             "level": 1,
             "team": "COLOMBIA"
-        },
-        {
-            "username": "soledadarrieta13",
-            "exp": 70,
-            "level": 1,
-            "team": "ARGENTINA"
         },
         {
             "username": "user3040810172600",
@@ -1225,7 +1291,13 @@
             "team": "PANAMA"
         },
         {
-            "username": "brayanycl",
+            "username": "justindejesusbarr",
+            "exp": 70,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "ale.vasquez343",
             "exp": 70,
             "level": 1,
             "team": "VENEZUELA"
@@ -1237,10 +1309,10 @@
             "team": "COLOMBIA"
         },
         {
-            "username": "jos.manuel.leonet",
+            "username": "juli.genes",
             "exp": 65,
             "level": 1,
-            "team": "VENEZUELA"
+            "team": "COLOMBIA"
         },
         {
             "username": "danielbetancourt025",
@@ -1249,10 +1321,10 @@
             "team": "COLOMBIA"
         },
         {
-            "username": "juli.genes",
+            "username": "jos.manuel.leonet",
             "exp": 65,
             "level": 1,
-            "team": "COLOMBIA"
+            "team": "VENEZUELA"
         },
         {
             "username": "nicocomandoazul",
@@ -1261,25 +1333,19 @@
             "team": "PANAMA"
         },
         {
-            "username": "gheral.zacosta",
-            "exp": 65,
-            "level": 1,
-            "team": "COLOMBIA"
-        },
-        {
             "username": "manuebolivar86",
             "exp": 65,
             "level": 1,
             "team": "VENEZUELA"
         },
         {
-            "username": "arielmendivelso3",
-            "exp": 60,
+            "username": "gheral.zacosta",
+            "exp": 65,
             "level": 1,
             "team": "COLOMBIA"
         },
         {
-            "username": "juan.sebastian.da15",
+            "username": "camilasanchez429",
             "exp": 60,
             "level": 1,
             "team": "COLOMBIA"
@@ -1291,19 +1357,25 @@
             "team": "COLOMBIA"
         },
         {
-            "username": "itss_sebass32",
-            "exp": 60,
-            "level": 1,
-            "team": "ECUADOR"
-        },
-        {
             "username": "angelsoto917",
             "exp": 60,
             "level": 1,
             "team": "ARGENTINA"
         },
         {
-            "username": "camilasanchez429",
+            "username": "itss_sebass32",
+            "exp": 60,
+            "level": 1,
+            "team": "ECUADOR"
+        },
+        {
+            "username": "juan.sebastian.da15",
+            "exp": 60,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "arielmendivelso3",
             "exp": 60,
             "level": 1,
             "team": "COLOMBIA"
@@ -1333,7 +1405,19 @@
             "team": "ECUADOR"
         },
         {
+            "username": "paezneira",
+            "exp": 55,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
             "username": "zjaimeetjoz",
+            "exp": 55,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "alvarocuza",
             "exp": 55,
             "level": 1,
             "team": "COLOMBIA"
@@ -1351,28 +1435,16 @@
             "team": "VENEZUELA"
         },
         {
-            "username": "paezneira",
-            "exp": 55,
-            "level": 1,
-            "team": "COLOMBIA"
-        },
-        {
-            "username": "alvarocuza",
-            "exp": 55,
-            "level": 1,
-            "team": "COLOMBIA"
-        },
-        {
             "username": "joseluisburbanov",
             "exp": 55,
             "level": 1,
             "team": "COLOMBIA"
         },
         {
-            "username": "maikel.urdaneta3",
-            "exp": 53,
+            "username": "carlos.gutierrez8260",
+            "exp": 55,
             "level": 1,
-            "team": "VENEZUELA"
+            "team": "COLOMBIA"
         },
         {
             "username": "daniel_pinilla_f",
@@ -1385,6 +1457,12 @@
             "exp": 53,
             "level": 1,
             "team": "ECUADOR"
+        },
+        {
+            "username": "maikel.urdaneta3",
+            "exp": 53,
+            "level": 1,
+            "team": "VENEZUELA"
         },
         {
             "username": "elpupuhumor2",
@@ -1405,42 +1483,6 @@
             "team": "COLOMBIA"
         },
         {
-            "username": "arl_1111",
-            "exp": 50,
-            "level": 1,
-            "team": "VENEZUELA"
-        },
-        {
-            "username": "jarleison.lopez",
-            "exp": 50,
-            "level": 1,
-            "team": "COLOMBIA"
-        },
-        {
-            "username": "jhostine.lara5",
-            "exp": 50,
-            "level": 1,
-            "team": "PANAMA"
-        },
-        {
-            "username": "tuflakahermosa.com",
-            "exp": 50,
-            "level": 1,
-            "team": "VENEZUELA"
-        },
-        {
-            "username": "neymar.jr8387",
-            "exp": 50,
-            "level": 1,
-            "team": "VENEZUELA"
-        },
-        {
-            "username": "valejv120225",
-            "exp": 50,
-            "level": 1,
-            "team": "VENEZUELA"
-        },
-        {
             "username": "liberato1215",
             "exp": 50,
             "level": 1,
@@ -1459,10 +1501,52 @@
             "team": "COLOMBIA"
         },
         {
+            "username": "tuflakahermosa.com",
+            "exp": 50,
+            "level": 1,
+            "team": "VENEZUELA"
+        },
+        {
+            "username": "arl_1111",
+            "exp": 50,
+            "level": 1,
+            "team": "VENEZUELA"
+        },
+        {
+            "username": "valejv120225",
+            "exp": 50,
+            "level": 1,
+            "team": "VENEZUELA"
+        },
+        {
+            "username": "neymar.jr8387",
+            "exp": 50,
+            "level": 1,
+            "team": "VENEZUELA"
+        },
+        {
+            "username": "jarleison.lopez",
+            "exp": 50,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "jhostine.lara5",
+            "exp": 50,
+            "level": 1,
+            "team": "PANAMA"
+        },
+        {
             "username": "mariuxi._.0",
             "exp": 45,
             "level": 1,
             "team": "ECUADOR"
+        },
+        {
+            "username": "chamo.23.503",
+            "exp": 45,
+            "level": 1,
+            "team": "EL SALVADOR"
         },
         {
             "username": "yamilethdaguadagu",
@@ -1471,10 +1555,10 @@
             "team": "COLOMBIA"
         },
         {
-            "username": "yeison.romero.mopa",
-            "exp": 44,
+            "username": "antonio_cardona_4444",
+            "exp": 42,
             "level": 1,
-            "team": "COLOMBIA"
+            "team": "VENEZUELA"
         },
         {
             "username": ".cristianpiloto",
@@ -1489,42 +1573,6 @@
             "team": "COLOMBIA"
         },
         {
-            "username": "antonio_cardona_4444",
-            "exp": 42,
-            "level": 1,
-            "team": "VENEZUELA"
-        },
-        {
-            "username": "yeisoncadena68",
-            "exp": 40,
-            "level": 1,
-            "team": "COLOMBIA"
-        },
-        {
-            "username": "jhon.daniel.mejia2",
-            "exp": 40,
-            "level": 1,
-            "team": "COLOMBIA"
-        },
-        {
-            "username": "alexanderaguila794",
-            "exp": 40,
-            "level": 1,
-            "team": "COLOMBIA"
-        },
-        {
-            "username": "hernanncardozoo",
-            "exp": 40,
-            "level": 1,
-            "team": "COLOMBIA"
-        },
-        {
-            "username": "jalesky52",
-            "exp": 40,
-            "level": 1,
-            "team": "VENEZUELA"
-        },
-        {
             "username": "oscar..soto..420",
             "exp": 40,
             "level": 1,
@@ -1537,10 +1585,34 @@
             "team": "COLOMBIA"
         },
         {
+            "username": "raulfunes04",
+            "exp": 40,
+            "level": 1,
+            "team": "HONDURAS"
+        },
+        {
+            "username": "jhon.daniel.mejia2",
+            "exp": 40,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
             "username": "angelbermontanez",
             "exp": 40,
             "level": 1,
             "team": "VENEZUELA"
+        },
+        {
+            "username": "jalesky52",
+            "exp": 40,
+            "level": 1,
+            "team": "VENEZUELA"
+        },
+        {
+            "username": "yeisoncadena68",
+            "exp": 40,
+            "level": 1,
+            "team": "COLOMBIA"
         },
         {
             "username": "justin.david109",
@@ -1549,14 +1621,26 @@
             "team": "COLOMBIA"
         },
         {
-            "username": "raulfunes04",
+            "username": "hernanncardozoo",
             "exp": 40,
             "level": 1,
-            "team": "HONDURAS"
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "alexanderaguila794",
+            "exp": 40,
+            "level": 1,
+            "team": "COLOMBIA"
         },
         {
             "username": "futtbol_x_edits",
             "exp": 38,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "yesus952",
+            "exp": 37,
             "level": 1,
             "team": "COLOMBIA"
         },
@@ -1567,13 +1651,19 @@
             "team": "HONDURAS"
         },
         {
-            "username": "karo27178",
+            "username": "julian.valdez4",
             "exp": 35,
             "level": 1,
-            "team": "ECUADOR"
+            "team": "COLOMBIA"
         },
         {
             "username": "ange53475",
+            "exp": 35,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "edwuarmorelos",
             "exp": 35,
             "level": 1,
             "team": "COLOMBIA"
@@ -1585,22 +1675,16 @@
             "team": "VENEZUELA"
         },
         {
-            "username": "julian.valdez4",
-            "exp": 35,
-            "level": 1,
-            "team": "COLOMBIA"
-        },
-        {
             "username": "rafaberth",
             "exp": 35,
             "level": 1,
             "team": "VENEZUELA"
         },
         {
-            "username": "edwuarmorelos",
+            "username": "karo27178",
             "exp": 35,
             "level": 1,
-            "team": "COLOMBIA"
+            "team": "ECUADOR"
         },
         {
             "username": "fer662938",
@@ -1609,40 +1693,10 @@
             "team": "COLOMBIA"
         },
         {
-            "username": "susana.rojas13",
-            "exp": 30,
-            "level": 1,
-            "team": "COLOMBIA"
-        },
-        {
-            "username": "jesushernandez14034",
-            "exp": 30,
+            "username": "jorye2434",
+            "exp": 31,
             "level": 1,
             "team": "VENEZUELA"
-        },
-        {
-            "username": "carloscervantes1695",
-            "exp": 30,
-            "level": 1,
-            "team": "COLOMBIA"
-        },
-        {
-            "username": "amparomm19",
-            "exp": 30,
-            "level": 1,
-            "team": "COLOMBIA"
-        },
-        {
-            "username": "el_pardo_17",
-            "exp": 30,
-            "level": 1,
-            "team": "ARGENTINA"
-        },
-        {
-            "username": "henry.bricio",
-            "exp": 30,
-            "level": 1,
-            "team": "ECUADOR"
         },
         {
             "username": "cecilia.chimbo2",
@@ -1651,10 +1705,76 @@
             "team": "ECUADOR"
         },
         {
+            "username": "henry.bricio",
+            "exp": 30,
+            "level": 1,
+            "team": "ECUADOR"
+        },
+        {
+            "username": "susana.rojas13",
+            "exp": 30,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "plebeyos_yt",
+            "exp": 30,
+            "level": 1,
+            "team": "ECUADOR"
+        },
+        {
+            "username": "el_pardo_17",
+            "exp": 30,
+            "level": 1,
+            "team": "ARGENTINA"
+        },
+        {
+            "username": "carloscervantes1695",
+            "exp": 30,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "rosa_cast08",
+            "exp": 30,
+            "level": 1,
+            "team": "PANAMA"
+        },
+        {
+            "username": "isaacpolodias",
+            "exp": 30,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "jhonatapiresrocha",
+            "exp": 30,
+            "level": 1,
+            "team": ""
+        },
+        {
+            "username": "amparomm19",
+            "exp": 30,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
             "username": "yeisonescobedo2",
             "exp": 30,
             "level": 1,
             "team": "COLOMBIA"
+        },
+        {
+            "username": "angel.12dc",
+            "exp": 30,
+            "level": 1,
+            "team": "VENEZUELA"
+        },
+        {
+            "username": "jesushernandez14034",
+            "exp": 30,
+            "level": 1,
+            "team": "VENEZUELA"
         },
         {
             "username": "r_jr66",
@@ -1669,28 +1789,16 @@
             "team": "ECUADOR"
         },
         {
-            "username": "plebeyos_yt",
+            "username": "julian.gomez015",
             "exp": 30,
             "level": 1,
-            "team": "ECUADOR"
+            "team": "ARGENTINA"
         },
         {
-            "username": "jhonatapiresrocha",
-            "exp": 30,
+            "username": "victorbalaguera77",
+            "exp": 29,
             "level": 1,
-            "team": ""
-        },
-        {
-            "username": "rosa_cast08",
-            "exp": 30,
-            "level": 1,
-            "team": "PANAMA"
-        },
-        {
-            "username": "angel.12dc",
-            "exp": 30,
-            "level": 1,
-            "team": "VENEZUELA"
+            "team": "COLOMBIA"
         },
         {
             "username": "tj.gy7",
@@ -1705,8 +1813,14 @@
             "team": "COLOMBIA"
         },
         {
-            "username": "victorbalaguera77",
-            "exp": 29,
+            "username": "pedro.jared4",
+            "exp": 27,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "juliana.velzquez14",
+            "exp": 26,
             "level": 1,
             "team": "COLOMBIA"
         },
@@ -1717,8 +1831,26 @@
             "team": "MEXICO"
         },
         {
-            "username": "juliana.velzquez14",
-            "exp": 26,
+            "username": "dayeissybellorin1",
+            "exp": 25,
+            "level": 1,
+            "team": "VENEZUELA"
+        },
+        {
+            "username": "wilber.yodera",
+            "exp": 25,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "axtellez99",
+            "exp": 25,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "felipe._.urrego",
+            "exp": 25,
             "level": 1,
             "team": "COLOMBIA"
         },
@@ -1735,18 +1867,6 @@
             "team": "PANAMA"
         },
         {
-            "username": "wilber.yodera",
-            "exp": 25,
-            "level": 1,
-            "team": "COLOMBIA"
-        },
-        {
-            "username": "justiciarey2",
-            "exp": 25,
-            "level": 1,
-            "team": "VENEZUELA"
-        },
-        {
             "username": "jesus.aurelio49",
             "exp": 25,
             "level": 1,
@@ -1759,19 +1879,7 @@
             "team": "ECUADOR"
         },
         {
-            "username": "mari_08_73",
-            "exp": 25,
-            "level": 1,
-            "team": "COLOMBIA"
-        },
-        {
-            "username": "jeffersonmolina99",
-            "exp": 25,
-            "level": 1,
-            "team": "COLOMBIA"
-        },
-        {
-            "username": "el.papi.sabroson8",
+            "username": "santiago_ramirez444",
             "exp": 25,
             "level": 1,
             "team": "COLOMBIA"
@@ -1783,74 +1891,38 @@
             "team": "VENEZUELA"
         },
         {
-            "username": "dayeissybellorin1",
+            "username": "justiciarey2",
             "exp": 25,
             "level": 1,
             "team": "VENEZUELA"
         },
         {
+            "username": "el.papi.sabroson8",
+            "exp": 25,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "mari_08_73",
+            "exp": 25,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "camilazapata960",
+            "exp": 25,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "jeffersonmolina99",
+            "exp": 25,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
             "username": "johan.parra748",
             "exp": 23,
-            "level": 1,
-            "team": "COLOMBIA"
-        },
-        {
-            "username": "laurensofiamartel",
-            "exp": 20,
-            "level": 1,
-            "team": "COLOMBIA"
-        },
-        {
-            "username": "javier.jimenez5564",
-            "exp": 20,
-            "level": 1,
-            "team": "COLOMBIA"
-        },
-        {
-            "username": "user158918999",
-            "exp": 20,
-            "level": 1,
-            "team": "ECUADOR"
-        },
-        {
-            "username": "carlosjr_47",
-            "exp": 20,
-            "level": 1,
-            "team": "MEXICO"
-        },
-        {
-            "username": "ui8kku",
-            "exp": 20,
-            "level": 1,
-            "team": "COLOMBIA"
-        },
-        {
-            "username": "user805924080",
-            "exp": 20,
-            "level": 1,
-            "team": "ECUADOR"
-        },
-        {
-            "username": "colimber8",
-            "exp": 20,
-            "level": 1,
-            "team": "VENEZUELA"
-        },
-        {
-            "username": "maribelmirelladel",
-            "exp": 20,
-            "level": 1,
-            "team": "ECUADOR"
-        },
-        {
-            "username": "yohananiaza1",
-            "exp": 20,
-            "level": 1,
-            "team": "COLOMBIA"
-        },
-        {
-            "username": "josuecaballero844",
-            "exp": 20,
             "level": 1,
             "team": "COLOMBIA"
         },
@@ -1867,8 +1939,68 @@
             "team": "COLOMBIA"
         },
         {
-            "username": "kevinperdomo.jr",
-            "exp": 19,
+            "username": "zsara03",
+            "exp": 20,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "yohananiaza1",
+            "exp": 20,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "maribelmirelladel",
+            "exp": 20,
+            "level": 1,
+            "team": "ECUADOR"
+        },
+        {
+            "username": "colimber8",
+            "exp": 20,
+            "level": 1,
+            "team": "VENEZUELA"
+        },
+        {
+            "username": "carlosjr_47",
+            "exp": 20,
+            "level": 1,
+            "team": "MEXICO"
+        },
+        {
+            "username": "user805924080",
+            "exp": 20,
+            "level": 1,
+            "team": "ECUADOR"
+        },
+        {
+            "username": "josuecaballero844",
+            "exp": 20,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "javier.jimenez5564",
+            "exp": 20,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "laurensofiamartel",
+            "exp": 20,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "user158918999",
+            "exp": 20,
+            "level": 1,
+            "team": "ECUADOR"
+        },
+        {
+            "username": "ui8kku",
+            "exp": 20,
             "level": 1,
             "team": "COLOMBIA"
         },
@@ -1877,6 +2009,12 @@
             "exp": 19,
             "level": 1,
             "team": "PANAMA"
+        },
+        {
+            "username": "kevinperdomo.jr",
+            "exp": 19,
+            "level": 1,
+            "team": "COLOMBIA"
         },
         {
             "username": "sebas97tian",
@@ -1891,13 +2029,79 @@
             "team": "VENEZUELA"
         },
         {
+            "username": "leonardoalfonzo19",
+            "exp": 15,
+            "level": 1,
+            "team": "VENEZUELA"
+        },
+        {
+            "username": "user2847619627130",
+            "exp": 15,
+            "level": 1,
+            "team": "ECUADOR"
+        },
+        {
+            "username": "santisassy0",
+            "exp": 15,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "aldo.cabrera857",
+            "exp": 15,
+            "level": 1,
+            "team": "ARGENTINA"
+        },
+        {
+            "username": "mariabeltrn28",
+            "exp": 15,
+            "level": 1,
+            "team": "PANAMA"
+        },
+        {
+            "username": "josecarlos.melend",
+            "exp": 15,
+            "level": 1,
+            "team": "VENEZUELA"
+        },
+        {
+            "username": "javierhurtado1736",
+            "exp": 15,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "teti71237",
+            "exp": 15,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
             "username": "ixn_mxcxas",
             "exp": 15,
             "level": 1,
             "team": "COLOMBIA"
         },
         {
-            "username": "emmadavi4",
+            "username": "yerik.flex",
+            "exp": 15,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "doria5978",
+            "exp": 15,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "jhon25926",
+            "exp": 15,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "jhonatanefectos",
             "exp": 15,
             "level": 1,
             "team": "COLOMBIA"
@@ -1915,6 +2119,42 @@
             "team": "VENEZUELA"
         },
         {
+            "username": "gby22__",
+            "exp": 15,
+            "level": 1,
+            "team": "ECUADOR"
+        },
+        {
+            "username": "seb_a.al",
+            "exp": 15,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "laodiosa325",
+            "exp": 15,
+            "level": 1,
+            "team": "VENEZUELA"
+        },
+        {
+            "username": "berlain.ramrez.ja",
+            "exp": 15,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "guilleeeeeee09",
+            "exp": 15,
+            "level": 1,
+            "team": "ARGENTINA"
+        },
+        {
+            "username": "emmadavi4",
+            "exp": 15,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
             "username": "juaness_111",
             "exp": 15,
             "level": 1,
@@ -1927,109 +2167,13 @@
             "team": "MEXICO"
         },
         {
-            "username": "berlain.ramrez.ja",
-            "exp": 15,
-            "level": 1,
-            "team": "COLOMBIA"
-        },
-        {
-            "username": "javierhurtado1736",
-            "exp": 15,
-            "level": 1,
-            "team": "COLOMBIA"
-        },
-        {
-            "username": "user2847619627130",
-            "exp": 15,
-            "level": 1,
-            "team": "ECUADOR"
-        },
-        {
-            "username": "mariabeltrn28",
-            "exp": 15,
-            "level": 1,
-            "team": "PANAMA"
-        },
-        {
-            "username": "gby22__",
-            "exp": 15,
-            "level": 1,
-            "team": "ECUADOR"
-        },
-        {
-            "username": "doria5978",
-            "exp": 15,
-            "level": 1,
-            "team": "COLOMBIA"
-        },
-        {
-            "username": "aldo.cabrera857",
-            "exp": 15,
-            "level": 1,
-            "team": "ARGENTINA"
-        },
-        {
-            "username": "josecarlos.melend",
-            "exp": 15,
-            "level": 1,
-            "team": "VENEZUELA"
-        },
-        {
-            "username": "seb_a.al",
-            "exp": 15,
-            "level": 1,
-            "team": "COLOMBIA"
-        },
-        {
-            "username": "isaacpolodias",
-            "exp": 15,
-            "level": 1,
-            "team": "COLOMBIA"
-        },
-        {
-            "username": "jhon25926",
-            "exp": 15,
-            "level": 1,
-            "team": "COLOMBIA"
-        },
-        {
-            "username": "laodiosa325",
-            "exp": 15,
-            "level": 1,
-            "team": "VENEZUELA"
-        },
-        {
-            "username": "leonardoalfonzo19",
-            "exp": 15,
-            "level": 1,
-            "team": "VENEZUELA"
-        },
-        {
-            "username": "guilleeeeeee09",
-            "exp": 15,
-            "level": 1,
-            "team": "ARGENTINA"
-        },
-        {
-            "username": "teti71237",
-            "exp": 15,
-            "level": 1,
-            "team": "COLOMBIA"
-        },
-        {
-            "username": "yerik.flex",
-            "exp": 15,
-            "level": 1,
-            "team": "COLOMBIA"
-        },
-        {
-            "username": "santisassy0",
-            "exp": 15,
-            "level": 1,
-            "team": "COLOMBIA"
-        },
-        {
             "username": "andrius.aponte",
+            "exp": 14,
+            "level": 1,
+            "team": "VENEZUELA"
+        },
+        {
+            "username": "fnix40645",
             "exp": 14,
             "level": 1,
             "team": "VENEZUELA"
@@ -2037,6 +2181,12 @@
         {
             "username": "toro_arango",
             "exp": 13,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "juan.miranda9863",
+            "exp": 12,
             "level": 1,
             "team": "COLOMBIA"
         },
@@ -2059,31 +2209,43 @@
             "team": "COLOMBIA"
         },
         {
-            "username": "luischavezhernand8",
-            "exp": 10,
+            "username": "nicolas.maya925",
+            "exp": 11,
             "level": 1,
-            "team": "MEXICO"
+            "team": "COLOMBIA"
         },
         {
-            "username": "buses_conestylo7",
+            "username": "kennybarrios81",
             "exp": 10,
             "level": 1,
             "team": "COLOMBIA"
         },
         {
-            "username": "santi.rodelo",
+            "username": "winner5.h0",
+            "exp": 10,
+            "level": 1,
+            "team": "VENEZUELA"
+        },
+        {
+            "username": "jrjhoan168",
             "exp": 10,
             "level": 1,
             "team": "COLOMBIA"
         },
         {
-            "username": "manuelflores.2026",
+            "username": "oscarleon016",
             "exp": 10,
             "level": 1,
-            "team": "ARGENTINA"
+            "team": "COLOMBIA"
         },
         {
-            "username": "t.mamasita43",
+            "username": "mariamanci1",
+            "exp": 10,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "gabriel.varela851",
             "exp": 10,
             "level": 1,
             "team": "ECUADOR"
@@ -2095,37 +2257,103 @@
             "team": "VENEZUELA"
         },
         {
+            "username": "wjuan_navia",
+            "exp": 10,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "danisss123sofi",
+            "exp": 10,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "vill_5_",
+            "exp": 10,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "kunoichi.013",
+            "exp": 10,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "fader_xzv.0",
+            "exp": 10,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "user84967082536985",
+            "exp": 10,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "user32141472500721",
+            "exp": 10,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "lale_l4",
+            "exp": 10,
+            "level": 1,
+            "team": ""
+        },
+        {
+            "username": "maria.paola.garce0",
+            "exp": 10,
+            "level": 1,
+            "team": "ECUADOR"
+        },
+        {
+            "username": "t.mamasita43",
+            "exp": 10,
+            "level": 1,
+            "team": "ECUADOR"
+        },
+        {
+            "username": "santi.rodelo",
+            "exp": 10,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "ronaldandresosori",
+            "exp": 10,
+            "level": 1,
+            "team": ""
+        },
+        {
+            "username": "stiven.valencia482",
+            "exp": 10,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "luischavezhernand8",
+            "exp": 10,
+            "level": 1,
+            "team": "MEXICO"
+        },
+        {
             "username": "kellysvega13",
             "exp": 10,
             "level": 1,
             "team": "COLOMBIA"
         },
         {
-            "username": "jhonaislant",
+            "username": "mateo_lpz12",
             "exp": 10,
             "level": 1,
-            "team": "COLOMBIA"
-        },
-        {
-            "username": "fandelchamito0",
-            "exp": 10,
-            "level": 1,
-            "team": "COLOMBIA"
+            "team": "EL SALVADOR"
         },
         {
             "username": "leeyang075",
-            "exp": 10,
-            "level": 1,
-            "team": "COLOMBIA"
-        },
-        {
-            "username": "sergiobarca19",
-            "exp": 10,
-            "level": 1,
-            "team": "COLOMBIA"
-        },
-        {
-            "username": "ell.brey.pg",
             "exp": 10,
             "level": 1,
             "team": "COLOMBIA"
@@ -2137,7 +2365,109 @@
             "team": "ECUADOR"
         },
         {
-            "username": "danisss123sofi",
+            "username": "uzielsantos65",
+            "exp": 10,
+            "level": 1,
+            "team": ""
+        },
+        {
+            "username": "sergiobarca19",
+            "exp": 10,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "kevinsu9",
+            "exp": 10,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "ell.brey.pg",
+            "exp": 10,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "fabianlopez6758",
+            "exp": 10,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "benjamin.torres418",
+            "exp": 10,
+            "level": 1,
+            "team": "ECUADOR"
+        },
+        {
+            "username": "luis_monsale",
+            "exp": 10,
+            "level": 1,
+            "team": "VENEZUELA"
+        },
+        {
+            "username": "luzmeryocampog818",
+            "exp": 10,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "kevin.espitia6",
+            "exp": 10,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "cmail35",
+            "exp": 10,
+            "level": 1,
+            "team": ""
+        },
+        {
+            "username": "colombia",
+            "exp": 10,
+            "level": 1,
+            "team": "VENEZUELA"
+        },
+        {
+            "username": "albertoalvarez1357",
+            "exp": 10,
+            "level": 1,
+            "team": "VENEZUELA"
+        },
+        {
+            "username": "mariadelrosariograjales",
+            "exp": 10,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "manuelflores.2026",
+            "exp": 10,
+            "level": 1,
+            "team": "ARGENTINA"
+        },
+        {
+            "username": "chuyyzpm",
+            "exp": 10,
+            "level": 1,
+            "team": ""
+        },
+        {
+            "username": "yesid30.25",
+            "exp": 10,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "fandelchamito0",
+            "exp": 10,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "jhonaislant",
             "exp": 10,
             "level": 1,
             "team": "COLOMBIA"
@@ -2149,10 +2479,40 @@
             "team": "VENEZUELA"
         },
         {
-            "username": "kevinsu9",
+            "username": "jos.manuel.torreg3",
             "exp": 10,
             "level": 1,
             "team": "COLOMBIA"
+        },
+        {
+            "username": "ricardo.pulido18",
+            "exp": 10,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "jeison3148",
+            "exp": 10,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "buses_conestylo7",
+            "exp": 10,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "davidquivano",
+            "exp": 10,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "yovannyjose94",
+            "exp": 10,
+            "level": 1,
+            "team": "VENEZUELA"
         },
         {
             "username": "dairon.tovar70",
@@ -2167,158 +2527,8 @@
             "team": "VENEZUELA"
         },
         {
-            "username": "albertoalvarez1357",
-            "exp": 10,
-            "level": 1,
-            "team": "VENEZUELA"
-        },
-        {
-            "username": "maria.paola.garce0",
-            "exp": 10,
-            "level": 1,
-            "team": "ECUADOR"
-        },
-        {
-            "username": "uzielsantos65",
-            "exp": 10,
-            "level": 1,
-            "team": ""
-        },
-        {
-            "username": "colombia",
-            "exp": 10,
-            "level": 1,
-            "team": "VENEZUELA"
-        },
-        {
-            "username": "chuyyzpm",
-            "exp": 10,
-            "level": 1,
-            "team": ""
-        },
-        {
-            "username": "mateo_lpz12",
-            "exp": 10,
-            "level": 1,
-            "team": "EL SALVADOR"
-        },
-        {
-            "username": "winner5.h0",
-            "exp": 10,
-            "level": 1,
-            "team": "VENEZUELA"
-        },
-        {
-            "username": "kunoichi.013",
-            "exp": 10,
-            "level": 1,
-            "team": "COLOMBIA"
-        },
-        {
-            "username": "cmail35",
-            "exp": 10,
-            "level": 1,
-            "team": ""
-        },
-        {
-            "username": "jos.manuel.torreg3",
-            "exp": 10,
-            "level": 1,
-            "team": "COLOMBIA"
-        },
-        {
-            "username": "gabriel.varela851",
-            "exp": 10,
-            "level": 1,
-            "team": "ECUADOR"
-        },
-        {
-            "username": "kevin.espitia6",
-            "exp": 10,
-            "level": 1,
-            "team": "COLOMBIA"
-        },
-        {
-            "username": "user84967082536985",
-            "exp": 10,
-            "level": 1,
-            "team": "COLOMBIA"
-        },
-        {
-            "username": "fabianlopez6758",
-            "exp": 10,
-            "level": 1,
-            "team": "COLOMBIA"
-        },
-        {
-            "username": "stiven.valencia482",
-            "exp": 10,
-            "level": 1,
-            "team": "COLOMBIA"
-        },
-        {
-            "username": "jeison3148",
-            "exp": 10,
-            "level": 1,
-            "team": "COLOMBIA"
-        },
-        {
-            "username": "benjamin.torres418",
-            "exp": 10,
-            "level": 1,
-            "team": "ECUADOR"
-        },
-        {
-            "username": "kennybarrios81",
-            "exp": 10,
-            "level": 1,
-            "team": "COLOMBIA"
-        },
-        {
-            "username": "fader_xzv.0",
-            "exp": 10,
-            "level": 1,
-            "team": "COLOMBIA"
-        },
-        {
-            "username": "mariadelrosariograjales",
-            "exp": 10,
-            "level": 1,
-            "team": "COLOMBIA"
-        },
-        {
-            "username": "yovannyjose94",
-            "exp": 10,
-            "level": 1,
-            "team": "VENEZUELA"
-        },
-        {
-            "username": "lale_l4",
-            "exp": 10,
-            "level": 1,
-            "team": ""
-        },
-        {
-            "username": "mariamanci1",
-            "exp": 10,
-            "level": 1,
-            "team": "COLOMBIA"
-        },
-        {
-            "username": "luis_monsale",
-            "exp": 10,
-            "level": 1,
-            "team": "VENEZUELA"
-        },
-        {
-            "username": "davidquivano",
-            "exp": 10,
-            "level": 1,
-            "team": "COLOMBIA"
-        },
-        {
-            "username": "jeferson.alexande42",
-            "exp": 7,
+            "username": "milena.patricia.h0",
+            "exp": 8,
             "level": 1,
             "team": "COLOMBIA"
         },
@@ -2329,241 +2539,19 @@
             "team": "ECUADOR"
         },
         {
+            "username": "jeferson.alexande42",
+            "exp": 7,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
             "username": "julian_boys",
             "exp": 6,
             "level": 1,
             "team": "COLOMBIA"
         },
         {
-            "username": "gomez.fabio",
-            "exp": 5,
-            "level": 1,
-            "team": "COLOMBIA"
-        },
-        {
-            "username": "crimifut12",
-            "exp": 5,
-            "level": 1,
-            "team": "VENEZUELA"
-        },
-        {
-            "username": "crimifut123411",
-            "exp": 5,
-            "level": 1,
-            "team": "HONDURAS"
-        },
-        {
-            "username": "samuelperezcogoll36",
-            "exp": 5,
-            "level": 1,
-            "team": "COLOMBIA"
-        },
-        {
-            "username": "josealfredojimene404",
-            "exp": 5,
-            "level": 1,
-            "team": "COLOMBIA"
-        },
-        {
-            "username": "el.otaku13",
-            "exp": 5,
-            "level": 1,
-            "team": "COLOMBIA"
-        },
-        {
-            "username": "camilosanchez118",
-            "exp": 5,
-            "level": 1,
-            "team": "COLOMBIA"
-        },
-        {
-            "username": "yugiohgx_777",
-            "exp": 5,
-            "level": 1,
-            "team": "ECUADOR"
-        },
-        {
-            "username": "user3705776600379",
-            "exp": 5,
-            "level": 1,
-            "team": "VENEZUELA"
-        },
-        {
-            "username": "0414gonzalez",
-            "exp": 5,
-            "level": 1,
-            "team": "VENEZUELA"
-        },
-        {
-            "username": "yeimerleandroduea",
-            "exp": 5,
-            "level": 1,
-            "team": "COLOMBIA"
-        },
-        {
-            "username": "15johan18",
-            "exp": 5,
-            "level": 1,
-            "team": "COLOMBIA"
-        },
-        {
-            "username": ".carlosrodrigu",
-            "exp": 5,
-            "level": 1,
-            "team": "COLOMBIA"
-        },
-        {
-            "username": "crimifut12341111",
-            "exp": 5,
-            "level": 1,
-            "team": "ARGENTINA"
-        },
-        {
-            "username": "iamcrissamd",
-            "exp": 5,
-            "level": 1,
-            "team": "COLOMBIA"
-        },
-        {
-            "username": "zoro3745",
-            "exp": 5,
-            "level": 1,
-            "team": "COLOMBIA"
-        },
-        {
-            "username": "crimifut1234111",
-            "exp": 5,
-            "level": 1,
-            "team": "EL SALVADOR"
-        },
-        {
-            "username": "samuelito4185",
-            "exp": 5,
-            "level": 1,
-            "team": "COLOMBIA"
-        },
-        {
-            "username": "kevinpacheco2738",
-            "exp": 5,
-            "level": 1,
-            "team": "COLOMBIA"
-        },
-        {
-            "username": "crimifut12341",
-            "exp": 5,
-            "level": 1,
-            "team": "GUATEMALA"
-        },
-        {
-            "username": "chelsyr8",
-            "exp": 5,
-            "level": 1,
-            "team": "MEXICO"
-        },
-        {
-            "username": "andrisiito.rz",
-            "exp": 5,
-            "level": 1,
-            "team": "COLOMBIA"
-        },
-        {
-            "username": "sagitario25_22",
-            "exp": 5,
-            "level": 1,
-            "team": "COLOMBIA"
-        },
-        {
-            "username": "curiosidades.gatu",
-            "exp": 5,
-            "level": 1,
-            "team": "COLOMBIA"
-        },
-        {
-            "username": "junior_1924100",
-            "exp": 5,
-            "level": 1,
-            "team": "COLOMBIA"
-        },
-        {
-            "username": "sebastinreveron",
-            "exp": 5,
-            "level": 1,
-            "team": "VENEZUELA"
-        },
-        {
-            "username": "amalia.espitia8",
-            "exp": 5,
-            "level": 1,
-            "team": "COLOMBIA"
-        },
-        {
-            "username": "juanloaiza.10",
-            "exp": 5,
-            "level": 1,
-            "team": "COLOMBIA"
-        },
-        {
-            "username": "osneider.cardenas5",
-            "exp": 5,
-            "level": 1,
-            "team": "COLOMBIA"
-        },
-        {
-            "username": "xavileon20",
-            "exp": 5,
-            "level": 1,
-            "team": "ECUADOR"
-        },
-        {
-            "username": "crimifut1234",
-            "exp": 5,
-            "level": 1,
-            "team": "PANAMA"
-        },
-        {
-            "username": "alejandro.free.fi1",
-            "exp": 5,
-            "level": 1,
-            "team": "COLOMBIA"
-        },
-        {
-            "username": "cristian.blanco965",
-            "exp": 5,
-            "level": 1,
-            "team": "VENEZUELA"
-        },
-        {
-            "username": "freddyra611",
-            "exp": 5,
-            "level": 1,
-            "team": "GUATEMALA"
-        },
-        {
-            "username": "daniel.guerrero7928",
-            "exp": 5,
-            "level": 1,
-            "team": "COLOMBIA"
-        },
-        {
-            "username": "miguelpalacio027",
-            "exp": 5,
-            "level": 1,
-            "team": "COLOMBIA"
-        },
-        {
-            "username": "joselito0712",
-            "exp": 5,
-            "level": 1,
-            "team": "COLOMBIA"
-        },
-        {
-            "username": "andres.rojas6295",
-            "exp": 5,
-            "level": 1,
-            "team": "COLOMBIA"
-        },
-        {
-            "username": "miguelortiz1673",
+            "username": "user7027723336772",
             "exp": 5,
             "level": 1,
             "team": "COLOMBIA"
@@ -2575,91 +2563,31 @@
             "team": "EL SALVADOR"
         },
         {
-            "username": "humbert1113",
+            "username": "jesusher23.0",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "crimifut1234111",
+            "exp": 5,
+            "level": 1,
+            "team": "EL SALVADOR"
+        },
+        {
+            "username": "sebastinreveron",
             "exp": 5,
             "level": 1,
             "team": "VENEZUELA"
         },
         {
-            "username": "fernando.fernande8159",
+            "username": "jean.leon344",
             "exp": 5,
             "level": 1,
-            "team": "COLOMBIA"
+            "team": "VENEZUELA"
         },
         {
-            "username": "henao_533",
-            "exp": 5,
-            "level": 1,
-            "team": "COLOMBIA"
-        },
-        {
-            "username": "lizethvanegas2",
-            "exp": 5,
-            "level": 1,
-            "team": "COLOMBIA"
-        },
-        {
-            "username": "majo12345678910111213141",
-            "exp": 5,
-            "level": 1,
-            "team": "COLOMBIA"
-        },
-        {
-            "username": "ramon251782gmail.com1",
-            "exp": 5,
-            "level": 1,
-            "team": "ARGENTINA"
-        },
-        {
-            "username": "menor.nc1",
-            "exp": 5,
-            "level": 1,
-            "team": "ECUADOR"
-        },
-        {
-            "username": "isa_431209",
-            "exp": 5,
-            "level": 1,
-            "team": "COLOMBIA"
-        },
-        {
-            "username": "pipe.ospina13",
-            "exp": 5,
-            "level": 1,
-            "team": "COLOMBIA"
-        },
-        {
-            "username": "catein2",
-            "exp": 5,
-            "level": 1,
-            "team": "ECUADOR"
-        },
-        {
-            "username": "analeticiapaezcas",
-            "exp": 5,
-            "level": 1,
-            "team": "COLOMBIA"
-        },
-        {
-            "username": "carlosruiz147",
-            "exp": 5,
-            "level": 1,
-            "team": "COLOMBIA"
-        },
-        {
-            "username": "jxviex_jx_09",
-            "exp": 5,
-            "level": 1,
-            "team": "ECUADOR"
-        },
-        {
-            "username": "user7027723336772",
-            "exp": 5,
-            "level": 1,
-            "team": "COLOMBIA"
-        },
-        {
-            "username": "andresantos0411",
+            "username": "jp017470",
             "exp": 5,
             "level": 1,
             "team": "COLOMBIA"
@@ -2671,10 +2599,328 @@
             "team": "COLOMBIA"
         },
         {
+            "username": "kevinpacheco2738",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "samuelnavarro8551",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "samuelperezcogoll36",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "lfreth_.pm",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "camilosanchez118",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "emy46373",
+            "exp": 5,
+            "level": 1,
+            "team": "ECUADOR"
+        },
+        {
+            "username": "freddyra611",
+            "exp": 5,
+            "level": 1,
+            "team": "GUATEMALA"
+        },
+        {
+            "username": "15johan18",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "crimifut12",
+            "exp": 5,
+            "level": 1,
+            "team": "VENEZUELA"
+        },
+        {
+            "username": "daniel_12516",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "surez.surez308",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "drsycue",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "andres.rojas6295",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "laelcira",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "ana.carolina.cast24",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "jhonfredycastaeda7",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "iamcrissamd",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "yamilet4152",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "einercampin",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "josealfredojimene404",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "jaker1293lo",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "cristian.quiroga337",
+            "exp": 5,
+            "level": 1,
+            "team": "ECUADOR"
+        },
+        {
+            "username": "franklincmy4",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "yeimerleandroduea",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "fandemerlina38",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "elbabiface",
+            "exp": 5,
+            "level": 1,
+            "team": "ECUADOR"
+        },
+        {
+            "username": "joselito0712",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "007gggghtyh",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "jxviex_jx_09",
+            "exp": 5,
+            "level": 1,
+            "team": "ECUADOR"
+        },
+        {
+            "username": "dulcesitaaaaa06",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "angelarape",
+            "exp": 5,
+            "level": 1,
+            "team": "VENEZUELA"
+        },
+        {
+            "username": "el.otaku13",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "user3705776600379",
+            "exp": 5,
+            "level": 1,
+            "team": "VENEZUELA"
+        },
+        {
             "username": "crimifut123411111",
             "exp": 5,
             "level": 1,
             "team": "MEXICO"
+        },
+        {
+            "username": "miguelpalacio027",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "elmer1425",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "carlosruiz147",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "www.svencarm",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "ramon251782gmail.com1",
+            "exp": 5,
+            "level": 1,
+            "team": "ARGENTINA"
+        },
+        {
+            "username": "analeticiapaezcas",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "junior_1924100",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "samu59258",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "crimifut1234",
+            "exp": 5,
+            "level": 1,
+            "team": "PANAMA"
+        },
+        {
+            "username": "capimo98",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "jheisondaniel4",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "pipe.ospina13",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "daniel.guerrero7928",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "menor.nc1",
+            "exp": 5,
+            "level": 1,
+            "team": "ECUADOR"
+        },
+        {
+            "username": "._564152",
+            "exp": 5,
+            "level": 1,
+            "team": "MEXICO"
+        },
+        {
+            "username": "jrxmb7",
+            "exp": 5,
+            "level": 1,
+            "team": "GUATEMALA"
+        },
+        {
+            "username": "crimifut12341",
+            "exp": 5,
+            "level": 1,
+            "team": "GUATEMALA"
+        },
+        {
+            "username": "crimifut12341111",
+            "exp": 5,
+            "level": 1,
+            "team": "ARGENTINA"
+        },
+        {
+            "username": "0414gonzalez",
+            "exp": 5,
+            "level": 1,
+            "team": "VENEZUELA"
+        },
+        {
+            "username": "miguelortiz1673",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA"
         },
         {
             "username": "ramonatorcate3",
@@ -2689,61 +2935,127 @@
             "team": "MEXICO"
         },
         {
-            "username": "fandemerlina38",
+            "username": "alejandro.free.fi1",
             "exp": 5,
             "level": 1,
             "team": "COLOMBIA"
         },
         {
-            "username": "www.svencarm",
+            "username": "gracias.ruiz.crsti",
             "exp": 5,
             "level": 1,
             "team": "COLOMBIA"
         },
         {
-            "username": "emy46373",
+            "username": "yugiohgx_777",
             "exp": 5,
             "level": 1,
             "team": "ECUADOR"
         },
         {
-            "username": "angelarape",
+            "username": "henao_533",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "dilan.501",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "amalia.espitia8",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "catein2",
+            "exp": 5,
+            "level": 1,
+            "team": "ECUADOR"
+        },
+        {
+            "username": "curiosidades.gatu",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "xavileon20",
+            "exp": 5,
+            "level": 1,
+            "team": "ECUADOR"
+        },
+        {
+            "username": "jhoanballesteros",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "isa_431209",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "osneider.cardenas5",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "andrisiito.rz",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "zoro3745",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "chelsyr8",
+            "exp": 5,
+            "level": 1,
+            "team": "MEXICO"
+        },
+        {
+            "username": "lizethvanegas2",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "majo12345678910111213141",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "humbert1113",
             "exp": 5,
             "level": 1,
             "team": "VENEZUELA"
         },
         {
-            "username": "jheisondaniel4",
+            "username": "samuelito4185",
             "exp": 5,
             "level": 1,
             "team": "COLOMBIA"
         },
         {
-            "username": "dianamarcelacalong",
+            "username": "juanloaiza.10",
             "exp": 5,
             "level": 1,
             "team": "COLOMBIA"
         },
         {
-            "username": "lfreth_.pm",
-            "exp": 5,
-            "level": 1,
-            "team": "COLOMBIA"
-        },
-        {
-            "username": "colombia1",
-            "exp": 5,
-            "level": 1,
-            "team": "VENEZUELA"
-        },
-        {
-            "username": "surez.surez308",
-            "exp": 5,
-            "level": 1,
-            "team": "COLOMBIA"
-        },
-        {
-            "username": "einercampin",
+            "username": "sagitario25_22",
             "exp": 5,
             "level": 1,
             "team": "COLOMBIA"
@@ -2755,43 +3067,49 @@
             "team": "COLOMBIA"
         },
         {
-            "username": "jean.leon344",
+            "username": "andreacamilaherre68",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "gomez.fabio",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "crimifut123411",
+            "exp": 5,
+            "level": 1,
+            "team": "HONDURAS"
+        },
+        {
+            "username": "juanfer.galviz2",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA"
+        },
+        {
+            "username": "colombia1",
             "exp": 5,
             "level": 1,
             "team": "VENEZUELA"
         },
         {
-            "username": "jrxmb7",
+            "username": "fabikid",
             "exp": 5,
             "level": 1,
-            "team": "GUATEMALA"
+            "team": "VENEZUELA"
         },
         {
-            "username": "dilan.501",
-            "exp": 5,
-            "level": 1,
-            "team": "COLOMBIA"
-        },
-        {
-            "username": "wjuan_navia",
+            "username": "andresantos0411",
             "exp": 5,
             "level": 1,
             "team": "COLOMBIA"
         },
         {
-            "username": "._564152",
-            "exp": 5,
-            "level": 1,
-            "team": "MEXICO"
-        },
-        {
-            "username": "elmer1425",
-            "exp": 5,
-            "level": 1,
-            "team": "COLOMBIA"
-        },
-        {
-            "username": "andreacamilaherre68",
+            "username": "fernando.fernande8159",
             "exp": 5,
             "level": 1,
             "team": "COLOMBIA"
@@ -2803,49 +3121,19 @@
             "team": "CUBA"
         },
         {
-            "username": "gracias.ruiz.crsti",
+            "username": ".carlosrodrigu",
             "exp": 5,
             "level": 1,
             "team": "COLOMBIA"
         },
         {
-            "username": "elbabiface",
-            "exp": 5,
-            "level": 1,
-            "team": "ECUADOR"
-        },
-        {
-            "username": "fabikid",
+            "username": "cristian.blanco965",
             "exp": 5,
             "level": 1,
             "team": "VENEZUELA"
         },
         {
-            "username": "drsycue",
-            "exp": 5,
-            "level": 1,
-            "team": "COLOMBIA"
-        },
-        {
-            "username": "laelcira",
-            "exp": 5,
-            "level": 1,
-            "team": "COLOMBIA"
-        },
-        {
-            "username": "jhonfredycastaeda7",
-            "exp": 5,
-            "level": 1,
-            "team": "COLOMBIA"
-        },
-        {
-            "username": "samuelnavarro8551",
-            "exp": 5,
-            "level": 1,
-            "team": "COLOMBIA"
-        },
-        {
-            "username": "jesusher23.0",
+            "username": "dianamarcelacalong",
             "exp": 5,
             "level": 1,
             "team": "COLOMBIA"
