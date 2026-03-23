@@ -1,70 +1,11 @@
 {
     "users": [
-        {
-            "username": "crimifut9",
-            "exp": 130105,
-            "level": 130,
-            "team": "MONARCAS"
-        },
-        {
-            "username": "crimifut4",
-            "exp": 95030,
-            "level": 95,
-            "team": "PUMAS"
-        },
-        {
-            "username": "crimifut8",
-            "exp": 70020,
-            "level": 70,
-            "team": "SANTOS"
-        },
-        {
-            "username": "crimifut5",
-            "exp": 65030,
-            "level": 65,
-            "team": "MONTERREY"
-        },
-        {
-            "username": "crimifut7",
-            "exp": 65020,
-            "level": 65,
-            "team": "TOLUCA"
-        },
-        {
-            "username": "crimifut6",
-            "exp": 60030,
-            "level": 60,
-            "team": "TIGRES"
-        },
-        {
-            "username": "crimifut2",
-            "exp": 55040,
-            "level": 55,
-            "team": "ATLAS"
-        },
-        {
-            "username": "crimifut3",
-            "exp": 55030,
-            "level": 55,
-            "team": "CRUZ AZUL"
-        },
-        {
-            "username": "crimifut",
-            "exp": 49175,
-            "level": 49,
-            "team": "COLOMBIA"
-        },
+        
         {
             "username": "jeancarlosramir2",
             "exp": 34410,
             "level": 34,
             "team": "ECUADOR"
-        },
-        {
-            "username": "crimifut1",
-            "exp": 25045,
-            "level": 25,
-            "team": "CHIVAS"
         },
         {
             "username": "eshualejo",
