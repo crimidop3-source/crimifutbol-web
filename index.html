@@ -393,22 +393,45 @@
         }
 
         .tab-btn {
-            flex: 1;
-            padding: 12px;
-            border: 2px solid #333;
-            background: #111;
-            color: #888;
-            font-family: 'Orbitron';
-            cursor: pointer;
-            transition: 0.3s;
-            font-size: 0.8rem;
-        }
+    flex: 1;
+    padding: 15px;
+    border: none;
+    background: #111;
+    color: #666;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.4s;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    /* Corte diagonal estilo Cyberpunk */
+    clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+    position: relative;
+}
 
-            .tab-btn.active {
-                border-color: var(--gx-accent);
-                color: white;
-                box-shadow: 0 0 10px var(--gx-glow);
-            }
+.tab-btn:hover {
+    color: white;
+    background: #1a1a1a;
+}
+
+.tab-btn.active {
+    background: var(--gx-accent);
+    color: #000; /* Texto negro para resaltar */
+    box-shadow: 0 0 20px var(--gx-glow);
+    transform: translateY(-2px);
+}
+
+/* Pequeño detalle de luz encima del botón activo */
+.tab-btn.active::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: white;
+    opacity: 0.5;
+}
 
         .gx-search-container {
             width: 100%;
@@ -821,25 +844,58 @@
             document.getElementById('title-nivel').innerText = `TOP 10 NIVELES ${sufijo}`;
             cargarRankings();
         }
-
-        async function checkPlayerRacha() {
+async function checkPlayerRacha() {
     const btn = document.getElementById('gx-btn');
     const input = document.getElementById('gx-input');
+    const userSearch = input.value.trim().toLowerCase();
     
-    if(!input.value) return;
+    if(!userSearch) return;
 
-    // Efecto de carga visual
+    // 1. Efecto Visual de Carga
+    const originalText = "CONSULTAR";
     btn.innerText = "ESCANEANDO...";
     btn.style.opacity = "0.7";
-    
-    // Simulamos un pequeño retraso de red para que se vea la animación
-    await new Promise(resolve => setTimeout(resolve, 800));
+    btn.disabled = true; // Evita múltiples clics
 
-    // ... (aquí sigue todo el código que ya tenías de fetch y captains) ...
-    
-    // Al final de la función, devuelve el texto al botón
-    btn.innerText = "CONSULTAR";
-    btn.style.opacity = "1";
+    try {
+        // Simular retraso para el efecto visual
+        await new Promise(resolve => setTimeout(resolve, 800));
+
+        // 2. Cargar Datos
+        const resp = await fetch(currentJSON);
+        const data = await resp.json();
+        const captains = getCaptains(data.users);
+        const user = data.users.find(u => u.username.toLowerCase() === userSearch);
+
+        if (user) {
+            // Evento de Google Analytics
+            if (typeof gtag === 'function') {
+                gtag('event', 'consulta_usuario', { 'nombre_tiktok': userSearch });
+            }
+
+            const isCap = captains.has(user.username.toLowerCase());
+            const badge = isCap ? `<span class="badge-captain">👑 CAPITÁN</span>` : "";
+
+            // 3. Mostrar Resultados
+            document.getElementById('player-card').style.display = 'block';
+            document.getElementById('res-name').innerHTML = "@" + user.username.toUpperCase() + badge;
+            document.getElementById('res-racha').innerHTML = (user.rachaDias || 0) + " DÍAS 🔥";
+            document.getElementById('res-nivel').innerHTML = (user.level || 1) + (isCap ? " 👑" : "");
+            
+            // Scroll suave al resultado
+            document.getElementById('player-card').scrollIntoView({ behavior: 'smooth', block: 'center' });
+        } else {
+            alert("Usuario no encontrado. ¡Asegúrate de escribirlo igual que en TikTok!");
+        }
+    } catch (e) {
+        console.error("Error en la consulta:", e);
+        alert("Error al conectar con la base de datos.");
+    } finally {
+        // 4. Restaurar Botón
+        btn.innerText = originalText;
+        btn.style.opacity = "1";
+        btn.disabled = false;
+    }
 }
 
         async function cargarRankings() {
