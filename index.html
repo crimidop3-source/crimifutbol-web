@@ -17,6 +17,83 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
 
     <style>
+
+    /* Contenedor principal del buscador */
+.gx-search-container {
+    max-width: 700px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    margin-bottom: 40px;
+}
+
+/* Efecto de línea de escaneo que pasa por el buscador */
+.gx-search-container::before {
+    content: "";
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(transparent, var(--gx-glow), transparent);
+    animation: scan-line 4s infinite linear;
+    opacity: 0.2;
+    pointer-events: none;
+}
+
+@keyframes scan-line {
+    0% { top: -100%; }
+    100% { top: 100%; }
+}
+
+.search-box {
+    display: flex;
+    flex-direction: column; /* En móvil se ve mejor uno sobre otro */
+    gap: 15px;
+    position: relative;
+    z-index: 2;
+}
+
+@media (min-width: 600px) {
+    .search-box { flex-direction: row; }
+}
+
+/* El input con estilo neón */
+#gx-input {
+    background: #050505;
+    border: 2px solid #333;
+    border-radius: 8px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.1rem;
+    padding: 15px;
+    text-align: center;
+    letter-spacing: 2px;
+    transition: 0.4s;
+    box-shadow: inset 0 0 10px rgba(0,0,0,1);
+}
+
+#gx-input:focus {
+    border-color: var(--gx-accent);
+    box-shadow: 0 0 20px var(--gx-glow), inset 0 0 10px var(--gx-glow);
+    transform: scale(1.02);
+}
+
+/* El botón de consulta principal */
+#gx-btn {
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    height: 55px;
+    border-radius: 8px;
+    background: var(--gx-accent);
+    color: #000; /* Texto negro para que resalte sobre el neón */
+    font-weight: 900;
+    text-shadow: none;
+    clip-path: polygon(0% 0%, 95% 0%, 100% 30%, 100% 100%, 5% 100%, 0% 70%);
+}
     @property --gx-accent {
   syntax: '<color>';
   inherits: true;
@@ -407,19 +484,19 @@
         }
 
         .rank-box {
-            background: rgba(255,255,255,0.03);
-            padding: 20px;
-            border-radius: 10px;
-            border-bottom: 2px solid var(--gx-accent);
-        }
+    background: linear-gradient(180deg, rgba(255,255,255,0.05) 0%, rgba(0,0,0,0) 100%);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-top: 3px solid var(--gx-accent);
+    backdrop-filter: blur(10px);
+}
 
-            .rank-box h3 {
-                font-family: 'Orbitron';
-                font-size: 1rem;
-                color: var(--gx-accent);
-                margin: 0 0 15px 0;
-                text-align: center;
-            }
+.rank-box h3 {
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    background: rgba(0,0,0,0.3);
+    padding: 10px;
+    border-radius: 4px;
+}
 
         table {
             width: 100%;
@@ -585,6 +662,38 @@
             <a href="https://www.tiktok.com/@crimifutbol" target="_blank" class="btn-live">VER AHORA</a>
         </section>
 
+        
+
+        <div class="tabs-container">
+            <button class="tab-btn active" onclick="switchTorneo('fpc', this)">TORNEO FPC</button>
+            <button class="tab-btn" onclick="switchTorneo('mundial', this)">MUNDIAL</button>
+        </div>
+
+        <div class="gx-search-container">
+            <div class="search-box">
+                <input type="text" id="gx-input" placeholder="Escribe tu usuario de tiktok...">
+                <button id="gx-btn" onclick="checkPlayerRacha()">CONSULTAR</button>
+            </div>
+        </div>
+
+        <div id="player-card">
+            <h2 id="res-name" style="margin-top:0;">@USUARIO</h2>
+            <div style="display:flex; justify-content:space-between;">
+                <div><p style="margin:0; color:#888;">RACHA</p><div id="res-racha" class="fire-text">0 DÍAS 🔥</div></div>
+                <div style="text-align:right;"><p style="margin:0; color:#888;">NIVEL</p><div id="res-nivel" style="font-size:1.8rem; font-weight:bold;">1</div></div>
+            </div>
+        </div>
+
+        <div class="rankings-wrapper">
+            <div class="rank-box">
+                <h3 id="title-racha">TOP 10 RACHAS FPC</h3>
+                <table><tbody id="body-racha"></tbody></table>
+            </div>
+            <div class="rank-box">
+                <h3 id="title-nivel">TOP 10 NIVELES FPC</h3>
+                <table><tbody id="body-nivel"></tbody></table>
+            </div>
+        </div>
         <div class="rules-grid">
             <div class="rule-card" onclick="openModal('PASO 1: ÚNETE', 'Para ingresar oficialmente a la pista, solo debes comentar el nombre de tu Equipo (Torneo FPC) o tu País (Mundial). <br><br>Al hacerlo, el sistema te leerá automáticamente y tu vehículo aparecerá en pantalla listo para correr. ¡Asegúrate de escribirlo bien!', '💬')">
                 <span class="rule-title">PASO 1 💬</span>
@@ -619,37 +728,6 @@
                     <div class="benefit-card" onclick="openModal('BENEFICIO: 30 DÍAS', '¡UN MES DE PURA PASIÓN! Eres una Leyenda Absoluta. Desbloqueas el aura brillante en el juego y obtienes un Multiplicador Masivo X3 para aplastar a los rivales.', '💎')"><span class="b-icon">💎</span><div class="b-days">30 DÍAS</div><div class="b-desc">Rango Leyenda VIP con <b style="color:white;">Multiplicador Masivo X3</b>.</div></div>
                     <div class="benefit-card" onclick="openModal('BENEFICIO: 50 DÍAS', 'Has alcanzado el olimpo de Crimifutbol. Tu racha se vuelve Inmortal (nunca se reiniciará) y me comunicaré contigo para crear un comando especial en el chat que lleve tu nombre.', '🏆')"><span class="b-icon">🏆</span><div class="b-days">50 DÍAS</div><div class="b-desc">Rango Dios. <b style="color:white;">Inmortalidad de Racha</b> y comando especial.</div></div>
                 </div>
-            </div>
-        </div>
-
-        <div class="tabs-container">
-            <button class="tab-btn active" onclick="switchTorneo('fpc', this)">TORNEO FPC</button>
-            <button class="tab-btn" onclick="switchTorneo('mundial', this)">MUNDIAL</button>
-        </div>
-
-        <div class="gx-search-container">
-            <div class="search-box">
-                <input type="text" id="gx-input" placeholder="Escribe tu usuario de tiktok...">
-                <button id="gx-btn" onclick="checkPlayerRacha()">CONSULTAR</button>
-            </div>
-        </div>
-
-        <div id="player-card">
-            <h2 id="res-name" style="margin-top:0;">@USUARIO</h2>
-            <div style="display:flex; justify-content:space-between;">
-                <div><p style="margin:0; color:#888;">RACHA</p><div id="res-racha" class="fire-text">0 DÍAS 🔥</div></div>
-                <div style="text-align:right;"><p style="margin:0; color:#888;">NIVEL</p><div id="res-nivel" style="font-size:1.8rem; font-weight:bold;">1</div></div>
-            </div>
-        </div>
-
-        <div class="rankings-wrapper">
-            <div class="rank-box">
-                <h3 id="title-racha">TOP 10 RACHAS FPC</h3>
-                <table><tbody id="body-racha"></tbody></table>
-            </div>
-            <div class="rank-box">
-                <h3 id="title-nivel">TOP 10 NIVELES FPC</h3>
-                <table><tbody id="body-nivel"></tbody></table>
             </div>
         </div>
 
@@ -745,25 +823,24 @@
         }
 
         async function checkPlayerRacha() {
-            const userSearch = document.getElementById('gx-input').value.trim().toLowerCase();
-            try {
-                const resp = await fetch(currentJSON);
-                const data = await resp.json();
-                const captains = getCaptains(data.users); // Lógica de equipos
-                const user = data.users.find(u => u.username.toLowerCase() === userSearch);
-                if (user) {
-                    gtag('event', 'consulta_usuario', { 'nombre_tiktok': userSearch });
-                    const isCap = captains.has(user.username.toLowerCase());
-                    const badge = isCap ? `<span class="badge-captain">👑 CAPITÁN</span>` : "";
+    const btn = document.getElementById('gx-btn');
+    const input = document.getElementById('gx-input');
+    
+    if(!input.value) return;
 
-                    document.getElementById('player-card').style.display = 'block';
-                    document.getElementById('res-name').innerHTML = "@" + user.username.toUpperCase() + badge;
-                    document.getElementById('res-racha').innerHTML = (user.rachaDias || 0) + " DÍAS 🔥";
-                    document.getElementById('res-nivel').innerHTML = (user.level || 1) + (isCap ? " 👑" : "");
-                    document.getElementById('player-card').scrollIntoView({ behavior: 'smooth', block: 'center' });
-                } else { alert("Usuario no encontrado"); }
-            } catch (e) { console.error(e); }
-        }
+    // Efecto de carga visual
+    btn.innerText = "ESCANEANDO...";
+    btn.style.opacity = "0.7";
+    
+    // Simulamos un pequeño retraso de red para que se vea la animación
+    await new Promise(resolve => setTimeout(resolve, 800));
+
+    // ... (aquí sigue todo el código que ya tenías de fetch y captains) ...
+    
+    // Al final de la función, devuelve el texto al botón
+    btn.innerText = "CONSULTAR";
+    btn.style.opacity = "1";
+}
 
         async function cargarRankings() {
             try {
