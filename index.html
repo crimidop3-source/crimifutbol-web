@@ -17,6 +17,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
 
     <style>
+    @property --gx-accent {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #00f2ff;
+}
+
+@property --gx-glow {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: rgba(0, 242, 255, 0.5);
+}
         :root {
             --neon-red: #ff0032;
             --neon-blue: #00f2ff;
@@ -37,6 +48,10 @@
             margin: 0;
             overflow-x: hidden;
             background-image: radial-gradient(circle at 50% 50%, #1a1a1a 0%, #0b0b0b 100%);
+            body {
+    /* ... tus otras reglas ... */
+    transition: --gx-accent 0.8s ease, --gx-glow 0.8s ease;
+}
         }
 
         /* HEADER */
@@ -773,17 +788,31 @@
         }
 
         function colorLoop() {
-            const m = new Date().getMinutes();
-            const root = document.documentElement;
-            const isRed = Math.floor(m / 5) % 2 === 1;
-            root.style.setProperty('--gx-accent', isRed ? 'var(--neon-red)' : 'var(--neon-blue)');
-            root.style.setProperty('--gx-glow', isRed ? 'rgba(255, 0, 50, 0.5)' : 'rgba(0, 242, 255, 0.5)');
-            document.getElementById('header-logo').src = isRed ? "logo_rojo.png" : "logo_azul.png";
-        }
+    const m = new Date().getMinutes();
+    const root = document.documentElement;
+    const isRed = Math.floor(m / 5) % 2 === 1;
+
+    // 1. Cambiar variables de color
+    root.style.setProperty('--gx-accent', isRed ? 'var(--neon-red)' : 'var(--neon-blue)');
+    root.style.setProperty('--gx-glow', isRed ? 'rgba(255, 0, 50, 0.5)' : 'rgba(0, 242, 255, 0.5)');
+
+    // 2. Cambiar logo del header
+    document.getElementById('header-logo').src = isRed ? "logo_rojo.png" : "logo_azul.png";
+
+    // 3. CAMBIO DE FAVICON (Añade esta línea)
+    document.getElementById('favicon').href = isRed ? "logo_rojo.png" : "logo_azul.png";
+}
 
         setInterval(colorLoop, 30000);
         colorLoop();
         cargarRankings();
+        // Detectar la tecla Enter en el input de búsqueda
+document.getElementById('gx-input').addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+        event.preventDefault(); // Evita que la página se recargue
+        checkPlayerRacha();    // Llama a tu función de consulta
+    }
+});
     </script>
 </body>
 </html>
