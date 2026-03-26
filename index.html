@@ -873,36 +873,39 @@
                 const allUsers = await fetchAllUserData();
                 const captains = getCaptains(allUsers);
 
-                // CAMBIO AQUÍ: Usamos filter para traer TODOS los registros de ese nombre
+                // Filtramos todos los registros de ese usuario
                 const results = allUsers.filter(u => u.username.toLowerCase() === userSearch);
 
                 if (results.length > 0) {
                     document.getElementById('player-card').style.display = 'block';
                     let htmlContent = "";
 
-                    // Recorremos cada torneo donde apareció el usuario
                     results.forEach(user => {
-                        // Antes era: const isCap = captains.has(user.username.toLowerCase());
-                        // Ahora es:
+                        // 1. Verificamos si es capitán en ESTE torneo específico
                         const isCap = captains.has(`${user.username.toLowerCase()}-${user.torneo}`);
-                        // Dentro del results.forEach, puedes añadir esto:
+
+                        // 2. Definimos el color según el torneo
                         const colorTorneo = user.torneo === 'FPC' ? '#00f2ff' : (user.torneo === 'MUNDIAL' ? '#ff0032' : '#ff8c00');
 
-                        // Y en el HTML de la etiqueta:
-                        <p style="font-size: 0.8rem; color: ${colorTorneo}; margin-bottom: 5px;">📍 SECTOR: ${user.torneo}</p>
+                        // 3. Creamos el badge de capitán
                         const badge = isCap ? `<span class="badge-captain">👑 CAPITÁN</span>` : "";
 
-                        // Detectamos el torneo basado en el JSON (necesitas que el JSON tenga un campo "torneo")
-                        // Si tu JSON no tiene el nombre del torneo, podemos usar el equipo para diferenciar
-                        const etiquetaTorneo = user.torneo || "TORNEO";
-
+                        // 4. Armamos el bloque de HTML para este resultado
                         htmlContent += `
                     <div style="border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 15px; margin-bottom: 15px;">
                         <h2 style="margin-top:0; color:var(--gx-accent);">@${user.username.toUpperCase()} ${badge}</h2>
-                        <p style="font-size: 0.8rem; color: #ff8c00; margin-bottom: 5px;">📍 SECTOR: ${etiquetaTorneo}</p>
+                        <p style="font-size: 0.9rem; color: ${colorTorneo}; font-weight: bold; margin-bottom: 10px;">
+                           📍 SECTOR: ${user.torneo}
+                        </p>
                         <div style="display:flex; justify-content:space-between;">
-                            <div><p style="margin:0; color:#888;">RACHA</p><div class="fire-text">${user.rachaDias || 0} DÍAS 🔥</div></div>
-                            <div style="text-align:right;"><p style="margin:0; color:#888;">NIVEL</p><div style="font-size:1.8rem; font-weight:bold;">${user.level || 1}</div></div>
+                            <div>
+                                <p style="margin:0; color:#888; font-size:0.8rem;">RACHA</p>
+                                <div class="fire-text">${user.rachaDias || 0} DÍAS 🔥</div>
+                            </div>
+                            <div style="text-align:right;">
+                                <p style="margin:0; color:#888; font-size:0.8rem;">NIVEL</p>
+                                <div style="font-size:1.8rem; font-weight:bold;">${user.level || 1}</div>
+                            </div>
                         </div>
                     </div>
                 `;
@@ -911,10 +914,11 @@
                     document.getElementById('player-card').innerHTML = htmlContent;
                     document.getElementById('player-card').scrollIntoView({ behavior: 'smooth', block: 'center' });
                 } else {
-                    alert("Usuario no encontrado.");
+                    alert("Usuario no encontrado en las bases de datos.");
                 }
             } catch (e) {
-                alert("Error en la base de datos.");
+                console.error(e);
+                alert("Error al conectar con la base de datos.");
             } finally {
                 btn.innerText = "CONSULTAR";
                 btn.disabled = false;
