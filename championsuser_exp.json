@@ -1,0 +1,20 @@
+{
+    "users": [
+        {
+            "username": "crimi",
+            "exp": 1220,
+            "level": 1,
+            "team": "ARSENAL",
+            "rachaDias": 1,
+            "ultimaFecha": "2026-03-25"
+        },
+        {
+            "username": "Cristian",
+            "exp": 450,
+            "level": 1,
+            "team": "Millonarios",
+            "rachaDias": 1,
+            "ultimaFecha": "2026-03-25"
+        }
+    ]
+}

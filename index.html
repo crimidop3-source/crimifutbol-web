@@ -125,10 +125,7 @@
             margin: 0;
             overflow-x: hidden;
             background-image: radial-gradient(circle at 50% 50%, #1a1a1a 0%, #0b0b0b 100%);
-            body {
-    /* ... tus otras reglas ... */
-    transition: --gx-accent 0.8s ease, --gx-glow 0.8s ease;
-}
+            transition: background 0.8s ease; /* <--- Así se arregla */
         }
 
         /* HEADER */
@@ -687,10 +684,7 @@
 
         
 
-        <div class="tabs-container">
-            <button class="tab-btn active" onclick="switchTorneo('fpc', this)">TORNEO FPC</button>
-            <button class="tab-btn" onclick="switchTorneo('mundial', this)">MUNDIAL</button>
-        </div>
+        
 
         <div class="gx-search-container">
             <div class="search-box">
@@ -709,11 +703,11 @@
 
         <div class="rankings-wrapper">
             <div class="rank-box">
-                <h3 id="title-racha">TOP 10 RACHAS FPC</h3>
+                <h3 id="title-racha">TOP 10 RACHAS</h3>
                 <table><tbody id="body-racha"></tbody></table>
             </div>
             <div class="rank-box">
-                <h3 id="title-nivel">TOP 10 NIVELES FPC</h3>
+                <h3 id="title-nivel">TOP 10 NIVELES</h3>
                 <table><tbody id="body-nivel"></tbody></table>
             </div>
         </div>
@@ -779,7 +773,34 @@
     </div>
 
     <script>
-        let currentJSON = "user_exp.json";
+        // Estos son tus 4 archivos de juegos
+        const jsonFiles = [
+            "fpc_exp.json",
+            "championsuser_exp.json",
+            "mundialuser_exp.json"
+            
+        ];
+
+        async function fetchAllUserData() {
+            try {
+                // Pedimos los 4 archivos al mismo tiempo
+                const responses = await Promise.all(jsonFiles.map(file => fetch(file).catch(() => null)));
+                const dataObjects = await Promise.all(responses.map(res => res && res.ok ? res.json() : { users: [] }));
+
+                // Juntamos a todos los niños (usuarios) en un solo salón (array)
+                let allUsers = [];
+                dataObjects.forEach(data => {
+                    if (data && data.users) {
+                        allUsers = allUsers.concat(data.users);
+                    }
+                });
+                return allUsers;
+            } catch (e) {
+                console.error("Error cargando archivos:", e);
+                return [];
+            }
+        } /* <--- Asegúrate de que esta llave cierre la función entera */
+        
         /* LÓGICA DE CAPITANES: Calcula el Top 3 por equipo/país */
         /* LÓGICA DE CAPITANES: Analiza TODO el JSON para sacar el Top 3 por equipo */
         function getCaptains(users) {
@@ -844,78 +865,63 @@
             document.getElementById('title-nivel').innerText = `TOP 10 NIVELES ${sufijo}`;
             cargarRankings();
         }
-async function checkPlayerRacha() {
-    const btn = document.getElementById('gx-btn');
-    const input = document.getElementById('gx-input');
-    const userSearch = input.value.trim().toLowerCase();
-    
-    if(!userSearch) return;
+        async function checkPlayerRacha() {
+            const btn = document.getElementById('gx-btn');
+            const input = document.getElementById('gx-input');
+            const userSearch = input.value.trim().toLowerCase();
 
-    // 1. Efecto Visual de Carga
-    const originalText = "CONSULTAR";
-    btn.innerText = "ESCANEANDO...";
-    btn.style.opacity = "0.7";
-    btn.disabled = true; // Evita múltiples clics
+            if (!userSearch) return;
 
-    try {
-        // Simular retraso para el efecto visual
-        await new Promise(resolve => setTimeout(resolve, 800));
+            btn.innerText = "ESCANEANDO...";
+            btn.disabled = true;
 
-        // 2. Cargar Datos
-        const resp = await fetch(currentJSON);
-        const data = await resp.json();
-        const captains = getCaptains(data.users);
-        const user = data.users.find(u => u.username.toLowerCase() === userSearch);
+            try {
+                // 1. Traemos a todos los usuarios de los 4 archivos
+                const allUsers = await fetchAllUserData();
+                const captains = getCaptains(allUsers); // Usamos la lista gorda
 
-        if (user) {
-            // Evento de Google Analytics
-            if (typeof gtag === 'function') {
-                gtag('event', 'consulta_usuario', { 'nombre_tiktok': userSearch });
+                // 2. Buscamos al usuario en la lista gorda
+                const user = allUsers.find(u => u.username.toLowerCase() === userSearch);
+
+                if (user) {
+                    const isCap = captains.has(user.username.toLowerCase());
+                    const badge = isCap ? `<span class="badge-captain">👑 CAPITÁN</span>` : "";
+
+                    document.getElementById('player-card').style.display = 'block';
+                    document.getElementById('res-name').innerHTML = "@" + user.username.toUpperCase() + badge;
+                    document.getElementById('res-racha').innerHTML = (user.rachaDias || 0) + " DÍAS 🔥";
+                    document.getElementById('res-nivel').innerHTML = (user.level || 1) + (isCap ? " 👑" : "");
+
+                    document.getElementById('player-card').scrollIntoView({ behavior: 'smooth', block: 'center' });
+                } else {
+                    alert("¡No te encontré! Asegúrate de estar en alguno de los 4 torneos.");
+                }
+            } catch (e) {
+                alert("Error al conectar con la base de datos.");
+            } finally {
+                btn.innerText = "CONSULTAR";
+                btn.disabled = false;
             }
-
-            const isCap = captains.has(user.username.toLowerCase());
-            const badge = isCap ? `<span class="badge-captain">👑 CAPITÁN</span>` : "";
-
-            // 3. Mostrar Resultados
-            document.getElementById('player-card').style.display = 'block';
-            document.getElementById('res-name').innerHTML = "@" + user.username.toUpperCase() + badge;
-            document.getElementById('res-racha').innerHTML = (user.rachaDias || 0) + " DÍAS 🔥";
-            document.getElementById('res-nivel').innerHTML = (user.level || 1) + (isCap ? " 👑" : "");
-            
-            // Scroll suave al resultado
-            document.getElementById('player-card').scrollIntoView({ behavior: 'smooth', block: 'center' });
-        } else {
-            alert("Usuario no encontrado. ¡Asegúrate de escribirlo igual que en TikTok!");
         }
-    } catch (e) {
-        console.error("Error en la consulta:", e);
-        alert("Error al conectar con la base de datos.");
-    } finally {
-        // 4. Restaurar Botón
-        btn.innerText = originalText;
-        btn.style.opacity = "1";
-        btn.disabled = false;
-    }
-}
+
 
         async function cargarRankings() {
             try {
-                const resp = await fetch(currentJSON);
-                const data = await resp.json();
-                const captains = getCaptains(data.users);
+                const allUsers = await fetchAllUserData();
+                const captains = getCaptains(allUsers);
 
-                // Top Rachas
-                const topRacha = [...data.users].sort((a, b) => (b.rachaDias || 0) - (a.rachaDias || 0)).slice(0, 10);
+                // Top 10 Rachas de todos los juegos juntos
+                const topRacha = [...allUsers].sort((a, b) => (b.rachaDias || 0) - (a.rachaDias || 0)).slice(0, 10);
                 document.getElementById('body-racha').innerHTML = topRacha.map((u, i) => {
                     const isCap = captains.has(u.username.toLowerCase());
                     return `<tr><td>#${i + 1}</td><td>${u.username}${isCap ? ' 👑' : ''}</td><td class="fire-text">${u.rachaDias || 0} 🔥</td></tr>`;
                 }).join('');
 
-                // Top Niveles
-                const topNivel = [...data.users].sort((a, b) => (b.level || 1) - (a.level || 1) || (b.exp || 0) - (a.exp || 0)).slice(0, 10);
+                // Top 10 Niveles de todos los juegos juntos
+                const topNivel = [...allUsers].sort((a, b) => (b.level || 1) - (a.level || 1)).slice(0, 10);
                 document.getElementById('body-nivel').innerHTML = topNivel.map((u, i) => {
                     const isCap = captains.has(u.username.toLowerCase());
-                    return `<tr><td>#${i + 1}</td><td>${u.username}</td><td style="color:var(--gx-accent); font-weight:bold;">Nvl ${u.level || 1}${isCap ? ' <span class="badge-captain">👑 CAPITÁN</span>' : ''}</td></tr>`;
+                    return `<tr><td>#${i + 1}</td><td>${u.username}</td><td style="color:var(--gx-accent); font-weight:bold;">Nvl ${u.level || 1}${isCap ? ' <span class="badge-captain">👑</span>' : ''}</td></tr>`;
                 }).join('');
             } catch (e) { console.error(e); }
         }
