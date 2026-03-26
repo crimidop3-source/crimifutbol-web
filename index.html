@@ -809,29 +809,21 @@
             const captains = new Set();
             const byTeam = {};
 
-            // 1. Recorremos el 100% de los usuarios del JSON sin importar cuántos sean
+            // Agrupamos por equipo Y torneo para no mezclarlos
             users.forEach(u => {
-                const teamName = u.team || "SIN EQUIPO";
-                if (!byTeam[teamName]) byTeam[teamName] = [];
-                byTeam[teamName].push(u);
+                // Creamos una clave única por equipo en ese torneo específico
+                const teamKey = `${u.team}-${u.torneo}`;
+                if (!byTeam[teamKey]) byTeam[teamKey] = [];
+                byTeam[teamKey].push(u);
             });
 
-            // 2. Ahora, de cada equipo encontrado en todo el JSON...
-            for (const team in byTeam) {
-                // ...ordenamos a TODOS los jugadores de ese equipo de mayor a menor nivel
-                const top3 = byTeam[team]
-                    .sort((a, b) => {
-                        // Primero comparamos por nivel
-                        if ((b.level || 0) !== (a.level || 0)) {
-                            return (b.level || 0) - (a.level || 0);
-                        }
-                        // Si empatan en nivel, el que tenga más EXP es el capitán
-                        return (b.exp || 0) - (a.exp || 0);
-                    })
-                    .slice(0, 3); // Tomamos a los 3 mejores
+            for (const key in byTeam) {
+                const top3 = byTeam[key]
+                    .sort((a, b) => (b.level || 0) - (a.level || 0) || (b.exp || 0) - (a.exp || 0))
+                    .slice(0, 3);
 
-                // 3. Los guardamos oficialmente como capitanes
-                top3.forEach(u => captains.add(u.username.toLowerCase()));
+                // AQUÍ EL CAMBIO: Guardamos "nombre-torneo" (ejemplo: "s.riapiran-FPC")
+                top3.forEach(u => captains.add(`${u.username.toLowerCase()}-${u.torneo}`));
             }
             return captains;
         }
@@ -890,7 +882,14 @@
 
                     // Recorremos cada torneo donde apareció el usuario
                     results.forEach(user => {
-                        const isCap = captains.has(user.username.toLowerCase());
+                        // Antes era: const isCap = captains.has(user.username.toLowerCase());
+                        // Ahora es:
+                        const isCap = captains.has(`${user.username.toLowerCase()}-${user.torneo}`);
+                        // Dentro del results.forEach, puedes añadir esto:
+                        const colorTorneo = user.torneo === 'FPC' ? '#00f2ff' : (user.torneo === 'MUNDIAL' ? '#ff0032' : '#ff8c00');
+
+                        // Y en el HTML de la etiqueta:
+                        <p style="font-size: 0.8rem; color: ${colorTorneo}; margin-bottom: 5px;">📍 SECTOR: ${user.torneo}</p>
                         const badge = isCap ? `<span class="badge-captain">👑 CAPITÁN</span>` : "";
 
                         // Detectamos el torneo basado en el JSON (necesitas que el JSON tenga un campo "torneo")
