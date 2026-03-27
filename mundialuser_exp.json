@@ -74,11 +74,11 @@
         },
         {
             "username": "Cristian",
-            "exp": 6300,
+            "exp": 6360,
             "level": 6,
             "team": "Millonarios",
-            "rachaDias": 2,
-            "ultimaFecha": "2026-03-26"
+            "rachaDias": 3,
+            "ultimaFecha": "2026-03-27"
         },
         {
             "username": "elfiguered0",
@@ -121,6 +121,14 @@
             "ultimaFecha": ""
         },
         {
+            "username": "juan.miranda9863",
+            "exp": 3621,
+            "level": 3,
+            "team": "COLOMBIA",
+            "rachaDias": 1,
+            "ultimaFecha": "2026-03-27"
+        },
+        {
             "username": "kevincito688",
             "exp": 2842,
             "level": 2,
@@ -138,11 +146,11 @@
         },
         {
             "username": "eslesli.osorio",
-            "exp": 2261,
+            "exp": 2280,
             "level": 2,
             "team": "EL SALVADOR",
-            "rachaDias": 0,
-            "ultimaFecha": ""
+            "rachaDias": 1,
+            "ultimaFecha": "2026-03-27"
         },
         {
             "username": "breiner.florez38",
@@ -265,6 +273,14 @@
             "ultimaFecha": ""
         },
         {
+            "username": "juliana.99suarez",
+            "exp": 1286,
+            "level": 1,
+            "team": "COLOMBIA",
+            "rachaDias": 1,
+            "ultimaFecha": "2026-03-27"
+        },
+        {
             "username": "alexisdejesscamej",
             "exp": 1267,
             "level": 1,
@@ -309,14 +325,6 @@
             "exp": 1071,
             "level": 1,
             "team": "VENEZUELA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "juliana.99suarez",
-            "exp": 1024,
-            "level": 1,
-            "team": "COLOMBIA",
             "rachaDias": 0,
             "ultimaFecha": ""
         },
@@ -377,18 +385,18 @@
             "ultimaFecha": ""
         },
         {
-            "username": "carlosort98",
-            "exp": 845,
-            "level": 1,
-            "team": "VENEZUELA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
             "username": "pedronaranjo471",
             "exp": 845,
             "level": 1,
             "team": "ECUADOR",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "carlosort98",
+            "exp": 845,
+            "level": 1,
+            "team": "VENEZUELA",
             "rachaDias": 0,
             "ultimaFecha": ""
         },
@@ -543,6 +551,14 @@
             "team": "COLOMBIA",
             "rachaDias": 0,
             "ultimaFecha": ""
+        },
+        {
+            "username": "lauralizarazo78",
+            "exp": 555,
+            "level": 1,
+            "team": "COLOMBIA",
+            "rachaDias": 1,
+            "ultimaFecha": "2026-03-27"
         },
         {
             "username": "alejandro.garca7679",
@@ -761,6 +777,14 @@
             "ultimaFecha": ""
         },
         {
+            "username": "nicocomandoazul",
+            "exp": 290,
+            "level": 1,
+            "team": "PANAMA",
+            "rachaDias": 1,
+            "ultimaFecha": "2026-03-27"
+        },
+        {
             "username": "el.osdiel",
             "exp": 281,
             "level": 1,
@@ -929,14 +953,6 @@
             "ultimaFecha": ""
         },
         {
-            "username": "juan.miranda9863",
-            "exp": 225,
-            "level": 1,
-            "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
             "username": "cris.5810",
             "exp": 223,
             "level": 1,
@@ -945,18 +961,18 @@
             "ultimaFecha": ""
         },
         {
-            "username": "daniel_manchay",
-            "exp": 215,
-            "level": 1,
-            "team": "ECUADOR",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
             "username": "izofer",
             "exp": 215,
             "level": 1,
             "team": "COLOMBIA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "daniel_manchay",
+            "exp": 215,
+            "level": 1,
+            "team": "ECUADOR",
             "rachaDias": 0,
             "ultimaFecha": ""
         },
@@ -1137,14 +1153,6 @@
             "ultimaFecha": ""
         },
         {
-            "username": "mayot4220",
-            "exp": 175,
-            "level": 1,
-            "team": "VENEZUELA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
             "username": "andresguerrero0203",
             "exp": 175,
             "level": 1,
@@ -1154,6 +1162,14 @@
         },
         {
             "username": "bershenrique.oficial",
+            "exp": 175,
+            "level": 1,
+            "team": "VENEZUELA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "mayot4220",
             "exp": 175,
             "level": 1,
             "team": "VENEZUELA",
@@ -1209,10 +1225,10 @@
             "ultimaFecha": ""
         },
         {
-            "username": "danko.lrk",
+            "username": "miile.41",
             "exp": 160,
             "level": 1,
-            "team": "COLOMBIA",
+            "team": "ARGENTINA",
             "rachaDias": 0,
             "ultimaFecha": ""
         },
@@ -1225,10 +1241,10 @@
             "ultimaFecha": ""
         },
         {
-            "username": "miile.41",
+            "username": "danko.lrk",
             "exp": 160,
             "level": 1,
-            "team": "ARGENTINA",
+            "team": "COLOMBIA",
             "rachaDias": 0,
             "ultimaFecha": ""
         },
@@ -1241,18 +1257,18 @@
             "ultimaFecha": ""
         },
         {
-            "username": "rosmery.yazaira.f",
-            "exp": 150,
-            "level": 1,
-            "team": "EL SALVADOR",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
             "username": "darlichara",
             "exp": 150,
             "level": 1,
             "team": "COLOMBIA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "rosmery.yazaira.f",
+            "exp": 150,
+            "level": 1,
+            "team": "EL SALVADOR",
             "rachaDias": 0,
             "ultimaFecha": ""
         },
@@ -1369,15 +1385,15 @@
             "ultimaFecha": ""
         },
         {
-            "username": "jhonalejandromill",
+            "username": "javiergomez028",
             "exp": 125,
             "level": 1,
-            "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
+            "team": "CUBA",
+            "rachaDias": 1,
+            "ultimaFecha": "2026-03-26"
         },
         {
-            "username": "lauralizarazo78",
+            "username": "jhonalejandromill",
             "exp": 125,
             "level": 1,
             "team": "COLOMBIA",
@@ -1391,14 +1407,6 @@
             "team": "HONDURAS",
             "rachaDias": 0,
             "ultimaFecha": ""
-        },
-        {
-            "username": "javiergomez028",
-            "exp": 125,
-            "level": 1,
-            "team": "CUBA",
-            "rachaDias": 1,
-            "ultimaFecha": "2026-03-26"
         },
         {
             "username": "nicoll15kevin",
@@ -1441,6 +1449,14 @@
             "ultimaFecha": ""
         },
         {
+            "username": "teamrojo549",
+            "exp": 115,
+            "level": 1,
+            "team": "VENEZUELA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
             "username": "eyin.vane",
             "exp": 115,
             "level": 1,
@@ -1453,14 +1469,6 @@
             "exp": 115,
             "level": 1,
             "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "teamrojo549",
-            "exp": 115,
-            "level": 1,
-            "team": "VENEZUELA",
             "rachaDias": 0,
             "ultimaFecha": ""
         },
@@ -1593,12 +1601,12 @@
             "ultimaFecha": ""
         },
         {
-            "username": "neiber189",
+            "username": "elenitha854",
             "exp": 100,
             "level": 1,
-            "team": "VENEZUELA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
+            "team": "MEXICO",
+            "rachaDias": 1,
+            "ultimaFecha": "2026-03-27"
         },
         {
             "username": "chathitha1119",
@@ -1609,8 +1617,24 @@
             "ultimaFecha": ""
         },
         {
+            "username": "neiber189",
+            "exp": 100,
+            "level": 1,
+            "team": "VENEZUELA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
             "username": "marianyelishijadedios",
             "exp": 96,
+            "level": 1,
+            "team": "VENEZUELA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "reinaldocaridad",
+            "exp": 95,
             "level": 1,
             "team": "VENEZUELA",
             "rachaDias": 0,
@@ -1633,10 +1657,10 @@
             "ultimaFecha": ""
         },
         {
-            "username": "reinaldocaridad",
-            "exp": 95,
+            "username": "ng_23000",
+            "exp": 92,
             "level": 1,
-            "team": "VENEZUELA",
+            "team": "COLOMBIA",
             "rachaDias": 0,
             "ultimaFecha": ""
         },
@@ -1649,24 +1673,8 @@
             "ultimaFecha": ""
         },
         {
-            "username": "ng_23000",
-            "exp": 92,
-            "level": 1,
-            "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
             "username": "jos.pajaro0",
             "exp": 91,
-            "level": 1,
-            "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "lila_molina9808",
-            "exp": 90,
             "level": 1,
             "team": "COLOMBIA",
             "rachaDias": 0,
@@ -1682,6 +1690,14 @@
         },
         {
             "username": "estevanmuoz7",
+            "exp": 90,
+            "level": 1,
+            "team": "COLOMBIA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "lila_molina9808",
             "exp": 90,
             "level": 1,
             "team": "COLOMBIA",
@@ -1729,14 +1745,6 @@
             "ultimaFecha": ""
         },
         {
-            "username": "tomasramire8",
-            "exp": 81,
-            "level": 1,
-            "team": "GUATEMALA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
             "username": "ilovxmar",
             "exp": 81,
             "level": 1,
@@ -1745,10 +1753,10 @@
             "ultimaFecha": ""
         },
         {
-            "username": "ana399393933962527826263",
-            "exp": 80,
+            "username": "tomasramire8",
+            "exp": 81,
             "level": 1,
-            "team": "COLOMBIA",
+            "team": "GUATEMALA",
             "rachaDias": 0,
             "ultimaFecha": ""
         },
@@ -1769,18 +1777,18 @@
             "ultimaFecha": ""
         },
         {
-            "username": "vaitiareangel0",
-            "exp": 79,
+            "username": "ana399393933962527826263",
+            "exp": 80,
             "level": 1,
-            "team": "MEXICO",
+            "team": "COLOMBIA",
             "rachaDias": 0,
             "ultimaFecha": ""
         },
         {
-            "username": "romero_s11",
-            "exp": 78,
+            "username": "vaitiareangel0",
+            "exp": 79,
             "level": 1,
-            "team": "COLOMBIA",
+            "team": "MEXICO",
             "rachaDias": 0,
             "ultimaFecha": ""
         },
@@ -1793,10 +1801,10 @@
             "ultimaFecha": ""
         },
         {
-            "username": "val089318",
-            "exp": 77,
+            "username": "romero_s11",
+            "exp": 78,
             "level": 1,
-            "team": "ECUADOR",
+            "team": "COLOMBIA",
             "rachaDias": 0,
             "ultimaFecha": ""
         },
@@ -1817,12 +1825,20 @@
             "ultimaFecha": ""
         },
         {
-            "username": "luisgaldamez183",
-            "exp": 75,
+            "username": "val089318",
+            "exp": 77,
             "level": 1,
-            "team": "EL SALVADOR",
+            "team": "ECUADOR",
             "rachaDias": 0,
             "ultimaFecha": ""
+        },
+        {
+            "username": "crimi0",
+            "exp": 75,
+            "level": 1,
+            "team": "HONDURAS",
+            "rachaDias": 1,
+            "ultimaFecha": "2026-03-26"
         },
         {
             "username": "andresnavarro051",
@@ -1841,12 +1857,12 @@
             "ultimaFecha": ""
         },
         {
-            "username": "crimi0",
+            "username": "luisgaldamez183",
             "exp": 75,
             "level": 1,
-            "team": "HONDURAS",
-            "rachaDias": 1,
-            "ultimaFecha": "2026-03-26"
+            "team": "EL SALVADOR",
+            "rachaDias": 0,
+            "ultimaFecha": ""
         },
         {
             "username": "luis_la_l_l3tras3",
@@ -1889,18 +1905,10 @@
             "ultimaFecha": ""
         },
         {
-            "username": "esperanza.afanado3",
+            "username": "user3040810172600",
             "exp": 70,
             "level": 1,
-            "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "escorpion5362",
-            "exp": 70,
-            "level": 1,
-            "team": "MEXICO",
+            "team": "PANAMA",
             "rachaDias": 0,
             "ultimaFecha": ""
         },
@@ -1913,22 +1921,6 @@
             "ultimaFecha": ""
         },
         {
-            "username": "ale.vasquez343",
-            "exp": 70,
-            "level": 1,
-            "team": "VENEZUELA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "user3040810172600",
-            "exp": 70,
-            "level": 1,
-            "team": "PANAMA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
             "username": "justindejesusbarr",
             "exp": 70,
             "level": 1,
@@ -1937,7 +1929,7 @@
             "ultimaFecha": ""
         },
         {
-            "username": "sagi...kw",
+            "username": "ale.vasquez343",
             "exp": 70,
             "level": 1,
             "team": "VENEZUELA",
@@ -1953,6 +1945,14 @@
             "ultimaFecha": ""
         },
         {
+            "username": "esperanza.afanado3",
+            "exp": 70,
+            "level": 1,
+            "team": "COLOMBIA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
             "username": "rubengallardo_",
             "exp": 70,
             "level": 1,
@@ -1961,16 +1961,24 @@
             "ultimaFecha": ""
         },
         {
-            "username": "kattii1999",
-            "exp": 66,
+            "username": "escorpion5362",
+            "exp": 70,
             "level": 1,
-            "team": "COLOMBIA",
+            "team": "MEXICO",
             "rachaDias": 0,
             "ultimaFecha": ""
         },
         {
-            "username": "gheral.zacosta",
-            "exp": 65,
+            "username": "sagi...kw",
+            "exp": 70,
+            "level": 1,
+            "team": "VENEZUELA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "kattii1999",
+            "exp": 66,
             "level": 1,
             "team": "COLOMBIA",
             "rachaDias": 0,
@@ -1985,7 +1993,31 @@
             "ultimaFecha": ""
         },
         {
+            "username": "jos.manuel.leonet",
+            "exp": 65,
+            "level": 1,
+            "team": "VENEZUELA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
             "username": "dianacamilo122",
+            "exp": 65,
+            "level": 1,
+            "team": "COLOMBIA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "manuebolivar86",
+            "exp": 65,
+            "level": 1,
+            "team": "VENEZUELA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "gheral.zacosta",
             "exp": 65,
             "level": 1,
             "team": "COLOMBIA",
@@ -2009,22 +2041,6 @@
             "ultimaFecha": ""
         },
         {
-            "username": "nicocomandoazul",
-            "exp": 65,
-            "level": 1,
-            "team": "PANAMA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "jos.manuel.leonet",
-            "exp": 65,
-            "level": 1,
-            "team": "VENEZUELA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
             "username": "danielbetancourt025",
             "exp": 65,
             "level": 1,
@@ -2033,12 +2049,12 @@
             "ultimaFecha": ""
         },
         {
-            "username": "manuebolivar86",
-            "exp": 65,
+            "username": "victormanuel____",
+            "exp": 62,
             "level": 1,
-            "team": "VENEZUELA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
+            "team": "CHILE",
+            "rachaDias": 1,
+            "ultimaFecha": "2026-03-27"
         },
         {
             "username": "kevin.gallego31",
@@ -2057,7 +2073,7 @@
             "ultimaFecha": ""
         },
         {
-            "username": "fernndarodriguez5",
+            "username": "arielmendivelso3",
             "exp": 60,
             "level": 1,
             "team": "COLOMBIA",
@@ -2073,12 +2089,12 @@
             "ultimaFecha": ""
         },
         {
-            "username": "crimi7",
+            "username": "fernndarodriguez5",
             "exp": 60,
             "level": 1,
-            "team": "MEXICO",
-            "rachaDias": 1,
-            "ultimaFecha": "2026-03-26"
+            "team": "COLOMBIA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
         },
         {
             "username": "itss_sebass32",
@@ -2089,28 +2105,28 @@
             "ultimaFecha": ""
         },
         {
-            "username": "camilasanchez429",
-            "exp": 60,
-            "level": 1,
-            "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "arielmendivelso3",
-            "exp": 60,
-            "level": 1,
-            "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
             "username": "crimi8",
             "exp": 60,
             "level": 1,
             "team": "VENEZUELA",
             "rachaDias": 1,
             "ultimaFecha": "2026-03-26"
+        },
+        {
+            "username": "crimi7",
+            "exp": 60,
+            "level": 1,
+            "team": "MEXICO",
+            "rachaDias": 1,
+            "ultimaFecha": "2026-03-26"
+        },
+        {
+            "username": "camilasanchez429",
+            "exp": 60,
+            "level": 1,
+            "team": "COLOMBIA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
         },
         {
             "username": "angelsoto917",
@@ -2153,6 +2169,30 @@
             "ultimaFecha": ""
         },
         {
+            "username": "xd020279",
+            "exp": 55,
+            "level": 1,
+            "team": "ECUADOR",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "joseluisburbanov",
+            "exp": 55,
+            "level": 1,
+            "team": "COLOMBIA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "alvarocuza",
+            "exp": 55,
+            "level": 1,
+            "team": "COLOMBIA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
             "username": "jorge.pereira970",
             "exp": 55,
             "level": 1,
@@ -2169,7 +2209,7 @@
             "ultimaFecha": ""
         },
         {
-            "username": "joseluisburbanov",
+            "username": "carlos.gutierrez8260",
             "exp": 55,
             "level": 1,
             "team": "COLOMBIA",
@@ -2185,32 +2225,16 @@
             "ultimaFecha": ""
         },
         {
-            "username": "xd020279",
-            "exp": 55,
-            "level": 1,
-            "team": "ECUADOR",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "carlos.gutierrez8260",
-            "exp": 55,
-            "level": 1,
-            "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "alvarocuza",
-            "exp": 55,
-            "level": 1,
-            "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
             "username": "yonkeiberwilyonjar",
             "exp": 54,
+            "level": 1,
+            "team": "VENEZUELA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "maikel.urdaneta3",
+            "exp": 53,
             "level": 1,
             "team": "VENEZUELA",
             "rachaDias": 0,
@@ -2221,14 +2245,6 @@
             "exp": 53,
             "level": 1,
             "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "maikel.urdaneta3",
-            "exp": 53,
-            "level": 1,
-            "team": "VENEZUELA",
             "rachaDias": 0,
             "ultimaFecha": ""
         },
@@ -2265,7 +2281,7 @@
             "ultimaFecha": ""
         },
         {
-            "username": "neymar.jr8387",
+            "username": "valejv120225",
             "exp": 50,
             "level": 1,
             "team": "VENEZUELA",
@@ -2273,7 +2289,15 @@
             "ultimaFecha": ""
         },
         {
-            "username": "jarleison.lopez",
+            "username": "jhostine.lara5",
+            "exp": 50,
+            "level": 1,
+            "team": "PANAMA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "liberato1215",
             "exp": 50,
             "level": 1,
             "team": "COLOMBIA",
@@ -2285,6 +2309,14 @@
             "exp": 50,
             "level": 1,
             "team": "COLOMBIA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "neymar.jr8387",
+            "exp": 50,
+            "level": 1,
+            "team": "VENEZUELA",
             "rachaDias": 0,
             "ultimaFecha": ""
         },
@@ -2305,6 +2337,22 @@
             "ultimaFecha": ""
         },
         {
+            "username": "wantippe",
+            "exp": 50,
+            "level": 1,
+            "team": "CUBA",
+            "rachaDias": 1,
+            "ultimaFecha": "2026-03-26"
+        },
+        {
+            "username": "jarleison.lopez",
+            "exp": 50,
+            "level": 1,
+            "team": "COLOMBIA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
             "username": "tuflakahermosa.com",
             "exp": 50,
             "level": 1,
@@ -2313,36 +2361,12 @@
             "ultimaFecha": ""
         },
         {
-            "username": "valejv120225",
-            "exp": 50,
+            "username": "mariuxi._.0",
+            "exp": 45,
             "level": 1,
-            "team": "VENEZUELA",
+            "team": "ECUADOR",
             "rachaDias": 0,
             "ultimaFecha": ""
-        },
-        {
-            "username": "liberato1215",
-            "exp": 50,
-            "level": 1,
-            "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "jhostine.lara5",
-            "exp": 50,
-            "level": 1,
-            "team": "PANAMA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "wantippe",
-            "exp": 50,
-            "level": 1,
-            "team": "CUBA",
-            "rachaDias": 1,
-            "ultimaFecha": "2026-03-26"
         },
         {
             "username": "crimi",
@@ -2361,10 +2385,10 @@
             "ultimaFecha": ""
         },
         {
-            "username": "mariuxi._.0",
-            "exp": 45,
+            "username": "mariana.luciaaa7",
+            "exp": 42,
             "level": 1,
-            "team": "ECUADOR",
+            "team": "COLOMBIA",
             "rachaDias": 0,
             "ultimaFecha": ""
         },
@@ -2385,32 +2409,8 @@
             "ultimaFecha": ""
         },
         {
-            "username": "mariana.luciaaa7",
-            "exp": 42,
-            "level": 1,
-            "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
             "username": "frefiredecorazon",
             "exp": 41,
-            "level": 1,
-            "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "raulfunes04",
-            "exp": 40,
-            "level": 1,
-            "team": "HONDURAS",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "justin.david109",
-            "exp": 40,
             "level": 1,
             "team": "COLOMBIA",
             "rachaDias": 0,
@@ -2421,30 +2421,6 @@
             "exp": 40,
             "level": 1,
             "team": "ARGENTINA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "angelbermontanez",
-            "exp": 40,
-            "level": 1,
-            "team": "VENEZUELA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "alexanderaguila794",
-            "exp": 40,
-            "level": 1,
-            "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "x_.gxbriel._x",
-            "exp": 40,
-            "level": 1,
-            "team": "COLOMBIA",
             "rachaDias": 0,
             "ultimaFecha": ""
         },
@@ -2465,6 +2441,38 @@
             "ultimaFecha": ""
         },
         {
+            "username": "x_.gxbriel._x",
+            "exp": 40,
+            "level": 1,
+            "team": "COLOMBIA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "jhon.daniel.mejia2",
+            "exp": 40,
+            "level": 1,
+            "team": "COLOMBIA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "jalesky52",
+            "exp": 40,
+            "level": 1,
+            "team": "VENEZUELA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "justin.david109",
+            "exp": 40,
+            "level": 1,
+            "team": "COLOMBIA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
             "username": "yeisoncadena68",
             "exp": 40,
             "level": 1,
@@ -2481,15 +2489,15 @@
             "ultimaFecha": "2026-03-26"
         },
         {
-            "username": "hernanncardozoo",
+            "username": "raulfunes04",
             "exp": 40,
             "level": 1,
-            "team": "COLOMBIA",
+            "team": "HONDURAS",
             "rachaDias": 0,
             "ultimaFecha": ""
         },
         {
-            "username": "jalesky52",
+            "username": "angelbermontanez",
             "exp": 40,
             "level": 1,
             "team": "VENEZUELA",
@@ -2497,7 +2505,15 @@
             "ultimaFecha": ""
         },
         {
-            "username": "jhon.daniel.mejia2",
+            "username": "alexanderaguila794",
+            "exp": 40,
+            "level": 1,
+            "team": "COLOMBIA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "hernanncardozoo",
             "exp": 40,
             "level": 1,
             "team": "COLOMBIA",
@@ -2561,14 +2577,6 @@
             "ultimaFecha": ""
         },
         {
-            "username": "edwuarmorelos",
-            "exp": 35,
-            "level": 1,
-            "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
             "username": "crimi1",
             "exp": 35,
             "level": 1,
@@ -2577,7 +2585,7 @@
             "ultimaFecha": "2026-03-26"
         },
         {
-            "username": "rodrigo.aguilar472",
+            "username": "edwuarmorelos",
             "exp": 35,
             "level": 1,
             "team": "COLOMBIA",
@@ -2585,10 +2593,10 @@
             "ultimaFecha": ""
         },
         {
-            "username": "karo27178",
+            "username": "rodrigo.aguilar472",
             "exp": 35,
             "level": 1,
-            "team": "ECUADOR",
+            "team": "COLOMBIA",
             "rachaDias": 0,
             "ultimaFecha": ""
         },
@@ -2605,6 +2613,14 @@
             "exp": 35,
             "level": 1,
             "team": "VENEZUELA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "karo27178",
+            "exp": 35,
+            "level": 1,
+            "team": "ECUADOR",
             "rachaDias": 0,
             "ultimaFecha": ""
         },
@@ -2641,14 +2657,6 @@
             "ultimaFecha": ""
         },
         {
-            "username": "fer662938",
-            "exp": 31,
-            "level": 1,
-            "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
             "username": "ricardo.pulido18",
             "exp": 31,
             "level": 1,
@@ -2657,40 +2665,8 @@
             "ultimaFecha": ""
         },
         {
-            "username": "julian.gomez015",
-            "exp": 30,
-            "level": 1,
-            "team": "ARGENTINA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "r_jr66",
-            "exp": 30,
-            "level": 1,
-            "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "amparomm19",
-            "exp": 30,
-            "level": 1,
-            "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "yeisonescobedo2",
-            "exp": 30,
-            "level": 1,
-            "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "susana.rojas13",
-            "exp": 30,
+            "username": "fer662938",
+            "exp": 31,
             "level": 1,
             "team": "COLOMBIA",
             "rachaDias": 0,
@@ -2705,15 +2681,7 @@
             "ultimaFecha": ""
         },
         {
-            "username": "rosa_cast08",
-            "exp": 30,
-            "level": 1,
-            "team": "PANAMA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "plebeyos_yt",
+            "username": "cecilia.chimbo2",
             "exp": 30,
             "level": 1,
             "team": "ECUADOR",
@@ -2721,26 +2689,10 @@
             "ultimaFecha": ""
         },
         {
-            "username": "henry.bricio",
+            "username": "julian.gomez015",
             "exp": 30,
             "level": 1,
-            "team": "ECUADOR",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "jesushernandez14034",
-            "exp": 30,
-            "level": 1,
-            "team": "VENEZUELA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "isaacpolodias",
-            "exp": 30,
-            "level": 1,
-            "team": "COLOMBIA",
+            "team": "ARGENTINA",
             "rachaDias": 0,
             "ultimaFecha": ""
         },
@@ -2753,15 +2705,23 @@
             "ultimaFecha": ""
         },
         {
-            "username": "crimi2",
+            "username": "angel.12dc",
             "exp": 30,
             "level": 1,
-            "team": "CHILE",
-            "rachaDias": 1,
-            "ultimaFecha": "2026-03-26"
+            "team": "VENEZUELA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
         },
         {
-            "username": "cecilia.chimbo2",
+            "username": "rosa_cast08",
+            "exp": 30,
+            "level": 1,
+            "team": "PANAMA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "henry.bricio",
             "exp": 30,
             "level": 1,
             "team": "ECUADOR",
@@ -2769,10 +2729,18 @@
             "ultimaFecha": ""
         },
         {
-            "username": "jhonatapiresrocha",
+            "username": "plebeyos_yt",
             "exp": 30,
             "level": 1,
-            "team": "",
+            "team": "ECUADOR",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "r_jr66",
+            "exp": 30,
+            "level": 1,
+            "team": "COLOMBIA",
             "rachaDias": 0,
             "ultimaFecha": ""
         },
@@ -2793,12 +2761,60 @@
             "ultimaFecha": ""
         },
         {
-            "username": "angel.12dc",
+            "username": "yeisonescobedo2",
+            "exp": 30,
+            "level": 1,
+            "team": "COLOMBIA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "jhonatapiresrocha",
+            "exp": 30,
+            "level": 1,
+            "team": "",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "susana.rojas13",
+            "exp": 30,
+            "level": 1,
+            "team": "COLOMBIA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "jesushernandez14034",
             "exp": 30,
             "level": 1,
             "team": "VENEZUELA",
             "rachaDias": 0,
             "ultimaFecha": ""
+        },
+        {
+            "username": "amparomm19",
+            "exp": 30,
+            "level": 1,
+            "team": "COLOMBIA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "isaacpolodias",
+            "exp": 30,
+            "level": 1,
+            "team": "COLOMBIA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "crimi2",
+            "exp": 30,
+            "level": 1,
+            "team": "CHILE",
+            "rachaDias": 1,
+            "ultimaFecha": "2026-03-26"
         },
         {
             "username": "victorbalaguera77",
@@ -2833,14 +2849,6 @@
             "ultimaFecha": ""
         },
         {
-            "username": "juliana.velzquez14",
-            "exp": 26,
-            "level": 1,
-            "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
             "username": "jose.manuel.guada80",
             "exp": 26,
             "level": 1,
@@ -2849,63 +2857,15 @@
             "ultimaFecha": ""
         },
         {
+            "username": "juliana.velzquez14",
+            "exp": 26,
+            "level": 1,
+            "team": "COLOMBIA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
             "username": "stunt1908",
-            "exp": 25,
-            "level": 1,
-            "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "mari_08_73",
-            "exp": 25,
-            "level": 1,
-            "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "justiciarey2",
-            "exp": 25,
-            "level": 1,
-            "team": "VENEZUELA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "cosasdelavida16896",
-            "exp": 25,
-            "level": 1,
-            "team": "PANAMA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "crimi6",
-            "exp": 25,
-            "level": 1,
-            "team": "ESPAÑA",
-            "rachaDias": 1,
-            "ultimaFecha": "2026-03-26"
-        },
-        {
-            "username": "jeffersonmolina99",
-            "exp": 25,
-            "level": 1,
-            "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "fon.chi1",
-            "exp": 25,
-            "level": 1,
-            "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "el.pepe8463",
             "exp": 25,
             "level": 1,
             "team": "COLOMBIA",
@@ -2921,7 +2881,15 @@
             "ultimaFecha": ""
         },
         {
-            "username": "el.papi.sabroson8",
+            "username": "cosasdelavida16896",
+            "exp": 25,
+            "level": 1,
+            "team": "PANAMA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "el.pepe8463",
             "exp": 25,
             "level": 1,
             "team": "COLOMBIA",
@@ -2929,7 +2897,7 @@
             "ultimaFecha": ""
         },
         {
-            "username": "wilber.yodera",
+            "username": "mari_08_73",
             "exp": 25,
             "level": 1,
             "team": "COLOMBIA",
@@ -2937,34 +2905,10 @@
             "ultimaFecha": ""
         },
         {
-            "username": "felipe._.urrego",
+            "username": "jeffersonmolina99",
             "exp": 25,
             "level": 1,
             "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "jesus.aurelio49",
-            "exp": 25,
-            "level": 1,
-            "team": "VENEZUELA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "santiago_ramirez444",
-            "exp": 25,
-            "level": 1,
-            "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "andres.salazar2249",
-            "exp": 25,
-            "level": 1,
-            "team": "ECUADOR",
             "rachaDias": 0,
             "ultimaFecha": ""
         },
@@ -2985,7 +2929,79 @@
             "ultimaFecha": ""
         },
         {
+            "username": "justiciarey2",
+            "exp": 25,
+            "level": 1,
+            "team": "VENEZUELA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
             "username": "axtellez99",
+            "exp": 25,
+            "level": 1,
+            "team": "COLOMBIA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "el.papi.sabroson8",
+            "exp": 25,
+            "level": 1,
+            "team": "COLOMBIA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "crimi6",
+            "exp": 25,
+            "level": 1,
+            "team": "ESPAÑA",
+            "rachaDias": 1,
+            "ultimaFecha": "2026-03-26"
+        },
+        {
+            "username": "felipe._.urrego",
+            "exp": 25,
+            "level": 1,
+            "team": "COLOMBIA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "santiago_ramirez444",
+            "exp": 25,
+            "level": 1,
+            "team": "COLOMBIA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "fon.chi1",
+            "exp": 25,
+            "level": 1,
+            "team": "COLOMBIA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "jesus.aurelio49",
+            "exp": 25,
+            "level": 1,
+            "team": "VENEZUELA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "andres.salazar2249",
+            "exp": 25,
+            "level": 1,
+            "team": "ECUADOR",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "wilber.yodera",
             "exp": 25,
             "level": 1,
             "team": "COLOMBIA",
@@ -3025,14 +3041,6 @@
             "ultimaFecha": ""
         },
         {
-            "username": "user805924080",
-            "exp": 20,
-            "level": 1,
-            "team": "ECUADOR",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
             "username": "maribelmirelladel",
             "exp": 20,
             "level": 1,
@@ -3065,15 +3073,15 @@
             "ultimaFecha": ""
         },
         {
-            "username": "josuecaballero844",
+            "username": "user805924080",
             "exp": 20,
             "level": 1,
-            "team": "COLOMBIA",
+            "team": "ECUADOR",
             "rachaDias": 0,
             "ultimaFecha": ""
         },
         {
-            "username": "javier.jimenez5564",
+            "username": "yohananiaza1",
             "exp": 20,
             "level": 1,
             "team": "COLOMBIA",
@@ -3097,15 +3105,7 @@
             "ultimaFecha": ""
         },
         {
-            "username": "yohananiaza1",
-            "exp": 20,
-            "level": 1,
-            "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "zsara03",
+            "username": "javier.jimenez5564",
             "exp": 20,
             "level": 1,
             "team": "COLOMBIA",
@@ -3117,6 +3117,22 @@
             "exp": 20,
             "level": 1,
             "team": "VENEZUELA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "josuecaballero844",
+            "exp": 20,
+            "level": 1,
+            "team": "COLOMBIA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "zsara03",
+            "exp": 20,
+            "level": 1,
+            "team": "COLOMBIA",
             "rachaDias": 0,
             "ultimaFecha": ""
         },
@@ -3153,6 +3169,14 @@
             "ultimaFecha": ""
         },
         {
+            "username": "sebas97tian",
+            "exp": 16,
+            "level": 1,
+            "team": "COLOMBIA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
             "username": "albertvillareal63",
             "exp": 16,
             "level": 1,
@@ -3161,10 +3185,74 @@
             "ultimaFecha": ""
         },
         {
-            "username": "sebas97tian",
-            "exp": 16,
+            "username": "seb_a.al",
+            "exp": 15,
             "level": 1,
             "team": "COLOMBIA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "miriamramirez1948",
+            "exp": 15,
+            "level": 1,
+            "team": "MEXICO",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "vill_5_",
+            "exp": 15,
+            "level": 1,
+            "team": "COLOMBIA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "leonardoalfonzo19",
+            "exp": 15,
+            "level": 1,
+            "team": "VENEZUELA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "iamcrissamd",
+            "exp": 15,
+            "level": 1,
+            "team": "COLOMBIA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "juaness_111",
+            "exp": 15,
+            "level": 1,
+            "team": "COLOMBIA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "brayan_daniel62",
+            "exp": 15,
+            "level": 1,
+            "team": "COLOMBIA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "user2847619627130",
+            "exp": 15,
+            "level": 1,
+            "team": "ECUADOR",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "guilleeeeeee09",
+            "exp": 15,
+            "level": 1,
+            "team": "ARGENTINA",
             "rachaDias": 0,
             "ultimaFecha": ""
         },
@@ -3185,15 +3273,7 @@
             "ultimaFecha": ""
         },
         {
-            "username": "miriamramirez1948",
-            "exp": 15,
-            "level": 1,
-            "team": "MEXICO",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "yerik.flex",
+            "username": "teti71237",
             "exp": 15,
             "level": 1,
             "team": "COLOMBIA",
@@ -3201,7 +3281,7 @@
             "ultimaFecha": ""
         },
         {
-            "username": "iamcrissamd",
+            "username": "javierhurtado1736",
             "exp": 15,
             "level": 1,
             "team": "COLOMBIA",
@@ -3209,18 +3289,10 @@
             "ultimaFecha": ""
         },
         {
-            "username": "user2847619627130",
+            "username": "aldo.cabrera857",
             "exp": 15,
             "level": 1,
-            "team": "ECUADOR",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "seb_a.al",
-            "exp": 15,
-            "level": 1,
-            "team": "COLOMBIA",
+            "team": "ARGENTINA",
             "rachaDias": 0,
             "ultimaFecha": ""
         },
@@ -3233,7 +3305,7 @@
             "ultimaFecha": ""
         },
         {
-            "username": "brayan_daniel62",
+            "username": "daniel_12516",
             "exp": 15,
             "level": 1,
             "team": "COLOMBIA",
@@ -3241,7 +3313,7 @@
             "ultimaFecha": ""
         },
         {
-            "username": "vill_5_",
+            "username": "emmadavi4",
             "exp": 15,
             "level": 1,
             "team": "COLOMBIA",
@@ -3257,31 +3329,7 @@
             "ultimaFecha": ""
         },
         {
-            "username": "leonardoalfonzo19",
-            "exp": 15,
-            "level": 1,
-            "team": "VENEZUELA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "aldo.cabrera857",
-            "exp": 15,
-            "level": 1,
-            "team": "ARGENTINA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "josecarlos.melend",
-            "exp": 15,
-            "level": 1,
-            "team": "VENEZUELA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "jhonatanefectos",
+            "username": "yerik.flex",
             "exp": 15,
             "level": 1,
             "team": "COLOMBIA",
@@ -3289,7 +3337,7 @@
             "ultimaFecha": ""
         },
         {
-            "username": "emmadavi4",
+            "username": "ixn_mxcxas",
             "exp": 15,
             "level": 1,
             "team": "COLOMBIA",
@@ -3313,10 +3361,10 @@
             "ultimaFecha": ""
         },
         {
-            "username": "guilleeeeeee09",
+            "username": "angelicacorrales23",
             "exp": 15,
             "level": 1,
-            "team": "ARGENTINA",
+            "team": "VENEZUELA",
             "rachaDias": 0,
             "ultimaFecha": ""
         },
@@ -3329,6 +3377,22 @@
             "ultimaFecha": ""
         },
         {
+            "username": "josecarlos.melend",
+            "exp": 15,
+            "level": 1,
+            "team": "VENEZUELA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "jhonatanefectos",
+            "exp": 15,
+            "level": 1,
+            "team": "COLOMBIA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
             "username": "berlain.ramrez.ja",
             "exp": 15,
             "level": 1,
@@ -3337,55 +3401,7 @@
             "ultimaFecha": ""
         },
         {
-            "username": "angelicacorrales23",
-            "exp": 15,
-            "level": 1,
-            "team": "VENEZUELA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "teti71237",
-            "exp": 15,
-            "level": 1,
-            "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "ixn_mxcxas",
-            "exp": 15,
-            "level": 1,
-            "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
             "username": "santisassy0",
-            "exp": 15,
-            "level": 1,
-            "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "juaness_111",
-            "exp": 15,
-            "level": 1,
-            "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "javierhurtado1736",
-            "exp": 15,
-            "level": 1,
-            "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "daniel_12516",
             "exp": 15,
             "level": 1,
             "team": "COLOMBIA",
@@ -3425,14 +3441,6 @@
             "ultimaFecha": ""
         },
         {
-            "username": "niampiraluis19",
-            "exp": 11,
-            "level": 1,
-            "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
             "username": "deikers.palacios",
             "exp": 11,
             "level": 1,
@@ -3449,6 +3457,22 @@
             "ultimaFecha": ""
         },
         {
+            "username": "niampiraluis19",
+            "exp": 11,
+            "level": 1,
+            "team": "COLOMBIA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "jessicarosado42",
+            "exp": 10,
+            "level": 1,
+            "team": "ECUADOR",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
             "username": "luischavezhernand8",
             "exp": 10,
             "level": 1,
@@ -3457,7 +3481,15 @@
             "ultimaFecha": ""
         },
         {
-            "username": "user84967082536985",
+            "username": "naybelceliz",
+            "exp": 10,
+            "level": 1,
+            "team": "VENEZUELA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "kevin.espitia6",
             "exp": 10,
             "level": 1,
             "team": "COLOMBIA",
@@ -3465,7 +3497,63 @@
             "ultimaFecha": ""
         },
         {
-            "username": "luis_monsale",
+            "username": "mariamanci1",
+            "exp": 10,
+            "level": 1,
+            "team": "COLOMBIA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "oscarleon016",
+            "exp": 10,
+            "level": 1,
+            "team": "COLOMBIA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "colombia",
+            "exp": 10,
+            "level": 1,
+            "team": "VENEZUELA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "cmail35",
+            "exp": 10,
+            "level": 1,
+            "team": "",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "mariadelrosariograjales",
+            "exp": 10,
+            "level": 1,
+            "team": "COLOMBIA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "mateo_lpz12",
+            "exp": 10,
+            "level": 1,
+            "team": "EL SALVADOR",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "kellysvega13",
+            "exp": 10,
+            "level": 1,
+            "team": "COLOMBIA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "keydersnow1",
             "exp": 10,
             "level": 1,
             "team": "VENEZUELA",
@@ -3481,7 +3569,7 @@
             "ultimaFecha": ""
         },
         {
-            "username": "sergiobarca19",
+            "username": "jhonaislant",
             "exp": 10,
             "level": 1,
             "team": "COLOMBIA",
@@ -3489,50 +3577,10 @@
             "ultimaFecha": ""
         },
         {
-            "username": "ell.brey.pg",
+            "username": "fader_xzv.0",
             "exp": 10,
             "level": 1,
             "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "kellysvega13",
-            "exp": 10,
-            "level": 1,
-            "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "cmail35",
-            "exp": 10,
-            "level": 1,
-            "team": "",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "kevin.espitia6",
-            "exp": 10,
-            "level": 1,
-            "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "jessicarosado42",
-            "exp": 10,
-            "level": 1,
-            "team": "ECUADOR",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "winner5.h0",
-            "exp": 10,
-            "level": 1,
-            "team": "VENEZUELA",
             "rachaDias": 0,
             "ultimaFecha": ""
         },
@@ -3545,15 +3593,15 @@
             "ultimaFecha": ""
         },
         {
-            "username": "uzielsantos65",
+            "username": "leeyang075",
             "exp": 10,
             "level": 1,
-            "team": "",
+            "team": "COLOMBIA",
             "rachaDias": 0,
             "ultimaFecha": ""
         },
         {
-            "username": "mariamanci1",
+            "username": "fabianlopez6758",
             "exp": 10,
             "level": 1,
             "team": "COLOMBIA",
@@ -3585,7 +3633,7 @@
             "ultimaFecha": ""
         },
         {
-            "username": "jhonaislant",
+            "username": "dairon.tovar70",
             "exp": 10,
             "level": 1,
             "team": "COLOMBIA",
@@ -3593,23 +3641,7 @@
             "ultimaFecha": ""
         },
         {
-            "username": "fader_xzv.0",
-            "exp": 10,
-            "level": 1,
-            "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "fabianlopez6758",
-            "exp": 10,
-            "level": 1,
-            "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "leeyang075",
+            "username": "ell.brey.pg",
             "exp": 10,
             "level": 1,
             "team": "COLOMBIA",
@@ -3625,7 +3657,15 @@
             "ultimaFecha": ""
         },
         {
-            "username": "keydersnow1",
+            "username": "fandelchamito0",
+            "exp": 10,
+            "level": 1,
+            "team": "COLOMBIA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "luis_monsale",
             "exp": 10,
             "level": 1,
             "team": "VENEZUELA",
@@ -3633,7 +3673,87 @@
             "ultimaFecha": ""
         },
         {
-            "username": "fandelchamito0",
+            "username": "jrjhoan168",
+            "exp": 10,
+            "level": 1,
+            "team": "COLOMBIA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "user84967082536985",
+            "exp": 10,
+            "level": 1,
+            "team": "COLOMBIA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "kunoichi.013",
+            "exp": 10,
+            "level": 1,
+            "team": "COLOMBIA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "luzmeryocampog818",
+            "exp": 10,
+            "level": 1,
+            "team": "COLOMBIA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "yovannyjose94",
+            "exp": 10,
+            "level": 1,
+            "team": "VENEZUELA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "manuelflores.2026",
+            "exp": 10,
+            "level": 1,
+            "team": "ARGENTINA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "uzielsantos65",
+            "exp": 10,
+            "level": 1,
+            "team": "",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "chuyyzpm",
+            "exp": 10,
+            "level": 1,
+            "team": "",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "winner5.h0",
+            "exp": 10,
+            "level": 1,
+            "team": "VENEZUELA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "kennybarrios81",
+            "exp": 10,
+            "level": 1,
+            "team": "COLOMBIA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "sergiobarca19",
             "exp": 10,
             "level": 1,
             "team": "COLOMBIA",
@@ -3649,7 +3769,7 @@
             "ultimaFecha": ""
         },
         {
-            "username": "mariadelrosariograjales",
+            "username": "wjuan_navia",
             "exp": 10,
             "level": 1,
             "team": "COLOMBIA",
@@ -3661,150 +3781,6 @@
             "exp": 10,
             "level": 1,
             "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "wjuan_navia",
-            "exp": 10,
-            "level": 1,
-            "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "mateo_lpz12",
-            "exp": 10,
-            "level": 1,
-            "team": "EL SALVADOR",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "jrjhoan168",
-            "exp": 10,
-            "level": 1,
-            "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "dairon.tovar70",
-            "exp": 10,
-            "level": 1,
-            "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "benjamn.jesus.car",
-            "exp": 10,
-            "level": 1,
-            "team": "VENEZUELA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "naybelceliz",
-            "exp": 10,
-            "level": 1,
-            "team": "VENEZUELA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "yovannyjose94",
-            "exp": 10,
-            "level": 1,
-            "team": "VENEZUELA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "kunoichi.013",
-            "exp": 10,
-            "level": 1,
-            "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "kennybarrios81",
-            "exp": 10,
-            "level": 1,
-            "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "chuyyzpm",
-            "exp": 10,
-            "level": 1,
-            "team": "",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "luzmeryocampog818",
-            "exp": 10,
-            "level": 1,
-            "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "colombia",
-            "exp": 10,
-            "level": 1,
-            "team": "VENEZUELA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "santi.rodelo",
-            "exp": 10,
-            "level": 1,
-            "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "oscarleon016",
-            "exp": 10,
-            "level": 1,
-            "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "ojiithos1",
-            "exp": 10,
-            "level": 1,
-            "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "buses_conestylo7",
-            "exp": 10,
-            "level": 1,
-            "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "stiven.orozco26",
-            "exp": 10,
-            "level": 1,
-            "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "ronaldandresosori",
-            "exp": 10,
-            "level": 1,
-            "team": "",
             "rachaDias": 0,
             "ultimaFecha": ""
         },
@@ -3841,14 +3817,6 @@
             "ultimaFecha": ""
         },
         {
-            "username": "manuelflores.2026",
-            "exp": 10,
-            "level": 1,
-            "team": "ARGENTINA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
             "username": "maria.paola.garce0",
             "exp": 10,
             "level": 1,
@@ -3857,10 +3825,58 @@
             "ultimaFecha": ""
         },
         {
+            "username": "santi.rodelo",
+            "exp": 10,
+            "level": 1,
+            "team": "COLOMBIA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "buses_conestylo7",
+            "exp": 10,
+            "level": 1,
+            "team": "COLOMBIA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "stiven.orozco26",
+            "exp": 10,
+            "level": 1,
+            "team": "COLOMBIA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "ronaldandresosori",
+            "exp": 10,
+            "level": 1,
+            "team": "",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "benjamn.jesus.car",
+            "exp": 10,
+            "level": 1,
+            "team": "VENEZUELA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
             "username": "benjamin.torres418",
             "exp": 10,
             "level": 1,
             "team": "ECUADOR",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "ojiithos1",
+            "exp": 10,
+            "level": 1,
+            "team": "COLOMBIA",
             "rachaDias": 0,
             "ultimaFecha": ""
         },
@@ -3889,23 +3905,47 @@
             "ultimaFecha": ""
         },
         {
-            "username": "el.gordo2643",
+            "username": "samuelnavarro8551",
             "exp": 5,
             "level": 1,
-            "team": "VENEZUELA",
+            "team": "COLOMBIA",
             "rachaDias": 0,
             "ultimaFecha": ""
         },
         {
-            "username": "xavileon20",
+            "username": "daniel_torres501",
             "exp": 5,
             "level": 1,
-            "team": "ECUADOR",
+            "team": "COLOMBIA",
             "rachaDias": 0,
             "ultimaFecha": ""
         },
         {
-            "username": "einercampin",
+            "username": "007gggghtyh",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "el.otaku13",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "dilan.501",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "lfreth_.pm",
             "exp": 5,
             "level": 1,
             "team": "COLOMBIA",
@@ -3921,7 +3961,7 @@
             "ultimaFecha": ""
         },
         {
-            "username": "dulcesitaaaaa06",
+            "username": "zoro3745",
             "exp": 5,
             "level": 1,
             "team": "COLOMBIA",
@@ -3937,10 +3977,34 @@
             "ultimaFecha": ""
         },
         {
-            "username": "franklincmy4",
+            "username": "cristian.blanco965",
+            "exp": 5,
+            "level": 1,
+            "team": "VENEZUELA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "jesusher23.0",
             "exp": 5,
             "level": 1,
             "team": "COLOMBIA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "maicoll_140211",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "menor.nc1",
+            "exp": 5,
+            "level": 1,
+            "team": "ECUADOR",
             "rachaDias": 0,
             "ultimaFecha": ""
         },
@@ -3953,63 +4017,7 @@
             "ultimaFecha": ""
         },
         {
-            "username": "carlosruiz147",
-            "exp": 5,
-            "level": 1,
-            "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "gracias.ruiz.crsti",
-            "exp": 5,
-            "level": 1,
-            "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "sebastinreveron",
-            "exp": 5,
-            "level": 1,
-            "team": "VENEZUELA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "miguelortiz1673",
-            "exp": 5,
-            "level": 1,
-            "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "catein2",
-            "exp": 5,
-            "level": 1,
-            "team": "ECUADOR",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "samuelperezcogoll36",
-            "exp": 5,
-            "level": 1,
-            "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "jhonfredycastaeda7",
-            "exp": 5,
-            "level": 1,
-            "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "samu59258",
+            "username": "dulcesitaaaaa06",
             "exp": 5,
             "level": 1,
             "team": "COLOMBIA",
@@ -4025,71 +4033,7 @@
             "ultimaFecha": ""
         },
         {
-            "username": "andres.rojas6295",
-            "exp": 5,
-            "level": 1,
-            "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "zoro3745",
-            "exp": 5,
-            "level": 1,
-            "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "samuelito4185",
-            "exp": 5,
-            "level": 1,
-            "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "jp017470",
-            "exp": 5,
-            "level": 1,
-            "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "samuelnavarro8551",
-            "exp": 5,
-            "level": 1,
-            "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "cristian.blanco965",
-            "exp": 5,
-            "level": 1,
-            "team": "VENEZUELA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "crimifut12341",
-            "exp": 5,
-            "level": 1,
-            "team": "GUATEMALA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "user58562034366688",
-            "exp": 5,
-            "level": 1,
-            "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "gomez.fabio",
+            "username": "kevinpacheco2738",
             "exp": 5,
             "level": 1,
             "team": "COLOMBIA",
@@ -4105,6 +4049,38 @@
             "ultimaFecha": ""
         },
         {
+            "username": "gracias.ruiz.crsti",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "carlosruiz147",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "viuche2014",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA",
+            "rachaDias": 1,
+            "ultimaFecha": "2026-03-27"
+        },
+        {
+            "username": "samu59258",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
             "username": "camilosanchez118",
             "exp": 5,
             "level": 1,
@@ -4113,7 +4089,7 @@
             "ultimaFecha": ""
         },
         {
-            "username": "pipe.ospina13",
+            "username": "samuelito4185",
             "exp": 5,
             "level": 1,
             "team": "COLOMBIA",
@@ -4121,7 +4097,7 @@
             "ultimaFecha": ""
         },
         {
-            "username": "andresantos0411",
+            "username": "miguelortiz1673",
             "exp": 5,
             "level": 1,
             "team": "COLOMBIA",
@@ -4129,7 +4105,87 @@
             "ultimaFecha": ""
         },
         {
-            "username": "jeronimo_footz340",
+            "username": "david_esteban71",
+            "exp": 5,
+            "level": 1,
+            "team": "",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "jheisondaniel4",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "user58562034366688",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "www.svencarm",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "xavileon20",
+            "exp": 5,
+            "level": 1,
+            "team": "ECUADOR",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "emmanuel.576",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "samuelperezcogoll36",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "ffinsano352",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "emy46373",
+            "exp": 5,
+            "level": 1,
+            "team": "ECUADOR",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "crimifut1234111",
+            "exp": 5,
+            "level": 1,
+            "team": "EL SALVADOR",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "dianamarcelacalong",
             "exp": 5,
             "level": 1,
             "team": "COLOMBIA",
@@ -4141,14 +4197,6 @@
             "exp": 5,
             "level": 1,
             "team": "ECUADOR",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "andreacamilaherre68",
-            "exp": 5,
-            "level": 1,
-            "team": "COLOMBIA",
             "rachaDias": 0,
             "ultimaFecha": ""
         },
@@ -4209,351 +4257,7 @@
             "ultimaFecha": ""
         },
         {
-            "username": "ramonatorcate3",
-            "exp": 5,
-            "level": 1,
-            "team": "VENEZUELA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "jhoanballesteros",
-            "exp": 5,
-            "level": 1,
-            "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "osneider.cardenas5",
-            "exp": 5,
-            "level": 1,
-            "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "julianduque871",
-            "exp": 5,
-            "level": 1,
-            "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "007gggghtyh",
-            "exp": 5,
-            "level": 1,
-            "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "jesusher23.0",
-            "exp": 5,
-            "level": 1,
-            "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "juanloaiza.10",
-            "exp": 5,
-            "level": 1,
-            "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "dilan.501",
-            "exp": 5,
-            "level": 1,
-            "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "millertorres09",
-            "exp": 5,
-            "level": 1,
-            "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "crimifut1234111",
-            "exp": 5,
-            "level": 1,
-            "team": "EL SALVADOR",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "anthony.y.montes",
-            "exp": 5,
-            "level": 1,
-            "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "teven858",
-            "exp": 5,
-            "level": 1,
-            "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "andrisiito.rz",
-            "exp": 5,
-            "level": 1,
-            "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "felipe_gavilan",
-            "exp": 5,
-            "level": 1,
-            "team": "ARGENTINA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "daniel.guerrero7928",
-            "exp": 5,
-            "level": 1,
-            "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "isa_431209",
-            "exp": 5,
-            "level": 1,
-            "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "dianamarcelacalong",
-            "exp": 5,
-            "level": 1,
-            "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "ffinsano352",
-            "exp": 5,
-            "level": 1,
-            "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "thiago.lopez856",
-            "exp": 5,
-            "level": 1,
-            "team": "MEXICO",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "15johan18",
-            "exp": 5,
-            "level": 1,
-            "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "emy46373",
-            "exp": 5,
-            "level": 1,
-            "team": "ECUADOR",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "jean.leon344",
-            "exp": 5,
-            "level": 1,
-            "team": "VENEZUELA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "chelsyr8",
-            "exp": 5,
-            "level": 1,
-            "team": "MEXICO",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "linamaryith",
-            "exp": 5,
-            "level": 1,
-            "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "josealfredojimene404",
-            "exp": 5,
-            "level": 1,
-            "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "ana.carolina.cast24",
-            "exp": 5,
-            "level": 1,
-            "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "tabares14__",
-            "exp": 5,
-            "level": 1,
-            "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "crimifut123411111",
-            "exp": 5,
-            "level": 1,
-            "team": "MEXICO",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "jaker1293lo",
-            "exp": 5,
-            "level": 1,
-            "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "sagitario25_22",
-            "exp": 5,
-            "level": 1,
-            "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "joselito0712",
-            "exp": 5,
-            "level": 1,
-            "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "crimifut12",
-            "exp": 5,
-            "level": 1,
-            "team": "VENEZUELA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "fandemerlina38",
-            "exp": 5,
-            "level": 1,
-            "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "crimi5",
-            "exp": 5,
-            "level": 1,
-            "team": "ESPAÑA",
-            "rachaDias": 1,
-            "ultimaFecha": "2026-03-26"
-        },
-        {
-            "username": "capimo98",
-            "exp": 5,
-            "level": 1,
-            "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "emmanuel.576",
-            "exp": 5,
-            "level": 1,
-            "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "jxviex_jx_09",
-            "exp": 5,
-            "level": 1,
-            "team": "ECUADOR",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "crimifut123",
-            "exp": 5,
-            "level": 1,
-            "team": "CUBA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "griezmanncarlos7",
-            "exp": 5,
-            "level": 1,
-            "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "crimifut1234",
-            "exp": 5,
-            "level": 1,
-            "team": "PANAMA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "lizethvanegas2",
-            "exp": 5,
-            "level": 1,
-            "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "surez.surez308",
-            "exp": 5,
-            "level": 1,
-            "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "juanfer.galviz2",
-            "exp": 5,
-            "level": 1,
-            "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "jrxmb7",
+            "username": "crimifut12341",
             "exp": 5,
             "level": 1,
             "team": "GUATEMALA",
@@ -4561,18 +4265,10 @@
             "ultimaFecha": ""
         },
         {
-            "username": "andreschavez556",
+            "username": "andres.rojas6295",
             "exp": 5,
             "level": 1,
             "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "angelarape",
-            "exp": 5,
-            "level": 1,
-            "team": "VENEZUELA",
             "rachaDias": 0,
             "ultimaFecha": ""
         },
@@ -4585,15 +4281,7 @@
             "ultimaFecha": ""
         },
         {
-            "username": "._564152",
-            "exp": 5,
-            "level": 1,
-            "team": "MEXICO",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "gambesport",
+            "username": "einercampin",
             "exp": 5,
             "level": 1,
             "team": "COLOMBIA",
@@ -4609,7 +4297,7 @@
             "ultimaFecha": ""
         },
         {
-            "username": "henao_533",
+            "username": "gambesport",
             "exp": 5,
             "level": 1,
             "team": "COLOMBIA",
@@ -4617,7 +4305,135 @@
             "ultimaFecha": ""
         },
         {
-            "username": "yeimerleandroduea",
+            "username": "crimifut123",
+            "exp": 5,
+            "level": 1,
+            "team": "CUBA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "crimi5",
+            "exp": 5,
+            "level": 1,
+            "team": "ESPAÑA",
+            "rachaDias": 1,
+            "ultimaFecha": "2026-03-26"
+        },
+        {
+            "username": "josealfredojimene404",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "jaker1293lo",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "jean.leon344",
+            "exp": 5,
+            "level": 1,
+            "team": "VENEZUELA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "luchitocaycedo",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "el.gordo2643",
+            "exp": 5,
+            "level": 1,
+            "team": "VENEZUELA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "._564152",
+            "exp": 5,
+            "level": 1,
+            "team": "MEXICO",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "jrxmb7",
+            "exp": 5,
+            "level": 1,
+            "team": "GUATEMALA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "linamaryith",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "angelarape",
+            "exp": 5,
+            "level": 1,
+            "team": "VENEZUELA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "juanfer.galviz2",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "jeronimo_footz340",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "capimo98",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "freddyra611",
+            "exp": 5,
+            "level": 1,
+            "team": "GUATEMALA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "catein2",
+            "exp": 5,
+            "level": 1,
+            "team": "ECUADOR",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "daniel.guerrero7928",
             "exp": 5,
             "level": 1,
             "team": "COLOMBIA",
@@ -4633,10 +4449,122 @@
             "ultimaFecha": ""
         },
         {
-            "username": "freddyra611",
+            "username": "felipe_gavilan",
             "exp": 5,
             "level": 1,
-            "team": "GUATEMALA",
+            "team": "ARGENTINA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "yeimerleandroduea",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "millertorres09",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "griezmanncarlos7",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "lizethvanegas2",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "crimifut1234",
+            "exp": 5,
+            "level": 1,
+            "team": "PANAMA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "juanloaiza.10",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "isa_431209",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "andresantos0411",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "crimifut123411",
+            "exp": 5,
+            "level": 1,
+            "team": "HONDURAS",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "crimifut123411111",
+            "exp": 5,
+            "level": 1,
+            "team": "MEXICO",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "jxviex_jx_09",
+            "exp": 5,
+            "level": 1,
+            "team": "ECUADOR",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "surez.surez308",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "fandemerlina38",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "tabares14__",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA",
             "rachaDias": 0,
             "ultimaFecha": ""
         },
@@ -4649,7 +4577,15 @@
             "ultimaFecha": ""
         },
         {
-            "username": "laelcira",
+            "username": "chelsyr8",
+            "exp": 5,
+            "level": 1,
+            "team": "MEXICO",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "andreacamilaherre68",
             "exp": 5,
             "level": 1,
             "team": "COLOMBIA",
@@ -4657,7 +4593,7 @@
             "ultimaFecha": ""
         },
         {
-            "username": "maicoll_140211",
+            "username": "ana.carolina.cast24",
             "exp": 5,
             "level": 1,
             "team": "COLOMBIA",
@@ -4665,7 +4601,71 @@
             "ultimaFecha": ""
         },
         {
-            "username": "luchitocaycedo",
+            "username": "jhoanballesteros",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "sagitario25_22",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "ramonatorcate3",
+            "exp": 5,
+            "level": 1,
+            "team": "VENEZUELA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "osneider.cardenas5",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "crimifut12",
+            "exp": 5,
+            "level": 1,
+            "team": "VENEZUELA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "andreschavez556",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "humbert1113",
+            "exp": 5,
+            "level": 1,
+            "team": "VENEZUELA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "yamilet4152",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "user4396827655333",
             "exp": 5,
             "level": 1,
             "team": "COLOMBIA",
@@ -4681,7 +4681,7 @@
             "ultimaFecha": ""
         },
         {
-            "username": "user4396827655333",
+            "username": "joselito0712",
             "exp": 5,
             "level": 1,
             "team": "COLOMBIA",
@@ -4689,7 +4689,7 @@
             "ultimaFecha": ""
         },
         {
-            "username": "www.svencarm",
+            "username": "franklincmy4",
             "exp": 5,
             "level": 1,
             "team": "COLOMBIA",
@@ -4697,7 +4697,15 @@
             "ultimaFecha": ""
         },
         {
-            "username": "yamilet4152",
+            "username": "henao_533",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "jp017470",
             "exp": 5,
             "level": 1,
             "team": "COLOMBIA",
@@ -4721,23 +4729,7 @@
             "ultimaFecha": ""
         },
         {
-            "username": "crimifut123411",
-            "exp": 5,
-            "level": 1,
-            "team": "HONDURAS",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "menor.nc1",
-            "exp": 5,
-            "level": 1,
-            "team": "ECUADOR",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "junior_1924100",
+            "username": "julianduque871",
             "exp": 5,
             "level": 1,
             "team": "COLOMBIA",
@@ -4745,7 +4737,7 @@
             "ultimaFecha": ""
         },
         {
-            "username": "lfreth_.pm",
+            "username": "anthony.y.montes",
             "exp": 5,
             "level": 1,
             "team": "COLOMBIA",
@@ -4761,7 +4753,7 @@
             "ultimaFecha": ""
         },
         {
-            "username": "jheisondaniel4",
+            "username": "andrisiito.rz",
             "exp": 5,
             "level": 1,
             "team": "COLOMBIA",
@@ -4769,31 +4761,7 @@
             "ultimaFecha": ""
         },
         {
-            "username": "user3705776600379",
-            "exp": 5,
-            "level": 1,
-            "team": "VENEZUELA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "david_esteban71",
-            "exp": 5,
-            "level": 1,
-            "team": "",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "humbert1113",
-            "exp": 5,
-            "level": 1,
-            "team": "VENEZUELA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "el.otaku13",
+            "username": "pipe.ospina13",
             "exp": 5,
             "level": 1,
             "team": "COLOMBIA",
@@ -4801,18 +4769,10 @@
             "ultimaFecha": ""
         },
         {
-            "username": "daniel_torres501",
+            "username": "15johan18",
             "exp": 5,
             "level": 1,
             "team": "COLOMBIA",
-            "rachaDias": 0,
-            "ultimaFecha": ""
-        },
-        {
-            "username": "fabikid",
-            "exp": 5,
-            "level": 1,
-            "team": "VENEZUELA",
             "rachaDias": 0,
             "ultimaFecha": ""
         },
@@ -4849,6 +4809,54 @@
             "ultimaFecha": ""
         },
         {
+            "username": "laelcira",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "sebastinreveron",
+            "exp": 5,
+            "level": 1,
+            "team": "VENEZUELA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "teven858",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "junior_1924100",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "thiago.lopez856",
+            "exp": 5,
+            "level": 1,
+            "team": "MEXICO",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "gomez.fabio",
+            "exp": 5,
+            "level": 1,
+            "team": "COLOMBIA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
             "username": "drsycue",
             "exp": 5,
             "level": 1,
@@ -4857,12 +4865,36 @@
             "ultimaFecha": ""
         },
         {
-            "username": "kevinpacheco2738",
+            "username": "jhonfredycastaeda7",
             "exp": 5,
             "level": 1,
             "team": "COLOMBIA",
             "rachaDias": 0,
             "ultimaFecha": ""
+        },
+        {
+            "username": "user3705776600379",
+            "exp": 5,
+            "level": 1,
+            "team": "VENEZUELA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "fabikid",
+            "exp": 5,
+            "level": 1,
+            "team": "VENEZUELA",
+            "rachaDias": 0,
+            "ultimaFecha": ""
+        },
+        {
+            "username": "vaner_33",
+            "exp": 5,
+            "level": 1,
+            "team": "ECUADOR",
+            "rachaDias": 1,
+            "ultimaFecha": "2026-03-27"
         }
     ]
 }
