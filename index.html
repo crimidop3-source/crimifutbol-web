@@ -667,6 +667,7 @@
         }
         /* SECCIÓN PATROCINIO */
         .sponsor-container {
+            margin-top: 20px; /* Añade esto para separar del gancho */
             display: flex;
             align-items: center;
             justify-content: center;
@@ -760,18 +761,49 @@
             }
         }
 
-        /* ESTILO PARA EL MEGA GANCHO */
+        /* MEGA HOOK: Limpio y legible */
         .mega-hook {
             text-align: center;
             width: 100%;
-            max-width: 800px;
+            max-width: 850px;
             margin-bottom: 40px;
-            padding: 30px;
-            border: 2px solid var(--neon-red);
-            border-radius: 20px;
-            background: rgba(255, 0, 50, 0.1);
-            box-shadow: 0 0 20px rgba(255, 0, 50, 0.3);
+            padding: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.02);
         }
+
+            .mega-hook h1 {
+                font-family: 'Orbitron';
+                font-size: 1.6rem; /* Tamaño más equilibrado */
+                color: #fff;
+                margin: 0;
+                line-height: 1.2;
+            }
+
+                .mega-hook h1 .highlight {
+                    color: var(--neon-red);
+                    font-size: 2.2rem; /* Resaltado pero no gigante */
+                    font-weight: 900;
+                    text-shadow: none; /* Quitamos la sombra roja que molestaba */
+                }
+
+        /* PREMIOS: Ahora con la manito al pasar el mouse */
+        .prize-card {
+            background: #111;
+            border: 1px solid #222;
+            padding: 20px;
+            border-radius: 12px;
+            transition: 0.3s;
+            border-left: 4px solid var(--gx-accent);
+            cursor: pointer; /* <--- ESTO PONE LA MANITO */
+        }
+
+            .prize-card:hover {
+                transform: translateY(-5px);
+                background: #1a1a1a;
+                border-color: #444;
+            }
 
 
     </style>
@@ -786,8 +818,11 @@
     <div class="main-content">
 
         <div class="mega-hook">
-            <h1 style="font-family: 'Orbitron'; font-size: 2rem; color: #fff; margin: 0;">¿QUIERES GANARTE HASTA <span style="color: var(--neon-red); font-size: 3.2rem; text-shadow: 0 0 15px var(--neon-red);">$600.000$</span> SEMANALES?</h1>
-            <p style="font-size: 1.2rem; color: #ccc; margin-top: 15px;">Participa en nuestra dinámica de <a href="https://www.tiktok.com/@crimifutbol" target="_blank" style="color: #ff0050; text-decoration: none; font-weight: bold;">TikTok 📱</a> y gana premios reales.</p>
+            <h1>¿QUIERES GANARTE HASTA <span class="highlight">$600.000$</span> SEMANALES?</h1>
+            <p style="font-size: 1.1rem; color: #aaa; margin-top: 10px;">
+                Participa en la dinámica de <span style="color:var(--gx-accent)">CrimiFutbol</span> en
+                <a href="https://www.tiktok.com/@crimifutbol" target="_blank" class="tiktok-link">TikTok 📱</a>
+            </p>
         </div>
 
         <div class="sponsor-container">
@@ -968,12 +1003,14 @@
             document.getElementById('modal-text').innerHTML = text;
             document.getElementById('modal-icon').innerText = icon;
 
-            // Pone el color del título según el ciclo actual
             const rootStyles = getComputedStyle(document.documentElement);
             const accentColor = rootStyles.getPropertyValue('--gx-accent').trim();
-            document.getElementById('modal-title').style.color = title.includes("BENEFICIO") ? "#ff8c00" : accentColor;
-            document.getElementById('modal-content-box').style.borderLeftColor = title.includes("BENEFICIO") ? "#ff8c00" : accentColor;
 
+            // Si es un beneficio de racha, mantenemos el naranja. Si es otra cosa, usamos el neón.
+            const finalColor = title.includes("BENEFICIO") ? "#ff8c00" : accentColor;
+
+            document.getElementById('modal-title').style.color = finalColor;
+            document.getElementById('modal-content-box').style.borderLeftColor = finalColor;
             document.getElementById('info-modal').style.display = 'flex';
         }
 
@@ -996,8 +1033,6 @@
             try {
                 const allUsers = await fetchAllUserData();
                 const captains = getCaptains(allUsers);
-
-                // Filtramos todos los registros de ese usuario
                 const results = allUsers.filter(u => u.username.toLowerCase() === userSearch);
 
                 if (results.length > 0) {
@@ -1005,25 +1040,16 @@
                     let htmlContent = "";
 
                     results.forEach(user => {
-                        // Antes tenías una clave con guion, ahora es directa:
                         const isCap = captains.has(user.username.toLowerCase());
-                      
-
-                        // 3. Creamos el badge de capitán
                         const badge = isCap ? `<span class="badge-captain">👑 CAPITÁN</span>` : "";
 
-                        // 4. Armamos el bloque de HTML para este resultado
-                        // Busca esta línea y déjala así:
                         htmlContent += `
-    <div style="border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 15px; margin-bottom: 15px;">
-        <h2 style="margin-top:0; color:var(--gx-accent);">
-            @${user.username.toUpperCase()} 
-            <span style="font-size: 0.8rem; color: #888; font-family: 'Rajdhani';">[${user.team || 'SIN EQUIPO'}]</span>
-            ${badge}
-        </h2>
-                        <p style="font-size: 0.9rem; color: ${colorTorneo}; font-weight: bold; margin-bottom: 10px;">
-                           📍 SECTOR: ${user.torneo}
-                        </p>
+                    <div style="border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 15px; margin-bottom: 15px;">
+                        <h2 style="margin-top:0; color:var(--gx-accent);">
+                            @${user.username.toUpperCase()} 
+                            <span style="font-size: 0.8rem; color: #888; font-family: 'Rajdhani';">[${user.team || 'SIN EQUIPO'}]</span>
+                            ${badge}
+                        </h2>
                         <div style="display:flex; justify-content:space-between;">
                             <div>
                                 <p style="margin:0; color:#888; font-size:0.8rem;">RACHA</p>
@@ -1041,11 +1067,10 @@
                     document.getElementById('player-card').innerHTML = htmlContent;
                     document.getElementById('player-card').scrollIntoView({ behavior: 'smooth', block: 'center' });
                 } else {
-                    alert("Usuario no encontrado en las bases de datos.");
+                    alert("Usuario no encontrado.");
                 }
             } catch (e) {
                 console.error(e);
-                alert("Error al conectar con la base de datos.");
             } finally {
                 btn.innerText = "CONSULTAR";
                 btn.disabled = false;
