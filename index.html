@@ -868,9 +868,14 @@
                         const badge = isCap ? `<span class="badge-captain">👑 CAPITÁN</span>` : "";
 
                         // 4. Armamos el bloque de HTML para este resultado
+                        // Busca esta línea y déjala así:
                         htmlContent += `
-                    <div style="border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 15px; margin-bottom: 15px;">
-                        <h2 style="margin-top:0; color:var(--gx-accent);">@${user.username.toUpperCase()} ${badge}</h2>
+    <div style="border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 15px; margin-bottom: 15px;">
+        <h2 style="margin-top:0; color:var(--gx-accent);">
+            @${user.username.toUpperCase()} 
+            <span style="font-size: 0.8rem; color: #888; font-family: 'Rajdhani';">[${user.team || 'SIN EQUIPO'}]</span>
+            ${badge}
+        </h2>
                         <p style="font-size: 0.9rem; color: ${colorTorneo}; font-weight: bold; margin-bottom: 10px;">
                            📍 SECTOR: ${user.torneo}
                         </p>
@@ -908,18 +913,35 @@
                 const allUsers = await fetchAllUserData();
                 const captains = getCaptains(allUsers);
 
-                // Top 10 Rachas de todos los juegos juntos
+                // Top 10 Rachas
                 const topRacha = [...allUsers].sort((a, b) => (b.rachaDias || 0) - (a.rachaDias || 0)).slice(0, 10);
                 document.getElementById('body-racha').innerHTML = topRacha.map((u, i) => {
                     const isCap = captains.has(u.username.toLowerCase());
-                    return `<tr><td>#${i + 1}</td><td>${u.username}${isCap ? ' 👑' : ''}</td><td class="fire-text">${u.rachaDias || 0} 🔥</td></tr>`;
+                    return `<tr>
+        <td>#${i + 1}</td>
+        <td>
+            <b style="color:white;">${u.username}</b> 
+            <small style="color:#666; margin-left:5px;">(${u.team || 'FPC'})</small>
+            ${isCap ? ' 👑' : ''}
+        </td>
+        <td class="fire-text">${u.rachaDias || 0} 🔥</td>
+    </tr>`;
                 }).join('');
 
-                // Top 10 Niveles de todos los juegos juntos
+                // Top 10 Niveles
                 const topNivel = [...allUsers].sort((a, b) => (b.level || 1) - (a.level || 1)).slice(0, 10);
                 document.getElementById('body-nivel').innerHTML = topNivel.map((u, i) => {
                     const isCap = captains.has(u.username.toLowerCase());
-                    return `<tr><td>#${i + 1}</td><td>${u.username}</td><td style="color:var(--gx-accent); font-weight:bold;">Nvl ${u.level || 1}${isCap ? ' <span class="badge-captain">👑</span>' : ''}</td></tr>`;
+                    return `<tr>
+        <td>#${i + 1}</td>
+        <td>
+            <b style="color:white;">${u.username}</b>
+            <small style="color:#666; margin-left:5px;">(${u.team || 'FPC'})</small>
+        </td>
+        <td style="color:var(--gx-accent); font-weight:bold;">
+            Nvl ${u.level || 1}${isCap ? ' <span class="badge-captain">👑</span>' : ''}
+        </td>
+    </tr>`;
                 }).join('');
             } catch (e) { console.error(e); }
         }
