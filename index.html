@@ -773,57 +773,45 @@
     </div>
 
     <script>
-        // Estos son tus 4 archivos de juegos
-        const jsonFiles = [
-            "fpc_exp.json",
-            "championsuser_exp.json",
-            "mundialuser_exp.json"
-            
-        ];
+    
+        // Ahora solo manejamos un archivo oficial
+        const currentJSON = "fpc_exp.json";
 
         async function fetchAllUserData() {
-            // Nombres amigables para las etiquetas
-            const nombresTorneos = ["FPC", "CHAMPIONS", "MUNDIAL", "ASCENSO"];
-
             try {
-                const responses = await Promise.all(jsonFiles.map(file => fetch(file).catch(() => null)));
-                const dataObjects = await Promise.all(responses.map(res => res && res.ok ? res.json() : { users: [] }));
+                const response = await fetch(currentJSON);
+                if (!response.ok) throw new Error("No se pudo leer el archivo");
+                const data = await response.json();
 
-                let allUsers = [];
-                dataObjects.forEach((data, index) => {
-                    if (data && data.users) {
-                        // Aquí le ponemos la etiqueta "FPC", "MUNDIAL", etc. a cada usuario antes de unirlo
-                        const usersWithTag = data.users.map(u => ({ ...u, torneo: nombresTorneos[index] }));
-                        allUsers = allUsers.concat(usersWithTag);
-                    }
-                });
-                return allUsers;
+                // Le ponemos la etiqueta FPC a todos los usuarios del archivo
+                return (data.users || []).map(u => ({ ...u, torneo: "FPC" }));
             } catch (e) {
+                console.error("Error cargando base de datos:", e);
                 return [];
             }
         }
         
+        
         /* LÓGICA DE CAPITANES: Calcula el Top 3 por equipo/país */
-        /* LÓGICA DE CAPITANES: Analiza TODO el JSON para sacar el Top 3 por equipo */
+       
         function getCaptains(users) {
             const captains = new Set();
             const byTeam = {};
 
-            // Agrupamos por equipo Y torneo para no mezclarlos
+            // Agrupamos solo por equipo
             users.forEach(u => {
-                // Creamos una clave única por equipo en ese torneo específico
-                const teamKey = `${u.team}-${u.torneo}`;
-                if (!byTeam[teamKey]) byTeam[teamKey] = [];
-                byTeam[teamKey].push(u);
+                const teamName = u.team || "SIN EQUIPO";
+                if (!byTeam[teamName]) byTeam[teamName] = [];
+                byTeam[teamName].push(u);
             });
 
-            for (const key in byTeam) {
-                const top3 = byTeam[key]
+            for (const team in byTeam) {
+                const top3 = byTeam[team]
                     .sort((a, b) => (b.level || 0) - (a.level || 0) || (b.exp || 0) - (a.exp || 0))
                     .slice(0, 3);
 
-                // AQUÍ EL CAMBIO: Guardamos "nombre-torneo" (ejemplo: "s.riapiran-FPC")
-                top3.forEach(u => captains.add(`${u.username.toLowerCase()}-${u.torneo}`));
+                // Guardamos solo el nombre (en minúsculas para evitar errores)
+                top3.forEach(u => captains.add(u.username.toLowerCase()));
             }
             return captains;
         }
@@ -848,17 +836,7 @@
             document.getElementById('info-modal').style.display = 'none';
         }
 
-        /* RESTO DE FUNCIONES */
-        function switchTorneo(torneo, btn) {
-            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            const sufijo = torneo === 'fpc' ? 'FPC' : 'MUNDIAL';
-            currentJSON = torneo === 'fpc' ? "user_exp.json" : "mundial_exp.json";
-
-            document.getElementById('title-racha').innerText = `TOP 10 RACHAS ${sufijo}`;
-            document.getElementById('title-nivel').innerText = `TOP 10 NIVELES ${sufijo}`;
-            cargarRankings();
-        }
+        
         async function checkPlayerRacha() {
             const btn = document.getElementById('gx-btn');
             const input = document.getElementById('gx-input');
@@ -881,9 +859,8 @@
                     let htmlContent = "";
 
                     results.forEach(user => {
-                        // 1. Verificamos si es capitán en ESTE torneo específico
-                        const isCap = captains.has(`${user.username.toLowerCase()}-${user.torneo}`);
-
+                        // Antes tenías una clave con guion, ahora es directa:
+                        const isCap = captains.has(user.username.toLowerCase());
                         // 2. Definimos el color según el torneo
                         const colorTorneo = user.torneo === 'FPC' ? '#00f2ff' : (user.torneo === 'MUNDIAL' ? '#ff0032' : '#ff8c00');
 
