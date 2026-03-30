@@ -743,6 +743,35 @@
             gap: 5px;
             font-weight: bold;
         }
+        /* EFECTO DORADO PARA EL GANADOR */
+        .prize-first {
+            border-left: 5px solid #f1c40f !important;
+            background: linear-gradient(145deg, #1a1601, #050505) !important;
+            animation: golden-glow 2s infinite alternate;
+        }
+
+        @keyframes golden-glow {
+            0% {
+                box-shadow: 0 0 10px rgba(241, 196, 15, 0.1);
+            }
+
+            100% {
+                box-shadow: 0 0 25px rgba(241, 196, 15, 0.4);
+            }
+        }
+
+        /* ESTILO PARA EL MEGA GANCHO */
+        .mega-hook {
+            text-align: center;
+            width: 100%;
+            max-width: 800px;
+            margin-bottom: 40px;
+            padding: 30px;
+            border: 2px solid var(--neon-red);
+            border-radius: 20px;
+            background: rgba(255, 0, 50, 0.1);
+            box-shadow: 0 0 20px rgba(255, 0, 50, 0.3);
+        }
 
 
     </style>
@@ -756,6 +785,11 @@
 
     <div class="main-content">
 
+        <div class="mega-hook">
+            <h1 style="font-family: 'Orbitron'; font-size: 2rem; color: #fff; margin: 0;">¿QUIERES GANARTE HASTA <span style="color: var(--neon-red); font-size: 3.2rem; text-shadow: 0 0 15px var(--neon-red);">$600.000$</span> SEMANALES?</h1>
+            <p style="font-size: 1.2rem; color: #ccc; margin-top: 15px;">Participa en nuestra dinámica de <a href="https://www.tiktok.com/@crimifutbol" target="_blank" style="color: #ff0050; text-decoration: none; font-weight: bold;">TikTok 📱</a> y gana premios reales.</p>
+        </div>
+
         <div class="sponsor-container">
             <a href="https://www.poder.com.co/" target="_blank">
                 <img src="logo_patrocinador.png" alt="Poder" class="sponsor-logo">
@@ -763,36 +797,35 @@
             <div class="sponsor-text">PATROCINADOR OFICIAL</div>
         </div>
 
-        <div style="text-align: center; max-width: 800px; margin-bottom: 30px;">
-            <h2 style="font-family: 'Orbitron'; color: #fff; letter-spacing: 3px;">🎁 6 GANADORES SEMANALES</h2>
-            <p style="color: #ccc;">Participa en nuestra dinámica de <a href="https://www.tiktok.com/@crimifutbol" target="_blank" class="tiktok-link">TikTok 📱</a> y gana premios reales cada semana.</p>
-        </div>
-
         <div class="prizes-grid">
-            <div class="prize-card">
-                <div class="prize-rank">🥇 1ER PUESTO</div>
+            <div class="prize-card prize-first" onclick="openModal('🥇 1ER PUESTO', 'Reservado para el **Donador Principal** de la semana. <br><br>💰 **Premio:** $200.000 COP. <br><br>Es el reconocimiento máximo a quien más impulsa el torneo con su apoyo directo en el Live.', '🥇')">
+                <div class="prize-rank" style="color:#f1c40f;">🥇 1ER PUESTO</div>
                 <div class="prize-amount">$200.000</div>
                 <div class="prize-desc">Donador Principal del Torneo.</div>
             </div>
-            <div class="prize-card">
+
+            <div class="prize-card" onclick="openModal('🥈 2DO PUESTO', 'Para nuestro **Donador Secundario**. <br><br>💰 **Premio:** $150.000 COP. <br><br>Gracias por ser un pilar fundamental en cada carrera.', '🥈')">
                 <div class="prize-rank">🥈 2DO PUESTO</div>
                 <div class="prize-amount">$150.000</div>
                 <div class="prize-desc">Donador Secundario del Torneo.</div>
             </div>
-            <div class="prize-card">
+
+            <div class="prize-card" onclick="openModal('🥉 3ER PUESTO', 'Premio al **Tercer Donador** con más impacto. <br><br>💰 **Premio:** $100.000 COP. <br><br>Tu apoyo hace que la pista nunca se detenga.', '🥉')">
                 <div class="prize-rank">🥉 3ER PUESTO</div>
                 <div class="prize-amount">$100.000</div>
                 <div class="prize-desc">Tercer Donador del Torneo.</div>
             </div>
-            <div class="prize-card" style="border-left-color: #ff8c00;">
+
+            <div class="prize-card" style="border-left-color: #ff8c00;" onclick="openModal('🔥 4TO Y 5TO PUESTO', 'Premio a la **Lealtad y Conocimiento**. <br><br>✅ Mantén tu racha activa de Lunes a Sábado. <br>✅ Sé el usuario con más aciertos en trivias y predicciones. <br><br>💰 **Premio:** $50.000 COP para cada uno.', '🔥')">
                 <div class="prize-rank">🔥 4TO Y 5TO PUESTO</div>
                 <div class="prize-amount">$50.000 c/u</div>
-                <div class="prize-desc">Rachas activas (Lun-Sáb) y más aciertos en Trivias.</div>
+                <div class="prize-desc">Rachas activas y más aciertos.</div>
             </div>
-            <div class="prize-card" style="border-left-color: #ff8c00;">
+
+            <div class="prize-card" style="border-left-color: #ff8c00;" onclick="openModal('⚡ 6TO PUESTO', 'Premio al **Rey del Tap-Tap**. <br><br>✅ Mantén tu racha activa de Lunes a Sábado. <br>✅ Sé el usuario con el registro más alto de interacción (likes). <br><br>💰 **Premio:** $50.000 COP.', '⚡')">
                 <div class="prize-rank">⚡ 6TO PUESTO</div>
                 <div class="prize-amount">$50.000</div>
-                <div class="prize-desc">Racha activa (Lun-Sáb) y máximo nivel de Tap-Tap.</div>
+                <div class="prize-desc">Racha activa y máximo Tap-Tap.</div>
             </div>
         </div>
 
