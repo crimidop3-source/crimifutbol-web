@@ -57,6 +57,11 @@
                 padding: 15px;
                 margin-bottom: 20px;
             }
+            .rules-grid {
+                grid-template-columns: 1fr !important; /* Esto los pone uno abajo del otro en el cel */
+                gap: 15px;
+                width: 100%;
+            }
         }
 
         /* Separación de bloques sutil */
@@ -133,6 +138,11 @@
 
             .prize-amount {
                 font-size: 1.2rem;
+            }
+            .rules-grid {
+                grid-template-columns: 1fr !important; /* Esto los pone uno abajo del otro en el cel */
+                gap: 15px;
+                width: 100%;
             }
         }
 
@@ -611,14 +621,19 @@
             }
         }
 
-        /* RANKINGS */
+        /* Busca esto y reemplázalo todo */
         .rankings-wrapper {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
             width: 100%;
-            max-width: 1000px;
-            margin-bottom: 50px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        /* Agrega esto justo debajo del bloque anterior */
+        .rank-box table {
+            width: 100%;
         }
 
         .rank-box {
@@ -779,6 +794,11 @@
             .scroller-track {
                 margin: 0;
                 padding-left: 10px;
+            }
+            .rules-grid {
+                grid-template-columns: 1fr !important; /* Esto los pone uno abajo del otro en el cel */
+                gap: 15px;
+                width: 100%;
             }
         }
         /* SECCIÓN PATROCINIO */
@@ -1009,21 +1029,26 @@
         <section class="content-block bg-dark-1">
             <div class="section-title">
 
-                <div class="rules-grid">
-                    <div class="rule-card" onclick="openModal('PASO 1: ÚNETE', 'Para ingresar oficialmente a la pista, solo debes comentar el nombre de tu Equipo. <br><br>Al hacerlo, el sistema te leerá automáticamente y tu unirá a tu equipo ¡Asegúrate de escribirlo bien!', '💬')">
-                        <span class="rule-title">PASO 1 💬</span>
-                        <p style="font-size:0.85rem; color:#aaa;">Comenta el nombre o apodo de tu equipo. <b style="color:var(--gx-accent);">(Clic para ver más)</b></p>
+                <section class="content-block bg-dark-1">
+                    <div class="section-title">
+                        <h2>¿CÓMO JUGAR?</h2>
+                        <p>GUÍA DE INICIO</p>
                     </div>
-                    <div class="rule-card" onclick="openModal('PASO 2: IMPULSA', 'Una vez en la pista, tu objetivo es dar velocidad. <br><br>Los <b>Likes</b> dan potencia constante. Los <b>Comentarios</b> aceleran. Los <b>Regalos</b> (cualquiera) dan empujes masivos.<br><br>🔥 <b>Dato Clave:</b> Por cada interacción acumulas Experiencia (EXP) en tu perfil para subir de nivel.', '🚀')">
-                        <span class="rule-title">PASO 2 🚀</span>
-                        <p style="font-size:0.85rem; color:#aaa;">Likes y Regalos dan potencia y acumulan EXP. <b style="color:var(--gx-accent);">(Clic para ver más)</b></p>
+                    <div class="rules-grid">
+                        <div class="rule-card" onclick="openModal('PASO 1: ÚNETE', 'Comenta el nombre de tu Equipo. El sistema te unirá automáticamente.', '💬')">
+                            <span class="rule-title">PASO 1 💬</span>
+                            <p style="font-size:0.85rem; color:#aaa;">Comenta el nombre de tu equipo. <b>(Clic para ver más)</b></p>
+                        </div>
+                        <div class="rule-card" onclick="openModal('PASO 2: IMPULSA', 'Likes dan potencia, comentarios aceleran y regalos dan empujes masivos.', '🚀')">
+                            <span class="rule-title">PASO 2 🚀</span>
+                            <p style="font-size:0.85rem; color:#aaa;">Likes y Regalos dan potencia. <b>(Clic para ver más)</b></p>
+                        </div>
+                        <div class="rule-card" onclick="openModal('PASO 3: CAPITANES', 'El Top 3 de cada equipo son Capitanes y activan el X2 Grupal.', '👑')">
+                            <span class="rule-title">PASO 3 👑</span>
+                            <p style="font-size:0.85rem; color:#aaa;">Los mejores activan el X2. <b>(Clic para ver más)</b></p>
+                        </div>
                     </div>
-                    <div class="rule-card" onclick="openModal('PASO 3: CAPITANES', 'Los 3 jugadores que más Experiencia (EXP) tengan aportando a un equipo, se convierten en sus <b>Capitanes</b>.<br><br>👑 <b>Poder de Capitán:</b> Una vez por directo, si un capitán escribe la palabra <i>capitan</i>, activará un multiplicador <b>X2 para TODO su equipo durante 3 minutos</b>. ¡Coordínate con tu equipo!', '👑')">
-                        <span class="rule-title">PASO 3 👑</span>
-                        <p style="font-size:0.85rem; color:#aaa;">Top 3 son Capitanes. Activan X2 Grupal. <b style="color:var(--gx-accent);">(Clic para ver más)</b></p>
-                    </div>
-
-                </div>
+                </section>
 
             </div>
         </section>
