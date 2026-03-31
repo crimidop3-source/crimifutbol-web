@@ -886,11 +886,19 @@
 
         <div class="rankings-wrapper">
             <div class="rank-box">
-                <h3 id="title-racha">TOP 10 RACHAS</h3>
+                <h3 style="color: #f1c40f;">🏆 TOP DONADORES (COINS)</h3>
+                <table><tbody id="body-donador"></tbody></table>
+            </div>
+            <div class="rank-box">
+                <h3 style="color: #00f2ff;">🧠 TOP TRIVIAS (ACIERTOS)</h3>
+                <table><tbody id="body-taps"></tbody></table>
+            </div>
+            <div class="rank-box">
+                <h3 style="color: #ff8c00;">🔥 TOP RACHAS</h3>
                 <table><tbody id="body-racha"></tbody></table>
             </div>
             <div class="rank-box">
-                <h3 id="title-nivel">TOP 10 NIVELES</h3>
+                <h3 style="color: #ffffff;">⭐ TOP NIVELES</h3>
                 <table><tbody id="body-nivel"></tbody></table>
             </div>
         </div>
@@ -1085,37 +1093,47 @@
                 const allUsers = await fetchAllUserData();
                 const captains = getCaptains(allUsers);
 
-                // Top 10 Rachas
+                // 1. TOP DONADORES (Basado en 'coins')
+                const topDonador = [...allUsers].sort((a, b) => (b.coins || 0) - (a.coins || 0)).slice(0, 10);
+                document.getElementById('body-donador').innerHTML = topDonador.map((u, i) => `
+            <tr>
+                <td>#${i + 1}</td>
+                <td><b style="color:white;">${u.username}</b> <small style="color:#666">[${u.team || 'FPC'}]</small></td>
+                <td style="color:#f1c40f; text-align:right;">${(u.coins || 0).toLocaleString()} 🪙</td>
+            </tr>`).join('');
+
+                // 2. TOP TRIVIAS (Basado en 'trivias')
+                const topTrivias = [...allUsers].sort((a, b) => (b.trivias || 0) - (a.trivias || 0)).slice(0, 10);
+                document.getElementById('body-taps').innerHTML = topTrivias.map((u, i) => `
+            <tr>
+                <td>#${i + 1}</td>
+                <td><b style="color:white;">${u.username}</b></td>
+                <td style="color:#00f2ff; text-align:right;">${u.trivias || 0} 🧠</td>
+            </tr>`).join('');
+
+                // 3. TOP RACHAS
                 const topRacha = [...allUsers].sort((a, b) => (b.rachaDias || 0) - (a.rachaDias || 0)).slice(0, 10);
                 document.getElementById('body-racha').innerHTML = topRacha.map((u, i) => {
                     const isCap = captains.has(u.username.toLowerCase());
                     return `<tr>
-        <td>#${i + 1}</td>
-        <td>
-            <b style="color:white;">${u.username}</b> 
-            <small style="color:#666; margin-left:5px;">(${u.team || 'FPC'})</small>
-            ${isCap ? ' 👑' : ''}
-        </td>
-        <td class="fire-text">${u.rachaDias || 0} 🔥</td>
-    </tr>`;
+                <td>#${i + 1}</td>
+                <td><b style="color:white;">${u.username}</b> ${isCap ? '👑' : ''}</td>
+                <td class="fire-text" style="text-align:right;">${u.rachaDias || 0} 🔥</td>
+            </tr>`;
                 }).join('');
 
-                // Top 10 Niveles
-                const topNivel = [...allUsers].sort((a, b) => (b.level || 1) - (a.level || 1)).slice(0, 10);
-                document.getElementById('body-nivel').innerHTML = topNivel.map((u, i) => {
-                    const isCap = captains.has(u.username.toLowerCase());
-                    return `<tr>
-        <td>#${i + 1}</td>
-        <td>
-            <b style="color:white;">${u.username}</b>
-            <small style="color:#666; margin-left:5px;">(${u.team || 'FPC'})</small>
-        </td>
-        <td style="color:var(--gx-accent); font-weight:bold;">
-            Nvl ${u.level || 1}${isCap ? ' <span class="badge-captain">👑</span>' : ''}
-        </td>
-    </tr>`;
-                }).join('');
-            } catch (e) { console.error(e); }
+                // 4. TOP NIVELES
+                const topNivel = [...allUsers].sort((a, b) => (b.level || 0) - (a.level || 0)).slice(0, 10);
+                document.getElementById('body-nivel').innerHTML = topNivel.map((u, i) => `
+            <tr>
+                <td>#${i + 1}</td>
+                <td><b style="color:white;">${u.username}</b></td>
+                <td style="color:var(--gx-accent); font-weight:bold; text-align:right;">Nvl ${u.level || 0}</td>
+            </tr>`).join('');
+
+            } catch (e) {
+                console.error("Error cargando los rankings:", e);
+            }
         }
 
         function colorLoop() {
