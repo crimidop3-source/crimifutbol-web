@@ -18,7 +18,42 @@
 
     <style>
 
+        /* AJUSTES PARA CELULAR */
+        @media (max-width: 600px) {
+            .mega-hook h1 {
+                font-size: 2.2rem !important;
+            }
 
+            /* Hace que los rankings ocupen todo el ancho y no se vean chiquitos */
+            .rankings-wrapper {
+                grid-template-columns: 1fr !important;
+                gap: 10px;
+            }
+
+            .rank-box {
+                padding: 10px;
+            }
+
+            /* Achicamos un poco el texto de las tablas para que quepa el nombre */
+            td {
+                font-size: 0.8rem;
+                padding: 8px 4px;
+            }
+
+            /* Los premios en 2 columnas para que no sea un scroll eterno */
+            .prizes-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 10px;
+            }
+            /* El primer premio ocupa las dos columnas para resaltar */
+            .prize-first {
+                grid-column: span 2;
+            }
+
+            .prize-amount {
+                font-size: 1.2rem;
+            }
+        }
 
     /* Contenedor principal del buscador */
 .gx-search-container {
@@ -824,12 +859,11 @@
             <div class="sponsor-text">PATROCINADOR OFICIAL</div>
         </div>
 
-        <div class="mega-hook">
-            <h1>¿QUIERES GANARTE HASTA <span class="highlight">$600.000$</span> SEMANALES?</h1>
-            <p style="font-size: 1.1rem; color: #aaa; margin-top: 10px;">
-                Participa en la dinámica de <span style="color:var(--gx-accent)">CrimiFutbol</span> en
-                <a href="https://www.tiktok.com/@crimifutbol" target="_blank" class="tiktok-link">TikTok 📱</a>
-            </p>
+        <div class="mega-hook" style="border: none; background: none; padding: 10px; margin-bottom: 20px;">
+            <h1 style="font-size: 2.5rem; line-height: 1;">
+                $600.000<br>
+                <span style="font-size: 1.2rem; color: var(--gx-accent); letter-spacing: 2px;">EN PREMIOS SEMANALES</span>
+            </h1>
         </div>
 
 
@@ -853,16 +887,16 @@
                 <div class="prize-desc">Tercer Donador del Torneo.</div>
             </div>
 
-            <div class="prize-card" style="border-left-color: #ff8c00;" onclick="openModal('🔥 4TO Y 5TO PUESTO', 'Premio a la **Lealtad y Conocimiento**. <br><br>✅ Mantén tu racha activa de Lunes a Sábado. <br>✅ Sé el usuario con más aciertos en trivias y predicciones. <br><br>💰 **Premio:** $50.000 COP para cada uno.', '🔥')">
+            <div class="prize-card" style="border-left-color: #ff8c00;" onclick="openModal('🔥 4TO Y 5TO PUESTO', 'Premio a la **Lealtad y Conocimiento**. <br><br>✅ Sé uno de los dos usuarios con más aciertos en trivias y predicciones. <br><br>💰 **Premio:** $50.000 COP para cada uno.', '🔥')">
                 <div class="prize-rank">🔥 4TO Y 5TO PUESTO</div>
                 <div class="prize-amount">$50.000 c/u</div>
-                <div class="prize-desc">Rachas activas y más aciertos.</div>
+                <div class="prize-desc">Mas trivias adivinadas.</div>
             </div>
 
-            <div class="prize-card" style="border-left-color: #ff8c00;" onclick="openModal('⚡ 6TO PUESTO', 'Premio al **Rey del Tap-Tap**. <br><br>✅ Mantén tu racha activa de Lunes a Sábado. <br>✅ Sé el usuario con el registro más alto de interacción (likes). <br><br>💰 **Premio:** $50.000 COP.', '⚡')">
+            <div class="prize-card" style="border-left-color: #ff8c00;" onclick="openModal('⚡ 6TO PUESTO', 'Premio al **Rey del Tap-Tap**. <br><br>✅ Sé el usuario con el registro más alto de interacción (likes). <br><br>💰 **Premio:** $50.000 COP.', '⚡')">
                 <div class="prize-rank">⚡ 6TO PUESTO</div>
                 <div class="prize-amount">$50.000</div>
-                <div class="prize-desc">Racha activa y máximo Tap-Tap.</div>
+                <div class="prize-desc">Rey del tap tap.</div>
             </div>
         </div>
 
@@ -893,10 +927,7 @@
                 <h3 style="color: #00f2ff;">🧠 TOP TRIVIAS (ACIERTOS)</h3>
                 <table><tbody id="body-taps"></tbody></table>
             </div>
-            <div class="rank-box">
-                <h3 style="color: #ff8c00;">🔥 TOP RACHAS</h3>
-                <table><tbody id="body-racha"></tbody></table>
-            </div>
+            
             <div class="rank-box">
                 <h3 style="color: #ffffff;">⭐ TOP NIVELES</h3>
                 <table><tbody id="body-nivel"></tbody></table>
@@ -1111,16 +1142,7 @@
                 <td style="color:#00f2ff; text-align:right;">${u.trivias || 0} 🧠</td>
             </tr>`).join('');
 
-                // 3. TOP RACHAS
-                const topRacha = [...allUsers].sort((a, b) => (b.rachaDias || 0) - (a.rachaDias || 0)).slice(0, 10);
-                document.getElementById('body-racha').innerHTML = topRacha.map((u, i) => {
-                    const isCap = captains.has(u.username.toLowerCase());
-                    return `<tr>
-                <td>#${i + 1}</td>
-                <td><b style="color:white;">${u.username}</b> ${isCap ? '👑' : ''}</td>
-                <td class="fire-text" style="text-align:right;">${u.rachaDias || 0} 🔥</td>
-            </tr>`;
-                }).join('');
+                
 
                 // 4. TOP NIVELES
                 const topNivel = [...allUsers].sort((a, b) => (b.level || 0) - (a.level || 0)).slice(0, 10);
