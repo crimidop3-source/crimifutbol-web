@@ -621,7 +621,6 @@
             }
         }
 
-        /* Busca esto y reemplázalo todo */
         .rankings-wrapper {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -629,19 +628,22 @@
             width: 100%;
             max-width: 1100px;
             margin: 0 auto;
-        }
-
-        /* Agrega esto justo debajo del bloque anterior */
-        .rank-box table {
-            width: 100%;
+            padding: 10px; /* Importante para que no toque los bordes del cel */
         }
 
         .rank-box {
-    background: linear-gradient(180deg, rgba(255,255,255,0.05) 0%, rgba(0,0,0,0) 100%);
-    border: 1px solid rgba(255,255,255,0.1);
-    border-top: 3px solid var(--gx-accent);
-    backdrop-filter: blur(10px);
-}
+            background: rgba(255, 255, 255, 0.05);
+            border-top: 3px solid var(--gx-accent);
+            padding: 15px;
+            border-radius: 8px;
+            width: 100%; /* Para que ocupe todo el ancho disponible */
+        }
+
+            .rank-box table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+
 
 .rank-box h3 {
     letter-spacing: 3px;
@@ -1006,21 +1008,21 @@
 
         <section class="content-block bg-dark-2">
             <div class="section-title">
-
-                <div class="rankings-wrapper">
-                    <div class="rank-box">
-                        <h3 style="color: #f1c40f;">🏆 TOP DONADORES (COINS)</h3>
-                        <table><tbody id="body-donador"></tbody></table>
-                    </div>
-                    <div class="rank-box">
-                        <h3 style="color: #00f2ff;">🧠 TOP TRIVIAS (ACIERTOS)</h3>
-                        <table><tbody id="body-taps"></tbody></table>
-                    </div>
-
-                    <div class="rank-box">
-                        <h3 style="color: #ee1d52;">❤️ TOP TAPS (LIKES)</h3>
-                        <table><tbody id="body-nivel"></tbody></table>
-                    </div>
+                <h2>RANKINGS</h2>
+                <p>LOS MEJORES</p>
+            </div>
+            <div class="rankings-wrapper">
+                <div class="rank-box">
+                    <h3 style="color: #f1c40f;">🏆 TOP DONADORES</h3>
+                    <table><tbody id="body-donador"></tbody></table>
+                </div>
+                <div class="rank-box">
+                    <h3 style="color: #00f2ff;">🧠 TOP TRIVIAS</h3>
+                    <table><tbody id="body-taps"></tbody></table>
+                </div>
+                <div class="rank-box">
+                    <h3 style="color: #ee1d52;">❤️ TOP TAPS</h3>
+                    <table><tbody id="body-nivel"></tbody></table>
                 </div>
             </div>
         </section>
@@ -1028,28 +1030,22 @@
 
         <section class="content-block bg-dark-1">
             <div class="section-title">
-
-                <section class="content-block bg-dark-1">
-                    <div class="section-title">
-                        <h2>¿CÓMO JUGAR?</h2>
-                        <p>GUÍA DE INICIO</p>
-                    </div>
-                    <div class="rules-grid">
-                        <div class="rule-card" onclick="openModal('PASO 1: ÚNETE', 'Comenta el nombre de tu Equipo. El sistema te unirá automáticamente.', '💬')">
-                            <span class="rule-title">PASO 1 💬</span>
-                            <p style="font-size:0.85rem; color:#aaa;">Comenta el nombre de tu equipo. <b>(Clic para ver más)</b></p>
-                        </div>
-                        <div class="rule-card" onclick="openModal('PASO 2: IMPULSA', 'Likes dan potencia, comentarios aceleran y regalos dan empujes masivos.', '🚀')">
-                            <span class="rule-title">PASO 2 🚀</span>
-                            <p style="font-size:0.85rem; color:#aaa;">Likes y Regalos dan potencia. <b>(Clic para ver más)</b></p>
-                        </div>
-                        <div class="rule-card" onclick="openModal('PASO 3: CAPITANES', 'El Top 3 de cada equipo son Capitanes y activan el X2 Grupal.', '👑')">
-                            <span class="rule-title">PASO 3 👑</span>
-                            <p style="font-size:0.85rem; color:#aaa;">Los mejores activan el X2. <b>(Clic para ver más)</b></p>
-                        </div>
-                    </div>
-                </section>
-
+                <h2>¿CÓMO JUGAR?</h2>
+                <p>GUÍA DE INICIO</p>
+            </div>
+            <div class="rules-grid">
+                <div class="rule-card" onclick="openModal('PASO 1: ÚNETE', 'Comenta tu equipo para entrar automáticamente.', '💬')">
+                    <span class="rule-title">PASO 1 💬</span>
+                    <p style="font-size:0.85rem; color:#aaa;">Comenta tu equipo. <b>(Ver más)</b></p>
+                </div>
+                <div class="rule-card" onclick="openModal('PASO 2: IMPULSA', 'Likes y Regalos dan potencia a tu equipo.', '🚀')">
+                    <span class="rule-title">PASO 2 🚀</span>
+                    <p style="font-size:0.85rem; color:#aaa;">Da potencia e impulso. <b>(Ver más)</b></p>
+                </div>
+                <div class="rule-card" onclick="openModal('PASO 3: CAPITANES', 'El Top 3 activa el X2 Grupal.', '👑')">
+                    <span class="rule-title">PASO 3 👑</span>
+                    <p style="font-size:0.85rem; color:#aaa;">Lidera con el X2. <b>(Ver más)</b></p>
+                </div>
             </div>
         </section>
 
