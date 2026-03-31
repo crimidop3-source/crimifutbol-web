@@ -59,6 +59,46 @@
             }
         }
 
+        /* Separación de bloques sutil */
+        .content-block {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 60px 20px; /* Espacio arriba y abajo */
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05); /* Línea divisoria muy fina */
+        }
+
+        /* Fondos alternados para diferenciar */
+        .bg-dark-1 {
+            background: transparent;
+        }
+
+        .bg-dark-2 {
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        /* Títulos tipo "Sección" */
+        .section-title {
+            font-family: 'Orbitron', sans-serif;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+            .section-title h2 {
+                font-size: 2.2rem;
+                margin: 0;
+                color: white;
+            }
+
+            .section-title p {
+                font-size: 0.9rem;
+                color: var(--gx-accent);
+                letter-spacing: 3px;
+                margin: 5px 0 0 0;
+                font-weight: bold;
+            }
+
         /* AJUSTES PARA CELULAR */
         @media (max-width: 600px) {
             .mega-hook h1 {
@@ -898,87 +938,108 @@
             </a>
         </div>
 
-        <div class="mega-hook" style="border: none; background: none; padding: 0; margin-bottom: 25px;">
-            <h1 style="font-size: 2.8rem; line-height: 0.9; margin:0;">$600.000</h1>
-            <p style="font-size: 1rem; color: var(--gx-accent); letter-spacing: 2px; margin-top: 5px; font-weight: bold;">PREMIOS SEMANALES</p>
-        </div>
+        <section class="content-block bg-dark-1">
+            <div class="section-title">
 
-        <div class="prizes-grid">
-            <div class="prize-card prize-first" onclick="openModal('🥇 1ER PUESTO', 'Reservado para el **Donador Principal** de la semana. <br><br>💰 **Premio:** $200.000 COP.', '🥇')">
-                <div class="prize-rank" style="color:#f1c40f;">🥇 1ER PUESTO</div>
-                <div class="prize-amount">$200.000</div>
-                <div class="prize-desc">Donador Principal.</div>
+                <div class="mega-hook" style="border: none; background: none; padding: 0; margin-bottom: 25px;">
+                    <h1 style="font-size: 2.8rem; line-height: 0.9; margin:0;">$600.000</h1>
+                    <p style="font-size: 1rem; color: var(--gx-accent); letter-spacing: 2px; margin-top: 5px; font-weight: bold;">PREMIOS SEMANALES</p>
+                </div>
+
+                <div class="prizes-grid">
+                    <div class="prize-card prize-first" onclick="openModal('🥇 1ER PUESTO', 'Reservado para el **Donador Principal** de la semana. <br><br>💰 **Premio:** $200.000 COP.', '🥇')">
+                        <div class="prize-rank" style="color:#f1c40f;">🥇 1ER PUESTO</div>
+                        <div class="prize-amount">$200.000</div>
+                        <div class="prize-desc">Donador Principal.</div>
+                    </div>
+
+                    <div class="prize-card" onclick="openModal('🥈 2DO PUESTO', 'Para nuestro **Donador Secundario**. <br><br>💰 **Premio:** $150.000 COP.', '🥈')">
+                        <div class="prize-rank">🥈 2DO PUESTO</div>
+                        <div class="prize-amount">$150.000</div>
+                        <div class="prize-desc">Donador Secundario.</div>
+                    </div>
+
+                    <div class="prize-card" onclick="openModal('🥉 3ER PUESTO', '¡Sorteo para la Comunidad! <br><br>✅ Envía tu **Quiereme** a diario. <br><br>💰 **Premio:** $100.000 COP sorteados entre los fans más leales.', '🥉')">
+                        <div class="prize-rank">🥉 3ER PUESTO</div>
+                        <div class="prize-amount">$100.000</div>
+                        <div class="prize-desc">Sorteo Fans Activos.</div>
+                    </div>
+
+                    <div class="prize-card" style="border-left-color: #ff8c00;" onclick="openModal('🔥 4TO Y 5TO PUESTO', 'Más trivias adivinadas.', '🔥')">
+                        <div class="prize-rank">🔥 4TO/5TO</div>
+                        <div class="prize-amount">$50.000</div>
+                        <div class="prize-desc">Top Trivias.</div>
+                    </div>
+
+                    <div class="prize-card" style="border-left-color: #ff8c00;" onclick="openModal('⚡ 6TO PUESTO', 'Rey del tap tap.', '⚡')">
+                        <div class="prize-rank">⚡ 6TO PUESTO</div>
+                        <div class="prize-amount">$50.000</div>
+                        <div class="prize-desc">Rey Tap Tap.</div>
+                    </div>
+                </div>
+
             </div>
+        </section>
 
-            <div class="prize-card" onclick="openModal('🥈 2DO PUESTO', 'Para nuestro **Donador Secundario**. <br><br>💰 **Premio:** $150.000 COP.', '🥈')">
-                <div class="prize-rank">🥈 2DO PUESTO</div>
-                <div class="prize-amount">$150.000</div>
-                <div class="prize-desc">Donador Secundario.</div>
+
+
+
+        <section class="content-block bg-dark-2">
+            <div class="section-title">
+
+                <div class="rankings-wrapper">
+                    <div class="rank-box">
+                        <h3 style="color: #f1c40f;">🏆 TOP DONADORES (COINS)</h3>
+                        <table><tbody id="body-donador"></tbody></table>
+                    </div>
+                    <div class="rank-box">
+                        <h3 style="color: #00f2ff;">🧠 TOP TRIVIAS (ACIERTOS)</h3>
+                        <table><tbody id="body-taps"></tbody></table>
+                    </div>
+
+                    <div class="rank-box">
+                        <h3 style="color: #ee1d52;">❤️ TOP TAPS (LIKES)</h3>
+                        <table><tbody id="body-nivel"></tbody></table>
+                    </div>
+                </div>
             </div>
+        </section>
 
-            <div class="prize-card" onclick="openModal('🥉 3ER PUESTO', '¡Sorteo para la Comunidad! <br><br>✅ Envía tu **Quiereme** a diario. <br><br>💰 **Premio:** $100.000 COP sorteados entre los fans más leales.', '🥉')">
-                <div class="prize-rank">🥉 3ER PUESTO</div>
-                <div class="prize-amount">$100.000</div>
-                <div class="prize-desc">Sorteo Fans Activos.</div>
+
+        <section class="content-block bg-dark-1">
+            <div class="section-title">
+
+                <div class="rules-grid">
+                    <div class="rule-card" onclick="openModal('PASO 1: ÚNETE', 'Para ingresar oficialmente a la pista, solo debes comentar el nombre de tu Equipo. <br><br>Al hacerlo, el sistema te leerá automáticamente y tu unirá a tu equipo ¡Asegúrate de escribirlo bien!', '💬')">
+                        <span class="rule-title">PASO 1 💬</span>
+                        <p style="font-size:0.85rem; color:#aaa;">Comenta el nombre o apodo de tu equipo. <b style="color:var(--gx-accent);">(Clic para ver más)</b></p>
+                    </div>
+                    <div class="rule-card" onclick="openModal('PASO 2: IMPULSA', 'Una vez en la pista, tu objetivo es dar velocidad. <br><br>Los <b>Likes</b> dan potencia constante. Los <b>Comentarios</b> aceleran. Los <b>Regalos</b> (cualquiera) dan empujes masivos.<br><br>🔥 <b>Dato Clave:</b> Por cada interacción acumulas Experiencia (EXP) en tu perfil para subir de nivel.', '🚀')">
+                        <span class="rule-title">PASO 2 🚀</span>
+                        <p style="font-size:0.85rem; color:#aaa;">Likes y Regalos dan potencia y acumulan EXP. <b style="color:var(--gx-accent);">(Clic para ver más)</b></p>
+                    </div>
+                    <div class="rule-card" onclick="openModal('PASO 3: CAPITANES', 'Los 3 jugadores que más Experiencia (EXP) tengan aportando a un equipo, se convierten en sus <b>Capitanes</b>.<br><br>👑 <b>Poder de Capitán:</b> Una vez por directo, si un capitán escribe la palabra <i>capitan</i>, activará un multiplicador <b>X2 para TODO su equipo durante 3 minutos</b>. ¡Coordínate con tu equipo!', '👑')">
+                        <span class="rule-title">PASO 3 👑</span>
+                        <p style="font-size:0.85rem; color:#aaa;">Top 3 son Capitanes. Activan X2 Grupal. <b style="color:var(--gx-accent);">(Clic para ver más)</b></p>
+                    </div>
+
+                </div>
+
             </div>
+        </section>
 
-            <div class="prize-card" style="border-left-color: #ff8c00;" onclick="openModal('🔥 4TO Y 5TO PUESTO', 'Más trivias adivinadas.', '🔥')">
-                <div class="prize-rank">🔥 4TO/5TO</div>
-                <div class="prize-amount">$50.000</div>
-                <div class="prize-desc">Top Trivias.</div>
+        <section class="content-block bg-dark-2">
+            <div class="section-title">
+                <h2 style="font-size: 3.5rem;">BUSCA</h2>
+                <p>TU PERFIL</p>
             </div>
-
-            <div class="prize-card" style="border-left-color: #ff8c00;" onclick="openModal('⚡ 6TO PUESTO', 'Rey del tap tap.', '⚡')">
-                <div class="prize-rank">⚡ 6TO PUESTO</div>
-                <div class="prize-amount">$50.000</div>
-                <div class="prize-desc">Rey Tap Tap.</div>
+            <div class="gx-search-container">
+                <div class="search-box">
+                    <input type="text" id="gx-input" placeholder="Tu usuario de TikTok...">
+                    <button id="gx-btn" onclick="checkPlayerRacha()">CONSULTAR PERFIL</button>
+                </div>
             </div>
-        </div>
-
-
-
-
-        
-
-        
-
-        <div class="rankings-wrapper">
-            <div class="rank-box">
-                <h3 style="color: #f1c40f;">🏆 TOP DONADORES (COINS)</h3>
-                <table><tbody id="body-donador"></tbody></table>
-            </div>
-            <div class="rank-box">
-                <h3 style="color: #00f2ff;">🧠 TOP TRIVIAS (ACIERTOS)</h3>
-                <table><tbody id="body-taps"></tbody></table>
-            </div>
-
-            <div class="rank-box">
-                <h3 style="color: #ee1d52;">❤️ TOP TAPS (LIKES)</h3>
-                <table><tbody id="body-nivel"></tbody></table>
-            </div>
-        </div>
-        <div class="rules-grid">
-            <div class="rule-card" onclick="openModal('PASO 1: ÚNETE', 'Para ingresar oficialmente a la pista, solo debes comentar el nombre de tu Equipo. <br><br>Al hacerlo, el sistema te leerá automáticamente y tu unirá a tu equipo ¡Asegúrate de escribirlo bien!', '💬')">
-                <span class="rule-title">PASO 1 💬</span>
-                <p style="font-size:0.85rem; color:#aaa;">Comenta el nombre o apodo de tu equipo. <b style="color:var(--gx-accent);">(Clic para ver más)</b></p>
-            </div>
-            <div class="rule-card" onclick="openModal('PASO 2: IMPULSA', 'Una vez en la pista, tu objetivo es dar velocidad. <br><br>Los <b>Likes</b> dan potencia constante. Los <b>Comentarios</b> aceleran. Los <b>Regalos</b> (cualquiera) dan empujes masivos.<br><br>🔥 <b>Dato Clave:</b> Por cada interacción acumulas Experiencia (EXP) en tu perfil para subir de nivel.', '🚀')">
-                <span class="rule-title">PASO 2 🚀</span>
-                <p style="font-size:0.85rem; color:#aaa;">Likes y Regalos dan potencia y acumulan EXP. <b style="color:var(--gx-accent);">(Clic para ver más)</b></p>
-            </div>
-            <div class="rule-card" onclick="openModal('PASO 3: CAPITANES', 'Los 3 jugadores que más Experiencia (EXP) tengan aportando a un equipo, se convierten en sus <b>Capitanes</b>.<br><br>👑 <b>Poder de Capitán:</b> Una vez por directo, si un capitán escribe la palabra <i>capitan</i>, activará un multiplicador <b>X2 para TODO su equipo durante 3 minutos</b>. ¡Coordínate con tu equipo!', '👑')">
-                <span class="rule-title">PASO 3 👑</span>
-                <p style="font-size:0.85rem; color:#aaa;">Top 3 son Capitanes. Activan X2 Grupal. <b style="color:var(--gx-accent);">(Clic para ver más)</b></p>
-            </div>
-            
-        </div>
-
-        <div class="gx-search-container">
-            <div class="search-box">
-                <input type="text" id="gx-input" placeholder="Escribe tu usuario de tiktok...">
-                <button id="gx-btn" onclick="checkPlayerRacha()">CONSULTAR</button>
-            </div>
-        </div>
+        </section>
 
         <div style="width:100%; max-width:1100px;">
             <h2 style="font-family:'Orbitron'; text-align:center; color:var(--gx-accent); margin-bottom: 0;">👑 SALÓN DE LA FAMA</h2>
@@ -995,200 +1056,200 @@
 
     </div>
 
-    <div class="modal-overlay" id="info-modal" onclick="closeModal(event)">
-        <div class="modal-box" id="modal-content-box" onclick="event.stopPropagation()">
-            <span class="close-btn" onclick="closeModal(event)">&times;</span>
-            <span class="modal-icon-large" id="modal-icon">💬</span>
-            <h2 class="modal-title" id="modal-title">TÍTULO DE LA REGLA</h2>
-            <div class="modal-text" id="modal-text">Aquí va la explicación detallada del paso o beneficio.</div>
-        </div>
-    </div>
-
-    <script>
-    
-        // Ahora solo manejamos un archivo oficial
-        const currentJSON = "fpc_exp.json";
-
-        async function fetchAllUserData() {
-            try {
-                const response = await fetch(currentJSON);
-                if (!response.ok) throw new Error("No se pudo leer el archivo");
-                const data = await response.json();
-
-                // Le ponemos la etiqueta FPC a todos los usuarios del archivo
-                return (data.users || []).map(u => ({ ...u, torneo: "FPC" }));
-            } catch (e) {
-                console.error("Error cargando base de datos:", e);
-                return [];
-            }
-        }
-        
-        
-        /* LÓGICA DE CAPITANES: Calcula el Top 3 por equipo/país */
-       
-        function getCaptains(users) {
-            const captains = new Set();
-            const byTeam = {};
-
-            // Agrupamos solo por equipo
-            users.forEach(u => {
-                const teamName = u.team || "SIN EQUIPO";
-                if (!byTeam[teamName]) byTeam[teamName] = [];
-                byTeam[teamName].push(u);
-            });
-
-            for (const team in byTeam) {
-                const top3 = byTeam[team]
-                    .sort((a, b) => (b.level || 0) - (a.level || 0) || (b.exp || 0) - (a.exp || 0))
-                    .slice(0, 3);
-
-                // Guardamos solo el nombre (en minúsculas para evitar errores)
-                top3.forEach(u => captains.add(u.username.toLowerCase()));
-            }
-            return captains;
-        }
-
-        /* LÓGICA DEL MODAL (Ventanas Emergentes) */
-        function openModal(title, text, icon) {
-            document.getElementById('modal-title').innerText = title;
-            document.getElementById('modal-text').innerHTML = text; // Mantenemos innerHTML para que lea el diseño del perfil
-            document.getElementById('modal-icon').innerText = icon;
-
-            // Obtenemos el color neón que esté activo en ese momento (Azul o Rojo)
-            const rootStyles = getComputedStyle(document.documentElement);
-            const finalColor = rootStyles.getPropertyValue('--gx-accent').trim();
-
-            // Aplicamos el color al título y al borde izquierdo del cuadro
-            document.getElementById('modal-title').style.color = finalColor;
-            document.getElementById('modal-content-box').style.borderLeftColor = finalColor;
-
-            // Mostramos el modal
-            document.getElementById('info-modal').style.display = 'flex';
-        }
-
-        function closeModal(e) {
-            if (e) e.stopPropagation();
-            document.getElementById('info-modal').style.display = 'none';
-        }
-
-        
-        async function checkPlayerRacha() {
-            const input = document.getElementById('gx-input').value.trim().toLowerCase();
-            if (!input) return;
-
-            const users = await fetchAllUserData();
-            const captains = getCaptains(users); // Usamos tu lógica de capitanes
-            const user = users.find(u => u.username.toLowerCase() === input);
-
-            if (user) {
-                const isCap = captains.has(user.username.toLowerCase());
-                const capBadge = isCap ? `<span class="badge-captain" style="display:block; margin-top:5px;">👑 CAPITÁN</span>` : "";
-
-                // Construimos el contenido con los datos que pediste
-                const content = `
-            <div style="text-align:center;">
-                <h2 style="color:var(--gx-accent); margin-bottom:0;">@${user.username.toUpperCase()}</h2>
-                <span style="color:#888; font-family:'Orbitron'; font-size:0.9rem;">${user.team || 'SIN EQUIPO'}</span>
-                ${capBadge}
-                
-                <div style="display:grid; grid-template-columns: 1fr 1fr; gap:15px; margin-top:20px; border-top:1px solid #333; padding-top:15px;">
-                    <div style="text-align:left;">
-                        <p style="margin:0; font-size:0.7rem; color:#666;">NIVEL</p>
-                        <div style="font-size:1.4rem; font-weight:bold;">${user.level || 1}</div>
-                    </div>
-                    <div style="text-align:right;">
-                        <p style="margin:0; font-size:0.7rem; color:#666;">ENVIADOS</p>
-                        <div style="font-size:1.2rem; font-weight:bold; color:#f1c40f;">${(user.coins || 0).toLocaleString()} 🪙</div>
-                    </div>
-                    <div style="text-align:left;">
-                        <p style="margin:0; font-size:0.7rem; color:#666;">TRIVIAS</p>
-                        <div style="font-size:1.2rem; font-weight:bold; color:#00f2ff;">${user.trivias || 0} 🧠</div>
-                    </div>
-                    <div style="text-align:right;">
-                        <p style="margin:0; font-size:0.7rem; color:#666;">TAPS</p>
-                        <div style="font-size:1.2rem; font-weight:bold; color:#ee1d52;">${(user.taps || 0).toLocaleString()} ❤️</div>
-                    </div>
+            <div class="modal-overlay" id="info-modal" onclick="closeModal(event)">
+                <div class="modal-box" id="modal-content-box" onclick="event.stopPropagation()">
+                    <span class="close-btn" onclick="closeModal(event)">&times;</span>
+                    <span class="modal-icon-large" id="modal-icon">💬</span>
+                    <h2 class="modal-title" id="modal-title">TÍTULO DE LA REGLA</h2>
+                    <div class="modal-text" id="modal-text">Aquí va la explicación detallada del paso o beneficio.</div>
                 </div>
             </div>
-        `;
 
-                // Reutilizamos la función del modal que ya tienes
-                openModal("PERFIL DEL JUGADOR", content, "👤");
+            <script>
 
-            } else {
-                alert("Usuario no registrado en la base de datos.");
-            }
-        }
+                // Ahora solo manejamos un archivo oficial
+                const currentJSON = "fpc_exp.json";
+
+                async function fetchAllUserData() {
+                    try {
+                        const response = await fetch(currentJSON);
+                        if (!response.ok) throw new Error("No se pudo leer el archivo");
+                        const data = await response.json();
+
+                        // Le ponemos la etiqueta FPC a todos los usuarios del archivo
+                        return (data.users || []).map(u => ({ ...u, torneo: "FPC" }));
+                    } catch (e) {
+                        console.error("Error cargando base de datos:", e);
+                        return [];
+                    }
+                }
 
 
-        async function cargarRankings() {
-            try {
-                const allUsers = await fetchAllUserData();
-                const captains = getCaptains(allUsers);
+                /* LÓGICA DE CAPITANES: Calcula el Top 3 por equipo/país */
 
-                // 1. TOP DONADORES (Basado en 'coins')
-                const topDonador = [...allUsers].sort((a, b) => (b.coins || 0) - (a.coins || 0)).slice(0, 10);
-                document.getElementById('body-donador').innerHTML = topDonador.map((u, i) => `
-            <tr>
-                <td>#${i + 1}</td>
-                <td><b style="color:white;">${u.username}</b> <small style="color:#666">[${u.team || 'FPC'}]</small></td>
-                <td style="color:#f1c40f; text-align:right;">${(u.coins || 0).toLocaleString()} 🪙</td>
-            </tr>`).join('');
+                function getCaptains(users) {
+                    const captains = new Set();
+                    const byTeam = {};
 
-                // 2. TOP TRIVIAS (Basado en 'trivias')
-                const topTrivias = [...allUsers].sort((a, b) => (b.trivias || 0) - (a.trivias || 0)).slice(0, 10);
-                document.getElementById('body-taps').innerHTML = topTrivias.map((u, i) => `
-            <tr>
-                <td>#${i + 1}</td>
-                <td><b style="color:white;">${u.username}</b></td>
-                <td style="color:#00f2ff; text-align:right;">${u.trivias || 0} 🧠</td>
-            </tr>`).join('');
+                    // Agrupamos solo por equipo
+                    users.forEach(u => {
+                        const teamName = u.team || "SIN EQUIPO";
+                        if (!byTeam[teamName]) byTeam[teamName] = [];
+                        byTeam[teamName].push(u);
+                    });
 
-                
+                    for (const team in byTeam) {
+                        const top3 = byTeam[team]
+                            .sort((a, b) => (b.level || 0) - (a.level || 0) || (b.exp || 0) - (a.exp || 0))
+                            .slice(0, 3);
 
-                // TOP TAPS (MODIFICADO CON CORAZÓN)
-                const topTaps = [...allUsers].sort((a, b) => (b.taps || 0) - (a.taps || 0)).slice(0, 10);
-                document.getElementById('body-nivel').innerHTML = topTaps.map((u, i) => `
-                <tr>
-                    <td>#${i + 1}</td>
-                    <td><b style="color:white;">${u.username}</b></td>
-                    <td style="color:#ee1d52; text-align:right; font-weight:bold;">
-                        ${(u.taps || 0).toLocaleString()} ❤️
-                    </td>
-                </tr>
-            `).join('');
+                        // Guardamos solo el nombre (en minúsculas para evitar errores)
+                        top3.forEach(u => captains.add(u.username.toLowerCase()));
+                    }
+                    return captains;
+                }
 
-            } catch (e) {
-                console.error("Error cargando los rankings:", e);
-            }
-        }
+                /* LÓGICA DEL MODAL (Ventanas Emergentes) */
+                function openModal(title, text, icon) {
+                    document.getElementById('modal-title').innerText = title;
+                    document.getElementById('modal-text').innerHTML = text; // Mantenemos innerHTML para que lea el diseño del perfil
+                    document.getElementById('modal-icon').innerText = icon;
 
-        function colorLoop() {
-    const m = new Date().getMinutes();
-    const root = document.documentElement;
-    const isRed = Math.floor(m / 5) % 2 === 1;
+                    // Obtenemos el color neón que esté activo en ese momento (Azul o Rojo)
+                    const rootStyles = getComputedStyle(document.documentElement);
+                    const finalColor = rootStyles.getPropertyValue('--gx-accent').trim();
 
-    // 1. Cambiar variables de color
-    root.style.setProperty('--gx-accent', isRed ? 'var(--neon-red)' : 'var(--neon-blue)');
-    root.style.setProperty('--gx-glow', isRed ? 'rgba(255, 0, 50, 0.5)' : 'rgba(0, 242, 255, 0.5)');
+                    // Aplicamos el color al título y al borde izquierdo del cuadro
+                    document.getElementById('modal-title').style.color = finalColor;
+                    document.getElementById('modal-content-box').style.borderLeftColor = finalColor;
 
-    // 2. Cambiar logo del header
-    document.getElementById('header-logo').src = isRed ? "logo_rojo.png" : "logo_azul.png";
+                    // Mostramos el modal
+                    document.getElementById('info-modal').style.display = 'flex';
+                }
 
-    // 3. CAMBIO DE FAVICON (Añade esta línea)
-    document.getElementById('favicon').href = isRed ? "logo_rojo.png" : "logo_azul.png";
-}
+                function closeModal(e) {
+                    if (e) e.stopPropagation();
+                    document.getElementById('info-modal').style.display = 'none';
+                }
 
-        setInterval(colorLoop, 30000);
-        colorLoop();
-        cargarRankings();
-        // Detectar la tecla Enter en el input de búsqueda
-document.getElementById('gx-input').addEventListener('keydown', function(event) {
-    if (event.key === 'Enter') {
-        event.preventDefault(); // Evita que la página se recargue
-        checkPlayerRacha();    // Llama a tu función de consulta
-    }
-});
-    </script>
+
+                async function checkPlayerRacha() {
+                    const input = document.getElementById('gx-input').value.trim().toLowerCase();
+                    if (!input) return;
+
+                    const users = await fetchAllUserData();
+                    const captains = getCaptains(users); // Usamos tu lógica de capitanes
+                    const user = users.find(u => u.username.toLowerCase() === input);
+
+                    if (user) {
+                        const isCap = captains.has(user.username.toLowerCase());
+                        const capBadge = isCap ? `<span class="badge-captain" style="display:block; margin-top:5px;">👑 CAPITÁN</span>` : "";
+
+                        // Construimos el contenido con los datos que pediste
+                        const content = `
+                                                <div style="text-align:center;">
+                                                    <h2 style="color:var(--gx-accent); margin-bottom:0;">@${user.username.toUpperCase()}</h2>
+                                                    <span style="color:#888; font-family:'Orbitron'; font-size:0.9rem;">${user.team || 'SIN EQUIPO'}</span>
+                                                    ${capBadge}
+
+                                                    <div style="display:grid; grid-template-columns: 1fr 1fr; gap:15px; margin-top:20px; border-top:1px solid #333; padding-top:15px;">
+                                                        <div style="text-align:left;">
+                                                            <p style="margin:0; font-size:0.7rem; color:#666;">NIVEL</p>
+                                                            <div style="font-size:1.4rem; font-weight:bold;">${user.level || 1}</div>
+                                                        </div>
+                                                        <div style="text-align:right;">
+                                                            <p style="margin:0; font-size:0.7rem; color:#666;">ENVIADOS</p>
+                                                            <div style="font-size:1.2rem; font-weight:bold; color:#f1c40f;">${(user.coins || 0).toLocaleString()} 🪙</div>
+                                                        </div>
+                                                        <div style="text-align:left;">
+                                                            <p style="margin:0; font-size:0.7rem; color:#666;">TRIVIAS</p>
+                                                            <div style="font-size:1.2rem; font-weight:bold; color:#00f2ff;">${user.trivias || 0} 🧠</div>
+                                                        </div>
+                                                        <div style="text-align:right;">
+                                                            <p style="margin:0; font-size:0.7rem; color:#666;">TAPS</p>
+                                                            <div style="font-size:1.2rem; font-weight:bold; color:#ee1d52;">${(user.taps || 0).toLocaleString()} ❤️</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            `;
+
+                        // Reutilizamos la función del modal que ya tienes
+                        openModal("PERFIL DEL JUGADOR", content, "👤");
+
+                    } else {
+                        alert("Usuario no registrado en la base de datos.");
+                    }
+                }
+
+
+                async function cargarRankings() {
+                    try {
+                        const allUsers = await fetchAllUserData();
+                        const captains = getCaptains(allUsers);
+
+                        // 1. TOP DONADORES (Basado en 'coins')
+                        const topDonador = [...allUsers].sort((a, b) => (b.coins || 0) - (a.coins || 0)).slice(0, 10);
+                        document.getElementById('body-donador').innerHTML = topDonador.map((u, i) => `
+                                                <tr>
+                                                    <td>#${i + 1}</td>
+                                                    <td><b style="color:white;">${u.username}</b> <small style="color:#666">[${u.team || 'FPC'}]</small></td>
+                                                    <td style="color:#f1c40f; text-align:right;">${(u.coins || 0).toLocaleString()} 🪙</td>
+                                                </tr>`).join('');
+
+                        // 2. TOP TRIVIAS (Basado en 'trivias')
+                        const topTrivias = [...allUsers].sort((a, b) => (b.trivias || 0) - (a.trivias || 0)).slice(0, 10);
+                        document.getElementById('body-taps').innerHTML = topTrivias.map((u, i) => `
+                                                <tr>
+                                                    <td>#${i + 1}</td>
+                                                    <td><b style="color:white;">${u.username}</b></td>
+                                                    <td style="color:#00f2ff; text-align:right;">${u.trivias || 0} 🧠</td>
+                                                </tr>`).join('');
+
+
+
+                        // TOP TAPS (MODIFICADO CON CORAZÓN)
+                        const topTaps = [...allUsers].sort((a, b) => (b.taps || 0) - (a.taps || 0)).slice(0, 10);
+                        document.getElementById('body-nivel').innerHTML = topTaps.map((u, i) => `
+                                                    <tr>
+                                                        <td>#${i + 1}</td>
+                                                        <td><b style="color:white;">${u.username}</b></td>
+                                                        <td style="color:#ee1d52; text-align:right; font-weight:bold;">
+                                                            ${(u.taps || 0).toLocaleString()} ❤️
+                                                        </td>
+                                                    </tr>
+                                                `).join('');
+
+                    } catch (e) {
+                        console.error("Error cargando los rankings:", e);
+                    }
+                }
+
+                function colorLoop() {
+                    const m = new Date().getMinutes();
+                    const root = document.documentElement;
+                    const isRed = Math.floor(m / 5) % 2 === 1;
+
+                    // 1. Cambiar variables de color
+                    root.style.setProperty('--gx-accent', isRed ? 'var(--neon-red)' : 'var(--neon-blue)');
+                    root.style.setProperty('--gx-glow', isRed ? 'rgba(255, 0, 50, 0.5)' : 'rgba(0, 242, 255, 0.5)');
+
+                    // 2. Cambiar logo del header
+                    document.getElementById('header-logo').src = isRed ? "logo_rojo.png" : "logo_azul.png";
+
+                    // 3. CAMBIO DE FAVICON (Añade esta línea)
+                    document.getElementById('favicon').href = isRed ? "logo_rojo.png" : "logo_azul.png";
+                }
+
+                setInterval(colorLoop, 30000);
+                colorLoop();
+                cargarRankings();
+                // Detectar la tecla Enter en el input de búsqueda
+                document.getElementById('gx-input').addEventListener('keydown', function (event) {
+                    if (event.key === 'Enter') {
+                        event.preventDefault(); // Evita que la página se recargue
+                        checkPlayerRacha();    // Llama a tu función de consulta
+                    }
+                });
+            </script>
 </body>
 </html>
