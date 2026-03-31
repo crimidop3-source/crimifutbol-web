@@ -916,7 +916,7 @@
                 <div class="prize-desc">Donador Secundario.</div>
             </div>
 
-            <div class="prize-card" onclick="openModal('🥉 3ER PUESTO', '¡Sorteo para la Comunidad! <br><br>✅ Envía tu **Quiereme** a diario. <br><br>💰 **Premio:** $100.000 COP sorteados entre los fans más leales.', '🥉')">
+            <div class="prize-card" onclick="openModal('🥉 3ER PUESTO', '¡Sorteo para la Comunidad! <br><br>✅ Envía tu **Quiereme** a diario. <br>✅ Mantente activo en el chat. <br><br>💰 **Premio:** $100.000 COP sorteados entre los fans más leales.', '🥉')">
                 <div class="prize-rank">🥉 3ER PUESTO</div>
                 <div class="prize-amount">$100.000</div>
                 <div class="prize-desc">Sorteo Fans Activos.</div>
@@ -1179,16 +1179,11 @@
 
                 
 
-                // NUEVO: TOP TAPS (Reemplazando niveles)
+                // TOP TAPS
                 const topTaps = [...allUsers].sort((a, b) => (b.taps || 0) - (a.taps || 0)).slice(0, 10);
                 document.getElementById('body-nivel').innerHTML = topTaps.map((u, i) => `
-            <tr><td>#${i + 1}</td><td><b>${u.username}</b></td><td style="color:var(--gx-accent); text-align:right;">${(u.taps || 0).toLocaleString()} ⚡</td></tr>
-        `).join('');
-            <tr>
-                <td>#${i + 1}</td>
-                <td><b style="color:white;">${u.username}</b></td>
-                <td style="color:var(--gx-accent); font-weight:bold; text-align:right;">Nvl ${u.level || 0}</td>
-            </tr>`).join('');
+        <tr><td>#${i + 1}</td><td>${u.username}</td><td style="text-align:right">${(u.taps || 0).toLocaleString()} ⚡</td></tr>
+    `).join('');
 
             } catch (e) {
                 console.error("Error cargando los rankings:", e);
