@@ -938,12 +938,7 @@
 
 
 
-        <div class="gx-search-container">
-            <div class="search-box">
-                <input type="text" id="gx-input" placeholder="Escribe tu usuario de tiktok...">
-                <button id="gx-btn" onclick="checkPlayerRacha()">CONSULTAR</button>
-            </div>
-        </div>
+        
 
         <div id="player-card">
             <h2 id="res-name" style="margin-top:0;">@USUARIO</h2>
@@ -969,9 +964,9 @@
             </div>
         </div>
         <div class="rules-grid">
-            <div class="rule-card" onclick="openModal('PASO 1: ÚNETE', 'Para ingresar oficialmente a la pista, solo debes comentar el nombre de tu Equipo (Torneo FPC) o tu País (Mundial). <br><br>Al hacerlo, el sistema te leerá automáticamente y tu vehículo aparecerá en pantalla listo para correr. ¡Asegúrate de escribirlo bien!', '💬')">
+            <div class="rule-card" onclick="openModal('PASO 1: ÚNETE', 'Para ingresar oficialmente a la pista, solo debes comentar el nombre de tu Equipo. <br><br>Al hacerlo, el sistema te leerá automáticamente y tu unirá a tu equipo ¡Asegúrate de escribirlo bien!', '💬')">
                 <span class="rule-title">PASO 1 💬</span>
-                <p style="font-size:0.85rem; color:#aaa;">Comenta tu Equipo o País para entrar en la carrera. <b style="color:var(--gx-accent);">(Clic para ver más)</b></p>
+                <p style="font-size:0.85rem; color:#aaa;">Comenta el nombre o apodo de tu equipo. <b style="color:var(--gx-accent);">(Clic para ver más)</b></p>
             </div>
             <div class="rule-card" onclick="openModal('PASO 2: IMPULSA', 'Una vez en la pista, tu objetivo es dar velocidad. <br><br>Los <b>Likes</b> dan potencia constante. Los <b>Comentarios</b> aceleran. Los <b>Regalos</b> (cualquiera) dan empujes masivos.<br><br>🔥 <b>Dato Clave:</b> Por cada interacción acumulas Experiencia (EXP) en tu perfil para subir de nivel.', '🚀')">
                 <span class="rule-title">PASO 2 🚀</span>
@@ -981,27 +976,13 @@
                 <span class="rule-title">PASO 3 👑</span>
                 <p style="font-size:0.85rem; color:#aaa;">Top 3 son Capitanes. Activan X2 Grupal. <b style="color:var(--gx-accent);">(Clic para ver más)</b></p>
             </div>
-            <div class="rule-card" onclick="openModal('PASO 4: LA RACHA', 'La constancia tiene premio. Si entras a mi Live todos los días y comentas tu equipo, sumarás +1 Día a tu Racha.<br><br>Tener una racha alta te otorga poderes permanentes, como multiplicadores de fuerza para tus regalos o escudos protectores. Si faltas un día, ¡la pierdes!', '🔥')">
-                <span class="rule-title">PASO 4 🔥</span>
-                <p style="font-size:0.85rem; color:#aaa;">Actívate a diario para subir tu racha. <b style="color:var(--gx-accent);">(Clic para ver más)</b></p>
-            </div>
+            
         </div>
 
-        <div style="width:100%; max-width:1100px;">
-            <h2 class="benefits-title">🏆 CAMINO DE LA RACHA 🏆</h2>
-            <div class="scroller-wrapper">
-                <div class="scroller-track">
-                    <div class="benefit-card" onclick="openModal('BENEFICIO: 1 DÍA', '¡Bienvenido a Crimifutbol! Al completar tu primer día, tu usuario queda registrado en la base de datos oficial. Ya puedes empezar a acumular EXP y competir por ser el Capitán de tu equipo.', '⭐')"><span class="b-icon">⭐</span><div class="b-days">1 DÍA</div><div class="b-desc">Ingreso oficial. Desbloqueas tu perfil en la base de datos FPC.</div></div>
-                    <div class="benefit-card" onclick="openModal('BENEFICIO: 3 DÍAS', 'Demuestras compromiso. El sistema reconoce tu racha y te otorga un 10% de velocidad extra en todos los comentarios que hagas. ¡Tu equipo sentirá la diferencia!', '⚡')"><span class="b-icon">⚡</span><div class="b-days">3 DÍAS</div><div class="b-desc">Recibes un <b style="color:white;">10% extra</b> de velocidad en tus comentarios.</div></div>
-                    <div class="benefit-card" onclick="openModal('BENEFICIO: 5 DÍAS', 'Tu poder económico aumenta. Cada vez que envíes una Rosa o cualquier otro regalo, este impulsará a tu equipo un 50% más de lo normal (X1.5).', '🚀')"><span class="b-icon">🚀</span><div class="b-days">5 DÍAS</div><div class="b-desc">Tus regalos obtienen un <b style="color:white;">Impulso X1.5</b> automático.</div></div>
-                    <div class="benefit-card" onclick="openModal('BENEFICIO: 7 DÍAS', '¡Una semana entera de lealtad! Tu nombre aparecerá resaltado en el Tablón VIP durante las carreras. Todos sabrán que eres un veterano apoyando a tu equipo.', '🎨')"><span class="b-icon">🎨</span><div class="b-days">7 DÍAS</div><div class="b-desc">Tu nombre saldrá en el <b style="color:white;">Tablón VIP</b> del directo.</div></div>
-                    <div class="benefit-card" onclick="openModal('BENEFICIO: 10 DÍAS', 'Has despertado el poder real. Tienes Fuerza X2 permanente. Esto significa que TODO lo que hagas (likes, comentarios, regalos) vale EL DOBLE, siempre y cuando no pierdas tu racha.', '🧨')"><span class="b-icon">🧨</span><div class="b-days">10 DÍAS</div><div class="b-desc">Poder activado: <b style="color:white;">Fuerza X2</b> permanente en todo.</div></div>
-                    <div class="benefit-card" onclick="openModal('BENEFICIO: 15 DÍAS', 'Tu cerebro es tu mejor arma. En los minijuegos de trivias que lanzamos en el directo, si logras responder correctamente de primero, los puntos que se lleva tu equipo se multiplican por 2.', '🧠')"><span class="b-icon">🧠</span><div class="b-days">15 DÍAS</div><div class="b-desc">Si adivinas la trivia, tu equipo recibe <b style="color:white;">Doble Puntaje</b>.</div></div>
-                    <div class="benefit-card" onclick="openModal('BENEFICIO: 20 DÍAS', 'Todos tenemos un día ocupado. Al llegar a 20 días, obtienes un salvavidas. Si por alguna razón no puedes asistir a un directo, tu racha NO se reiniciará a cero. ¡Pero solo funciona una vez!', '🛡️')"><span class="b-icon">🛡️</span><div class="b-days">20 DÍAS</div><div class="b-desc">Desbloqueas el <b style="color:white;">Escudo Anti-Falla</b> para tu racha.</div></div>
-                    <div class="benefit-card" onclick="openModal('BENEFICIO: 25 DÍAS', 'Tu voz es ley. Cuando haya votaciones en el chat para decidir qué mapa jugar o qué torneo abrir, tu comentario de voto valdrá por dos personas.', '👑')"><span class="b-icon">👑</span><div class="b-days">25 DÍAS</div><div class="b-desc">Rango de Élite. Tienes <b style="color:white;">Voto Doble</b> en encuestas.</div></div>
-                    <div class="benefit-card" onclick="openModal('BENEFICIO: 30 DÍAS', '¡UN MES DE PURA PASIÓN! Eres una Leyenda Absoluta. Desbloqueas el aura brillante en el juego y obtienes un Multiplicador Masivo X3 para aplastar a los rivales.', '💎')"><span class="b-icon">💎</span><div class="b-days">30 DÍAS</div><div class="b-desc">Rango Leyenda VIP con <b style="color:white;">Multiplicador Masivo X3</b>.</div></div>
-                    <div class="benefit-card" onclick="openModal('BENEFICIO: 50 DÍAS', 'Has alcanzado el olimpo de Crimifutbol. Tu racha se vuelve Inmortal (nunca se reiniciará) y me comunicaré contigo para crear un comando especial en el chat que lleve tu nombre.', '🏆')"><span class="b-icon">🏆</span><div class="b-days">50 DÍAS</div><div class="b-desc">Rango Dios. <b style="color:white;">Inmortalidad de Racha</b> y comando especial.</div></div>
-                </div>
+        <div class="gx-search-container">
+            <div class="search-box">
+                <input type="text" id="gx-input" placeholder="Escribe tu usuario de tiktok...">
+                <button id="gx-btn" onclick="checkPlayerRacha()">CONSULTAR</button>
             </div>
         </div>
 
