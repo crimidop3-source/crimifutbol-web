@@ -916,7 +916,7 @@
                 <div class="prize-desc">Donador Secundario.</div>
             </div>
 
-            <div class="prize-card" onclick="openModal('🥉 3ER PUESTO', '¡Sorteo para la Comunidad! <br><br>✅ Envía tu **Quiereme** a diario. <br>✅ Mantente activo en el chat. <br><br>💰 **Premio:** $100.000 COP sorteados entre los fans más leales.', '🥉')">
+            <div class="prize-card" onclick="openModal('🥉 3ER PUESTO', '¡Sorteo para la Comunidad! <br><br>✅ Envía tu **Quiereme** a diario. <br><br>💰 **Premio:** $100.000 COP sorteados entre los fans más leales.', '🥉')">
                 <div class="prize-rank">🥉 3ER PUESTO</div>
                 <div class="prize-amount">$100.000</div>
                 <div class="prize-desc">Sorteo Fans Activos.</div>
@@ -963,11 +963,10 @@
                 <table><tbody id="body-taps"></tbody></table>
             </div>
 
-            // NUEVO: TOP TAPS (Reemplazando niveles)
-            const topTaps = [...allUsers].sort((a, b) => (b.taps || 0) - (a.taps || 0)).slice(0, 10);
-            document.getElementById('body-nivel').innerHTML = topTaps.map((u, i) => `
-            <tr><td>#${i+1}</td><td><b>${u.username}</b></td><td style="color:var(--gx-accent); text-align:right;">${(u.taps || 0).toLocaleString()} ⚡</td></tr>
-            `).join('');
+            <div class="rank-box">
+                <h3 style="color: #ffffff;">⭐ TOP NIVELES</h3>
+                <table><tbody id="body-nivel"></tbody></table>
+            </div>
         </div>
         <div class="rules-grid">
             <div class="rule-card" onclick="openModal('PASO 1: ÚNETE', 'Para ingresar oficialmente a la pista, solo debes comentar el nombre de tu Equipo (Torneo FPC) o tu País (Mundial). <br><br>Al hacerlo, el sistema te leerá automáticamente y tu vehículo aparecerá en pantalla listo para correr. ¡Asegúrate de escribirlo bien!', '💬')">
@@ -1180,9 +1179,11 @@
 
                 
 
-                // 4. TOP NIVELES
-                const topNivel = [...allUsers].sort((a, b) => (b.level || 0) - (a.level || 0)).slice(0, 10);
-                document.getElementById('body-nivel').innerHTML = topNivel.map((u, i) => `
+                // NUEVO: TOP TAPS (Reemplazando niveles)
+                const topTaps = [...allUsers].sort((a, b) => (b.taps || 0) - (a.taps || 0)).slice(0, 10);
+                document.getElementById('body-nivel').innerHTML = topTaps.map((u, i) => `
+            <tr><td>#${i + 1}</td><td><b>${u.username}</b></td><td style="color:var(--gx-accent); text-align:right;">${(u.taps || 0).toLocaleString()} ⚡</td></tr>
+        `).join('');
             <tr>
                 <td>#${i + 1}</td>
                 <td><b style="color:white;">${u.username}</b></td>
