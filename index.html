@@ -940,13 +940,7 @@
 
         
 
-        <div id="player-card">
-            <h2 id="res-name" style="margin-top:0;">@USUARIO</h2>
-            <div style="display:flex; justify-content:space-between;">
-                <div><p style="margin:0; color:#888;">RACHA</p><div id="res-racha" class="fire-text">0 DÍAS 🔥</div></div>
-                <div style="text-align:right;"><p style="margin:0; color:#888;">NIVEL</p><div id="res-nivel" style="font-size:1.8rem; font-weight:bold;">1</div></div>
-            </div>
-        </div>
+        
 
         <div class="rankings-wrapper">
             <div class="rank-box">
@@ -1057,17 +1051,18 @@
         /* LÓGICA DEL MODAL (Ventanas Emergentes) */
         function openModal(title, text, icon) {
             document.getElementById('modal-title').innerText = title;
-            document.getElementById('modal-text').innerHTML = text;
+            document.getElementById('modal-text').innerHTML = text; // Mantenemos innerHTML para que lea el diseño del perfil
             document.getElementById('modal-icon').innerText = icon;
 
+            // Obtenemos el color neón que esté activo en ese momento (Azul o Rojo)
             const rootStyles = getComputedStyle(document.documentElement);
-            const accentColor = rootStyles.getPropertyValue('--gx-accent').trim();
+            const finalColor = rootStyles.getPropertyValue('--gx-accent').trim();
 
-            // Si es un beneficio de racha, mantenemos el naranja. Si es otra cosa, usamos el neón.
-            const finalColor = title.includes("BENEFICIO") ? "#ff8c00" : accentColor;
-
+            // Aplicamos el color al título y al borde izquierdo del cuadro
             document.getElementById('modal-title').style.color = finalColor;
             document.getElementById('modal-content-box').style.borderLeftColor = finalColor;
+
+            // Mostramos el modal
             document.getElementById('info-modal').style.display = 'flex';
         }
 
@@ -1078,59 +1073,50 @@
 
         
         async function checkPlayerRacha() {
-            const btn = document.getElementById('gx-btn');
-            const input = document.getElementById('gx-input');
-            const userSearch = input.value.trim().toLowerCase();
+            const input = document.getElementById('gx-input').value.trim().toLowerCase();
+            if (!input) return;
 
-            if (!userSearch) return;
+            const users = await fetchAllUserData();
+            const captains = getCaptains(users); // Usamos tu lógica de capitanes
+            const user = users.find(u => u.username.toLowerCase() === input);
 
-            btn.innerText = "ESCANEANDO...";
-            btn.disabled = true;
+            if (user) {
+                const isCap = captains.has(user.username.toLowerCase());
+                const capBadge = isCap ? `<span class="badge-captain" style="display:block; margin-top:5px;">👑 CAPITÁN</span>` : "";
 
-            try {
-                const allUsers = await fetchAllUserData();
-                const captains = getCaptains(allUsers);
-                const results = allUsers.filter(u => u.username.toLowerCase() === userSearch);
-
-                if (results.length > 0) {
-                    document.getElementById('player-card').style.display = 'block';
-                    let htmlContent = "";
-
-                    results.forEach(user => {
-                        const isCap = captains.has(user.username.toLowerCase());
-                        const badge = isCap ? `<span class="badge-captain">👑 CAPITÁN</span>` : "";
-
-                        htmlContent += `
-                    <div style="border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 15px; margin-bottom: 15px;">
-                        <h2 style="margin-top:0; color:var(--gx-accent);">
-                            @${user.username.toUpperCase()} 
-                            <span style="font-size: 0.8rem; color: #888; font-family: 'Rajdhani';">[${user.team || 'SIN EQUIPO'}]</span>
-                            ${badge}
-                        </h2>
-                        <div style="display:flex; justify-content:space-between;">
-                            <div>
-                                <p style="margin:0; color:#888; font-size:0.8rem;">RACHA</p>
-                                <div class="fire-text">${user.rachaDias || 0} DÍAS 🔥</div>
-                            </div>
-                            <div style="text-align:right;">
-                                <p style="margin:0; color:#888; font-size:0.8rem;">NIVEL</p>
-                                <div style="font-size:1.8rem; font-weight:bold;">${user.level || 1}</div>
-                            </div>
-                        </div>
+                // Construimos el contenido con los datos que pediste
+                const content = `
+            <div style="text-align:center;">
+                <h2 style="color:var(--gx-accent); margin-bottom:0;">@${user.username.toUpperCase()}</h2>
+                <span style="color:#888; font-family:'Orbitron'; font-size:0.9rem;">${user.team || 'SIN EQUIPO'}</span>
+                ${capBadge}
+                
+                <div style="display:grid; grid-template-columns: 1fr 1fr; gap:15px; margin-top:20px; border-top:1px solid #333; padding-top:15px;">
+                    <div style="text-align:left;">
+                        <p style="margin:0; font-size:0.7rem; color:#666;">NIVEL</p>
+                        <div style="font-size:1.4rem; font-weight:bold;">${user.level || 1}</div>
                     </div>
-                `;
-                    });
+                    <div style="text-align:right;">
+                        <p style="margin:0; font-size:0.7rem; color:#666;">ENVIADOS</p>
+                        <div style="font-size:1.2rem; font-weight:bold; color:#f1c40f;">${(user.coins || 0).toLocaleString()} 🪙</div>
+                    </div>
+                    <div style="text-align:left;">
+                        <p style="margin:0; font-size:0.7rem; color:#666;">TRIVIAS</p>
+                        <div style="font-size:1.2rem; font-weight:bold; color:#00f2ff;">${user.trivias || 0} 🧠</div>
+                    </div>
+                    <div style="text-align:right;">
+                        <p style="margin:0; font-size:0.7rem; color:#666;">TAPS</p>
+                        <div style="font-size:1.2rem; font-weight:bold; color:#ee1d52;">${(user.taps || 0).toLocaleString()} ❤️</div>
+                    </div>
+                </div>
+            </div>
+        `;
 
-                    document.getElementById('player-card').innerHTML = htmlContent;
-                    document.getElementById('player-card').scrollIntoView({ behavior: 'smooth', block: 'center' });
-                } else {
-                    alert("Usuario no encontrado.");
-                }
-            } catch (e) {
-                console.error(e);
-            } finally {
-                btn.innerText = "CONSULTAR";
-                btn.disabled = false;
+                // Reutilizamos la función del modal que ya tienes
+                openModal("PERFIL DEL JUGADOR", content, "👤");
+
+            } else {
+                alert("Usuario no registrado en la base de datos.");
             }
         }
 
