@@ -1,0 +1,12 @@
+{
+  "users": [
+    {
+      "username": "PRUEBA",
+      "team": "MILLONARIOS",
+      "level": 1,
+      "coins": 100,
+      "trivias": 5,
+      "taps": 50
+    }
+  ]
+}
