@@ -1055,6 +1055,15 @@
                 </div>
             </div>
         </section>
+        <section class="content-block bg-dark-1">
+            <div class="section-title">
+                <h2 style="color: #f1c40f;">ESTADÍSTICAS FPC</h2>
+                <p>PALMARÉS E HISTORIAL DE WINS</p>
+            </div>
+            <div id="equipos-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 15px; width: 100%; max-width: 1100px; padding: 10px;">
+            </div>
+        </section>
+
 
         <section class="content-block bg-dark-2">
             <div class="section-title">
@@ -1216,45 +1225,62 @@
 
 
                 async function cargarRankings() {
-                    
                     try {
-                        const allUsers = await fetchAllUserData();
-                        const captains = getCaptains(allUsers);
+                        // Cargamos usuarios y títulos al mismo tiempo
+                        const [userData, winsData] = await Promise.all([
+                            fetchAllUserData(),
+                            fetch("fpc_wins.json").then(res => res.json())
+                        ]);
 
-                        // 1. TOP DONADORES (Basado en 'coins')
-                        const topDonador = [...allUsers].sort((a, b) => (b.coins || 0) - (a.coins || 0)).slice(0, 10);
-                        document.getElementById('body-donador').innerHTML = topDonador.map((u, i) => `
-                                                <tr>
-                                                    <td>#${i + 1}</td>
-                                                    <td><b style="color:white;">${u.username}</b> <small style="color:#666">[${u.team || 'FPC'}]</small></td>
-                                                    <td style="color:#f1c40f; text-align:right;">${(u.coins || 0).toLocaleString()} 🪙</td>
-                                                </tr>`).join('');
+                        // 1. GENERAR TARJETAS DE EQUIPOS
+                        if (winsData && winsData.wins) {
+                            const equiposGrid = document.getElementById('equipos-grid');
 
-                        // 2. TOP TRIVIAS (Basado en 'trivias')
-                        const topTrivias = [...allUsers].sort((a, b) => (b.trivias || 0) - (a.trivias || 0)).slice(0, 10);
-                        document.getElementById('body-taps').innerHTML = topTrivias.map((u, i) => `
-                                                <tr>
-                                                    <td>#${i + 1}</td>
-                                                    <td><b style="color:white;">${u.username}</b></td>
-                                                    <td style="color:#00f2ff; text-align:right;">${u.trivias || 0} 🧠</td>
-                                                </tr>`).join('');
+                            // Ordenamos: Campeones primero, luego por Wins
+                            const sortedTeams = [...winsData.wins].sort((a, b) =>
+                                (b.cups || 0) - (a.cups || 0) || (b.wins || 0) - (a.wins || 0)
+                            );
 
+                            equiposGrid.innerHTML = sortedTeams.map(t => {
+                                const logo = t.country.toLowerCase().replace(/\s+/g, '') + '.png';
+                                const tieneCopas = (t.cups || 0) > 0;
 
+                                return `
+                                <div class="benefit-card" style="border: 1px solid ${tieneCopas ? '#f1c40f' : '#333'}; background: rgba(0,0,0,0.5); text-align: center; padding: 15px; min-height: 180px; position: relative;">
+                                    ${tieneCopas ? '<div style="position:absolute; top:5px; right:5px;">🏆</div>' : ''}
+                                    <img src="${logo}" style="width:50px; height:50px; object-fit:contain; margin-bottom:10px; filter: drop-shadow(0 0 8px ${tieneCopas ? 'rgba(241,196,15,0.5)' : 'transparent'});" onerror="this.src='logo_azul.png'">
+                                    <h4 style="font-family:'Orbitron'; color: white; margin: 5px 0; font-size: 0.8rem;">${t.country.toUpperCase()}</h4>
+                                    <div style="margin-top:10px; border-top: 1px solid rgba(255,255,255,0.1); padding-top:10px;">
+                                        <div style="font-size: 1.2rem; font-weight: 800; color: #f1c40f; font-family:'Orbitron';">
+                                            ${t.cups || 0} <small style="font-size:0.5rem; color:#888;">TITULOS</small>
+                                        </div>
+                                        <div style="font-size: 0.9rem; font-weight: bold; color: #00f2ff; margin-top: 5px;">
+                                            ${(t.wins || 0).toLocaleString()} <small style="font-size:0.5rem; color:#666;">WINS</small>
+                                        </div>
+                                    </div>
+                                </div>`;
+                            }).join('');
+                        }
 
-                        // TOP TAPS (MODIFICADO CON CORAZÓN)
-                        const topTaps = [...allUsers].sort((a, b) => (b.taps || 0) - (a.taps || 0)).slice(0, 10);
-                        document.getElementById('body-nivel').innerHTML = topTaps.map((u, i) => `
-                                                    <tr>
-                                                        <td>#${i + 1}</td>
-                                                        <td><b style="color:white;">${u.username}</b></td>
-                                                        <td style="color:#ee1d52; text-align:right; font-weight:bold;">
-                                                            ${(u.taps || 0).toLocaleString()} ❤️
-                                                        </td>
-                                                    </tr>
-                                                `).join('');
+                        // 2. RANKINGS DE USUARIOS (Lo que ya tenías)
+                        if (userData.length > 0) {
+                            const sortAndFill = (id, key, symbol, color) => {
+                                const top = [...userData].sort((a, b) => (b[key] || 0) - (a[key] || 0)).slice(0, 10);
+                                document.getElementById(id).innerHTML = top.map((u, i) => `
+                                    <tr>
+                                        <td>#${i + 1}</td>
+                                        <td><b style="color:white;">${u.username}</b> <small style="color:#666">[${u.team || 'FPC'}]</small></td>
+                                        <td style="color:${color}; text-align:right;">${(u[key] || 0).toLocaleString()} ${symbol}</td>
+                                    </tr>`).join('');
+                            };
+
+                            sortAndFill('body-donador', 'coins', '🪙', '#f1c40f');
+                            sortAndFill('body-taps', 'trivias', '🧠', '#00f2ff');
+                            sortAndFill('body-nivel', 'taps', '❤️', '#ee1d52');
+                        }
 
                     } catch (e) {
-                        console.error("Error cargando los rankings:", e);
+                        console.error("Error cargando los datos maestros:", e);
                     }
                 }
 

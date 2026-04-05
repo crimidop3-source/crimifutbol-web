@@ -1,0 +1,104 @@
+{
+    "wins": [
+        {
+            "country": "America",
+            "wins": 60,
+            "cups": 0
+        },
+        {
+            "country": "Cucuta",
+            "wins": 0,
+            "cups": 0
+        },
+        {
+            "country": "Junior",
+            "wins": 80,
+            "cups": 0
+        },
+        {
+            "country": "Medellin",
+            "wins": 200,
+            "cups": 0
+        },
+        {
+            "country": "Nacional",
+            "wins": 6260,
+            "cups": 1
+        },
+        {
+            "country": "Pereira",
+            "wins": 0,
+            "cups": 0
+        },
+        {
+            "country": "Santa Fe",
+            "wins": 10,
+            "cups": 0
+        },
+        {
+            "country": "Millonarios",
+            "wins": 3180,
+            "cups": 1
+        },
+        {
+            "country": "Bucaramanga",
+            "wins": 1390,
+            "cups": 0
+        },
+        {
+            "country": "Tolima",
+            "wins": 170,
+            "cups": 0
+        },
+        {
+            "country": "Once Caldas",
+            "wins": 50,
+            "cups": 0
+        },
+        {
+            "country": "Cali",
+            "wins": 1050,
+            "cups": 0
+        },
+        {
+            "country": "Boyaca Chico",
+            "wins": 0,
+            "cups": 0
+        },
+        {
+            "country": "Envigado",
+            "wins": 0,
+            "cups": 0
+        },
+        {
+            "country": "Inter De Bogota",
+            "wins": 0,
+            "cups": 0
+        },
+        {
+            "country": "Llaneros",
+            "wins": 0,
+            "cups": 0
+        },
+        {
+            "country": "Pasto",
+            "wins": 0,
+            "cups": 0
+        },
+        {
+            "country": "Quindio",
+            "wins": 0,
+            "cups": 0
+        },
+        {
+            "country": "Real Cartagena",
+            "wins": 0,
+            "cups": 0
+        },
+        {
+            "country": "Union Magdalena",
+            "wins": 0,
+            "cups": 0
+        }
+    ]
+}
