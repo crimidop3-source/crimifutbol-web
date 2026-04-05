@@ -25,11 +25,7 @@
             "wins": 6260,
             "cups": 1
         },
-        {
-            "country": "Pereira",
-            "wins": 0,
-            "cups": 0
-        },
+        
         {
             "country": "Santa Fe",
             "wins": 10,
@@ -58,46 +54,6 @@
         {
             "country": "Cali",
             "wins": 1050,
-            "cups": 0
-        },
-        {
-            "country": "Boyaca Chico",
-            "wins": 0,
-            "cups": 0
-        },
-        {
-            "country": "Envigado",
-            "wins": 0,
-            "cups": 0
-        },
-        {
-            "country": "Inter De Bogota",
-            "wins": 0,
-            "cups": 0
-        },
-        {
-            "country": "Llaneros",
-            "wins": 0,
-            "cups": 0
-        },
-        {
-            "country": "Pasto",
-            "wins": 0,
-            "cups": 0
-        },
-        {
-            "country": "Quindio",
-            "wins": 0,
-            "cups": 0
-        },
-        {
-            "country": "Real Cartagena",
-            "wins": 0,
-            "cups": 0
-        },
-        {
-            "country": "Union Magdalena",
-            "wins": 0,
             "cups": 0
         }
     ]
