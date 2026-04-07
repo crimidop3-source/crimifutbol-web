@@ -12,6 +12,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Crimi Futbol</title>
+    <meta name="description" content="Rankings, estadísticas y premios de Crimi Futbol. ¡Consulta tu nivel y compite!">
+    <meta property="og:title" content="Crimi Futbol | Rankings Oficiales">
+    <meta property="og:description" content="¿En qué nivel estás? Consulta tu perfil del Live aquí.">
+    <meta property="og:image" content="https://crimifutbol.com/logo_azul.png"> <meta property="og:url" content="https://crimifutbol.com">
+    <meta name="twitter:card" content="summary_large_image">
 
     <link rel="icon" type="image/png" href="logo_azul.png" id="favicon">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
@@ -1172,119 +1177,145 @@
                 }
 
 
-                async function checkPlayerRacha() {
-                    const input = document.getElementById('gx-input').value.trim().toLowerCase();
-                    if (!input) return;
+                // 1. Variable global para guardar los usuarios una sola vez
+    let cachedUsers = null;
 
-                    const users = await fetchAllUserData();
-                    const captains = getCaptains(users);
-                    const user = users.find(u => u.username.toLowerCase() === input);
+    async function checkPlayerRacha() {
+        const btn = document.getElementById('gx-btn');
+        const inputField = document.getElementById('gx-input');
+        const input = inputField.value.trim().toLowerCase();
+        
+        if (!input) return;
 
-                    if (user) {
-                        const isCap = captains.has(user.username.toLowerCase());
-                        const capBadge = isCap ? `<span class="badge-captain" style="display:block; margin-top:5px;">👑 CAPITÁN</span>` : "";
+        // Cambiamos el texto del botón para dar feedback visual
+        const originalBtnText = btn.innerText;
+        btn.innerText = "BUSCANDO...";
+        btn.disabled = true;
 
-                        // LÓGICA DE ESCUDOS:
-                        // Convertimos el nombre del equipo a minúsculas y le quitamos espacios
-                        // Si no tiene equipo, usa el logo azul por defecto
-                        const teamFile = user.team ? user.team.toLowerCase().replace(/\s+/g, '') + '.png' : 'logo_azul.png';
+        try {
+            // Si es la primera búsqueda, descargamos los datos. 
+            // Si ya se buscaron antes, usamos la copia guardada (cachedUsers).
+            if (!cachedUsers) {
+                cachedUsers = await fetchAllUserData();
+            }
 
-                        const content = `
-            <div style="text-align:center;">
-                <img src="${teamFile}" alt="${user.team}" style="width:80px; height:80px; object-fit:contain; margin-bottom:10px; filter: drop-shadow(0 0 10px var(--gx-glow));" onerror="this.src='logo_azul.png'">
+            const captains = getCaptains(cachedUsers);
+            const user = cachedUsers.find(u => u.username.toLowerCase() === input);
+
+            if (user) {
+                const isCap = captains.has(user.username.toLowerCase());
+                const capBadge = isCap ? `<span class="badge-captain" style="display:block; margin-top:5px;">👑 CAPITÁN</span>` : "";
+                const teamFile = user.team ? user.team.toLowerCase().replace(/\s+/g, '') + '.png' : 'logo_azul.png';
+
+                const content = `
+                    <div style="text-align:center;">
+                        <img src="${teamFile}" alt="${user.team}" style="width:80px; height:80px; object-fit:contain; margin-bottom:10px; filter: drop-shadow(0 0 10px var(--gx-glow));" onerror="this.src='logo_azul.png'">
+                        <h2 style="color:var(--gx-accent); margin-bottom:0;">@${user.username.toUpperCase()}</h2>
+                        <span style="color:#888; font-family:'Orbitron'; font-size:0.9rem;">${user.team || 'SIN EQUIPO'}</span>
+                        ${capBadge}
+                        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:15px; margin-top:20px; border-top:1px solid #333; padding-top:15px;">
+                            <div style="text-align:left;">
+                                <p style="margin:0; font-size:0.7rem; color:#666;">NIVEL</p>
+                                <div style="font-size:1.4rem; font-weight:bold;">${user.level || 1}</div>
+                            </div>
+                            <div style="text-align:right;">
+                                <p style="margin:0; font-size:0.7rem; color:#666;">ENVIADOS</p>
+                                <div style="font-size:1.2rem; font-weight:bold; color:#f1c40f;">${(user.coins || 0).toLocaleString()} 🪙</div>
+                            </div>
+                            <div style="text-align:left;">
+                                <p style="margin:0; font-size:0.7rem; color:#666;">TRIVIAS</p>
+                                <div style="font-size:1.2rem; font-weight:bold; color:#00f2ff;">${user.trivias || 0} 🧠</div>
+                            </div>
+                            <div style="text-align:right;">
+                                <p style="margin:0; font-size:0.7rem; color:#666;">TAPS</p>
+                                <div style="font-size:1.2rem; font-weight:bold; color:#ee1d52;">${(user.taps || 0).toLocaleString()} ❤️</div>
+                            </div>
+                        </div>
+                    </div>`;
+
+                openModal("PERFIL DEL JUGADOR", content, "");
+            } else {
+                alert("Usuario no registrado en la base de datos.");
+            }
+        } catch (e) {
+            console.error("Error en la búsqueda:", e);
+            alert("Hubo un error al cargar los datos.");
+        } finally {
+            // Restauramos el botón
+            btn.innerText = originalBtnText;
+            btn.disabled = false;
+        }
+    }
+
+
+               async function cargarRankings() {
+    try {
+        // 1. Verificamos si ya tenemos los usuarios en memoria (caché)
+        // Si no están, los descargamos. Si ya están, no hacemos el fetch de nuevo.
+        if (!cachedUsers) {
+            cachedUsers = await fetchAllUserData();
+        }
+
+        // 2. Cargamos los datos de los títulos (este archivo es pequeño, no hay problema)
+        const winsResponse = await fetch("fpc_wins.json");
+        const winsData = await winsResponse.json();
+
+        // Usamos cachedUsers para los rankings
+        const userData = cachedUsers;
+
+        // --- 1. GENERAR TARJETAS DE EQUIPOS (ESTADÍSTICAS FPC) ---
+        if (winsData && winsData.wins) {
+            const equiposGrid = document.getElementById('equipos-grid');
+
+            // Ordenamos: Campeones primero, luego por Wins
+            const sortedTeams = [...winsData.wins].sort((a, b) =>
+                (b.cups || 0) - (a.cups || 0) || (b.wins || 0) - (a.wins || 0)
+            );
+
+            equiposGrid.innerHTML = sortedTeams.map(t => {
+                const logo = t.country.toLowerCase().replace(/\s+/g, '') + '.png';
+                const tieneCopas = (t.cups || 0) > 0;
+
+                return `
+                <div class="benefit-card" style="border: 1px solid ${tieneCopas ? '#f1c40f' : '#333'}; background: rgba(0,0,0,0.5); text-align: center; padding: 15px; min-height: 180px; position: relative;">
+                    ${tieneCopas ? '<div style="position:absolute; top:5px; right:5px;">🏆</div>' : ''}
+                    <img src="${logo}" style="width:50px; height:50px; object-fit:contain; margin-bottom:10px; filter: drop-shadow(0 0 8px ${tieneCopas ? 'rgba(241,196,15,0.5)' : 'transparent'});" onerror="this.src='logo_azul.png'">
+                    <h4 style="font-family:'Orbitron'; color: white; margin: 5px 0; font-size: 0.8rem;">${t.country.toUpperCase()}</h4>
+                    <div style="margin-top:10px; border-top: 1px solid rgba(255,255,255,0.1); padding-top:10px;">
+                        <div style="font-size: 1.2rem; font-weight: 800; color: #f1c40f; font-family:'Orbitron';">
+                            ${t.cups || 0} <small style="font-size:0.5rem; color:#888;">TITULOS</small>
+                        </div>
+                        <div style="font-size: 0.9rem; font-weight: bold; color: #00f2ff; margin-top: 5px;">
+                            ${(t.wins || 0).toLocaleString()} <small style="font-size:0.5rem; color:#666;">WINS</small>
+                        </div>
+                    </div>
+                </div>`;
+            }).join('');
+        }
+
+        // --- 2. RANKINGS DE USUARIOS ---
+        if (userData.length > 0) {
+            const sortAndFill = (id, key, symbol, color) => {
+                // Hacemos una copia para no alterar el orden de la caché original
+                const top = [...userData].sort((a, b) => (b[key] || 0) - (a[key] || 0)).slice(0, 10);
                 
-                <h2 style="color:var(--gx-accent); margin-bottom:0;">@${user.username.toUpperCase()}</h2>
-                <span style="color:#888; font-family:'Orbitron'; font-size:0.9rem;">${user.team || 'SIN EQUIPO'}</span>
-                ${capBadge}
+                document.getElementById(id).innerHTML = top.map((u, i) => `
+                    <tr>
+                        <td>#${i + 1}</td>
+                        <td><b style="color:white;">${u.username}</b> <small style="color:#666">[${u.team || 'FPC'}]</small></td>
+                        <td style="color:${color}; text-align:right;">${(u[key] || 0).toLocaleString()} ${symbol}</td>
+                    </tr>`).join('');
+            };
 
-                <div style="display:grid; grid-template-columns: 1fr 1fr; gap:15px; margin-top:20px; border-top:1px solid #333; padding-top:15px;">
-                    <div style="text-align:left;">
-                        <p style="margin:0; font-size:0.7rem; color:#666;">NIVEL</p>
-                        <div style="font-size:1.4rem; font-weight:bold;">${user.level || 1}</div>
-                    </div>
-                    <div style="text-align:right;">
-                        <p style="margin:0; font-size:0.7rem; color:#666;">ENVIADOS</p>
-                        <div style="font-size:1.2rem; font-weight:bold; color:#f1c40f;">${(user.coins || 0).toLocaleString()} 🪙</div>
-                    </div>
-                    <div style="text-align:left;">
-                        <p style="margin:0; font-size:0.7rem; color:#666;">TRIVIAS</p>
-                        <div style="font-size:1.2rem; font-weight:bold; color:#00f2ff;">${user.trivias || 0} 🧠</div>
-                    </div>
-                    <div style="text-align:right;">
-                        <p style="margin:0; font-size:0.7rem; color:#666;">TAPS</p>
-                        <div style="font-size:1.2rem; font-weight:bold; color:#ee1d52;">${(user.taps || 0).toLocaleString()} ❤️</div>
-                    </div>
-                </div>
-            </div>
-        `;
+            sortAndFill('body-donador', 'coins', '🪙', '#f1c40f');
+            sortAndFill('body-taps', 'trivias', '🧠', '#00f2ff');
+            sortAndFill('body-nivel', 'taps', '❤️', '#ee1d52');
+        }
 
-                        openModal("PERFIL DEL JUGADOR", content, ""); // Quitamos el icono "👤" porque ya pusimos el escudo dentro
-
-                    } else {
-                        alert("Usuario no registrado en la base de datos.");
-                    }
-                }
-
-
-                async function cargarRankings() {
-                    try {
-                        // Cargamos usuarios y títulos al mismo tiempo
-                        const [userData, winsData] = await Promise.all([
-                            fetchAllUserData(),
-                            fetch("fpc_wins.json").then(res => res.json())
-                        ]);
-
-                        // 1. GENERAR TARJETAS DE EQUIPOS
-                        if (winsData && winsData.wins) {
-                            const equiposGrid = document.getElementById('equipos-grid');
-
-                            // Ordenamos: Campeones primero, luego por Wins
-                            const sortedTeams = [...winsData.wins].sort((a, b) =>
-                                (b.cups || 0) - (a.cups || 0) || (b.wins || 0) - (a.wins || 0)
-                            );
-
-                            equiposGrid.innerHTML = sortedTeams.map(t => {
-                                const logo = t.country.toLowerCase().replace(/\s+/g, '') + '.png';
-                                const tieneCopas = (t.cups || 0) > 0;
-
-                                return `
-                                <div class="benefit-card" style="border: 1px solid ${tieneCopas ? '#f1c40f' : '#333'}; background: rgba(0,0,0,0.5); text-align: center; padding: 15px; min-height: 180px; position: relative;">
-                                    ${tieneCopas ? '<div style="position:absolute; top:5px; right:5px;">🏆</div>' : ''}
-                                    <img src="${logo}" style="width:50px; height:50px; object-fit:contain; margin-bottom:10px; filter: drop-shadow(0 0 8px ${tieneCopas ? 'rgba(241,196,15,0.5)' : 'transparent'});" onerror="this.src='logo_azul.png'">
-                                    <h4 style="font-family:'Orbitron'; color: white; margin: 5px 0; font-size: 0.8rem;">${t.country.toUpperCase()}</h4>
-                                    <div style="margin-top:10px; border-top: 1px solid rgba(255,255,255,0.1); padding-top:10px;">
-                                        <div style="font-size: 1.2rem; font-weight: 800; color: #f1c40f; font-family:'Orbitron';">
-                                            ${t.cups || 0} <small style="font-size:0.5rem; color:#888;">TITULOS</small>
-                                        </div>
-                                        <div style="font-size: 0.9rem; font-weight: bold; color: #00f2ff; margin-top: 5px;">
-                                            ${(t.wins || 0).toLocaleString()} <small style="font-size:0.5rem; color:#666;">WINS</small>
-                                        </div>
-                                    </div>
-                                </div>`;
-                            }).join('');
-                        }
-
-                        // 2. RANKINGS DE USUARIOS (Lo que ya tenías)
-                        if (userData.length > 0) {
-                            const sortAndFill = (id, key, symbol, color) => {
-                                const top = [...userData].sort((a, b) => (b[key] || 0) - (a[key] || 0)).slice(0, 10);
-                                document.getElementById(id).innerHTML = top.map((u, i) => `
-                                    <tr>
-                                        <td>#${i + 1}</td>
-                                        <td><b style="color:white;">${u.username}</b> <small style="color:#666">[${u.team || 'FPC'}]</small></td>
-                                        <td style="color:${color}; text-align:right;">${(u[key] || 0).toLocaleString()} ${symbol}</td>
-                                    </tr>`).join('');
-                            };
-
-                            sortAndFill('body-donador', 'coins', '🪙', '#f1c40f');
-                            sortAndFill('body-taps', 'trivias', '🧠', '#00f2ff');
-                            sortAndFill('body-nivel', 'taps', '❤️', '#ee1d52');
-                        }
-
-                    } catch (e) {
-                        console.error("Error cargando los datos maestros:", e);
-                    }
-                }
+    } catch (e) {
+        console.error("Error cargando los datos maestros:", e);
+    }
+}
 
                 function colorLoop() {
                     const m = new Date().getMinutes();
