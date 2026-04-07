@@ -2,7 +2,7 @@
     "wins": [
         {
             "country": "America",
-            "wins": 60,
+            "wins": 0,
             "cups": 0
         },
         {
@@ -12,48 +12,47 @@
         },
         {
             "country": "Junior",
-            "wins": 80,
+            "wins": 0,
             "cups": 0
         },
         {
             "country": "Medellin",
-            "wins": 200,
+            "wins": 0,
             "cups": 0
         },
         {
             "country": "Nacional",
-            "wins": 6260,
+            "wins": 0,
             "cups": 1
         },
-        
         {
             "country": "Santa Fe",
-            "wins": 10,
+            "wins": 0,
             "cups": 0
         },
         {
             "country": "Millonarios",
-            "wins": 3180,
-            "cups": 1
+            "wins": 0,
+            "cups": 2
         },
         {
             "country": "Bucaramanga",
-            "wins": 1390,
+            "wins": 0,
             "cups": 0
         },
         {
             "country": "Tolima",
-            "wins": 170,
+            "wins": 0,
             "cups": 0
         },
         {
             "country": "Once Caldas",
-            "wins": 50,
+            "wins": 0,
             "cups": 0
         },
         {
             "country": "Cali",
-            "wins": 1050,
+            "wins": 0,
             "cups": 0
         }
     ]
