@@ -1103,14 +1103,24 @@
 
                 async function fetchAllUserData() {
                     try {
-                        const response = await fetch(currentJSON);
-                        if (!response.ok) throw new Error("No se pudo leer el archivo");
-                        const data = await response.json();
+                        // Descargamos ambos archivos al tiempo
+                        const [resFpc, resTrivias] = await Promise.all([
+                            fetch("fpc_exp.json"),
+                            fetch("trivias_exp.json")
+                        ]);
 
-                        // Le ponemos la etiqueta FPC a todos los usuarios del archivo
-                        return (data.users || []).map(u => ({ ...u, torneo: "FPC" }));
+                        const dataFpc = await resFpc.json();
+                        const dataTrivias = await resTrivias.json();
+
+                        // Combinamos todos los usuarios en una sola lista para el buscador
+                        const allUsers = [...(dataFpc.users || []), ...(dataTrivias.users || [])];
+
+                        // Quitamos duplicados por si alguien está en ambos archivos
+                        const uniqueUsers = Array.from(new Map(allUsers.map(u => [u.username.toLowerCase(), u])).values());
+
+                        return uniqueUsers.map(u => ({ ...u, torneo: "FPC" }));
                     } catch (e) {
-                        console.error("Error cargando base de datos:", e);
+                        console.error("Error cargando base de datos combinada:", e);
                         return [];
                     }
                 }
@@ -1235,35 +1245,33 @@
     }
 
 
-               async function cargarRankings() {
-    try {
-        // 1. Verificamos si ya tenemos los usuarios en memoria (caché)
-        // Si no están, los descargamos. Si ya están, no hacemos el fetch de nuevo.
-        if (!cachedUsers) {
-            cachedUsers = await fetchAllUserData();
-        }
+                async function cargarRankings() {
+                    try {
+                        // --- 1. CARGAR DONADORES (fpc_exp.json) ---
+                        const respDonadores = await fetch("fpc_exp.json");
+                        const dataDonadores = await respDonadores.json();
+                        const usuariosDonadores = dataDonadores.users || [];
 
-        // 2. Cargamos los datos de los títulos (este archivo es pequeño, no hay problema)
-        const winsResponse = await fetch("fpc_wins.json");
-        const winsData = await winsResponse.json();
+                        // --- 2. CARGAR TRIVIAS (trivias_exp.json) ---
+                        const respTrivias = await fetch("trivias_exp.json");
+                        const dataTrivias = await respTrivias.json();
+                        const usuariosTrivias = dataTrivias.users || [];
 
-        // Usamos cachedUsers para los rankings
-        const userData = cachedUsers;
+                        // --- 3. CARGAR ESTADÍSTICAS EQUIPOS (fpc_wins.json) ---
+                        const winsResponse = await fetch("fpc_wins.json");
+                        const winsData = await winsResponse.json();
 
-        // --- 1. GENERAR TARJETAS DE EQUIPOS (ESTADÍSTICAS FPC) ---
-        if (winsData && winsData.wins) {
-            const equiposGrid = document.getElementById('equipos-grid');
+                        // --- GENERAR TARJETAS DE EQUIPOS ---
+                        if (winsData && winsData.wins) {
+                            const equiposGrid = document.getElementById('equipos-grid');
+                            const sortedTeams = [...winsData.wins].sort((a, b) =>
+                                (b.cups || 0) - (a.cups || 0) || (b.wins || 0) - (a.wins || 0)
+                            );
 
-            // Ordenamos: Campeones primero, luego por Wins
-            const sortedTeams = [...winsData.wins].sort((a, b) =>
-                (b.cups || 0) - (a.cups || 0) || (b.wins || 0) - (a.wins || 0)
-            );
-
-            equiposGrid.innerHTML = sortedTeams.map(t => {
-                const logo = t.country.toLowerCase().replace(/\s+/g, '') + '.png';
-                const tieneCopas = (t.cups || 0) > 0;
-
-                return `
+                            equiposGrid.innerHTML = sortedTeams.map(t => {
+                                const logo = t.country.toLowerCase().replace(/\s+/g, '') + '.png';
+                                const tieneCopas = (t.cups || 0) > 0;
+                                return `
                 <div class="benefit-card" style="border: 1px solid ${tieneCopas ? '#f1c40f' : '#333'}; background: rgba(0,0,0,0.5); text-align: center; padding: 15px; min-height: 180px; position: relative;">
                     ${tieneCopas ? '<div style="position:absolute; top:5px; right:5px;">🏆</div>' : ''}
                     <img src="${logo}" style="width:50px; height:50px; object-fit:contain; margin-bottom:10px; filter: drop-shadow(0 0 8px ${tieneCopas ? 'rgba(241,196,15,0.5)' : 'transparent'});" onerror="this.src='logo_azul.png'">
@@ -1277,32 +1285,32 @@
                         </div>
                     </div>
                 </div>`;
-            }).join('');
-        }
+                            }).join('');
+                        }
 
-        // --- 2. RANKINGS DE USUARIOS ---
-        if (userData.length > 0) {
-            const sortAndFill = (id, key, symbol, color) => {
-                // Hacemos una copia para no alterar el orden de la caché original
-                const top = [...userData].sort((a, b) => (b[key] || 0) - (a[key] || 0)).slice(0, 10);
-                
-                document.getElementById(id).innerHTML = top.map((u, i) => `
-                    <tr>
-                        <td>#${i + 1}</td>
-                        <td><b style="color:white;">${u.username}</b> <small style="color:#666">[${u.team || 'FPC'}]</small></td>
-                        <td style="color:${color}; text-align:right;">${(u[key] || 0).toLocaleString()} ${symbol}</td>
-                    </tr>`).join('');
-            };
+                        // --- LLENAR TABLA DONADORES (desde fpc_exp.json) ---
+                        const topDonadores = [...usuariosDonadores].sort((a, b) => (b.coins || 0) - (a.coins || 0)).slice(0, 10);
+                        document.getElementById('body-donador').innerHTML = topDonadores.map((u, i) => `
+            <tr>
+                <td>#${i + 1}</td>
+                <td><b style="color:white;">${u.username}</b> <small style="color:#666">[${u.team || 'FPC'}]</small></td>
+                <td style="color:#f1c40f; text-align:right;">${(u.coins || 0).toLocaleString()} 🪙</td>
+            </tr>`).join('');
 
-            sortAndFill('body-donador', 'coins', '🪙', '#f1c40f');
-            sortAndFill('body-taps', 'trivias', '🧠', '#00f2ff');
-            
-        }
+                        // --- LLENAR TABLA TRIVIAS (desde trivias_exp.json) ---
+                        const topTrivias = [...usuariosTrivias].sort((a, b) => (b.trivias || 0) - (a.trivias || 0)).slice(0, 10);
+                        document.getElementById('body-taps').innerHTML = topTrivias.map((u, i) => `
+            <tr>
+                <td>#${i + 1}</td>
+                <td><b style="color:white;">${u.username}</b> <small style="color:#666">[${u.team || 'FPC'}]</small></td>
+                <td style="color:#00f2ff; text-align:right;">${(u.trivias || 0).toLocaleString()} 🧠</td>
+            </tr>`).join('');
 
-    } catch (e) {
-        console.error("Error cargando los datos maestros:", e);
-    }
-}
+                    } catch (e) {
+                        console.error("Error cargando los datos de los rankings:", e);
+                    }
+                }
+
 
                 function colorLoop() {
                     const m = new Date().getMinutes();
