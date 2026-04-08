@@ -957,149 +957,107 @@
         <img src="logo_azul.png" alt="Logo" class="header-logo" id="header-logo">
         <a href="index.html" class="logo-nav">CRIMI FUTBOL</a>
     </header>
-    <div class="main-content">
-        <div class="sponsor-container" style="padding: 10px; gap: 10px; margin-bottom: 20px; border: none; background: rgba(255,255,255,0.02);">
-            <div class="sponsor-text" style="font-size: 0.7rem; opacity: 0.6;">PARTNER OFICIAL</div>
-            <a href="https://www.poder.com.co/" target="_blank">
-                <img src="logo_patrocinador.png" alt="Poder" style="height: 35px; width: auto;">
-            </a>
+   <div class="main-content">
+        <div class="rankings-wrapper" style="display: grid; grid-template-columns: 1fr 1fr; gap: 25px; width: 100%; max-width: 1200px; margin-top: 20px;">
+    
+    <div class="col-donadores">
+        <div class="section-title">
+            <h2 style="color: #f1c40f; font-size: 1.8rem;">DONADORES</h2>
+            <p>PREMIOS SEMANALES</p>
+        </div>
+        
+        <div style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 25px;">
+            <div class="prize-card prize-first" onclick="openModal('🥇 1ER DONADOR', 'Reservado para el patrocinador principal de la semana. ¡El máximo apoyo al canal!', '🥇')">
+                <div class="prize-rank">🥇 1ER DONADOR</div>
+                <div class="prize-amount">$150.000 COP</div>
+            </div>
+            <div class="prize-card" onclick="openModal('🥈 2DO DONADOR', 'Premio para el segundo gran apoyo de la semana en regalos del Live.', '🥈')">
+                <div class="prize-rank">🥈 2DO DONADOR</div>
+                <div class="prize-amount">$100.000 COP</div>
+            </div>
+            <div class="prize-card" onclick="openModal('🥉 3ER DONADOR', 'Premio para el tercer lugar de apoyo. ¡Toda ayuda cuenta!', '🥉')">
+                <div class="prize-rank">🥉 3ER DONADOR</div>
+                <div class="prize-amount">$50.000 COP</div>
+            </div>
         </div>
 
-        <section class="content-block bg-dark-1">
-            <div class="section-title">
+        <div class="rank-box">
+            <h3 style="color: #f1c40f; text-align:center;">🏆 TOP DONADORES</h3>
+            <table><tbody id="body-donador"></tbody></table>
+        </div>
+    </div>
 
-                <div class="mega-hook" style="border: none; background: none; padding: 0; margin-bottom: 25px;">
-                    <h1 style="font-size: 2.8rem; line-height: 0.9; margin:0;">$600.000</h1>
-                    <p style="font-size: 1rem; color: var(--gx-accent); letter-spacing: 2px; margin-top: 5px; font-weight: bold;">PREMIOS SEMANALES</p>
-                </div>
+    <div class="col-trivias">
+        <div class="section-title">
+            <h2 style="color: #00f2ff; font-size: 1.8rem;">TRIVIAS</h2>
+            <p>PREMIOS SEMANALES</p>
+        </div>
 
-                <div class="prizes-grid">
-                    <div class="prize-card prize-first" onclick="openModal('🥇 1ER PUESTO', 'Reservado para el **Donador Principal** de la semana. <br><br>💰 **Premio:** $200.000 COP.', '🥇')">
-                        <div class="prize-rank" style="color:#f1c40f;">🥇 1ER PUESTO</div>
-                        <div class="prize-amount">$200.000</div>
-                        <div class="prize-desc">Donador Principal.</div>
-                    </div>
-
-                    <div class="prize-card" onclick="openModal('🥈 2DO PUESTO', 'Para nuestro **Donador Secundario**. <br><br>💰 **Premio:** $150.000 COP.', '🥈')">
-                        <div class="prize-rank">🥈 2DO PUESTO</div>
-                        <div class="prize-amount">$150.000</div>
-                        <div class="prize-desc">Donador Secundario.</div>
-                    </div>
-
-                    <div class="prize-card" onclick="openModal('🥉 3ER PUESTO', '¡Sorteo para la Comunidad! <br><br>✅ Envía tu **Quiereme** a diario. <br><br>💰 **Premio:** $100.000 COP sorteados entre los fans más leales.', '🥉')">
-                        <div class="prize-rank">🥉 3ER PUESTO</div>
-                        <div class="prize-amount">$100.000</div>
-                        <div class="prize-desc">Sorteo Fans Activos.</div>
-                    </div>
-
-                    <div class="prize-card" style="border-left-color: #ff8c00;" onclick="openModal('🔥 #1 TOP TRIVAS', 'Adivina mas trivias que los demás y ganate este premio', '🔥')">
-                        <div class="prize-rank">🔥 4TO PUESTO</div>
-                        <div class="prize-amount">$50.000</div>
-                        <div class="prize-desc">Top #1 Trivias.</div>
-                    </div>
-
-                    <div class="prize-card" style="border-left-color: #ff8c00;" onclick="openModal('🔥 #2 TOP TRIVAS', 'Si quedas en el top 2 de las trivias te ganas este premio', '🔥')">
-                        <div class="prize-rank">🔥 5TO PUESTO</div>
-                        <div class="prize-amount">$50.000</div>
-                        <div class="prize-desc">Top #2 Trivias.</div>
-                    </div>
-
-
-                    <div class="prize-card" style="border-left-color: #ff8c00;" onclick="openModal('⚡ 6TO PUESTO', 'Se el jugador que mas da tap taps durante la semana y llevate este premio', '⚡')">
-                        <div class="prize-rank">⚡ 6TO PUESTO</div>
-                        <div class="prize-amount">$50.000</div>
-                        <div class="prize-desc">Rey Tap Tap.</div>
-                    </div>
-                </div>
-
+        <div style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 25px;">
+            <div class="prize-card" style="border-left-color: #00f2ff;" onclick="openModal('🧠 EXPERTO 1', '¡El cerebro del Live! Para el usuario que más trivias adivine esta semana.', '🧠')">
+                <div class="prize-rank">🧠 EXPERTO 1</div>
+                <div class="prize-amount">$100.000 COP</div>
             </div>
-        </section>
+            <div class="prize-card" style="border-left-color: #00f2ff;" onclick="openModal('🧠 EXPERTO 2', 'Segundo lugar en sabiduría. ¡Estás muy cerca de la cima!', '🧠')">
+                <div class="prize-rank">🧠 EXPERTO 2</div>
+                <div class="prize-amount">$100.000 COP</div>
+            </div>
+            <div class="prize-card" style="border-left-color: #00f2ff;" onclick="openModal('🧠 EXPERTO 3', 'Tercer lugar en conocimientos futbolísticos.', '🧠')">
+                <div class="prize-rank">🧠 EXPERTO 3</div>
+                <div class="prize-amount">$50.000 COP</div>
+            </div>
+            <div class="prize-card" style="border-left-color: #00f2ff;" onclick="openModal('🧠 EXPERTO 4', 'Cuarto lugar en el ranking de trivias. ¡Tu inteligencia tiene premio!', '🧠')">
+                <div class="prize-rank">🧠 EXPERTO 4</div>
+                <div class="prize-amount">$50.000 COP</div>
+            </div>
+        </div>
 
-        <section class="content-block bg-dark-1">
+        <div class="rank-box" style="border-top-color: #00f2ff;">
+            <h3 style="color: #00f2ff; text-align:center;">🧠 TOP TRIVIAS</h3>
+            <table><tbody id="body-taps"></tbody></table>
+        </div>
+    </div>
+</div>
+
+        <section class="content-block bg-dark-1" style="width:100%; margin-top:40px;">
             <div class="section-title">
                 <h2 style="color: #f1c40f;">ESTADÍSTICAS FPC</h2>
                 <p>PALMARÉS E HISTORIAL DE WINS</p>
             </div>
-            <div id="equipos-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 15px; width: 100%; max-width: 1100px; padding: 10px;">
+            <div id="equipos-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 15px; width: 100%; max-width: 1100px;">
             </div>
         </section>
 
-
-
-
-        <section class="content-block bg-dark-2">
-            <div class="section-title">
-                <h2>RANKINGS</h2>
-                <p>LOS MEJORES</p>
-            </div>
-            <div class="rankings-wrapper">
-                <div class="rank-box">
-                    <h3 style="color: #f1c40f;">🏆 TOP DONADORES</h3>
-                    <table><tbody id="body-donador"></tbody></table>
-                </div>
-                <div class="rank-box">
-                    <h3 style="color: #00f2ff;">🧠 TOP TRIVIAS</h3>
-                    <table><tbody id="body-taps"></tbody></table>
-                </div>
-                <div class="rank-box">
-                    <h3 style="color: #ee1d52;">❤️ TOP TAPS</h3>
-                    <table><tbody id="body-nivel"></tbody></table>
-                </div>
-            </div>
-        </section>
-
-
-        <section class="content-block bg-dark-1">
+        <section class="content-block bg-dark-2" style="width:100%;">
             <div class="section-title">
                 <h2>¿CÓMO JUGAR?</h2>
                 <p>GUÍA DE INICIO</p>
             </div>
             <div class="rules-grid">
-                <div class="rule-card" onclick="openModal('PASO 1: ÚNETE', 'Comenta tu equipo para entrar automáticamente.', '💬')">
-                    <span class="rule-title">PASO 1 💬</span>
-                    <p style="font-size:0.85rem; color:#aaa;">Comenta tu equipo. <b>(Ver más)</b></p>
-                </div>
-                <div class="rule-card" onclick="openModal('PASO 2: IMPULSA', 'Likes y Regalos dan potencia a tu equipo.', '🚀')">
-                    <span class="rule-title">PASO 2 🚀</span>
-                    <p style="font-size:0.85rem; color:#aaa;">Da potencia e impulso. <b>(Ver más)</b></p>
-                </div>
-                <div class="rule-card" onclick="openModal('PASO 3: CAPITANES', 'El Top 3 activa el X2 Grupal.', '👑')">
-                    <span class="rule-title">PASO 3 👑</span>
-                    <p style="font-size:0.85rem; color:#aaa;">Lidera con el X2. <b>(Ver más)</b></p>
-                </div>
+                <div class="rule-card" onclick="openModal('PASO 1', 'Comenta tu equipo.', '💬')"><span class="rule-title">PASO 1 💬</span></div>
+                <div class="rule-card" onclick="openModal('PASO 2', 'Da potencia con likes.', '🚀')"><span class="rule-title">PASO 2 🚀</span></div>
+                <div class="rule-card" onclick="openModal('PASO 3', 'Top 3 activa X2.', '👑')"><span class="rule-title">PASO 3 👑</span></div>
             </div>
         </section>
 
-
-
-        <section class="content-block bg-dark-2">
-            <div class="section-title">
-                <h2 style="font-size: 3.5rem;">BUSCA</h2>
-                <p>TU PERFIL</p>
-            </div>
+        <section class="content-block bg-dark-1" style="width:100%;">
+            <div class="section-title"><h2 style="font-size: 3rem;">BUSCA</h2><p>TU PERFIL</p></div>
             <div class="gx-search-container">
                 <div class="search-box">
-                    <input type="text" id="gx-input" placeholder="Tu usuario de TikTok...">
-                    <button id="gx-btn" onclick="checkPlayerRacha()">CONSULTAR PERFIL</button>
+                    <input type="text" id="gx-input" placeholder="Tu usuario...">
+                    <button id="gx-btn" onclick="checkPlayerRacha()">CONSULTAR</button>
                 </div>
             </div>
         </section>
 
-        <div style="width:100%; max-width:1100px;">
-            <h2 style="font-family:'Orbitron'; text-align:center; color:var(--gx-accent); margin-bottom: 0;">👑 SALÓN DE LA FAMA</h2>
+        <div style="width:100%; max-width:1100px; padding: 40px 0;">
+            <h2 style="font-family:'Orbitron'; text-align:center; color:var(--gx-accent);">👑 SALÓN DE LA FAMA</h2>
             <div class="scroller-wrapper">
                 <div class="scroller-track">
-                    <div class="video-card"><video autoplay loop muted playsinline><source src="video1.mp4" type="video/mp4"></video><div class="video-label">LEON</div></div>
-                    <div class="video-card"><video autoplay loop muted playsinline><source src="video2.mp4" type="video/mp4"></video><div class="video-label">DAIRO</div></div>
-                    <div class="video-card"><video autoplay loop muted playsinline><source src="video3.mp4" type="video/mp4"></video><div class="video-label">RIAPIRA</div></div>
-                    <div class="video-card"><video autoplay loop muted playsinline><source src="video4.mp4" type="video/mp4"></video><div class="video-label">YOJAN</div></div>
-                    <div class="video-card"><video autoplay loop muted playsinline><source src="video5.mp4" type="video/mp4"></video><div class="video-label">RIAPIRA</div></div>
-                </div>
+                    </div>
             </div>
         </div>
-
     </div>
-
             <div class="modal-overlay" id="info-modal" onclick="closeModal(event)">
                 <div class="modal-box" id="modal-content-box" onclick="event.stopPropagation()">
                     <span class="close-btn" onclick="closeModal(event)">&times;</span>
@@ -1309,7 +1267,7 @@
 
             sortAndFill('body-donador', 'coins', '🪙', '#f1c40f');
             sortAndFill('body-taps', 'trivias', '🧠', '#00f2ff');
-            sortAndFill('body-nivel', 'taps', '❤️', '#ee1d52');
+            
         }
 
     } catch (e) {
