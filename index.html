@@ -957,85 +957,98 @@
         <img src="logo_azul.png" alt="Logo" class="header-logo" id="header-logo">
         <a href="index.html" class="logo-nav">CRIMI FUTBOL</a>
     </header>
-   <div class="main-content">
+  <div class="main-content">
     
-    <div style="text-align: center; margin-bottom: 10px;">
-    <p style="font-family: 'Orbitron'; font-size: 0.7rem; color: #888; letter-spacing: 5px; margin-bottom: 5px;">PARTNER OFICIAL</p>
-    <img src="poder.png" alt="Revista Poder" style="height: 60px; filter: drop-shadow(0 0 10px rgba(255,255,255,0.2));">
-</div>
-
-<div style="text-align: center; margin-bottom: 40px; padding: 20px; background: rgba(241, 196, 15, 0.05); border-radius: 15px; border: 1px dashed rgba(241, 196, 15, 0.3); width: 100%; max-width: 1100px;">
-    <h1 style="font-family: 'Orbitron'; color: #f1c40f; font-size: 2.5rem; margin: 0; text-shadow: 0 0 20px rgba(241, 196, 15, 0.6);">$600.000 COP</h1>
-    <p style="font-family: 'Rajdhani'; color: #fff; font-size: 1.2rem; letter-spacing: 4px; margin-top: 5px; font-weight: bold; text-transform: uppercase;">EN PREMIOS CADA SEMANA</p>
-</div>
-        <div class="rankings-wrapper" style="display: grid; grid-template-columns: 1fr 1fr; gap: 25px; width: 100%; max-width: 1200px; margin-top: 20px;">
-    
-    <div class="col-donadores">
-        <div class="section-title">
-            <h2 style="color: #f1c40f; font-size: 1.8rem;">DONADORES</h2>
-            <p>PREMIOS SEMANALES</p>
-        </div>
-        
-        <div style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 25px;">
-            <div class="prize-card prize-first" onclick="openModal('🥇 1ER DONADOR', 'Reservado para el patrocinador principal de la semana. ¡El máximo apoyo al canal!', '🥇')">
-                <div class="prize-rank">🥇 1ER DONADOR</div>
-                <div class="prize-amount">$150.000 COP</div>
-            </div>
-            <div class="prize-card" onclick="openModal('🥈 2DO DONADOR', 'Premio para el segundo gran apoyo de la semana en regalos del Live.', '🥈')">
-                <div class="prize-rank">🥈 2DO DONADOR</div>
-                <div class="prize-amount">$100.000 COP</div>
-            </div>
-            <div class="prize-card" onclick="openModal('🥉 3ER DONADOR', 'Premio para el tercer lugar de apoyo. ¡Toda ayuda cuenta!', '🥉')">
-                <div class="prize-rank">🥉 3ER DONADOR</div>
-                <div class="prize-amount">$50.000 COP</div>
-            </div>
-        </div>
-
-        <div class="rank-box">
-            <h3 style="color: #f1c40f; text-align:center;">🏆 TOP DONADORES</h3>
-            <table><tbody id="body-donador"></tbody></table>
-        </div>
+    <div style="text-align: center; margin-bottom: 10px; width: 100%;">
+        <p style="font-family: 'Orbitron'; font-size: 0.7rem; color: #888; letter-spacing: 5px; margin-bottom: 5px;">PARTNER OFICIAL</p>
+        <img src="poder.png" alt="Revista Poder" style="height: 60px; filter: drop-shadow(0 0 10px rgba(255,255,255,0.2));">
     </div>
 
-    <div class="col-trivias">
-        <div class="section-title">
-            <h2 style="color: #00f2ff; font-size: 1.8rem;">TRIVIAS</h2>
-            <p>PREMIOS SEMANALES</p>
+    <div style="text-align: center; margin-bottom: 40px; padding: 20px; background: rgba(241, 196, 15, 0.05); border-radius: 15px; border: 1px dashed rgba(241, 196, 15, 0.3); width: 100%; max-width: 1100px;">
+        <h1 style="font-family: 'Orbitron'; color: #f1c40f; font-size: 2.5rem; margin: 0; text-shadow: 0 0 20px rgba(241, 196, 15, 0.6);">$600.000 COP</h1>
+        <p style="font-family: 'Rajdhani'; color: #fff; font-size: 1.2rem; letter-spacing: 4px; margin-top: 5px; font-weight: bold; text-transform: uppercase;">EN PREMIOS CADA SEMANA</p>
+    </div>
+
+    <div class="rankings-wrapper" style="display: grid; grid-template-columns: 1fr 1fr; gap: 25px; width: 100%; max-width: 1200px; margin-top: 20px;">
+        
+        <div class="col-donadores">
+            <div class="section-title">
+                <h2 style="color: #f1c40f; font-size: 1.8rem;">DONADORES</h2>
+                <p>PREMIOS SEMANALES</p>
+            </div>
+            
+            <div style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 25px;">
+                <div class="prize-card prize-first" onclick="openModal('🥇 1ER DONADOR', 'Máximo apoyo de la semana.', '🥇')">
+                    <div class="prize-rank">🥇 1ER DONADOR</div>
+                    <div class="prize-amount">$150.000 COP</div>
+                </div>
+                <div class="prize-card" onclick="openModal('🥈 2DO DONADOR', 'Segundo apoyo del Live.', '🥈')">
+                    <div class="prize-rank">🥈 2DO DONADOR</div>
+                    <div class="prize-amount">$100.000 COP</div>
+                </div>
+                <div class="prize-card" onclick="openModal('🥉 3ER DONADOR', 'Tercer apoyo del Live.', '🥉')">
+                    <div class="prize-rank">🥉 3ER DONADOR</div>
+                    <div class="prize-amount">$50.000 COP</div>
+                </div>
+            </div>
+
+            <div class="rank-box">
+                <h3 style="color: #f1c40f; text-align:center;">🏆 TOP DONADORES</h3>
+                <table><tbody id="body-donador"></tbody></table>
+            </div>
         </div>
 
-        <div style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 25px;">
-            <div class="prize-card" style="border-left-color: #00f2ff;" onclick="openModal('🧠 EXPERTO 1', '¡El cerebro del Live! Para el usuario que más trivias adivine esta semana.', '🧠')">
-                <div class="prize-rank">🧠 EXPERTO 1</div>
-                <div class="prize-amount">$100.000 COP</div>
+        <div class="col-trivias">
+            <div class="section-title">
+                <h2 style="color: #00f2ff; font-size: 1.8rem;">TRIVIAS</h2>
+                <p>PREMIOS SEMANALES</p>
             </div>
-            <div class="prize-card" style="border-left-color: #00f2ff;" onclick="openModal('🧠 EXPERTO 2', 'Segundo lugar en sabiduría. ¡Estás muy cerca de la cima!', '🧠')">
-                <div class="prize-rank">🧠 EXPERTO 2</div>
-                <div class="prize-amount">$100.000 COP</div>
+
+            <div style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 25px;">
+                <div class="prize-card" style="border-left-color: #00f2ff;" onclick="openModal('🧠 EXPERTO 1', 'El mejor en trivias.', '🧠')">
+                    <div class="prize-rank">🧠 EXPERTO 1</div>
+                    <div class="prize-amount">$100.000 COP</div>
+                </div>
+                <div class="prize-card" style="border-left-color: #00f2ff;" onclick="openModal('🧠 EXPERTO 2', 'Segundo mejor en trivias.', '🧠')">
+                    <div class="prize-rank">🧠 EXPERTO 2</div>
+                    <div class="prize-amount">$100.000 COP</div>
+                </div>
+                <div class="prize-card" style="border-left-color: #00f2ff;" onclick="openModal('🧠 EXPERTOS 3 Y 4', 'Tercer y cuarto lugar ($50k c/u).', '🧠')">
+                    <div class="prize-rank">🧠 EXPERTOS 3 Y 4</div>
+                    <div class="prize-amount">$100.000 COP <small style="font-size: 0.7rem; color: #888;">(TOTAL)</small></div>
+                </div>
             </div>
-            <div class="prize-card" style="border-left-color: #00f2ff;" onclick="openModal('🧠 EXPERTOS 3 Y 4', 'Premios para el tercer y cuarto lugar del ranking de trivias. ($50.000 c/u)', '🧠')">
-    <div class="prize-rank">🧠 EXPERTOS 3 Y 4</div>
-    <div class="prize-amount">$100.000 COP <small style="font-size: 0.7rem; color: #888;">(TOTAL)</small></div>
-</div>
+
+            <div class="rank-box" style="border-top-color: #00f2ff;">
+                <h3 style="color: #00f2ff; text-align:center;">🧠 TOP TRIVIAS</h3>
+                <table><tbody id="body-taps"></tbody></table>
             </div>
         </div>
+    </div> </div> ```
 
-        <div class="rank-box" style="border-top-color: #00f2ff;">
+### Paso final para los VIDEOS:
+Busca la sección de los videos (Salón de la Fama) y asegúrate de que la línea del "track" sea esta para que se centren:
+
+```html
+<div class="scroller-track" style="display: flex; gap: 15px; width: max-content; margin: 0 auto; padding: 0 10px; justify-content: center;">
+
+            <div class="rank-box" style="border-top-color: #00f2ff;">
             <h3 style="color: #00f2ff; text-align:center;">🧠 TOP TRIVIAS</h3>
             <table><tbody id="body-taps"></tbody></table>
-        </div>
-    </div>
-</div>
-
-        <section class="content-block bg-dark-1" style="width:100%; margin-top:40px;">
+           </div>
+           </div>
+           </div>
+ 
+            <section class="content-block bg-dark-1" style="width:100%; margin-top:40px;">
             <div class="section-title">
                 <h2 style="color: #f1c40f;">ESTADÍSTICAS FPC</h2>
                 <p>PALMARÉS E HISTORIAL DE WINS</p>
             </div>
             <div id="equipos-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 15px; width: 100%; max-width: 1100px;">
             </div>
-        </section>
+             </section>
 
-        <section class="content-block bg-dark-2" style="width:100%;">
+              <section class="content-block bg-dark-2" style="width:100%;">
             <div class="section-title">
                 <h2>¿CÓMO JUGAR?</h2>
                 <p>GUÍA DE INICIO</p>
