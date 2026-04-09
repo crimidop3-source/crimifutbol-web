@@ -2,12 +2,23 @@
     "users": [
         {
             "username": "Cristian",
-            "exp": 1000,
+            "exp": 1100,
             "level": 1,
             "team": "Millonarios",
-            "rachaDias": 1,
-            "ultimaFecha": "2026-04-07",
+            "rachaDias": 2,
+            "ultimaFecha": "2026-04-08",
             "coins": 0,
+            "trivias": 0,
+            "taps": 0
+        },
+        {
+            "username": "lauracamilaadara",
+            "exp": 495,
+            "level": 1,
+            "team": "",
+            "rachaDias": 1,
+            "ultimaFecha": "2026-04-08",
+            "coins": 99,
             "trivias": 0,
             "taps": 0
         },
@@ -34,6 +45,28 @@
             "taps": 0
         },
         {
+            "username": "nicocomandoazul",
+            "exp": 160,
+            "level": 1,
+            "team": "",
+            "rachaDias": 2,
+            "ultimaFecha": "2026-04-08",
+            "coins": 0,
+            "trivias": 7,
+            "taps": 0
+        },
+        {
+            "username": "fabiangomez587",
+            "exp": 140,
+            "level": 1,
+            "team": "",
+            "rachaDias": 2,
+            "ultimaFecha": "2026-04-08",
+            "coins": 0,
+            "trivias": 6,
+            "taps": 0
+        },
+        {
             "username": "crimi",
             "exp": 80,
             "level": 1,
@@ -45,25 +78,36 @@
             "taps": 0
         },
         {
-            "username": "fabiangomez587",
-            "exp": 60,
+            "username": "oscar_molina9200",
+            "exp": 70,
             "level": 1,
-            "team": "",
+            "team": "CALi",
             "rachaDias": 1,
-            "ultimaFecha": "2026-04-07",
+            "ultimaFecha": "2026-04-08",
+            "coins": 0,
+            "trivias": 3,
+            "taps": 0
+        },
+        {
+            "username": "juan.miranda9863",
+            "exp": 50,
+            "level": 1,
+            "team": "MEDELLIN",
+            "rachaDias": 2,
+            "ultimaFecha": "2026-04-08",
             "coins": 0,
             "trivias": 2,
             "taps": 0
         },
         {
-            "username": "nicocomandoazul",
-            "exp": 60,
+            "username": "luchitocaycedo",
+            "exp": 40,
             "level": 1,
             "team": "",
             "rachaDias": 1,
-            "ultimaFecha": "2026-04-07",
+            "ultimaFecha": "2026-04-08",
             "coins": 0,
-            "trivias": 2,
+            "trivias": 1,
             "taps": 0
         },
         {
@@ -100,12 +144,34 @@
             "taps": 0
         },
         {
-            "username": "juan.miranda9863",
-            "exp": 10,
+            "username": "yeison.herrera51",
+            "exp": 20,
             "level": 1,
-            "team": "MEDELLIN",
+            "team": "",
             "rachaDias": 1,
-            "ultimaFecha": "2026-04-07",
+            "ultimaFecha": "2026-04-08",
+            "coins": 0,
+            "trivias": 0,
+            "taps": 0
+        },
+        {
+            "username": "007gggghtyh",
+            "exp": 20,
+            "level": 1,
+            "team": "",
+            "rachaDias": 1,
+            "ultimaFecha": "2026-04-08",
+            "coins": 0,
+            "trivias": 0,
+            "taps": 0
+        },
+        {
+            "username": "bjbustillo",
+            "exp": 15,
+            "level": 1,
+            "team": "JUNIOR",
+            "rachaDias": 1,
+            "ultimaFecha": "2026-04-08",
             "coins": 0,
             "trivias": 0,
             "taps": 0
@@ -128,6 +194,17 @@
             "team": "",
             "rachaDias": 1,
             "ultimaFecha": "2026-04-07",
+            "coins": 1,
+            "trivias": 0,
+            "taps": 0
+        },
+        {
+            "username": "lauralizarazo78",
+            "exp": 5,
+            "level": 1,
+            "team": "",
+            "rachaDias": 1,
+            "ultimaFecha": "2026-04-08",
             "coins": 1,
             "trivias": 0,
             "taps": 0
