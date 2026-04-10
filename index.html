@@ -1103,7 +1103,7 @@
 
                 async function fetchAllUserData() {
                     try {
-                        // Descargamos ambos archivos al tiempo
+                        // 1. Descargamos ambos archivos
                         const [resFpc, resTrivias] = await Promise.all([
                             fetch("fpc_exp.json"),
                             fetch("trivias_exp.json")
@@ -1112,13 +1112,35 @@
                         const dataFpc = await resFpc.json();
                         const dataTrivias = await resTrivias.json();
 
-                        // Combinamos todos los usuarios en una sola lista para el buscador
-                        const allUsers = [...(dataFpc.users || []), ...(dataTrivias.users || [])];
+                        const usuariosFpc = dataFpc.users || [];
+                        const usuariosTrivias = dataTrivias.users || [];
 
-                        // Quitamos duplicados por si alguien está en ambos archivos
-                        const uniqueUsers = Array.from(new Map(allUsers.map(u => [u.username.toLowerCase(), u])).values());
+                        // 2. Usamos un Mapa para organizar la información
+                        const userMap = new Map();
 
-                        return uniqueUsers.map(u => ({ ...u, torneo: "FPC" }));
+                        // 3. PRIMERO cargamos los del FPC (Estos mandan en el Nivel y Equipo)
+                        usuariosFpc.forEach(u => {
+                            userMap.set(u.username.toLowerCase(), { ...u });
+                        });
+
+                        // 4. LUEGO procesamos los de Trivias
+                        usuariosTrivias.forEach(uT => {
+                            const usernameLower = uT.username.toLowerCase();
+                            if (userMap.has(usernameLower)) {
+                                // Si ya existe en FPC, SOLO le actualizamos las trivias
+                                // pero dejamos el nivel y equipo que ya tenía de fpc_exp.json
+                                const userExistente = userMap.get(usernameLower);
+                                userExistente.trivias = uT.trivias;
+                            } else {
+                                // Si el usuario SOLO está en el archivo de trivias, lo agregamos
+                                // con nivel 1 por defecto ya que no aparece en el principal
+                                userMap.set(usernameLower, { ...uT, level: 1 });
+                            }
+                        });
+
+                        // Convertimos el mapa de nuevo a una lista para el buscador
+                        return Array.from(userMap.values()).map(u => ({ ...u, torneo: "FPC" }));
+
                     } catch (e) {
                         console.error("Error cargando base de datos combinada:", e);
                         return [];
