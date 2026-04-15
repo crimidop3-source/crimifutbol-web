@@ -2,7 +2,7 @@
     "wins": [
         {
             "country": "America",
-            "wins": 0,
+            "wins": 20,
             "cups": 0
         },
         {
@@ -12,22 +12,22 @@
         },
         {
             "country": "Junior",
-            "wins": 0,
+            "wins": 820,
             "cups": 0
         },
         {
             "country": "Medellin",
-            "wins": 0,
+            "wins": 290,
             "cups": 0
         },
         {
             "country": "Nacional",
-            "wins": 0,
+            "wins": 160,
             "cups": 1
         },
         {
             "country": "Santa Fe",
-            "wins": 0,
+            "wins": 1080,
             "cups": 0
         },
         {
@@ -37,7 +37,7 @@
         },
         {
             "country": "Bucaramanga",
-            "wins": 0,
+            "wins": 750,
             "cups": 0
         },
         {
