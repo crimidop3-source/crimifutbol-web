@@ -2,24 +2,79 @@
     "users": [
         {
             "username": "Cristian",
-            "exp": 1820,
-            "level": 1,
+            "exp": 2100,
+            "level": 2,
             "team": "Millonarios",
-            "rachaDias": 1,
-            "ultimaFecha": "2026-04-14",
+            "rachaDias": 4,
+            "ultimaFecha": "2026-04-17",
             "coins": 0,
             "trivias": 0,
             "taps": 0
         },
         {
             "username": "jhonja1913",
-            "exp": 760,
+            "exp": 1352,
+            "level": 1,
+            "team": "",
+            "rachaDias": 4,
+            "ultimaFecha": "2026-04-17",
+            "coins": 0,
+            "trivias": 14,
+            "taps": 0
+        },
+        {
+            "username": "fabiangomez587",
+            "exp": 776,
+            "level": 1,
+            "team": "",
+            "rachaDias": 3,
+            "ultimaFecha": "2026-04-16",
+            "coins": 0,
+            "trivias": 0,
+            "taps": 0
+        },
+        {
+            "username": "nicocomandoazul",
+            "exp": 700,
             "level": 1,
             "team": "",
             "rachaDias": 1,
-            "ultimaFecha": "2026-04-14",
+            "ultimaFecha": "2026-04-17",
             "coins": 0,
-            "trivias": 7,
+            "trivias": 12,
+            "taps": 0
+        },
+        {
+            "username": "samjeico",
+            "exp": 564,
+            "level": 1,
+            "team": "",
+            "rachaDias": 3,
+            "ultimaFecha": "2026-04-16",
+            "coins": 0,
+            "trivias": 0,
+            "taps": 0
+        },
+        {
+            "username": "bjbustillo",
+            "exp": 540,
+            "level": 1,
+            "team": "JUNIOR",
+            "rachaDias": 4,
+            "ultimaFecha": "2026-04-17",
+            "coins": 0,
+            "trivias": 13,
+            "taps": 0
+        },
+        {
+            "username": "friillesfi",
+            "exp": 525,
+            "level": 1,
+            "team": "JUNIOR",
+            "rachaDias": 2,
+            "ultimaFecha": "2026-04-17",
+            "coins": 0,
+            "trivias": 1,
             "taps": 0
         },
         {
@@ -34,69 +89,58 @@
             "taps": 0
         },
         {
-            "username": "samjeico",
-            "exp": 480,
+            "username": "wantippe",
+            "exp": 450,
             "level": 1,
             "team": "",
             "rachaDias": 1,
-            "ultimaFecha": "2026-04-14",
+            "ultimaFecha": "2026-04-15",
             "coins": 0,
-            "trivias": 5,
+            "trivias": 0,
             "taps": 0
         },
         {
-            "username": "fabiangomez587",
-            "exp": 380,
+            "username": "lauralizarazo78",
+            "exp": 355,
             "level": 1,
             "team": "",
-            "rachaDias": 1,
-            "ultimaFecha": "2026-04-14",
-            "coins": 0,
-            "trivias": 6,
-            "taps": 0
-        },
-        {
-            "username": "nicocomandoazul",
-            "exp": 360,
-            "level": 1,
-            "team": "",
-            "rachaDias": 1,
-            "ultimaFecha": "2026-04-14",
-            "coins": 0,
-            "trivias": 2,
+            "rachaDias": 2,
+            "ultimaFecha": "2026-04-15",
+            "coins": 71,
+            "trivias": 0,
             "taps": 0
         },
         {
             "username": "wjuan_navia",
-            "exp": 280,
+            "exp": 320,
             "level": 1,
             "team": "",
-            "rachaDias": 1,
-            "ultimaFecha": "2026-04-14",
-            "coins": 0,
-            "trivias": 4,
-            "taps": 0
-        },
-        {
-            "username": "wantippe",
-            "exp": 250,
-            "level": 1,
-            "team": "",
-            "rachaDias": 1,
-            "ultimaFecha": "2026-04-07",
+            "rachaDias": 2,
+            "ultimaFecha": "2026-04-15",
             "coins": 0,
             "trivias": 0,
             "taps": 0
         },
         {
             "username": "pipe71390",
-            "exp": 240,
+            "exp": 300,
             "level": 1,
             "team": "",
             "rachaDias": 1,
-            "ultimaFecha": "2026-04-10",
+            "ultimaFecha": "2026-04-16",
             "coins": 0,
             "trivias": 0,
+            "taps": 0
+        },
+        {
+            "username": "ricardo.pulido18",
+            "exp": 280,
+            "level": 1,
+            "team": "",
+            "rachaDias": 2,
+            "ultimaFecha": "2026-04-17",
+            "coins": 0,
+            "trivias": 2,
             "taps": 0
         },
         {
@@ -111,6 +155,17 @@
             "taps": 0
         },
         {
+            "username": "juan.miranda9863",
+            "exp": 192,
+            "level": 1,
+            "team": "MEDELLIN",
+            "rachaDias": 1,
+            "ultimaFecha": "2026-04-17",
+            "coins": 0,
+            "trivias": 1,
+            "taps": 0
+        },
+        {
             "username": "camilojaimes.10",
             "exp": 180,
             "level": 1,
@@ -118,39 +173,6 @@
             "rachaDias": 1,
             "ultimaFecha": "2026-04-12",
             "coins": 0,
-            "trivias": 0,
-            "taps": 0
-        },
-        {
-            "username": "juan.miranda9863",
-            "exp": 172,
-            "level": 1,
-            "team": "MEDELLIN",
-            "rachaDias": 1,
-            "ultimaFecha": "2026-04-14",
-            "coins": 0,
-            "trivias": 2,
-            "taps": 0
-        },
-        {
-            "username": "bjbustillo",
-            "exp": 135,
-            "level": 1,
-            "team": "JUNIOR",
-            "rachaDias": 1,
-            "ultimaFecha": "2026-04-14",
-            "coins": 0,
-            "trivias": 3,
-            "taps": 0
-        },
-        {
-            "username": "lauralizarazo78",
-            "exp": 100,
-            "level": 1,
-            "team": "",
-            "rachaDias": 1,
-            "ultimaFecha": "2026-04-14",
-            "coins": 20,
             "trivias": 0,
             "taps": 0
         },
@@ -188,14 +210,36 @@
             "taps": 0
         },
         {
-            "username": "ricardo.pulido18",
+            "username": "juliantorres5333",
             "exp": 60,
             "level": 1,
             "team": "",
             "rachaDias": 1,
-            "ultimaFecha": "2026-04-14",
+            "ultimaFecha": "2026-04-16",
+            "coins": 0,
+            "trivias": 0,
+            "taps": 0
+        },
+        {
+            "username": "yeickson.herrera",
+            "exp": 60,
+            "level": 1,
+            "team": "",
+            "rachaDias": 1,
+            "ultimaFecha": "2026-04-17",
             "coins": 0,
             "trivias": 2,
+            "taps": 0
+        },
+        {
+            "username": "juan.carlos.zapat528",
+            "exp": 40,
+            "level": 1,
+            "team": "",
+            "rachaDias": 1,
+            "ultimaFecha": "2026-04-17",
+            "coins": 0,
+            "trivias": 1,
             "taps": 0
         },
         {
@@ -210,12 +254,23 @@
             "taps": 0
         },
         {
-            "username": "deivi.urrutia",
+            "username": "livancitoo",
+            "exp": 20,
+            "level": 1,
+            "team": "",
+            "rachaDias": 2,
+            "ultimaFecha": "2026-04-17",
+            "coins": 4,
+            "trivias": 0,
+            "taps": 0
+        },
+        {
+            "username": "un.colombiano.fue",
             "exp": 20,
             "level": 1,
             "team": "",
             "rachaDias": 1,
-            "ultimaFecha": "2026-04-09",
+            "ultimaFecha": "2026-04-07",
             "coins": 0,
             "trivias": 0,
             "taps": 0
@@ -232,12 +287,12 @@
             "taps": 0
         },
         {
-            "username": "007gggghtyh",
+            "username": "deivi.urrutia",
             "exp": 20,
             "level": 1,
             "team": "",
             "rachaDias": 1,
-            "ultimaFecha": "2026-04-08",
+            "ultimaFecha": "2026-04-09",
             "coins": 0,
             "trivias": 0,
             "taps": 0
@@ -254,12 +309,12 @@
             "taps": 0
         },
         {
-            "username": "un.colombiano.fue",
+            "username": "007gggghtyh",
             "exp": 20,
             "level": 1,
             "team": "",
             "rachaDias": 1,
-            "ultimaFecha": "2026-04-07",
+            "ultimaFecha": "2026-04-08",
             "coins": 0,
             "trivias": 0,
             "taps": 0
@@ -272,28 +327,6 @@
             "rachaDias": 1,
             "ultimaFecha": "2026-04-07",
             "coins": 0,
-            "trivias": 0,
-            "taps": 0
-        },
-        {
-            "username": "juliana.99suarez",
-            "exp": 5,
-            "level": 1,
-            "team": "BUCARAMANGA",
-            "rachaDias": 1,
-            "ultimaFecha": "2026-04-10",
-            "coins": 0,
-            "trivias": 0,
-            "taps": 0
-        },
-        {
-            "username": "jeison3148",
-            "exp": 5,
-            "level": 1,
-            "team": "",
-            "rachaDias": 1,
-            "ultimaFecha": "2026-04-09",
-            "coins": 1,
             "trivias": 0,
             "taps": 0
         },
@@ -320,12 +353,34 @@
             "taps": 0
         },
         {
+            "username": "jeison3148",
+            "exp": 5,
+            "level": 1,
+            "team": "",
+            "rachaDias": 1,
+            "ultimaFecha": "2026-04-09",
+            "coins": 1,
+            "trivias": 0,
+            "taps": 0
+        },
+        {
             "username": "tabares14__",
             "exp": 5,
             "level": 1,
             "team": "AMERICA",
             "rachaDias": 1,
             "ultimaFecha": "2026-04-09",
+            "coins": 0,
+            "trivias": 0,
+            "taps": 0
+        },
+        {
+            "username": "juliana.99suarez",
+            "exp": 5,
+            "level": 1,
+            "team": "BUCARAMANGA",
+            "rachaDias": 1,
+            "ultimaFecha": "2026-04-10",
             "coins": 0,
             "trivias": 0,
             "taps": 0
