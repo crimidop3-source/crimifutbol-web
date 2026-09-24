@@ -717,218 +717,259 @@ h3{
 <meta name="twitter:description" content="GolUp convierte tus transmisiones en experiencias interactivas de fútbol en tiempo real. Descarga el juego, explora sus modos, personaliza equipos y regalos, y lleva tu comunidad a una nueva forma de vivir el LIVE.">
 
 
-<style id="golup-site-electric-blue-final">
+<style id="golup-site-control-center-final">
+/* ============================================================
+   GOLUP WEB · MISMO LENGUAJE VISUAL DEL CONTROL CENTER
+   ============================================================ */
 :root{
-  --bg:#030817!important;
-  --bg2:#061127!important;
-  --panel:#08162f!important;
-  --panel2:#0b1d3e!important;
-  --line:#244f92!important;
-  --line2:#7aa8ff22!important;
-  --text:#f2f7ff!important;
-  --muted:#89a8dc!important;
-
-  /* El nombre histórico de la variable se conserva para no romper JS/CSS,
-     pero su valor YA ES AZUL. */
+  --bg:#05070a!important;
+  --bg2:#080b11!important;
+  --panel:#0a0e16!important;
+  --panel2:#0d121b!important;
+  --line:#1b2537!important;
+  --line2:#ffffff12!important;
+  --text:#eff8f6!important;
+  --muted:#556b92!important;
+  /* Se conserva el nombre histórico --green para no romper nada. */
   --green:#2f78ff!important;
   --green2:#1557d6!important;
   --green3:#86c7ff!important;
+  --red:#ff5369!important;
+  --orange:#ffb44d!important;
+  --shadow:0 24px 58px #000a!important;
 }
 
-html,
-body,
-.app,
-.main,
-.content{
+html,body{background:#05070a!important}
+body{
   background:
-    radial-gradient(circle at 78% 8%,#2f78ff20,transparent 27%),
-    radial-gradient(circle at 18% 84%,#1f6fff15,transparent 30%),
-    linear-gradient(180deg,#030817 0%,#061127 55%,#07152e 100%)!important;
+    radial-gradient(circle at 67% 12%,#0025661f,transparent 28%),
+    radial-gradient(circle at 47% 84%,#003ca313,transparent 32%),
+    linear-gradient(180deg,#05070a,#06080c 55%,#040707)!important;
 }
-
 body::before{
+  opacity:.42!important;
   background-image:
-    radial-gradient(circle at 16% 16%,#2f78ff45 0 1px,transparent 1.6px),
-    radial-gradient(circle at 74% 22%,#6aaeff35 0 1px,transparent 1.6px),
-    radial-gradient(circle at 44% 72%,#86c7ff28 0 1px,transparent 1.6px)!important;
+    radial-gradient(circle at 16% 16%,#2f78ff55 0 1px,transparent 1.6px),
+    radial-gradient(circle at 74% 22%,#2f78ff40 0 1px,transparent 1.6px),
+    radial-gradient(circle at 44% 72%,#78a6f633 0 1px,transparent 1.6px)!important;
+  background-size:290px 290px,380px 380px,510px 510px!important;
 }
+.app,.main,.content{background:transparent!important}
 
-/* SIDEBAR */
+/* SIDEBAR — mismo tono del Control Center */
 .sidebar{
-  border-right-color:#244f92!important;
+  border-right:1px solid #1b2537!important;
   background:
-    radial-gradient(ellipse at 40% 89%,#1f6fff22,transparent 42%),
-    linear-gradient(180deg,#061127,#07162f 70%,#040b1b)!important;
+    radial-gradient(ellipse at 40% 89%,#0b4db528,transparent 42%),
+    linear-gradient(180deg,#070b12,#060a11 70%,#05070b)!important;
 }
+.brand{padding:6px 9px 21px!important}
+.logo{
+  background:linear-gradient(145deg,#081225,#07101e)!important;
+  border-color:#2f78ff55!important;
+  box-shadow:0 0 0 1px #ffffff0a inset,0 10px 24px #0008,0 0 22px #2f78ff20!important;
+}
+.brand-copy strong{font-size:16px!important;font-weight:900!important;font-style:italic!important}
+.brand-copy strong span{color:#2f78ff!important;text-shadow:0 0 18px #2f78ff3b!important}
+.brand-copy small{color:#455777!important;font-size:8px!important;letter-spacing:.2em!important}
 
-.brand-copy strong span{
-  color:#2f78ff!important;
-  text-shadow:0 0 18px #2f78ff66!important;
-}
-.brand-copy small{
-  color:#86c7ff!important;
-}
-
-/* NAVEGACIÓN */
+.nav{gap:6px!important}
 .nav-btn{
-  color:#bfd5ff!important;
+  min-height:58px!important;
+  padding:10px 12px 10px 48px!important;
+  color:#6588c3!important;
+  border:1px solid transparent!important;
+  background:transparent!important;
+  font-weight:720!important;
 }
 .nav-btn:hover{
-  background:#0a2045!important;
-  border-color:#2f62ad!important;
+  background:#0b111a!important;
+  border-color:#1d2739!important;
 }
 .nav-btn.active{
-  background:linear-gradient(90deg,#174dba 0%,#102d66 58%,#091932 100%)!important;
-  border-color:#4b83e7!important;
-  color:#a9ceff!important;
+  background:linear-gradient(90deg,#00276ab8,#2f78ff0c)!important;
+  border-color:#2f78ff3d!important;
+  color:#4b89f4!important;
   box-shadow:inset 3px 0 0 #2f78ff!important;
 }
+.nav-icon{color:#607aa6!important}
 .nav-btn.active .nav-icon{
-  color:#86c7ff!important;
-  filter:drop-shadow(0 0 8px #2f78ffaa)!important;
+  color:#2f78ff!important;
+  filter:drop-shadow(0 0 7px #2f78ff66)!important;
 }
-.nav-sub{
-  color:#799bd4!important;
+.nav-sub{color:#495c7d!important}
+.side-status{
+  border-color:#152032!important;
+  background:#070b13!important;
+  box-shadow:none!important;
 }
+.side-status strong{color:#6a8dcb!important}
+.side-status small{color:#435574!important}
+.side-status strong::before{background:#2f78ff!important;box-shadow:0 0 9px #2f78ff!important}
 
-/* BARRA SUPERIOR */
+/* TOP BAR */
 .topbar{
-  background:#050d20ef!important;
-  border-bottom-color:#244f92!important;
+  height:58px!important;
+  background:#06080ce8!important;
+  border-bottom:1px solid #1b2537!important;
+  backdrop-filter:blur(16px)!important;
 }
-.page-title{
-  color:#8eafe8!important;
-}
-
-/* WHATSAPP TAMBIÉN QUEDA EN EL BRANDING AZUL */
-.whatsapp-mini,
-.buy-btn{
-  border-color:#4b83e7!important;
-  background:#2f78ff12!important;
-  color:#9bc8ff!important;
+.page-title{color:#556c93!important;font-size:11px!important;letter-spacing:.16em!important}
+.whatsapp-mini{
+  border-color:#2f78ff64!important;
+  background:linear-gradient(90deg,#001945,#081731)!important;
+  color:#85b1ff!important;
 }
 
 /* PANELES */
-.panel,
-.game-card,
-.tutorial-card,
-.help-card,
-.change,
-.security-note,
-.side-status{
-  background:
-    radial-gradient(circle at 90% 8%,#2f78ff0c,transparent 30%),
-    linear-gradient(180deg,#0b1d3c,#07152d)!important;
-  border-color:#285799!important;
-  box-shadow:0 14px 38px #0008,0 0 0 1px #ffffff08 inset,0 0 24px #2f78ff0c!important;
+.panel,.game-card,.tutorial-card,.help-card{
+  border:1px solid #1b2537!important;
+  background:linear-gradient(180deg,#0a0e16f4,#070b11f4)!important;
+  box-shadow:0 24px 58px #000a!important;
+}
+.change,.security-note,.side-status{
+  background:#070b13!important;
+}
+.change{border-color:#152034!important;color:#546a90!important}
+.change strong{color:#739add!important}
+.security-note{
+  border-color:#1c2a41!important;
+  border-left-color:#2f78ff!important;
+  color:#546a91!important;
 }
 
-/* DESCARGAS */
+/* HERO — inspirado en la pantalla Acceso del Control Center */
 .download-hero{
+  min-height:350px!important;
+  padding:38px 36px!important;
   background:
-    radial-gradient(circle at 86% 16%,#2f78ff27,transparent 31%),
-    linear-gradient(145deg,#0b1b38,#07142b 62%,#050d20)!important;
+    radial-gradient(ellipse at 82% 18%,#003eaa20,transparent 42%),
+    linear-gradient(180deg,#070b12,#070b11 70%,#060a11)!important;
+}
+.download-hero::before{
+  content:"";
+  position:absolute;
+  left:-12%;
+  right:-12%;
+  bottom:-235px;
+  height:340px;
+  border-radius:50% 50% 0 0;
+  border-top:1px solid #2f78ff70;
+  background:linear-gradient(180deg,#0a1830,#070d16 50%,#05080c);
+  box-shadow:0 -15px 70px #2f78ff20;
+  pointer-events:none;
 }
 .download-hero::after{
-  border-color:#2f78ff3b!important;
-  box-shadow:0 0 90px #2f78ff18!important;
+  right:-125px!important;
+  top:-165px!important;
+  border-color:#2f78ff22!important;
+  box-shadow:0 0 90px #2f78ff0d!important;
 }
-.download-copy,
-.info-row span,
-.change,
-.security-note{
-  color:#88a7db!important;
+.download-hero h1{
+  font-weight:900!important;
+  font-style:italic!important;
+  letter-spacing:-.045em!important;
 }
+.download-copy{color:#6079a5!important}
+.eyebrow{color:#51678c!important;letter-spacing:.18em!important}
 .version-chip{
-  border-color:#2c5798!important;
-  background:#071731!important;
-  color:#96b6ea!important;
+  border-color:#1f2c42!important;
+  background:#070d16!important;
+  color:#6079a5!important;
 }
+.version-chip strong{color:#eff8f6!important}
 
 /* BOTONES */
 .btn{
-  border-color:#315b9b!important;
-  background:#091a37!important;
-  color:#dbe9ff!important;
+  border:1px solid #242f43!important;
+  background:linear-gradient(145deg,#121823,#090d15)!important;
+  color:#ebf6f4!important;
+  box-shadow:none!important;
+  transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease!important;
 }
 .btn:hover{
-  border-color:#5a8bea!important;
-  background:#0d2450!important;
+  transform:translateY(-2px);
+  border-color:#2f78ff78!important;
+  background:linear-gradient(145deg,#121823,#090d15)!important;
+  box-shadow:0 14px 35px #2f78ff15!important;
 }
 .btn.primary{
-  border-color:#79a8ff!important;
-  background:linear-gradient(145deg,#2f78ff,#1557d6)!important;
+  background:linear-gradient(145deg,#003a9d,#001c4b)!important;
+  border-color:#2f78ff!important;
   color:#fff!important;
-  box-shadow:0 10px 26px #124bb15c,0 0 18px #2f78ff2a!important;
+  box-shadow:0 14px 38px #001a4f99!important;
 }
 .btn.primary:hover{
-  background:linear-gradient(145deg,#4b8cff,#2268e6)!important;
-  border-color:#a0c6ff!important;
+  background:linear-gradient(145deg,#0649bd,#002663)!important;
+  border-color:#78a7ff!important;
 }
+.buy-btn{
+  border-color:#2f78ff55!important;
+  background:#2f78ff09!important;
+  color:#6894df!important;
+}
+
+/* INFORMACIÓN */
+.info-row{border-bottom-color:#141e30!important}
+.info-row span{color:#4d6285!important}
+.info-row strong{color:#7197d9!important}
 
 /* CATÁLOGO */
-.game-card{
-  background:linear-gradient(180deg,#0a1a38,#07142b)!important;
-}
+.game-card{background:linear-gradient(180deg,#0a0e16,#070b11)!important}
 .game-video{
-  border-bottom-color:#285799!important;
+  border-bottom-color:#172235!important;
   background:
-    radial-gradient(circle at 70% 26%,#2f78ff1b,transparent 28%),
-    linear-gradient(145deg,#0d2450,#07142b)!important;
+    radial-gradient(circle at 70% 26%,#2f78ff17,transparent 28%),
+    linear-gradient(145deg,#0d1420,#070b11)!important;
 }
 .play-orb{
-  border-color:#4b83e7!important;
-  background:#2f78ff12!important;
-  color:#86c7ff!important;
-  box-shadow:0 0 30px #2f78ff22!important;
+  border-color:#2f78ff52!important;
+  background:#2f78ff0b!important;
+  color:#2f78ff!important;
+  box-shadow:0 0 30px #2f78ff13!important;
 }
-.game-code,
-.game-tag{
-  color:#86c7ff!important;
-}
-.game-tag{
-  border-color:#315fa9!important;
-}
-.game-card p,
-.video-placeholder small{
-  color:#87a4d5!important;
-}
+.video-placeholder strong{color:#759de1!important}
+.video-placeholder small,.game-card p{color:#51668b!important}
+.game-code{color:#52678d!important}
+.game-tag{border-color:#233450!important;color:#6181ba!important}
 
 /* TUTORIALES */
+.tutorial-card{background:#080c13!important}
 .tutorial-media{
-  border-bottom-color:#285799!important;
-  background:linear-gradient(135deg,#0c2149,#07142b 70%)!important;
+  border-bottom-color:#172234!important;
+  background:linear-gradient(135deg,#0b1321,#070b11 70%)!important;
 }
-.tutorial-body p,
-.help-card span{
-  color:#89a6d7!important;
-}
-.help-card a{
-  color:#86c7ff!important;
-}
+.tutorial-body p,.help-card span{color:#4d6285!important}
+.help-card{background:#070b13!important;border-color:#182438!important;box-shadow:none!important}
+.help-card strong{color:#749ce0!important}
+.help-card a{color:#5484d8!important}
 
-/* ESTADOS / TOAST */
-.side-status strong::before{
-  background:#2f78ff!important;
-  box-shadow:0 0 10px #2f78ff!important;
-}
+/* TOAST / ACCESIBILIDAD */
 .toast{
-  border-color:#315fa9!important;
+  border-color:#253248!important;
   border-left-color:#2f78ff!important;
-  background:#081832f5!important;
-  color:#dceaff!important;
+  background:#0b0f17f5!important;
+  color:#eff8f6!important;
+  box-shadow:0 20px 55px #000b!important;
+}
+button:focus-visible,a:focus-visible,input:focus-visible{
+  outline-color:#2f78ff!important;
+}
+*{scrollbar-color:#212d43 #070a10}
+
+/* Reproductores externos */
+.media-frame{
+  width:100%;
+  height:100%;
+  border:0;
+  display:block;
+  background:#050609;
 }
 
-/* ENFOQUE */
-button:focus-visible,
-a:focus-visible,
-input:focus-visible{
-  outline-color:#6aa5ff!important;
-}
-
-/* SCROLLBAR */
-*{
-  scrollbar-color:#315fae #061127;
+/* En móvil conservamos el carácter del Control Center sin aplastar contenido. */
+@media(max-width:700px){
+  .download-hero{min-height:320px!important;padding:26px 22px!important}
+  .download-hero h1{font-size:clamp(34px,11vw,52px)!important}
 }
 </style>
 
@@ -1112,11 +1153,22 @@ input:focus-visible{
 /* ============================================================
    GOLUP WEB · CONFIGURACIÓN RÁPIDA
 
-   1. Cuando publiques el instalador, pega su URL en downloadUrl.
-   2. Para agregar un video, escribe su ruta/URL en video.
-      Ejemplo: videos/rey-por-puntos.mp4
-   3. La subida real de archivos desde un panel web requiere
-      backend/hosting. Esta página no finge guardar archivos.
+   1. JUEGO:
+      - Sube tu ZIP/EXE a la carpeta /downloads de tu hosting
+        o usa una URL pública de almacenamiento.
+      - Después pega esa ruta/URL en SITE.downloadUrl.
+        Ejemplo: "downloads/GolUp-Windows.zip"
+
+   2. VIDEOS:
+      - Sube tus MP4 a /videos y pega la ruta en cada campo video.
+        Ejemplo: "videos/f1-rey-por-puntos.mp4"
+      - También puedes pegar un enlace público directo .mp4.
+      - Esta versión también reconoce enlaces de YouTube.
+
+   3. IMPORTANTE:
+      El HTML no puede "subir" archivos por sí solo. Los archivos se
+      cargan primero al hosting/almacenamiento y aquí solo se coloca
+      la ruta pública.
    ============================================================ */
 
 const SITE = {
@@ -1298,16 +1350,46 @@ SITE.changelog.forEach(item=>{
   changelog.appendChild(div);
 });
 
+function youtubeEmbedUrl(url){
+  try{
+    const u = new URL(url, window.location.href);
+    let id = "";
+
+    if (u.hostname.includes("youtu.be")){
+      id = u.pathname.replace(/^\/+/,"").split("/")[0];
+    }else if (u.hostname.includes("youtube.com")){
+      if (u.pathname.startsWith("/watch")) id = u.searchParams.get("v") || "";
+      else if (u.pathname.startsWith("/shorts/")) id = u.pathname.split("/shorts/")[1]?.split("/")[0] || "";
+      else if (u.pathname.startsWith("/embed/")) id = u.pathname.split("/embed/")[1]?.split("/")[0] || "";
+    }
+
+    return id
+      ? `https://www.youtube.com/embed/${encodeURIComponent(id)}?rel=0&modestbranding=1`
+      : "";
+  }catch{
+    return "";
+  }
+}
+
 function mediaHtml(video, label){
   if (video){
-    return `<video controls preload="metadata" src="${video}"></video>`;
+    const youtube = youtubeEmbedUrl(video);
+
+    if (youtube){
+      return `<iframe class="media-frame" src="${youtube}" title="${label}"
+        loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>`;
+    }
+
+    return `<video controls playsinline preload="metadata" src="${video}"></video>`;
   }
+
   return `
     <div class="video-placeholder">
       <div>
         <div class="play-orb">▶</div>
         <strong>VIDEO DE EJEMPLO</strong>
-        <small>${label}<br>Agrega el MP4 o URL en la configuración de esta página.</small>
+        <small>${label}<br>Agrega un MP4 o enlace de YouTube en la configuración.</small>
       </div>
     </div>`;
 }
