@@ -601,7 +601,7 @@ svg{display:block}
 
 <div class="toast" id="toast"><strong id="toastTitle"></strong><span id="toastText"></span></div>
 
-<script>
+<script type="module">
 /* ============================================================
    GOLUP WEB · CONFIGURACIÓN RÁPIDA
 
@@ -621,11 +621,23 @@ svg{display:block}
      listo para recibir el tutorial.
 
    IMPORTANTE
-   - Este HTML no sube archivos. Primero sube instaladores y
-     videos a tu hosting y después pega sus URLs aquí.
+   - Esta versión lee su contenido desde la carpeta data/.
+   - Usa el editor local de GolUp para cambiar textos, videos,
+     versiones y descargas sin modificar este HTML.
    ============================================================ */
 
-const SITE = {
+
+async function loadCmsJson(url, fallback){
+  try{
+    const response=await fetch(url,{cache:"no-store"});
+    if(!response.ok) throw new Error(`HTTP ${response.status}`);
+    return await response.json();
+  }catch(error){
+    console.warn(`[GolUp CMS] No pude leer ${url}; usando respaldo integrado.`,error);
+    return fallback;
+  }
+}
+const DEFAULT_SITE = {
   "version": "1.0.0",
   "published": "Pendiente de publicación",
   "installerName": "GolUp-Setup.exe",
@@ -648,9 +660,16 @@ const SITE = {
       "title": "Sistema preparado para actualizaciones",
       "text": "La web conserva versión, descarga y notas para conectarlo al actualizador."
     }
-  ]
+  ],
+  "home": {
+    "kicker": "GOLUP · CREATOR EXPERIENCE",
+    "titleLine1": "Tu LIVE.",
+    "titleAccent": "Convertido en juego.",
+    "description": "Descarga GolUp, aprende cada herramienta del Control Center y prepara una transmisión completa sin adivinar. Esta web está pensada para que cada botón, modo y flujo tenga su propio tutorial en video."
+  }
 };
-const GAMES = [
+const SITE = await loadCmsJson("data/site.json", DEFAULT_SITE);
+const GAMES_FALLBACK = [
   {
     "id": 1,
     "code": "F1",
@@ -760,7 +779,7 @@ const GAMES = [
     ]
   }
 ];
-const TUTORIALS = [
+const TUTORIALS_FALLBACK = [
   {
     "id": "start-what",
     "category": "primeros",
@@ -2013,9 +2032,9 @@ const TUTORIALS = [
     "keywords": "guardar salir ajustes configuración"
   }
 ];
-
-/* Pega aquí los videos cuando los tengas. Todos los IDs ya existen. */
-const VIDEO_URLS = Object.fromEntries(TUTORIALS.map(t => [t.id, ""]));
+const GAMES = await loadCmsJson("data/games.json", GAMES_FALLBACK);
+const TUTORIALS = await loadCmsJson("data/tutorials.json", TUTORIALS_FALLBACK);
+const VIDEO_URLS = await loadCmsJson("data/videos.json", Object.fromEntries(TUTORIALS.map(t => [t.id, ""])));
 
 const CATEGORY_LABELS = {
   todos:"Todos", primeros:"Primeros pasos", licencia:"Licencia", consola:"Consola",
@@ -2141,6 +2160,7 @@ function mediaHtml(id,label,locked=false){
 function escapeHtml(s=""){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
 function escapeAttr(s=""){return escapeHtml(s);}
 function getTutorial(id){return TUTORIALS.find(t=>t.id===id);}
+function isTutorialLocked(t){return Boolean(t?.locked && !(t?.category==="tiktok" && SITE.tiktokStudioEnabled));}
 
 let lastFocus=null;
 function openWorkspace(name){
@@ -2194,14 +2214,15 @@ setupTabs("license",renderLicenseSection);
 
 function openVideo(id){
   const t=getTutorial(id);if(!t)return;
+  const locked=isTutorialLocked(t);
   $("videoModalTitle").textContent=t.title;
   $("videoModalMeta").textContent=`${CATEGORY_LABELS[t.category]||t.category} · ${t.level}`;
-  $("videoModalMedia").innerHTML=mediaHtml(t.id,t.title,t.locked);
-  $("videoModalNote").textContent=t.locked
+  $("videoModalMedia").innerHTML=mediaHtml(t.id,t.title,locked);
+  $("videoModalNote").textContent=locked
     ?"Este tutorial queda reservado y bloqueado hasta habilitar la versión TikTok LIVE Studio."
     :VIDEO_URLS[t.id]
-      ?"Video configurado desde VIDEO_URLS."
-      :"Este espacio está listo. Agrega la URL del tutorial en VIDEO_URLS sin modificar el diseño.";
+      ?"Video configurado desde el editor local."
+      :"Este espacio está listo. Carga el video desde el editor local sin tocar el código.";
   $("videoBackdrop").hidden=false;$("videoModal").hidden=false;document.body.style.overflow="hidden";
   $("videoModalClose").focus({preventScroll:true});
 }
@@ -2213,13 +2234,14 @@ $("videoModalClose").addEventListener("click",closeVideo);
 $("videoBackdrop").addEventListener("click",closeVideo);
 
 function tutorialCard(t,compact=false){
-  return `<article class="tutorial-card${t.locked?" locked":""}" data-tutorial-id="${t.id}">
-    <div class="tutorial-media"><div class="video-shell">${mediaHtml(t.id,t.title,t.locked)}</div></div>
+  const locked=isTutorialLocked(t);
+  return `<article class="tutorial-card${locked?" locked":""}" data-tutorial-id="${t.id}">
+    <div class="tutorial-media"><div class="video-shell">${mediaHtml(t.id,t.title,locked)}</div></div>
     <div class="tutorial-body">
       <div class="tutorial-meta"><span class="tutorial-cat">${escapeHtml(CATEGORY_LABELS[t.category]||t.category)}</span><span class="tutorial-level">${escapeHtml(t.level)}</span></div>
       <h3>${escapeHtml(t.title)}</h3><p>${escapeHtml(t.description)}</p>
       <div class="tutorial-actions">
-        <button class="btn${t.locked?" muted":""}" type="button" data-watch="${t.id}" ${t.locked?"disabled":""}>${VIDEO_URLS[t.id]?"Ver video ▶":"Abrir espacio ▶"}</button>
+        <button class="btn${locked?" muted":""}" type="button" data-watch="${t.id}" ${locked?"disabled":""}>${VIDEO_URLS[t.id]?"Ver video ▶":"Abrir espacio ▶"}</button>
       </div>
     </div>
   </article>`;
@@ -2238,6 +2260,8 @@ function renderTutorialSubset(host,ids,intro){
 function buildDownloads(){
   const obsUrl=SITE.downloadObsUrl||SITE.downloadUrl||"";
   const obsAvailable=Boolean(obsUrl);
+  const studioUrl=SITE.downloadTikTokStudioUrl||"";
+  const studioAvailable=Boolean(SITE.tiktokStudioEnabled&&studioUrl);
   $("downloadVersionsPanel").innerHTML=`
     <div class="grid-2">
       <article class="card big-card download-card">
@@ -2253,16 +2277,16 @@ function buildDownloads(){
           <button class="btn" type="button" data-watch="start-install">Ver instalación ▶</button>
         </div>
       </article>
-      <article class="card big-card download-card muted-card">
-        <div class="card-head"><div><div class="kicker">TIKTOK LIVE STUDIO</div><h3 class="download-title">Versión LIVE Studio</h3><p>Espacio reservado para la integración dedicada con TikTok LIVE Studio.</p></div><span class="chip gray">PRÓXIMAMENTE</span></div>
+      <article class="card big-card download-card${studioAvailable?"":" muted-card"}">
+        <div class="card-head"><div><div class="kicker">TIKTOK LIVE STUDIO</div><h3 class="download-title">Versión LIVE Studio</h3><p>Integración dedicada para trabajar con TikTok LIVE Studio.</p></div><span class="chip${studioAvailable?"":" gray"}">${studioAvailable?"DISPONIBLE":"PRÓXIMAMENTE"}</span></div>
         <div class="download-meta">
-          <div class="data-cell"><span>Estado</span><strong>Muteada</strong></div>
-          <div class="data-cell"><span>Descarga</span><strong>Bloqueada</strong></div>
-          <div class="data-cell"><span>Tutoriales</span><strong>Espacios preparados</strong></div>
-          <div class="data-cell"><span>Activación</span><strong>Más adelante</strong></div>
+          <div class="data-cell"><span>Estado</span><strong>${studioAvailable?"Publicada":"Muteada"}</strong></div>
+          <div class="data-cell"><span>Descarga</span><strong>${studioAvailable?"Disponible":"Bloqueada"}</strong></div>
+          <div class="data-cell"><span>Tutoriales</span><strong>${studioAvailable?"Habilitados":"Espacios preparados"}</strong></div>
+          <div class="data-cell"><span>Activación</span><strong>${studioAvailable?"Activa":"Más adelante"}</strong></div>
         </div>
-        <div class="download-actions"><button class="btn muted" type="button" disabled>Descarga no disponible</button></div>
-        <div class="lock-band">No se publica ningún botón funcional hasta que la versión esté lista.</div>
+        <div class="download-actions">${studioAvailable?`<a class="btn primary" href="${escapeAttr(studioUrl)}" download>Descargar LIVE Studio ↓</a>`:`<button class="btn muted" type="button" disabled>Descarga no disponible</button>`}</div>
+        ${studioAvailable?"":`<div class="lock-band">No se publica ningún botón funcional hasta que la versión esté lista.</div>`}
       </article>
     </div>
     <div class="notice" style="margin-top:10px">La web mantiene compatibilidad con el campo antiguo <b>SITE.downloadUrl</b>. Si ya tenías una URL allí, se usa automáticamente como descarga OBS.</div>`;
@@ -2369,6 +2393,14 @@ function renderLicenseSection(key="register"){
 renderLicenseSection();
 
 /* META / LINKS */
+const HOME=SITE.home||{};
+const heroKicker=document.querySelector(".hero-main .kicker");
+const heroTitle=document.querySelector(".hero-main h1");
+const heroDescription=document.querySelector(".hero-main > p");
+if(heroKicker)heroKicker.textContent=HOME.kicker||"GOLUP · CREATOR EXPERIENCE";
+if(heroTitle)heroTitle.innerHTML=`${escapeHtml(HOME.titleLine1||"Tu LIVE.")}<br><span>${escapeHtml(HOME.titleAccent||"Convertido en juego.")}</span>`;
+if(heroDescription)heroDescription.textContent=HOME.description||"Descarga GolUp, aprende cada herramienta del Control Center y prepara una transmisión completa sin adivinar.";
+if(SITE.brand)document.title=`${SITE.brand} · Centro Oficial`;
 $("sideVersion").textContent=SITE.version;
 $("sideTutorialCount").textContent=String(TUTORIALS.length);
 $("versionChip").textContent=SITE.version;

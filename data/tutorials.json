@@ -1,0 +1,1253 @@
+[
+  {
+    "id": "start-what",
+    "category": "primeros",
+    "title": "¿Qué es GolUp?",
+    "description": "Recorrido general por el juego, el Control Center y la lógica de una transmisión interactiva.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "start-requirements",
+    "category": "primeros",
+    "title": "Requisitos antes de instalar",
+    "description": "Qué debes tener preparado en Windows, tu transmisión y tu licencia antes del primer inicio.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "start-download-obs",
+    "category": "primeros",
+    "title": "Descargar la versión OBS",
+    "description": "Dónde encontrar la versión oficial para OBS y cómo identificar la versión publicada.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "start-install",
+    "category": "primeros",
+    "title": "Instalar GolUp desde cero",
+    "description": "Desde el instalador hasta el primer arranque y la apertura correcta del Control Center.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "start-first-open",
+    "category": "primeros",
+    "title": "Primer inicio sin tocar nada",
+    "description": "Qué verás la primera vez y qué estados son normales antes de conectar Unity o TikTok.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "start-update",
+    "category": "primeros",
+    "title": "Actualizar GolUp",
+    "description": "Cómo identificar una versión nueva y actualizar sin confundir el instalador anterior.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "start-uninstall",
+    "category": "primeros",
+    "title": "Desinstalar o reinstalar",
+    "description": "Qué revisar antes de reinstalar y cómo volver a dejar el entorno listo.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "license-register",
+    "category": "licencia",
+    "title": "Registro de licencia",
+    "description": "Cómo completar el registro inicial de usuario/licencia y qué datos debes conservar.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "license-verify",
+    "category": "licencia",
+    "title": "Verificar usuario y licencia",
+    "description": "Cómo usar la pantalla de acceso y confirmar que la licencia quedó validada.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "license-modify",
+    "category": "licencia",
+    "title": "Modificar datos de acceso",
+    "description": "Qué hace el botón Modificar datos y cuándo volver a ingresar la información.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "license-countdown",
+    "category": "licencia",
+    "title": "Vencimiento y contador de licencia",
+    "description": "Cómo leer el estado de la licencia y entender los avisos de vencimiento.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "license-renew",
+    "category": "licencia",
+    "title": "Renovar o actualizar licencia",
+    "description": "Cómo usar la opción de actualización y soporte por WhatsApp.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "license-errors",
+    "category": "licencia",
+    "title": "Errores comunes de licencia",
+    "description": "Qué revisar cuando el Control Center no permite avanzar después de verificar.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "license-new-pc",
+    "category": "licencia",
+    "title": "Cambiar de equipo o reinstalar Windows",
+    "description": "Checklist de licencia para preparar un nuevo PC sin improvisar.",
+    "level": "INTERMEDIO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "console-what",
+    "category": "consola",
+    "title": "¿Qué es el modo consola / simulación?",
+    "description": "Para qué sirve probar GolUp sin depender de un LIVE real y qué sí puedes validar allí.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "console-first-frame",
+    "category": "consola",
+    "title": "Primer encuadre del juego",
+    "description": "Cómo dejar el juego cuadrado por primera vez antes de empezar a transmitir.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "console-resolution",
+    "category": "consola",
+    "title": "Resolución y posición inicial",
+    "description": "Qué revisar visualmente para que la salida quede alineada con tu formato de LIVE.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "console-open-tests",
+    "category": "consola",
+    "title": "Abrir pruebas de interacciones",
+    "description": "Cómo entrar al panel de pruebas desde el acceso o el Control Center.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "console-comment-team",
+    "category": "consola",
+    "title": "Simular comentario de equipo",
+    "description": "Cómo probar la acción Comentar equipo y confirmar que el participante entra correctamente.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "console-extra-comment",
+    "category": "consola",
+    "title": "Simular comentario extra",
+    "description": "Cómo usar Comentario extra durante una prueba local.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "console-like",
+    "category": "consola",
+    "title": "Simular Like ×10",
+    "description": "Cómo probar likes sin esperar interacciones reales.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "console-follow",
+    "category": "consola",
+    "title": "Simular Follow",
+    "description": "Cómo validar la interacción de follow desde el modo de pruebas.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "console-gift",
+    "category": "consola",
+    "title": "Simular un regalo",
+    "description": "Cómo elegir un regalo, coins y enviar una prueba local.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "console-profile",
+    "category": "consola",
+    "title": "Probar foto de perfil",
+    "description": "Cómo usar una URL de perfil durante una simulación y revisar el resultado.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "console-log",
+    "category": "consola",
+    "title": "Leer y limpiar el registro",
+    "description": "Cómo usar el log de actividad para detectar qué recibió el panel.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "console-before-live",
+    "category": "consola",
+    "title": "Checklist antes de salir del modo consola",
+    "description": "Qué debe quedar probado antes de conectar una cuenta real.",
+    "level": "INTERMEDIO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "obs-overview",
+    "category": "obs",
+    "title": "Configurar GolUp en OBS",
+    "description": "Vista general de la escena, captura y orden recomendado para preparar la transmisión.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "obs-scene",
+    "category": "obs",
+    "title": "Crear la escena de GolUp",
+    "description": "Cómo organizar una escena dedicada para el juego sin mezclar controles innecesarios.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "obs-capture",
+    "category": "obs",
+    "title": "Agregar GolUp como fuente",
+    "description": "Cómo incorporar la salida del juego a OBS y comprobar que se vea completa.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "obs-vertical",
+    "category": "obs",
+    "title": "Preparar formato vertical",
+    "description": "Cómo revisar encuadre, proporción y zonas seguras para un LIVE vertical.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "obs-audio",
+    "category": "obs",
+    "title": "Audio de GolUp en OBS",
+    "description": "Cómo verificar que música, efectos y voces lleguen como esperas a la transmisión.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "obs-layering",
+    "category": "obs",
+    "title": "Orden de capas",
+    "description": "Dónde ubicar juego, cámara, overlays y otros elementos para no tapar información importante.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "obs-performance",
+    "category": "obs",
+    "title": "Rendimiento y fluidez",
+    "description": "Qué observar si la captura se siente pesada, se congela o pierde fluidez.",
+    "level": "INTERMEDIO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "obs-live-check",
+    "category": "obs",
+    "title": "Checklist final de OBS",
+    "description": "Revisión completa antes de pulsar Iniciar transmisión.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "tls-overview",
+    "category": "tiktok",
+    "title": "Versión TikTok LIVE Studio",
+    "description": "Qué incluirá la versión diseñada para trabajar directamente con TikTok LIVE Studio.",
+    "level": "BÁSICO",
+    "locked": true,
+    "keywords": ""
+  },
+  {
+    "id": "tls-install",
+    "category": "tiktok",
+    "title": "Instalar la versión TikTok LIVE Studio",
+    "description": "Espacio reservado para el proceso de instalación específico.",
+    "level": "BÁSICO",
+    "locked": true,
+    "keywords": ""
+  },
+  {
+    "id": "tls-source",
+    "category": "tiktok",
+    "title": "Agregar GolUp a TikTok LIVE Studio",
+    "description": "Espacio reservado para captura, escena y encuadre dentro de LIVE Studio.",
+    "level": "BÁSICO",
+    "locked": true,
+    "keywords": ""
+  },
+  {
+    "id": "tls-audio",
+    "category": "tiktok",
+    "title": "Audio en TikTok LIVE Studio",
+    "description": "Espacio reservado para sonido, efectos y mezcla.",
+    "level": "BÁSICO",
+    "locked": true,
+    "keywords": ""
+  },
+  {
+    "id": "tls-first-live",
+    "category": "tiktok",
+    "title": "Primer LIVE con TikTok LIVE Studio",
+    "description": "Checklist reservado para la primera transmisión.",
+    "level": "BÁSICO",
+    "locked": true,
+    "keywords": ""
+  },
+  {
+    "id": "cc-overview",
+    "category": "control",
+    "title": "Mapa completo del Control Center",
+    "description": "Qué hace cada zona del panel y cómo pasar de Menú principal a una partida.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "cc-home",
+    "category": "control",
+    "title": "Menú principal",
+    "description": "Cómo usar las tarjetas de modos, Escenas, Ajustes y herramientas principales.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "cc-status",
+    "category": "control",
+    "title": "Estados de conexión",
+    "description": "Cómo leer Juego conectado, servidor, TikTok, usuario y estados de espera.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "cc-mode-open",
+    "category": "control",
+    "title": "Abrir un modo de juego",
+    "description": "Qué ocurre al seleccionar F1–F7 y cómo regresar sin romper el estado.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "cc-main-return",
+    "category": "control",
+    "title": "Volver al Menú principal",
+    "description": "Cómo regresar correctamente desde Partida, Escenas o Ajustes.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "cc-mobile",
+    "category": "control",
+    "title": "Control móvil y emparejamiento",
+    "description": "Cómo interpretar el emparejamiento móvil, QR/estado y refresco cuando esté disponible.",
+    "level": "INTERMEDIO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "cc-reset-titles",
+    "category": "control",
+    "title": "Reiniciar títulos históricos",
+    "description": "Qué hace esta acción, cuándo usarla y por qué requiere confirmación.",
+    "level": "AVANZADO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "match-tabs",
+    "category": "partida",
+    "title": "Partida, Recuperar, Regalos y Sistema",
+    "description": "Cómo se divide la ventana de un modo y qué pertenece a cada pestaña.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "timer-overview",
+    "category": "partida",
+    "title": "Cronómetro: guía completa",
+    "description": "Duraciones, estado, inicio y lectura del reloj durante una partida.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "timer-duration",
+    "category": "partida",
+    "title": "Elegir duración",
+    "description": "Cómo seleccionar el tiempo antes de iniciar y qué debes revisar al cambiarlo.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "timer-start",
+    "category": "partida",
+    "title": "Botón Iniciar",
+    "description": "Qué hace Iniciar y en qué momento usarlo.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "timer-reset",
+    "category": "partida",
+    "title": "Botón Reiniciar",
+    "description": "Qué reinicia el modo y por qué conviene verificar antes de pulsarlo.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "timer-auto-f3",
+    "category": "partida",
+    "title": "Automático de Supervivencia",
+    "description": "Cómo funciona la acción Iniciar automático disponible para F3.",
+    "level": "INTERMEDIO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "match-podium-var",
+    "category": "partida",
+    "title": "Podio / VAR",
+    "description": "Cómo usar Ver podio / VAR y cuándo aparece en el cierre de una partida.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "recovery-what",
+    "category": "recuperar",
+    "title": "¿Qué es Recuperar?",
+    "description": "La herramienta para enviar puntos manualmente cuando una interacción necesita recuperarse.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "recovery-user",
+    "category": "recuperar",
+    "title": "Usuario en Recuperación",
+    "description": "Cómo interpretar el usuario autocompletado por la sesión.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "recovery-team",
+    "category": "recuperar",
+    "title": "Equipo en Recuperación",
+    "description": "Cómo indicar el equipo correcto antes de recuperar coins/puntos.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "recovery-comment",
+    "category": "recuperar",
+    "title": "Volver a comentar el equipo",
+    "description": "Por qué después de ciertos regalos puede ser necesario reafirmar el equipo antes de recuperar.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "recovery-coins",
+    "category": "recuperar",
+    "title": "Coins / puntos manuales",
+    "description": "Cómo introducir la cantidad que deseas recuperar y enviar la acción.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "recovery-errors",
+    "category": "recuperar",
+    "title": "Qué revisar si Recuperar no responde",
+    "description": "Checklist de usuario, equipo, conexión y estado del modo.",
+    "level": "INTERMEDIO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "gift-tests",
+    "category": "regalos",
+    "title": "Regalos especiales de prueba",
+    "description": "Cómo probar cualquiera de los regalos especiales sin esperar un LIVE.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "gift-normal",
+    "category": "regalos",
+    "title": "Regalo normal y coins",
+    "description": "Cómo seleccionar un regalo, definir coins y probar la interacción.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "gift-special-team",
+    "category": "regalos",
+    "title": "Regalos directos por equipo",
+    "description": "Cómo se comportan los regalos especiales cuando están asignados a un equipo.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "gift-after-special",
+    "category": "regalos",
+    "title": "Qué hacer después de un regalo directo",
+    "description": "Por qué el flujo puede pedir comentar nuevamente antes de mandar coins normales.",
+    "level": "INTERMEDIO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "scenes-overview",
+    "category": "escenas",
+    "title": "Escenas: mapa completo",
+    "description": "Diferencia entre Plantillas, Regalos y Sistema.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "scenes-templates",
+    "category": "escenas",
+    "title": "Plantillas de participantes",
+    "description": "Cómo administrar los participantes visibles desde Escenas.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "scenes-new-template",
+    "category": "escenas",
+    "title": "Nueva plantilla",
+    "description": "Qué hace NUEVA PLANTILLA y por qué vacía participantes conservando los slots internos.",
+    "level": "INTERMEDIO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "scenes-team-name",
+    "category": "escenas",
+    "title": "Cambiar nombre de un equipo",
+    "description": "Cómo editar el nombre mostrado sin tocar archivos manualmente.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "scenes-shield",
+    "category": "escenas",
+    "title": "Cambiar escudo",
+    "description": "Cómo preparar y asignar un escudo a un participante.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "scenes-save-team",
+    "category": "escenas",
+    "title": "Guardar cambios de participante",
+    "description": "Cómo confirmar un cambio de nombre/escudo y verificar que Unity lo reciba.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "scenes-direct-gifts",
+    "category": "escenas",
+    "title": "Regalos directos",
+    "description": "Qué significa activar o desactivar Regalos directos.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "scenes-gift-map",
+    "category": "escenas",
+    "title": "Asignar regalos especiales a equipos",
+    "description": "Cómo definir a qué equipo pertenece cada regalo especial.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "scenes-system",
+    "category": "escenas",
+    "title": "Sistema dentro de Escenas",
+    "description": "Cómo leer estado y respaldo sin mezclarlo con Plantillas o Regalos.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "settings-overview",
+    "category": "ajustes",
+    "title": "Ajustes: mapa completo",
+    "description": "Audio, Video, Efectos y Sistema en una sola guía.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "settings-audio-general",
+    "category": "ajustes",
+    "title": "Audio general",
+    "description": "Activar o desactivar el audio completo y controlar volumen maestro.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "settings-audio-interactions",
+    "category": "ajustes",
+    "title": "Volumen de interacciones",
+    "description": "Ajustar sonidos de likes, comentarios y acciones de audiencia.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "settings-audio-position",
+    "category": "ajustes",
+    "title": "Cambios de posición",
+    "description": "Controlar el volumen asociado a cambios de posición.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "settings-audio-gifts",
+    "category": "ajustes",
+    "title": "Regalos y efectos",
+    "description": "Ajustar el nivel de audio de regalos y efectos.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "settings-audio-alerts",
+    "category": "ajustes",
+    "title": "Cronómetro y avisos",
+    "description": "Ajustar avisos y sonidos relacionados con el tiempo.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "settings-video-system",
+    "category": "ajustes",
+    "title": "Sistema de videos",
+    "description": "Activar/desactivar videos y regular su volumen.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "settings-music",
+    "category": "ajustes",
+    "title": "Música y celebración",
+    "description": "Ajustar el volumen de música y celebraciones.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "settings-intros",
+    "category": "ajustes",
+    "title": "Intros de modos",
+    "description": "Activar o desactivar las intros de cada modo.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "settings-snipe",
+    "category": "ajustes",
+    "title": "Video snipe",
+    "description": "Qué controla esta opción y cuándo conviene mantenerla activa.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "settings-vfx",
+    "category": "ajustes",
+    "title": "Efectos visuales",
+    "description": "Activar o desactivar los efectos visuales generales.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "settings-timer-voices",
+    "category": "ajustes",
+    "title": "Voces del cronómetro",
+    "description": "Activar o desactivar voces asociadas al reloj.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "settings-timer-effects",
+    "category": "ajustes",
+    "title": "Impacto del cronómetro",
+    "description": "Controlar los efectos de impacto del tiempo.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "settings-brightness",
+    "category": "ajustes",
+    "title": "Brillo de salida",
+    "description": "Ajustar el brillo sin cambiar la estructura del juego.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "settings-reset",
+    "category": "ajustes",
+    "title": "Restablecer ajustes",
+    "description": "Cómo volver a la configuración base y qué revisar después.",
+    "level": "INTERMEDIO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "backup-what",
+    "category": "respaldo",
+    "title": "Guardar y recuperar partida",
+    "description": "Qué es el respaldo de sesión y para qué sirve en una transmisión real.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "backup-save",
+    "category": "respaldo",
+    "title": "Guardar ahora",
+    "description": "Cómo crear un respaldo manual del estado actual.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "backup-restore",
+    "category": "respaldo",
+    "title": "Restaurar sesión",
+    "description": "Cómo reemplazar el estado actual por el último respaldo guardado.",
+    "level": "INTERMEDIO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "backup-when",
+    "category": "respaldo",
+    "title": "Cuándo conviene guardar",
+    "description": "Momentos recomendados del flujo para tener un punto de recuperación.",
+    "level": "INTERMEDIO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "system-overview",
+    "category": "sistema",
+    "title": "Estado del sistema",
+    "description": "Cómo leer servidor, Unity, usuario, puertos y estado general.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "system-server",
+    "category": "sistema",
+    "title": "Servidor y WebSocket",
+    "description": "Qué significa que el servidor esté en funcionamiento o sin conexión.",
+    "level": "INTERMEDIO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "system-unity",
+    "category": "sistema",
+    "title": "Estado de Unity",
+    "description": "Cómo reconocer si el juego está conectado o esperando Unity.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "system-ports",
+    "category": "sistema",
+    "title": "Puertos de control",
+    "description": "Dónde aparecen los puertos y por qué son útiles al diagnosticar.",
+    "level": "INTERMEDIO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "system-logs",
+    "category": "sistema",
+    "title": "Registro de actividad",
+    "description": "Cómo leer las últimas acciones recibidas por el Control Center.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "system-clear-log",
+    "category": "sistema",
+    "title": "Limpiar registro",
+    "description": "Cómo limpiar la vista del log sin confundirlo con un reinicio del juego.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "mode-f1-overview",
+    "category": "modos",
+    "title": "F1 · Rey por Puntos: guía completa",
+    "description": "Objetivo, flujo de partida y lectura del resultado.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "mode-f1-setup",
+    "category": "modos",
+    "title": "F1 · Preparación",
+    "description": "Qué revisar antes de iniciar el cronómetro.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "mode-f1-timer",
+    "category": "modos",
+    "title": "F1 · Cronómetro",
+    "description": "Duración, inicio y cierre del tiempo.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "mode-f1-support",
+    "category": "modos",
+    "title": "F1 · Puntos e interacciones",
+    "description": "Cómo se refleja el apoyo de la audiencia durante la competencia.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "mode-f1-finish",
+    "category": "modos",
+    "title": "F1 · Cierre y resultado",
+    "description": "Qué revisar al terminar la partida.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "mode-f2-overview",
+    "category": "modos",
+    "title": "F2 · Rey de la Tabla: guía completa",
+    "description": "Objetivo y lógica de clasificación dinámica.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "mode-f2-setup",
+    "category": "modos",
+    "title": "F2 · Preparación de la tabla",
+    "description": "Qué revisar antes de iniciar.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "mode-f2-table",
+    "category": "modos",
+    "title": "F2 · Leer posiciones",
+    "description": "Cómo interpretar los cambios de posición durante la partida.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "mode-f2-timer",
+    "category": "modos",
+    "title": "F2 · Cronómetro",
+    "description": "Duración y control del tiempo.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "mode-f2-finish",
+    "category": "modos",
+    "title": "F2 · Resultado final",
+    "description": "Cómo cerrar la clasificación.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "mode-f3-overview",
+    "category": "modos",
+    "title": "F3 · Supervivencia: guía completa",
+    "description": "Objetivo, rondas y eliminación del último.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "mode-f3-round",
+    "category": "modos",
+    "title": "F3 · Preparar una ronda",
+    "description": "Cómo iniciar cada ronda desde el cronómetro.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "mode-f3-auto",
+    "category": "modos",
+    "title": "F3 · Iniciar automático",
+    "description": "Qué hace el modo automático y cuándo usarlo.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "mode-f3-elimination",
+    "category": "modos",
+    "title": "F3 · Eliminación",
+    "description": "Cómo entender la salida del equipo con menor apoyo.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "mode-f3-finish",
+    "category": "modos",
+    "title": "F3 · Campeón y cierre",
+    "description": "Cómo termina la supervivencia.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "mode-f4-overview",
+    "category": "modos",
+    "title": "F4 · Rey del Cuadro: guía completa",
+    "description": "Flujo de torneo uno contra uno.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "mode-f4-draw",
+    "category": "modos",
+    "title": "F4 · Acción Q · Sortear equipos",
+    "description": "Cómo preparar el cuadro inicial.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "mode-f4-next",
+    "category": "modos",
+    "title": "F4 · Acción G · Siguiente cruce",
+    "description": "Cómo avanzar al siguiente enfrentamiento.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "mode-f4-timer",
+    "category": "modos",
+    "title": "F4 · Cronómetro del cruce",
+    "description": "Cómo controlar el tiempo de cada duelo.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "mode-f4-bracket",
+    "category": "modos",
+    "title": "F4 · Leer el cuadro",
+    "description": "Cómo seguir octavos, cuartos, semifinal y final.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "mode-f4-final",
+    "category": "modos",
+    "title": "F4 · Final, podio y cierre",
+    "description": "Qué hacer al llegar al último enfrentamiento.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "mode-f5-overview",
+    "category": "modos",
+    "title": "F5 · Cuadro Simultáneo: guía completa",
+    "description": "Cómo funciona el cuadro con cruces jugándose al mismo tiempo.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "mode-f5-draw",
+    "category": "modos",
+    "title": "F5 · Sortear equipos",
+    "description": "Cómo preparar los cruces antes de la ronda.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "mode-f5-simultaneous",
+    "category": "modos",
+    "title": "F5 · Cruces simultáneos",
+    "description": "Cómo leer varios enfrentamientos activos a la vez.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "mode-f5-timer",
+    "category": "modos",
+    "title": "F5 · Cronómetro",
+    "description": "Cómo iniciar y cerrar una ronda simultánea.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "mode-f5-rounds",
+    "category": "modos",
+    "title": "F5 · Avanzar de ronda",
+    "description": "Qué revisar antes de pasar a la siguiente fase.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "mode-f5-final",
+    "category": "modos",
+    "title": "F5 · Final y resultado",
+    "description": "Cómo cerrar el cuadro simultáneo.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "mode-f6-overview",
+    "category": "modos",
+    "title": "F6 · Rey del Quiéreme: guía completa",
+    "description": "Objetivo del modo y condición de victoria por meta.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "mode-f6-goal",
+    "category": "modos",
+    "title": "F6 · Meta y condición de victoria",
+    "description": "Cómo interpretar quién está más cerca de ganar.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "mode-f6-actiong",
+    "category": "modos",
+    "title": "F6 · Acción G · Nueva partida",
+    "description": "Cómo preparar una partida completamente nueva.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "mode-f6-support",
+    "category": "modos",
+    "title": "F6 · Apoyo de la audiencia",
+    "description": "Cómo leer el avance durante la dinámica.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "mode-f6-reset",
+    "category": "modos",
+    "title": "F6 · Reinicio correcto",
+    "description": "Qué revisar antes de comenzar otra partida.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "mode-f7-overview",
+    "category": "modos",
+    "title": "F7 · Grupo de la Muerte: guía completa",
+    "description": "Flujo de fase de grupos por puntos.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "mode-f7-groups",
+    "category": "modos",
+    "title": "F7 · Preparar grupos",
+    "description": "Cómo entender la estructura de grupos.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "mode-f7-points",
+    "category": "modos",
+    "title": "F7 · Puntos y posiciones",
+    "description": "Cómo leer quién está avanzando.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "mode-f7-timer",
+    "category": "modos",
+    "title": "F7 · Cronómetro de ronda",
+    "description": "Cómo controlar el tiempo de cada ronda.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "mode-f7-advance",
+    "category": "modos",
+    "title": "F7 · Avanzar de fase",
+    "description": "Qué revisar antes de pasar a la siguiente ronda.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "mode-f7-final",
+    "category": "modos",
+    "title": "F7 · Cierre de grupos",
+    "description": "Cómo finalizar la fase y continuar el flujo.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": ""
+  },
+  {
+    "id": "access-connect-tiktok",
+    "category": "control",
+    "title": "Conectar TikTok LIVE real",
+    "description": "Cómo usar Conectar TikTok LIVE desde Acceso y reconocer que la cuenta quedó enlazada al servidor.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": "conectar tiktok live acceso cuenta real"
+  },
+  {
+    "id": "access-start-simulation",
+    "category": "consola",
+    "title": "Iniciar modo simulación desde Acceso",
+    "description": "Cómo entrar al modo de prueba local desde la pantalla inicial antes de usar una cuenta real.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": "modo simulacion acceso consola"
+  },
+  {
+    "id": "access-live-vs-sim",
+    "category": "consola",
+    "title": "TikTok LIVE real vs modo simulación",
+    "description": "Qué cambia entre conectar una cuenta real y trabajar con Consola WS / PRUEBA LOCAL.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": "tiktok live simulacion consola ws prueba local"
+  },
+  {
+    "id": "settings-save-exit",
+    "category": "ajustes",
+    "title": "Guardar y salir de Ajustes",
+    "description": "Cómo confirmar la configuración actual con Guardar y salir y volver al flujo principal.",
+    "level": "BÁSICO",
+    "locked": false,
+    "keywords": "guardar salir ajustes configuración"
+  }
+]

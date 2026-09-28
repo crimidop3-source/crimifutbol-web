@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "code": "F1",
+    "name": "Rey por Puntos",
+    "tag": "Puntos",
+    "description": "Competencia directa por puntos. Configura el tiempo y comienza la partida.",
+    "accent": "blue",
+    "lessons": [
+      "mode-f1-overview",
+      "mode-f1-setup",
+      "mode-f1-timer",
+      "mode-f1-support",
+      "mode-f1-finish"
+    ]
+  },
+  {
+    "id": 2,
+    "code": "F2",
+    "name": "Rey de la Tabla",
+    "tag": "Clasificación",
+    "description": "Clasificación dinámica por apoyo. Configura el tiempo y comienza la partida.",
+    "accent": "cyan",
+    "lessons": [
+      "mode-f2-overview",
+      "mode-f2-setup",
+      "mode-f2-table",
+      "mode-f2-timer",
+      "mode-f2-finish"
+    ]
+  },
+  {
+    "id": 3,
+    "code": "F3",
+    "name": "Supervivencia",
+    "tag": "Eliminación",
+    "description": "El último equipo va quedando eliminado. Cada ronda comienza desde el cronómetro.",
+    "accent": "red",
+    "lessons": [
+      "mode-f3-overview",
+      "mode-f3-round",
+      "mode-f3-auto",
+      "mode-f3-elimination",
+      "mode-f3-finish"
+    ]
+  },
+  {
+    "id": 4,
+    "code": "F4",
+    "name": "Rey del Cuadro",
+    "tag": "1 VS 1",
+    "description": "Torneo uno contra uno. Sortea los equipos y prepara cada cruce en orden.",
+    "accent": "orange",
+    "lessons": [
+      "mode-f4-overview",
+      "mode-f4-draw",
+      "mode-f4-next",
+      "mode-f4-timer",
+      "mode-f4-bracket",
+      "mode-f4-final"
+    ]
+  },
+  {
+    "id": 5,
+    "code": "F5",
+    "name": "Cuadro Simultáneo",
+    "tag": "Duelos",
+    "description": "Todos los cruces se disputan al mismo tiempo. Sortea y luego inicia la ronda con el cronómetro.",
+    "accent": "purple",
+    "lessons": [
+      "mode-f5-overview",
+      "mode-f5-draw",
+      "mode-f5-simultaneous",
+      "mode-f5-timer",
+      "mode-f5-rounds",
+      "mode-f5-final"
+    ]
+  },
+  {
+    "id": 6,
+    "code": "F6",
+    "name": "Rey del Quiéreme",
+    "tag": "Meta",
+    "description": "El primer equipo que alcance la meta gana. Acción G prepara una partida completamente nueva.",
+    "accent": "pink",
+    "lessons": [
+      "mode-f6-overview",
+      "mode-f6-goal",
+      "mode-f6-actiong",
+      "mode-f6-support",
+      "mode-f6-reset"
+    ]
+  },
+  {
+    "id": 7,
+    "code": "F7",
+    "name": "Grupo de la Muerte",
+    "tag": "Grupos",
+    "description": "Fase de grupos por puntos. Las rondas se controlan desde el cronómetro.",
+    "accent": "green",
+    "lessons": [
+      "mode-f7-overview",
+      "mode-f7-groups",
+      "mode-f7-points",
+      "mode-f7-timer",
+      "mode-f7-advance",
+      "mode-f7-final"
+    ]
+  }
+]
