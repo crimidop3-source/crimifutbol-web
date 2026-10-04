@@ -1,11 +1,11 @@
 {
   "version": "1.0.0",
-  "published": "Pendiente de publicación",
+  "published": "Disponible para Windows",
   "installerName": "Instalar_GOLUP_1.0.0.exe",
-  "downloadUrl": "",
+  "downloadUrl": "https://github.com/crimidop3-source/crimifutbol-web/releases/download/v1.0.0/Instalar_GOLUP_1.0.0.exe",
   "downloadObsUrl": "https://github.com/crimidop3-source/crimifutbol-web/releases/download/v1.0.0/Instalar_GOLUP_1.0.0.exe",
-  "downloadTikTokStudioUrl": "",
-  "tiktokStudioEnabled": false,
+  "downloadTikTokStudioUrl": "https://github.com/crimidop3-source/crimifutbol-web/releases/download/v1.0.0/Instalar_GOLUP_LIVE_STUDIO_1.0.0.exe",
+  "tiktokStudioEnabled": true,
   "whatsapp": "573227339534",
   "brand": "GolUp @CriMiCreator",
   "changelog": [
@@ -24,8 +24,12 @@
   ],
   "home": {
     "kicker": "GOLUP · CREATOR EXPERIENCE",
-    "titleLine1": "sdfgsdgsdg",
+    "titleLine1": "Tu LIVE.",
     "titleAccent": "Convertido en juego.",
     "description": "Descarga GolUp, aprende cada herramienta del Control Center y prepara una transmisión completa sin adivinar. Esta web está pensada para que cada botón, modo y flujo tenga su propio tutorial en video."
-  }
+  },
+  "versionObs": "1.0.0",
+  "installerObsName": "Instalar_GOLUP_1.0.0.exe",
+  "versionTikTokStudio": "1.0.0",
+  "installerTikTokStudioName": "Instalar_GOLUP_LIVE_STUDIO_1.0.0.exe"
 }

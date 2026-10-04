@@ -1,12 +1,12 @@
 {
-  "start-install": "media/videos/DESCARGAR%20E%20INSTALAR.mp4",
-  "license-register": "media/videos/Primer%20Inicio%20Y%20Licencia.mp4",
-  "scenes-overview": "media/videos/Equipos%20Regalos%20y%20Ajustes%20.mp4",
-  "cc-mobile": "media/videos/Controlar%20Desde%20el%20Celular%20Y%20Reiniciar%20Titulos.mp4",
-  "console-open-tests": "media/videos/Pruebas%20Y%20Recuperacion%20De%20Puntos.mp4",
-  "obs-overview": "media/videos/OBS%20Y%20Tik%20Tok%20Live.mp4",
-  "mode-f1-overview": "media/videos/F1%20Y%20F2%20.%20Puntos%20y%20Tabla.mp4",
-  "mode-f3-overview": "media/videos/F3%20.%20Supervivencia%20y%20Snipe.mp4",
-  "mode-f4-overview": "media/videos/F4%20.%20Cruce%20Por%20Cruce.mp4",
-  "mode-f5-overview": "media/videos/F5%20Y%20F7%20.%20Simultaneos%20Y%20grupos.mp4"
+  "start-install": "https://youtu.be/iX44_-fY_AY",
+  "license-register": "https://youtu.be/li6o7LheCts",
+  "scenes-overview": "https://youtu.be/nVquSLhfrxQ",
+  "cc-mobile": "https://youtu.be/j7VEj4uTvlo",
+  "console-open-tests": "https://youtu.be/t05F3OXeLBM",
+  "obs-overview": "https://youtu.be/BBNl2zgZfQY",
+  "mode-f1-overview": "https://youtu.be/AwnV2ccF7cE",
+  "mode-f3-overview": "https://youtu.be/DAzOagvXdpg",
+  "mode-f4-overview": "https://youtu.be/OsmCsbzePro",
+  "mode-f5-overview": "https://youtu.be/xpWvnSmFgug"
 }
