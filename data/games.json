@@ -33,34 +33,12 @@
     ]
   },
   {
-    "id": 4,
-    "code": "F4",
-    "name": "Rey del Cuadro",
-    "tag": "1 VS 1",
-    "description": "Torneo uno contra uno. Sortea los equipos y prepara cada cruce en orden.",
-    "accent": "orange",
-    "lessons": [
-      "mode-f4-overview"
-    ]
-  },
-  {
     "id": 5,
     "code": "F5",
-    "name": "Cuadro Simultáneo",
-    "tag": "Duelos",
-    "description": "Todos los cruces se disputan al mismo tiempo. Sortea y luego inicia la ronda con el cronómetro.",
+    "name": "Torneo de llaves",
+    "tag": "Simultáneo / 1 vs 1",
+    "description": "Sortea los enfrentamientos y juega todos los cruces a la vez o uno por uno.",
     "accent": "purple",
-    "lessons": [
-      "mode-f5-overview"
-    ]
-  },
-  {
-    "id": 7,
-    "code": "F7",
-    "name": "Grupo de la Muerte",
-    "tag": "Grupos",
-    "description": "Fase de grupos por puntos. Las rondas se controlan desde el cronómetro.",
-    "accent": "green",
     "lessons": [
       "mode-f5-overview"
     ]

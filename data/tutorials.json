@@ -73,18 +73,18 @@
   },
   {
     "id": "mode-f4-overview",
-    "title": "F4 · Cruce por cruce",
+    "title": "Archivo · F4, cruce por cruce",
     "category": "modos",
-    "description": "",
+    "description": "Tutorial de una versión anterior.",
     "level": "BÁSICO",
     "locked": false,
     "keywords": ""
   },
   {
     "id": "mode-f5-overview",
-    "title": "F5 y F7 · Simultáneos y grupos",
+    "title": "F5 · Simultáneos (video anterior)",
     "category": "modos",
-    "description": "",
+    "description": "Incluye un segmento F7 de una versión anterior.",
     "level": "BÁSICO",
     "locked": false,
     "keywords": ""
